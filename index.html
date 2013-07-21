@@ -50,9 +50,9 @@
     <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archive</a></li>
      <li> &#8212 <a href="/blog/categories/theory">Theory</a></li>
-     <li> &#8212 <a href="/blog/categories/social-science">Social Science</a></li>
+     <li> &#8212 <a href="/blog/categories/social-science">Social science</a></li>
      <li> &#8212 <a href="/blog/categories/life">Journal</a></li>
-     <li> &#8212 <a href="/blog/categories/note">Ephemera</a></li>
+     <li> &#8212 <a href="/blog/categories/note">Other notes</a></li>
 </ul>
 
 <section class="aboutme">
@@ -224,6 +224,286 @@
 </ol>
 </div>
 
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-22T12:06:22-04:00" data-updated="true" itemprop="datePublished">May 22<span>nd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/social-science/'>social science</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/" itemprop="url">Civil War and the Square of Ethnic Fractionalization</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
+
+<p>Below is a replication of Sambanis 2004 where I simply add the square of ethnic fractionalization. If Steve&rsquo;s conjecture were true, we&rsquo;d expect <em>ef1</em> to be positive, <em>ef1sq</em> to be negative, and both of them to be significant. They are signed as expected but not significant given the controls recommended by Sambanis. I then try alternative codings of civil war and a simple equation with no controls. If Steve&rsquo;s conjecture is true, it&rsquo;s not obvious.</p>
+
+<p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
+
+<h2>Data</h2>
+
+<pre><code>&lt;code class="r"&gt;setwd("~/Dropbox/Data General/Sambanis 2004")
+library(foreign)
+sambanis &lt;- read.dta("SambanisJCR2004_replicationdataset.dta")
+sambanis$ef1sq &lt;- sambanis$ef1 * sambanis$ef1
+&lt;/code&gt;
+</code></pre>
+
+<h2>Replication of Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h2>
+
+<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + 
+    mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))
+summary(model)
+&lt;/code&gt;
+
+
+
+
+
+&lt;code&gt;## 
+## Call:
+## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
+##     oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.604  -0.231  -0.173  -0.106   3.560  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.90226    0.46234   -8.44  &lt; 2e-16 ***
+## gdpl1       -0.09271    0.02295   -4.04  5.3e-05 ***
+## grol1       -0.51380    0.49750   -1.03  0.30172    
+## inst3l1      0.23713    0.09634    2.46  0.01384 *  
+## anoc2l1      0.23792    0.08807    2.70  0.00690 ** 
+## oil2l1       0.29680    0.11541    2.57  0.01012 *  
+## ef1          0.35605    0.16455    2.16  0.03049 *  
+## lpopnsl1     0.10503    0.02743    3.83  0.00013 ***
+## mtnl1        0.00199    0.00182    1.09  0.27466    
+## warnsl1     -0.06609    0.10492   -0.63  0.52873    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1133.2  on 5892  degrees of freedom
+## Residual deviance: 1038.8  on 5883  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 1059
+## 
+## Number of Fisher Scoring iterations: 8
+&lt;/code&gt;
+</code></pre>
+
+<h2>Adding the square of ethnic fractionalization</h2>
+
+<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
+    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+summary(model)
+&lt;/code&gt;
+
+
+
+
+
+&lt;code&gt;## 
+## Call:
+## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
+##     oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, 
+##     family = binomial(link = "probit"), data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.595  -0.230  -0.172  -0.103   3.547  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.94606    0.48647   -8.11    5e-16 ***
+## gdpl1       -0.09092    0.02370   -3.84  0.00012 ***
+## grol1       -0.50874    0.49343   -1.03  0.30253    
+## inst3l1      0.23723    0.09641    2.46  0.01386 *  
+## anoc2l1      0.24253    0.08838    2.74  0.00607 ** 
+## oil2l1       0.26000    0.12119    2.15  0.03192 *  
+## ef1          0.51893    0.72622    0.71  0.47488    
+## ef1sq       -0.17995    0.71442   -0.25  0.80113    
+## lpopnsl1     0.10452    0.02775    3.77  0.00017 ***
+## mtnl1        0.00184    0.00188    0.98  0.32529    
+## muslim       0.00104    0.00111    0.93  0.35169    
+## warnsl1     -0.06888    0.10501   -0.66  0.51185    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1133.2  on 5892  degrees of freedom
+## Residual deviance: 1037.8  on 5881  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 1062
+## 
+## Number of Fisher Scoring iterations: 8
+&lt;/code&gt;
+</code></pre>
+
+<h2>Using Sambanis alternative coding of civil war</h2>
+
+<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
+    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+summary(model)
+&lt;/code&gt;
+
+
+
+
+
+&lt;code&gt;## 
+## Call:
+## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
+##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.532  -0.217  -0.165  -0.102   3.499  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.73245    0.52338   -7.13  9.9e-13 ***
+## gdpl1       -0.08649    0.02469   -3.50  0.00046 ***
+## grol1       -0.09783    0.48861   -0.20  0.84131    
+## inst3l1      0.23635    0.10911    2.17  0.03030 *  
+## anoc2l1      0.28191    0.09773    2.88  0.00392 ** 
+## oil2l1       0.16875    0.14066    1.20  0.23027    
+## ef1          0.65104    0.77115    0.84  0.39853    
+## ef1sq       -0.38362    0.77341   -0.50  0.61989    
+## lpopnsl1     0.08969    0.03039    2.95  0.00316 ** 
+## mtnl1        0.00209    0.00205    1.02  0.30854    
+## muslim       0.00118    0.00124    0.95  0.34246    
+## warnsl1     -0.21649    0.31589   -0.69  0.49313    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 915.34  on 5161  degrees of freedom
+## Residual deviance: 842.13  on 5150  degrees of freedom
+##   (4298 observations deleted due to missingness)
+## AIC: 866.1
+## 
+## Number of Fisher Scoring iterations: 8
+&lt;/code&gt;
+</code></pre>
+
+<h2>Using Fearon and Laitin 2003 coding of civil war</h2>
+
+<pre><code>&lt;code class="r"&gt;model &lt;- glm(warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
+    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+summary(model)
+&lt;/code&gt;
+
+
+
+
+
+&lt;code&gt;## 
+## Call:
+## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
+##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.501  -0.200  -0.145  -0.086   3.590  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -4.28989    0.54194   -7.92  2.5e-15 ***
+## gdpl1       -0.08807    0.02665   -3.30  0.00095 ***
+## grol1       -0.27141    0.52732   -0.51  0.60677    
+## inst3l1      0.19536    0.10692    1.83  0.06768 .  
+## anoc2l1      0.25845    0.09748    2.65  0.00802 ** 
+## oil2l1       0.13327    0.14174    0.94  0.34707    
+## ef1          0.44027    0.80427    0.55  0.58409    
+## ef1sq       -0.22642    0.79784   -0.28  0.77657    
+## lpopnsl1     0.11930    0.03065    3.89  9.9e-05 ***
+## mtnl1        0.00255    0.00204    1.25  0.21124    
+## muslim       0.00155    0.00122    1.26  0.20659    
+## warnsl1      0.01688    0.11169    0.15  0.87987    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 897.81  on 5892  degrees of freedom
+## Residual deviance: 822.48  on 5881  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 846.5
+## 
+## Number of Fisher Scoring iterations: 9
+&lt;/code&gt;
+</code></pre>
+
+<h2>Only ethnic fractionalization</h2>
+
+<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstnsb ~ ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
+summary(model)
+&lt;/code&gt;
+
+
+
+
+
+&lt;code&gt;## 
+## Call:
+## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.303  -0.227  -0.196  -0.161   2.990  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -2.302      0.131  -17.63   &lt;2e-16 ***
+## ef1            0.323      0.589    0.55     0.58    
+## ef1sq          0.283      0.580    0.49     0.63    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1249.6  on 6268  degrees of freedom
+## Residual deviance: 1230.5  on 6266  degrees of freedom
+##   (3191 observations deleted due to missingness)
+## AIC: 1237
+## 
+## Number of Fisher Scoring iterations: 7
+&lt;/code&gt;
+</code></pre>
 
 		
 		
@@ -510,45 +790,6 @@ _</p>
 		<p>One characteristically masculine technique of expression is to translate feelings of fear and insecurity into verbal and gestural forms of aggression and bids for power. In other words: not expression at all, but rather the opaque, instrumental action of concretely attempting to remove an irritation by subduing its real or imagined sources. Not depleting or reducing fear and insecurity but simply displacing them onto others. What the average man expects from women, and indeed requires from them, in order to exist with the fears and insecurities he knows no other way to deal with, is the woman&rsquo;s passive compliance with this masculinist formula of translating felt fears and insecurities into aggression, and many popular tropes about male-female romance only catalog the most traditional and well-known ways in which women have figured out how to cope with these strategic ruses of masculine dissimulation which are intended to pass for expression. Women who are no longer willing to shoulder all of this displaced insecurity and fear are, for obvious reasons, an extremely fearful threat to the traditional man. If such traditional men were simply backward, hopeless fools with whom it&rsquo;s not even worth bothering, then perhaps we could simply write them off as too far gone. Then those of us with radical interests would have no real reason to be too concerned with the difficulties these men face in coming to terms with the truth of feminism. But it is not so easy because it must be admitted that even we men who are absolutely committed to learning and understanding the nature of patriarchy and are actually committed to changing our practices in a way consistent with the liberation of all people, the truth is that we don&rsquo;t currently have alternative ways of dealing with the fears and insecurities we all suffer from. And it cannot be treated as a matter of heroism: &ldquo;I will just deal with it, I have no right to complain, because I&rsquo;m just a privileged man in a patriarchal society,&rdquo; without this, too, being itself a patriarchal and masculinist recourse.</p>
 
 <p>In other words, those interested in a radical collective resistance against patriarchy have to develop practices that allow men to deal with their insecurities and fears in a way that does not revert to partaking in ultimately masculinist stances. An opposite strategy is to forego all masculinist techniques, to sort of submit or offer oneself unconditionally, to say &ldquo;here I am, relinquishing myself of the only techniques I know for dealing with my securities and fears, here I am, nothing but insecurities and fears, and, in my refusal to displace these fears and insecurities onto others but having no other techniques for dealing with them, I will simply show them and reveal them in honesty.&rdquo; The difficulty here, again, is that the emotional difficulties of such a horrific ordeal of revelation and self-flagellation typically fall onto the shoulders of those who care. Historically, of course, it is on women that the burden of such care labor typically falls, making this strategy of absolutely candid surrender likely to backfire. Another way it backfires is that this sort of practice is truly quite grotesque, monstrous; it is literally inhuman insofar as it is basically the act of relinquishing all of the characteristically human, that is to say dissimulative and instrumental techniques for being in the world and presenting ourselves in the world as subjects. Needless to say, this inhumanity, although perhaps commendable on some ultimate scale, is quite exactly the opposite of what is attractive to humans, and it&rsquo;s nearly impossible to actually live with. The point worth stressing is that alternatives to the dead-ends of masculine self-expression are not readily available; it&rsquo;s not clear that anyone knows how to resist and replace them in a way that does not take recourse to some sort of instrumentalism and exploitation at some level.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-16T13:10:32-05:00" data-updated="true" itemprop="datePublished">Feb 16<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/theory/'>theory</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/02/16/400-the-vertigo-of-social-mobility/" itemprop="url">The Vertigo of Social Mobility</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Institutions lure you by flattering you, in a world where it is nearly impossible to find recognition outside of them; you begin to see yourself only in institutions that pre-exist you and over which you exercise no influence. If this is perfectly internalized, then you get typical neuroses, mid-life crises, etc. Alternatively, if it&rsquo;s not perfectly internalized, then you get perpetual, mini crises up front; you perpetually realize you&rsquo;re over-worked and over-working on things that are somehow sterilized in advance so as to make sure you cannot exercise freedom over them and you also realize that no matter how hard you work you will not overcome this impotence. The mythology of hard work is, for this reason, indispensable for the status quo; it&rsquo;s one of the only things that keeps people from realizing that they simply can&rsquo;t win, that nobody can win like that.</p>
-
-<p>Furthermore, growing dependent on such an institution for the most essential and elemental psychological needs is a most deadly vulnerability because, when one steps back from the institution for one&rsquo;s own freedom, to the exact degree one is accustomed to the flattery of that institution, one will feel stupid and worthless and suffer all kinds of the most pathetic problems and embarrassments in trying to step back. This is why the businessman in mid-life crisis is one of the most pathetic figures. However, every downturn of self-esteem that comes from such a precarious and self-betraying identification with an institution, tends to produce an upturn in at least one thing: economic consumption. For, the one thing the institutions will give you is money. And they&rsquo;ll give it to you precisely to the degree you&rsquo;re capable of doing something intense outside of an institution; nothing gets a higher price than that and intellectual history is replete with examples. When the life of the mind faulters and there is money in the bank, an almost automatic transference of energy takes place in which the mind fixates on some new thing to buy. Most important in this respect are upper-class goods such as nice clothing and nice housing. &ldquo;Why am I so stressed and neurotic?&rdquo; they ask themselves. &ldquo;It&rsquo;s because I don&rsquo;t have the proper materials for such an important life.&rdquo;</p>
-
-<p>Because money is the only thing the institutions ultimately offer you, there is an overwhelming tendency to spend it upwards so to speak&mdash;so as to alleviate the stresses incurred in earning it. This point is perhaps banal, but the less observed point here is not just the material compensation of purchased pleasures for working stress; it&rsquo;s that the things purchased actually come to convince people of the legitimacy of the social distribution of resources. &ldquo;I need a nice sunny loft apartment all to myself because I need to focus and that&rsquo;s when I&rsquo;m most creative, because I am an academic.&rdquo; In fact, the exact opposite is the truth: I need a nice sunny loft apartment precisely because I&rsquo;m not an academic, so that in trying to be one for money I get so stressed and distracted I can&rsquo;t even do it how most people live, so I have to spend this money on a new apartment, etc. Then, lo and behold, all of the material and psychological vertigo of upward mobility comes along. That vertigo is real, it is the _real movement_ as the Marxists like to say, of being distributed.</p>
 
 		
 		
