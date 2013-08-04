@@ -98,12 +98,14 @@
 
 <h2>Data</h2>
 
-<pre><code>&lt;code class="r"&gt;setwd("~/Dropbox/Data General/Sambanis 2004")
-library(foreign)
-sambanis &lt;- read.dta("SambanisJCR2004_replicationdataset.dta")
-sambanis$ef1sq &lt;- sambanis$ef1 * sambanis$ef1
-&lt;/code&gt;
-</code></pre>
+<figure class='code'><figcaption><span>Get data and create the squared variable</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>library<span class="p">(</span>foreign<span class="p">)</span>
+</span><span class='line'>sambanis <span class="o">&lt;-</span> read.dta<span class="p">(</span><span class="s">&quot;SambanisJCR2004_replicationdataset.dta&quot;</span><span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">$</span>ef1sq <span class="o">&lt;-</span> sambanis<span class="o">$</span>ef1 <span class="o">*</span> sambanis<span class="o">$</span>ef1
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>Replication of Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h2>
 

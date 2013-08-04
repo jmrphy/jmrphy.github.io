@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-08-04T14:44:21-04:00</updated>
+  <updated>2013-08-04T16:20:47-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -26,12 +26,12 @@
 
 <h2>Data</h2>
 
-<pre><code>&lt;code class="r"&gt;setwd("~/Dropbox/Data General/Sambanis 2004")
-library(foreign)
-sambanis &lt;- read.dta("SambanisJCR2004_replicationdataset.dta")
-sambanis$ef1sq &lt;- sambanis$ef1 * sambanis$ef1
-&lt;/code&gt;
-</code></pre>
+<p>``` r Get data and create the squared variable</p>
+
+<p>library(foreign)
+sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
+sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1
+```</p>
 
 <h2>Replication of Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h2>
 
