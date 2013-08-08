@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-08-04T16:20:47-04:00</updated>
+  <updated>2013-08-04T16:53:04-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -30,22 +30,22 @@
 
 <p>library(foreign)
 sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
-sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1
-```</p>
+sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1</p>
 
-<h2>Replication of Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h2>
+<p>```</p>
 
-<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + 
-    mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))
-summary(model)
-&lt;/code&gt;
+<p>``` r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</p>
 
+<p>model &lt;&ndash; glm(warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 +</p>
 
+<pre><code>    mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
 
+<p>summary(model)</p>
 
+<p>```</p>
 
-&lt;code&gt;## 
-## Call:
+<pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
 ##     oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, family = binomial(link = "probit"), 
 ##     data = sambanis)
@@ -77,22 +77,22 @@ summary(model)
 ## AIC: 1059
 ## 
 ## Number of Fisher Scoring iterations: 8
-&lt;/code&gt;
 </code></pre>
 
 <h2>Adding the square of ethnic fractionalization</h2>
 
-<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
-    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
-summary(model)
-&lt;/code&gt;
+<p>``` r Adding the square of ethnic fractionalization</p>
 
+<p>model &lt;&ndash; glm(warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
 
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link =          "probit"))
+</code></pre>
 
+<p>summary(model)</p>
 
+<p>```</p>
 
-&lt;code&gt;## 
-## Call:
+<pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
 ##     oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, 
 ##     family = binomial(link = "probit"), data = sambanis)
@@ -126,22 +126,20 @@ summary(model)
 ## AIC: 1062
 ## 
 ## Number of Fisher Scoring iterations: 8
-&lt;/code&gt;
 </code></pre>
 
-<h2>Using Sambanis alternative coding of civil war</h2>
+<p>``` r Using Sambanis alternative coding of civil war</p>
 
-<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
-    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
-summary(model)
-&lt;/code&gt;
+<p>model &lt;&ndash; glm(warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
 
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
 
+<p>summary(model)</p>
 
+<p>```</p>
 
-
-&lt;code&gt;## 
-## Call:
+<pre><code>## Call:
 ## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
 ##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
 ##     data = sambanis)
@@ -175,22 +173,22 @@ summary(model)
 ## AIC: 866.1
 ## 
 ## Number of Fisher Scoring iterations: 8
-&lt;/code&gt;
 </code></pre>
 
 <h2>Using Fearon and Laitin 2003 coding of civil war</h2>
 
-<pre><code>&lt;code class="r"&gt;model &lt;- glm(warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
-    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
-summary(model)
-&lt;/code&gt;
+<p>``` r Using Fearon and Laitin 2003 coding of civil war</p>
 
+<p>model &lt;&ndash; glm(warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
 
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
 
+<p>summary(model)</p>
 
+<p>```</p>
 
-&lt;code&gt;## 
-## Call:
+<pre><code>## Call:
 ## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
 ##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
 ##     data = sambanis)
@@ -224,21 +222,18 @@ summary(model)
 ## AIC: 846.5
 ## 
 ## Number of Fisher Scoring iterations: 9
-&lt;/code&gt;
 </code></pre>
 
 <h2>Only ethnic fractionalization</h2>
 
-<pre><code>&lt;code class="r"&gt;model &lt;- glm(warstnsb ~ ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
-summary(model)
-&lt;/code&gt;
+<p>``` r Only ethnic fractionalization</p>
 
+<p>model &lt;&ndash; glm(warstnsb ~ ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
+summary(model)</p>
 
+<p>```</p>
 
-
-
-&lt;code&gt;## 
-## Call:
+<pre><code>## Call:
 ## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
 ##     data = sambanis)
 ## 
@@ -262,7 +257,6 @@ summary(model)
 ## AIC: 1237
 ## 
 ## Number of Fisher Scoring iterations: 7
-&lt;/code&gt;
 </code></pre>
 ]]></content>
   </entry>
