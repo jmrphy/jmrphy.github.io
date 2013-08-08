@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: note | Justin Murphy]]></title>
+  <link href="http://jmrphy.github.io/blog/categories/note/atom.xml" rel="self"/>
+  <link href="http://jmrphy.github.io/"/>
+  <updated>2013-08-04T16:53:04-04:00</updated>
+  <id>http://jmrphy.github.io/</id>
+  <author>
+    <name><![CDATA[Justin Murphy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Untitled]]></title>
+    <link href="http://jmrphy.github.io/blog/2012/10/13/cupcakes-taste-like-violence/"/>
+    <updated>2012-10-13T17:15:18-04:00</updated>
+    <id>http://jmrphy.github.io/blog/2012/10/13/cupcakes-taste-like-violence</id>
+    <content type="html"><![CDATA[<p>“Cupcakes taste like violence.” &ndash; Ahuviya Harel, at the Ox</p>
+]]></content>
+  </entry>
+  
+</feed>
