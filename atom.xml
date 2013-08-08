@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-08-04T16:53:04-04:00</updated>
+  <updated>2013-08-08T16:25:57-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -479,7 +479,7 @@ _</p>
 
 <p>Almost everything in this post I learned how to do directly and solely from the amazingly smart, open and generous #Rstats community. The scraping and time-series plot follow a script by <a href="http://bommaritollc.com/2011/02/26/archiving-tweets-with-python/">Michael Bommarito</a>, and the rest follows scripts by <a href="https://github.com/benmarwick/AAA2011-Tweets/blob/master/AAA2011.R">Ben Marwick</a>.</p>
 
-<h2><strong>Analysis</strong></h2>
+<h2>Analysis</h2>
 
 <p>There are 269,158 tweets. These tweets are authored by 79,923 unique users. Of all the tweets, .62 are retweets.</p>
 
@@ -503,110 +503,174 @@ _</p>
 
 <p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
 
-<p>[code language=&ldquo;r&rdquo;]</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>x<span class="o">&lt;-</span>read.csv<span class="p">(</span><span class="s">&quot;tweets_#gazaunderattack.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</span><span class='line'>x<span class="o">$</span>username<span class="o">&lt;-</span>x<span class="o">$</span>V2
+</span><span class='line'>x<span class="o">$</span>text<span class="o">&lt;-</span>x<span class="o">$</span>V5
+</span><span class='line'>
+</span><span class='line'><span class="c1">#########################################</span>
+</span><span class='line'><span class="c1">#### Nice Time-Series Plot ####</span>
+</span><span class='line'><span class="c1">#########################################</span>
+</span><span class='line'>library<span class="p">(</span>ggplot2<span class="p">)</span>
+</span><span class='line'>x<span class="o">$</span>date <span class="o">&lt;-</span> strptime<span class="p">(</span>x<span class="o">$</span>V4<span class="p">,</span> <span class="s">&quot;%a, %d %b %Y %H:%M:%S %z&quot;</span><span class="p">,</span> tz <span class="o">=</span> <span class="s">&quot;EST&quot;</span><span class="p">)</span>
+</span><span class='line'>x<span class="o">$</span>date <span class="o">&lt;-</span> as.POSIXct<span class="p">(</span>x<span class="o">$</span>date<span class="p">,</span> tz <span class="o">=</span> <span class="s">&quot;EST&quot;</span><span class="p">)</span>
+</span><span class='line'>timeseries<span class="o">&lt;-</span>ggplot<span class="p">(</span>data<span class="o">=</span>x<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>date<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>aes<span class="p">(</span>fill<span class="o">=</span>..count..<span class="p">),</span> binwidth<span class="o">=</span><span class="m">60</span><span class="o">*</span><span class="m">30</span><span class="p">)</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;# of Tweets&quot;</span><span class="p">)</span> <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Time&quot;</span><span class="p">)</span>
+</span><span class='line'>timeseries
+</span><span class='line'>ggsave<span class="p">(</span>file<span class="o">=</span><span class="s">&quot;timeseries.png&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#########################################</span>
+</span><span class='line'><span class="c1">#### Nice Plot of Frequent Tweeters ####</span>
+</span><span class='line'><span class="c1">#########################################</span>
+</span><span class='line'>library<span class="p">(</span>ggplot2<span class="p">)</span>
+</span><span class='line'>x<span class="o">$</span>username<span class="p">[</span>x<span class="o">$</span>username<span class="o">==</span><span class="s">&quot;&quot;</span><span class="p">]</span><span class="o">&lt;-</span><span class="kc">NA</span>
+</span><span class='line'>length<span class="p">(</span>unique<span class="p">(</span>x<span class="o">$</span>username<span class="p">))</span> <span class="c1"># see how many unique tweeter accounts in the sample</span>
+</span><span class='line'>counts<span class="o">=</span>table<span class="p">(</span>x<span class="o">$</span>username<span class="p">)</span>
+</span><span class='line'>counts.sort<span class="o">&lt;-</span>sort<span class="p">(</span>counts<span class="p">)</span>
+</span><span class='line'>counts.sort.subset<span class="o">=</span>subset<span class="p">(</span>counts.sort<span class="p">,</span> counts.sort<span class="o">&gt;</span><span class="m">350</span><span class="p">)</span> <span class="c1"># create a subset of those who tweeted at least 350 times or more</span>
+</span><span class='line'>counts.sort.subset.df<span class="o">&lt;-</span>data.frame<span class="p">(</span>people<span class="o">=</span>unlist<span class="p">(</span>dimnames<span class="p">(</span>counts.sort.subset<span class="p">)),</span>count<span class="o">=</span>unlist<span class="p">(</span>counts.sort.subset<span class="p">))</span> <span class="c1"># makes a funny sort of data frame...</span>
+</span><span class='line'>counts.sort.subset.df<span class="o">&lt;-</span>data.frame<span class="p">(</span>people<span class="o">=</span>as.factor<span class="p">(</span>counts.sort.subset.df<span class="o">$</span>people<span class="p">),</span>counts<span class="o">=</span>as.numeric<span class="p">(</span>counts.sort.subset.df<span class="o">$</span>count<span class="p">))</span> <span class="c1"># makes a better data frame for ggplot to work with</span>
+</span><span class='line'>ggplot<span class="p">(</span>counts.sort.subset.df<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>people<span class="p">,</span>counts<span class="p">),</span>counts<span class="p">))</span> <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Number of messages&quot;</span><span class="p">)</span><span class="o">+</span> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span> <span class="c1"># plot nicely ordered counts of tweets by person for people &gt; 5 tggsave(file = &quot;tweet_counts.pdf&quot;) # export the plot to a PDF file</span>
+</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;tweet_counts.png&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">###########################################</span>
+</span><span class='line'><span class="c1">#### Nice Plot of Frequent Re-Tweeters ####</span>
+</span><span class='line'><span class="c1">###########################################</span>
+</span><span class='line'>library<span class="p">(</span>stringr<span class="p">)</span>
+</span><span class='line'>x<span class="o">$</span>text<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>row<span class="p">)</span> iconv<span class="p">(</span>row<span class="p">,</span>to<span class="o">=</span><span class="s">&#39;UTF-8&#39;</span><span class="p">))</span> <span class="c1">#remove odd characters</span>
+</span><span class='line'>trim <span class="o">&lt;-</span> <span class="kr">function</span> <span class="p">(</span>x<span class="p">)</span> sub<span class="p">(</span><span class="s">&#39;@&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">,</span>x<span class="p">)</span> <span class="c1"># remove @ symbol from user names</span>
+</span><span class='line'>x<span class="o">$</span>rt<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>tweet<span class="p">)</span> trim<span class="p">(</span>str_match<span class="p">(</span>tweet<span class="p">,</span><span class="s">&quot;^RT (@[[:alnum:]_]*)&quot;</span><span class="p">)[</span><span class="m">2</span><span class="p">]))</span> <span class="c1">#extract who has been RT’d</span>
+</span><span class='line'>sum<span class="p">(</span><span class="o">!</span>is.na<span class="p">(</span>x<span class="o">$</span>rt<span class="p">))</span> <span class="c1"># see how many tweets are retweets</span>
+</span><span class='line'>sum<span class="p">(</span><span class="o">!</span>is.na<span class="p">(</span>x<span class="o">$</span>rt<span class="p">))</span><span class="o">/</span>length<span class="p">(</span>x<span class="o">$</span>rt<span class="p">)</span> <span class="c1"># the ratio of retweets to tweets</span>
+</span><span class='line'>countRT<span class="o">&lt;-</span>table<span class="p">(</span>x<span class="o">$</span>rt<span class="p">)</span>
+</span><span class='line'>countRT<span class="o">&lt;-</span>sort<span class="p">(</span>countRT<span class="p">)</span>
+</span><span class='line'>countRT.subset<span class="o">=</span>subset<span class="p">(</span>countRT<span class="p">,</span>countRT<span class="o">&gt;</span><span class="m">1000</span><span class="p">)</span> <span class="c1"># subset those RT’d more than 1000 times</span>
+</span><span class='line'>countRT.subset.df<span class="o">&lt;-</span>data.frame<span class="p">(</span>people<span class="o">=</span>as.factor<span class="p">(</span>unlist<span class="p">(</span>dimnames<span class="p">(</span>countRT.subset<span class="p">))),</span>RT_count<span class="o">=</span>as.numeric<span class="p">(</span>unlist<span class="p">(</span>countRT.subset<span class="p">)))</span>
+</span><span class='line'>ggplot<span class="p">(</span>countRT.subset.df<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>people<span class="p">,</span>RT_count<span class="p">),</span>RT_count<span class="p">))</span> <span class="o">+</span>
+</span><span class='line'> xlab<span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Number of messages retweeted by others&quot;</span><span class="p">)</span> <span class="o">+</span>
+</span><span class='line'> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span>
+</span><span class='line'> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
+</span><span class='line'> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span>
+</span><span class='line'> <span class="c1"># plot nicely ordered counts of tweets by person for people &gt; 1000 retweets</span>
+</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;retweet_counts.png&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">###########################################</span>
+</span><span class='line'><span class="c1">#### Nice Plot of RT-Tweet Ratios #########</span>
+</span><span class='line'><span class="c1">###########################################</span>
+</span><span class='line'>t<span class="o">&lt;-</span>as.data.frame<span class="p">(</span>table<span class="p">(</span>x<span class="o">$</span>username<span class="p">))</span> <span class="c1"># make table with counts of tweets per person</span>
+</span><span class='line'>rt<span class="o">&lt;-</span>as.data.frame<span class="p">(</span>table<span class="p">(</span>x<span class="o">$</span>rt<span class="p">))</span> <span class="c1"># make table with counts of retweets per person</span>
+</span><span class='line'>t.rt<span class="o">&lt;-</span>merge<span class="p">(</span>t<span class="p">,</span>rt<span class="p">,</span>by<span class="o">=</span><span class="s">&quot;Var1&quot;</span><span class="p">)</span> <span class="c1"># combine tweet count and retweet count per person</span>
+</span><span class='line'>t.rt<span class="p">[</span><span class="s">&quot;ratio&quot;</span><span class="p">]</span><span class="o">&lt;-</span>t.rt<span class="o">$</span>Freq.y <span class="o">/</span> t.rt<span class="o">$</span>Freq.x <span class="c1"># creates new col and adds ratio tweet/retweet</span>
+</span><span class='line'>sort.t.rt<span class="o">&lt;-</span>t.rt<span class="p">[</span>order<span class="p">(</span>t.rt<span class="o">$</span>ratio<span class="p">),]</span> <span class="c1"># sort it to put names in order by ratio</span>
+</span><span class='line'>sort.t.rt.subset<span class="o">&lt;-</span>subset<span class="p">(</span>sort.t.rt<span class="p">,</span>sort.t.rt<span class="o">$</span>Freq.y<span class="o">&gt;</span><span class="m">1000</span><span class="p">)</span> <span class="c1"># exclude those with 1000 tweets or less</span>
+</span><span class='line'>sort.t.rt.subset.drop<span class="o">&lt;-</span>droplevels<span class="p">(</span>sort.t.rt.subset<span class="p">)</span> <span class="c1"># drop unused levels that got in there somehow... note that this is already a data frame</span>
+</span><span class='line'>ggplot<span class="p">(</span>sort.t.rt.subset<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>Var1<span class="p">,</span>ratio<span class="p">),</span>ratio<span class="p">))</span> <span class="o">+</span>
+</span><span class='line'> xlab<span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Retweets as a ratio of total tweets&quot;</span><span class="p">)</span> <span class="o">+</span>
+</span><span class='line'> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span>
+</span><span class='line'> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
+</span><span class='line'> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span>
+</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;retweet_ratios.png&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">###########################################</span>
+</span><span class='line'><span class="c1">#### Nice Plot of Most Popular Links ######</span>
+</span><span class='line'><span class="c1">###########################################</span>
+</span><span class='line'>x<span class="o">$</span>link<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>tweet<span class="p">)</span> str_extract<span class="p">(</span>tweet<span class="p">,(</span><span class="s">&quot;http[[:print:]]+&quot;</span><span class="p">)))</span> <span class="c1"># creates new field and extracts the links contained in the tweet</span>
+</span><span class='line'>x<span class="o">$</span>link<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>tweet<span class="p">)</span> str_extract<span class="p">(</span>tweet<span class="p">,</span><span class="s">&quot;http[[:print:]]{16}&quot;</span><span class="p">))</span> <span class="c1"># limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.</span>
+</span><span class='line'>countlink<span class="o">&lt;-</span>table<span class="p">(</span>x<span class="o">$</span>link<span class="p">)</span> <span class="c1"># get frequencies of each link</span>
+</span><span class='line'>countlink<span class="o">&lt;-</span>sort<span class="p">(</span>countlink<span class="p">)</span> <span class="c1"># sort them</span>
+</span><span class='line'>barplot<span class="p">(</span>countlink<span class="p">)</span> <span class="c1"># plot freqs</span>
+</span><span class='line'><span class="c1"># or to use ggplot2, read on...</span>
+</span><span class='line'>countlink<span class="o">&lt;-</span>data.frame<span class="p">(</span>table<span class="p">(</span>na.omit<span class="p">((</span>x<span class="o">$</span>link<span class="p">))))</span>
+</span><span class='line'>countlink<span class="o">&lt;-</span>subset<span class="p">(</span>countlink<span class="p">,</span>countlink<span class="o">$</span>Freq<span class="o">&gt;</span><span class="m">300</span><span class="p">)</span> <span class="c1"># exclude those with 300 tweets or less</span>
+</span><span class='line'>ggplot<span class="p">(</span>countlink<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>Var1<span class="p">,</span> Freq<span class="p">),</span> Freq<span class="p">))</span> <span class="o">+</span>
+</span><span class='line'> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span>
+</span><span class='line'> xlab<span class="p">(</span><span class="s">&quot;Link&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span> <span class="o">+</span>
+</span><span class='line'> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
+</span><span class='line'> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span>
+</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;links.png&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
-x$username&lt;-x$V2
-x$text&lt;-x$V5</p>
-
-<h6>#</h6>
-
-<h4>Nice Time-Series Plot</h4>
-
-<h6>#</h6>
-
-<p>library(ggplot2)
-x$date &lt;&ndash; strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
-x$date &lt;&ndash; as.POSIXct(x$date, tz = &ldquo;EST&rdquo;)
-timeseries&lt;-ggplot(data=x, aes(x=date)) + geom_bar(aes(fill=..count..), binwidth=60*30) + theme_bw() + ylab(&ldquo;# of Tweets&rdquo;) + xlab(&ldquo;Time&rdquo;)
-timeseries
-ggsave(file=&ldquo;timeseries.png&rdquo;)</p>
-
-<h6>#</h6>
-
-<h4>Nice Plot of Frequent Tweeters</h4>
-
-<h6>#</h6>
-
-<p>library(ggplot2)
-x$username[x$username==&ldquo;&rdquo;]&lt;-NA
-length(unique(x$username)) # see how many unique tweeter accounts in the sample
-counts=table(x$username)
-counts.sort&lt;-sort(counts)
-counts.sort.subset=subset(counts.sort, counts.sort>350) # create a subset of those who tweeted at least 350 times or more
-counts.sort.subset.df&lt;-data.frame(people=unlist(dimnames(counts.sort.subset)),count=unlist(counts.sort.subset)) # makes a funny sort of data frame&hellip;
-counts.sort.subset.df&lt;-data.frame(people=as.factor(counts.sort.subset.df$people),counts=as.numeric(counts.sort.subset.df$count)) # makes a better data frame for ggplot to work with
-ggplot(counts.sort.subset.df, aes(reorder(people,counts),counts)) + xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages&rdquo;)+ geom_bar() + coord_flip() + theme_bw() + opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) + opts(axis.title.y=theme_text(size = 14, angle=90)) # plot nicely ordered counts of tweets by person for people > 5 tggsave(file = &ldquo;tweet_counts.pdf&rdquo;) # export the plot to a PDF file
-ggsave(file = &ldquo;tweet_counts.png&rdquo;)</p>
-
-<h6>#</h6>
-
-<h4>Nice Plot of Frequent Re-Tweeters</h4>
-
-<h6>#</h6>
-
-<p>library(stringr)
-x$text=sapply(x$text,function(row) iconv(row,to=&lsquo;UTF-8&rsquo;)) #remove odd characters
-trim &lt;&ndash; function (x) sub(&lsquo;@&rsquo;,&lsquo;&rsquo;,x) # remove @ symbol from user names
-x$rt=sapply(x$text,function(tweet) trim(str_match(tweet,&ldquo;^RT (@[[:alnum:]_]*)&rdquo;)[2])) #extract who has been RT’d
-sum(!is.na(x$rt)) # see how many tweets are retweets
-sum(!is.na(x$rt))/length(x$rt) # the ratio of retweets to tweets
-countRT&lt;-table(x$rt)
-countRT&lt;-sort(countRT)
-countRT.subset=subset(countRT,countRT>1000) # subset those RT’d more than 1000 times
-countRT.subset.df&lt;-data.frame(people=as.factor(unlist(dimnames(countRT.subset))),RT_count=as.numeric(unlist(countRT.subset)))
-ggplot(countRT.subset.df, aes(reorder(people,RT_count),RT_count)) +
- xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages retweeted by others&rdquo;) +
- geom_bar() + coord_flip() + theme_bw() +
- opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))
- # plot nicely ordered counts of tweets by person for people > 1000 retweets
-ggsave(file = &ldquo;retweet_counts.png&rdquo;)</p>
-
-<h6>#</h6>
-
-<h4>Nice Plot of RT-Tweet Ratios</h4>
-
-<h6>#</h6>
-
-<p>t&lt;-as.data.frame(table(x$username)) # make table with counts of tweets per person
-rt&lt;-as.data.frame(table(x$rt)) # make table with counts of retweets per person
-t.rt&lt;-merge(t,rt,by=&ldquo;Var1&rdquo;) # combine tweet count and retweet count per person
-t.rt[&ldquo;ratio&rdquo;]&lt;-t.rt$Freq.y / t.rt$Freq.x # creates new col and adds ratio tweet/retweet
-sort.t.rt&lt;-t.rt[order(t.rt$ratio),] # sort it to put names in order by ratio
-sort.t.rt.subset&lt;-subset(sort.t.rt,sort.t.rt$Freq.y>1000) # exclude those with 1000 tweets or less
-sort.t.rt.subset.drop&lt;-droplevels(sort.t.rt.subset) # drop unused levels that got in there somehow&hellip; note that this is already a data frame
-ggplot(sort.t.rt.subset, aes(reorder(Var1,ratio),ratio)) +
- xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Retweets as a ratio of total tweets&rdquo;) +
- geom_bar() + coord_flip() + theme_bw() +
- opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))
-ggsave(file = &ldquo;retweet_ratios.png&rdquo;)</p>
-
-<h6>#</h6>
-
-<h4>Nice Plot of Most Popular Links</h4>
-
-<h6>#</h6>
-
-<p>x$link=sapply(x$text,function(tweet) str_extract(tweet,(&ldquo;http[[:print:]]+&rdquo;))) # creates new field and extracts the links contained in the tweet
-x$link=sapply(x$text,function(tweet) str_extract(tweet,&ldquo;http[[:print:]]{16}&rdquo;)) # limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
-countlink&lt;-table(x$link) # get frequencies of each link
-countlink&lt;-sort(countlink) # sort them
-barplot(countlink) # plot freqs</p>
-
-<h1>or to use ggplot2, read on&hellip;</h1>
-
-<p>countlink&lt;-data.frame(table(na.omit((x$link))))
-countlink&lt;-subset(countlink,countlink$Freq>300) # exclude those with 300 tweets or less
-ggplot(countlink, aes(reorder(Var1, Freq), Freq)) +
- geom_bar() + coord_flip() + theme_bw() +
- xlab(&ldquo;Link&rdquo;) + ylab(&ldquo;Frequency&rdquo;) +
- opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))
-ggsave(file = &ldquo;links.png&rdquo;)</p>
-
-<p>[/code]</p>
 ]]></content>
   </entry>
   

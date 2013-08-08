@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-08-04T16:53:04-04:00</updated>
+  <updated>2013-08-08T16:25:57-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -270,7 +270,7 @@ summary(model)</p>
 
 <p>Almost everything in this post I learned how to do directly and solely from the amazingly smart, open and generous #Rstats community. The scraping and time-series plot follow a script by <a href="http://bommaritollc.com/2011/02/26/archiving-tweets-with-python/">Michael Bommarito</a>, and the rest follows scripts by <a href="https://github.com/benmarwick/AAA2011-Tweets/blob/master/AAA2011.R">Ben Marwick</a>.</p>
 
-<h2><strong>Analysis</strong></h2>
+<h2>Analysis</h2>
 
 <p>There are 269,158 tweets. These tweets are authored by 79,923 unique users. Of all the tweets, .62 are retweets.</p>
 
@@ -294,7 +294,7 @@ summary(model)</p>
 
 <p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
 
-<p>[code language=&ldquo;r&rdquo;]</p>
+<p>``` r</p>
 
 <p>x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
 x$username&lt;-x$V2
@@ -397,7 +397,7 @@ ggplot(countlink, aes(reorder(Var1, Freq), Freq)) +
  opts(axis.title.y=theme_text(size = 14, angle=90))
 ggsave(file = &ldquo;links.png&rdquo;)</p>
 
-<p>[/code]</p>
+<p>```</p>
 ]]></content>
   </entry>
   
