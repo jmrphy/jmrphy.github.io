@@ -105,7 +105,7 @@
 <p><strong>                                       Estimate    Std. Error    t value    Pr(>|t|)</strong>
 (Intercept)                    0.313765      0.164460         1.908      0.0593
 D.inflex                         -0.986283   2.377463         -0.415      0.6791
-obama$Time[-105]     -0.005026   0.002742        -1.833      0.0698</p>
+obama$Time<a href="">-105</a>     -0.005026   0.002742        -1.833      0.0698</p>
 
 <p><a href="http://justinmurphy.files.wordpress.com/2012/09/diffinflationresiduals1.png"><img src="http://justinmurphy.files.wordpress.com/2012/09/diffinflationresiduals1.png" alt="" /></a>And I basically find the same thing for the other models&mdash;residuals show violation of OLS assumptions; models using first differences are statistically insignificant but the residuals look pretty clean. I even tried lags on the independent variables, thinking maybe changes in inflation expectations might just take a day to show up in Obama&rsquo;s Intrade chances&mdash;but no, nothing. A scatterplot using levels and then a scatterplot using first differences sums this up.</p>
 
@@ -115,7 +115,7 @@ obama$Time[-105]     -0.005026   0.002742        -1.833      0.0698</p
 
 <p>In summary, I don&rsquo;t think this data offers evidence that monetary expansion would help Obama&rsquo;s chances of re-election. All of my R code follows, email me or Redonkulous if you want the data file.</p>
 
-<p>[sourcecode language=&ldquo;r&rdquo;]</p>
+<p><a href="">sourcecode language=&ldquo;r&rdquo;</a></p>
 
 <p>obama&lt;-read.table(&ldquo;obamasp.csv&rdquo;, sep=&ldquo;,&rdquo;, header=TRUE)
 obama$inflex&lt;-ts(obama$inflex)
@@ -132,38 +132,38 @@ D.inflex&lt;-diff(obama$inflex, differences=1)</p>
 
 <p>library(car)</p>
 
-<p>sp&lt;-lm(obama$Obamaclose ~ obama$SPAdjClose + obama$Time)
+<p>sp&lt;-lm(obama$Obamaclose  obama$SPAdjClose + obama$Time)
 summary(sp)
 residualPlots(sp)</p>
 
-<p>D.sp&lt;-lm(D.Obamaclose ~ lag(D.SPAdjClose) + obama$Time[-105])
+<p>D.sp&lt;-lm(D.Obamaclose  lag(D.SPAdjClose) + obama$Time-105)
 summary(D.sp)
 residualPlots(D.sp)</p>
 
-<p>spLDV&lt;-lm(obama$Obamaclose ~ obama$SPAdjClose + obama$Time + lag(obama$Obamaclose))
+<p>spLDV&lt;-lm(obama$Obamaclose  obama$SPAdjClose + obama$Time + lag(obama$Obamaclose))
 summary(spLDV)
 residualPlots(spLDV)</p>
 
-<p>inf&lt;-lm(obama$Obamaclose ~ obama$inflex + obama$Time)
+<p>inf&lt;-lm(obama$Obamaclose  obama$inflex + obama$Time)
 summary(inf)
 residualPlots(inf)</p>
 
-<p>D.inf&lt;-lm(D.Obamaclose ~ D.inflex + obama$Time[-105])
+<p>D.inf&lt;-lm(D.Obamaclose  D.inflex + obama$Time-105)
 summary(D.inf)
 residualPlots(D.inf)</p>
 
-<p>all&lt;-lm(obama$Obamaclose ~ obama$inflex + obama$SPAdjClose + obama$Time)
+<p>all&lt;-lm(obama$Obamaclose  obama$inflex + obama$SPAdjClose + obama$Time)
 summary(all)
 residualPlots(all)</p>
 
-<p>D.all&lt;-lm(D.Obamaclose ~ D.inflex + D.SPAdjClose + obama$Time[-105])
+<p>D.all&lt;-lm(D.Obamaclose  D.inflex + D.SPAdjClose + obama$Time-105)
 summary(D.all)
 residualPlots(D.all)</p>
 
-<p>scatterplot(obama$Obamaclose ~ obama$inflex)
-scatterplot(D.Obamaclose ~ D.inflex)</p>
+<p>scatterplot(obama$Obamaclose  obama$inflex)
+scatterplot(D.Obamaclose  D.inflex)</p>
 
-<p>[/sourcecode]</p>
+<p><a href="">/sourcecode</a></p>
 </div>
 
 </article>

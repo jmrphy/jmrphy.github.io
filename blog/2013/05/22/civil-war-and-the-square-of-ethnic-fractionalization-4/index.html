@@ -1,17 +1,94 @@
-<hr />
 
-<p>author: justinmurphy
-comments: true
-date: 2013-05-22 16:06:22+00:00
-layout: post
-slug: civil-war-and-the-square-of-ethnic-fractionalization-4
-title: Civil War and the Square of Ethnic Fractionalization
-wordpress_id: 633
-categories:</p>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Civil War and the Square of Ethnic Fractionalization - Justin Murphy</title>
+	<meta name="author" content="Justin Murphy">
 
-<h2>&ndash; social science</h2>
+	
+	<meta name="description" content="Civil War and the Square of Ethnic Fractionalization Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is &hellip;">
+	
 
-<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="http://feeds.feedburner.com/jmrphy" rel="alternate" title="Justin Murphy" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><hgroup>
+  <h1><a href="/">Justin Murphy</a></h1>
+  
+</hgroup>
+
+
+<nav id="main-nav"><ul class="main-navigation">
+    <li><a href="/research">Research</a></li>
+  <li><a href="/teaching">Teaching</a></li>
+  <li><a href="https://www.dropbox.com/s/tettqqy742ce7ui/Murphy_CV.pdf">CV</a></li>
+  <li><a href="/blog/archives">Blog</a></li>
+     <li> &#8211 <a href="/blog/categories/theory">theory</a></li>
+     <li> &#8211 <a href="/blog/categories/social-science">social science</a></li>
+     <li> &#8211 <a href="/blog/categories/life">life</a></li>
+     <li> &#8211 <a href="/blog/categories/note">other notes</a></li>
+</ul>
+
+<section class="aboutme">
+  <p>
+    Political scientist at University of Southampton, UK. I'm a generalist and a radical.
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/jmrphy" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/jmrphy" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="http://feeds.feedburner.com/jmrphy" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Civil War and the Square of Ethnic Fractionalization</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
 
 <p>Below is a replication of Sambanis 2004 where I simply add the square of ethnic fractionalization. If Steve&rsquo;s conjecture were true, we&rsquo;d expect <em>ef1</em> to be positive, <em>ef1sq</em> to be negative, and both of them to be significant. They are signed as expected but not significant given the controls recommended by Sambanis. I then try alternative codings of civil war and a simple equation with no controls. If Steve&rsquo;s conjecture is true, it&rsquo;s not obvious.</p>
 
@@ -19,23 +96,24 @@ categories:</p>
 
 <h2>Data</h2>
 
-<p>&#8220;` r Get data and create the squared variable</p>
-
-<p>library(foreign)
+<p><code> r Get data and create the squared variable
+</code>
+library(foreign)
 sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
-sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1</p>
+sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1</p>
 
-<p>&#8220;`</p>
-
-<p>&#8220;` r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
-model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 +</p>
+<p><code>
+</code>
+<code> r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
+</code>model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 +</p>
 
 <pre><code>    mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))
 </code></pre>
 
 <p>summary(model)</p>
 
-<p>&#8220;`</p>
+<p><code>
+</code></p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -73,16 +151,17 @@ model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + e
 
 <h2>Adding the square of ethnic fractionalization</h2>
 
-<p>&#8220;` r Adding the square of ethnic fractionalization</p>
-
-<p>model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+<p><code> r Adding the square of ethnic fractionalization
+</code>
+model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
 
 <pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link =          "probit"))
 </code></pre>
 
 <p>summary(model)</p>
 
-<p>&#8220;`</p>
+<p><code>
+</code></p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -120,16 +199,17 @@ model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + e
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<p>&#8220;` r Using Sambanis alternative coding of civil war</p>
-
-<p>model &lt;&ndash; glm(warstns \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+<p><code> r Using Sambanis alternative coding of civil war
+</code>
+model &lt;&ndash; glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
 
 <pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
 </code></pre>
 
 <p>summary(model)</p>
 
-<p>&#8220;`</p>
+<p><code>
+</code></p>
 
 <pre><code>## Call:
 ## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -169,16 +249,17 @@ model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + e
 
 <h2>Using Fearon and Laitin 2003 coding of civil war</h2>
 
-<p>&#8220;` r Using Fearon and Laitin 2003 coding of civil war</p>
-
-<p>model &lt;&ndash; glm(warst7b \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+<p><code> r Using Fearon and Laitin 2003 coding of civil war
+</code>
+model &lt;&ndash; glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
 
 <pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
 </code></pre>
 
 <p>summary(model)</p>
 
-<p>&#8220;`</p>
+<p><code>
+</code></p>
 
 <pre><code>## Call:
 ## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -218,15 +299,15 @@ model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + e
 
 <h2>Only ethnic fractionalization</h2>
 
-<p>&#8220;` r Only ethnic fractionalization</p>
-
-<p>model &lt;&ndash; glm(warstnsb \~ ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
+<p><code> r Only ethnic fractionalization
+</code>
+model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
 summary(model)</p>
 
-<p>&#8220;`</p>
+<p><code>
+</code>   ## Call:</p>
 
-<pre><code>## Call:
-## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
+<pre><code>## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
 ##     data = sambanis)
 ## 
 ## Deviance Residuals: 
@@ -250,3 +331,82 @@ summary(model)</p>
 ## 
 ## Number of Fisher Scoring iterations: 7
 </code></pre>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Justin Murphy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'jmrphy';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/';
+        var disqus_url = 'http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-42953742-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

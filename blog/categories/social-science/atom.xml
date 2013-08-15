@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-08-15T19:05:31-04:00</updated>
+  <updated>2013-08-15T19:31:13-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -12,6 +12,257 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Civil War and the Square of Ethnic Fractionalization]]></title>
+    <link href="http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/"/>
+    <updated>2013-05-22T12:06:22-04:00</updated>
+    <id>http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4</id>
+    <content type="html"><![CDATA[<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
+
+<p>Below is a replication of Sambanis 2004 where I simply add the square of ethnic fractionalization. If Steve&rsquo;s conjecture were true, we&rsquo;d expect <em>ef1</em> to be positive, <em>ef1sq</em> to be negative, and both of them to be significant. They are signed as expected but not significant given the controls recommended by Sambanis. I then try alternative codings of civil war and a simple equation with no controls. If Steve&rsquo;s conjecture is true, it&rsquo;s not obvious.</p>
+
+<p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
+
+<h2>Data</h2>
+
+<p><code> r Get data and create the squared variable
+</code>
+library(foreign)
+sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
+sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1</p>
+
+<p><code>
+</code>
+<code> r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
+</code>model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 +</p>
+
+<pre><code>    mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p><code>
+</code></p>
+
+<pre><code>## Call:
+## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
+##     oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.604  -0.231  -0.173  -0.106   3.560  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.90226    0.46234   -8.44  &lt; 2e-16 ***
+## gdpl1       -0.09271    0.02295   -4.04  5.3e-05 ***
+## grol1       -0.51380    0.49750   -1.03  0.30172    
+## inst3l1      0.23713    0.09634    2.46  0.01384 *  
+## anoc2l1      0.23792    0.08807    2.70  0.00690 ** 
+## oil2l1       0.29680    0.11541    2.57  0.01012 *  
+## ef1          0.35605    0.16455    2.16  0.03049 *  
+## lpopnsl1     0.10503    0.02743    3.83  0.00013 ***
+## mtnl1        0.00199    0.00182    1.09  0.27466    
+## warnsl1     -0.06609    0.10492   -0.63  0.52873    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1133.2  on 5892  degrees of freedom
+## Residual deviance: 1038.8  on 5883  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 1059
+## 
+## Number of Fisher Scoring iterations: 8
+</code></pre>
+
+<h2>Adding the square of ethnic fractionalization</h2>
+
+<p><code> r Adding the square of ethnic fractionalization
+</code>
+model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link =          "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p><code>
+</code></p>
+
+<pre><code>## Call:
+## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
+##     oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, 
+##     family = binomial(link = "probit"), data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.595  -0.230  -0.172  -0.103   3.547  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.94606    0.48647   -8.11    5e-16 ***
+## gdpl1       -0.09092    0.02370   -3.84  0.00012 ***
+## grol1       -0.50874    0.49343   -1.03  0.30253    
+## inst3l1      0.23723    0.09641    2.46  0.01386 *  
+## anoc2l1      0.24253    0.08838    2.74  0.00607 ** 
+## oil2l1       0.26000    0.12119    2.15  0.03192 *  
+## ef1          0.51893    0.72622    0.71  0.47488    
+## ef1sq       -0.17995    0.71442   -0.25  0.80113    
+## lpopnsl1     0.10452    0.02775    3.77  0.00017 ***
+## mtnl1        0.00184    0.00188    0.98  0.32529    
+## muslim       0.00104    0.00111    0.93  0.35169    
+## warnsl1     -0.06888    0.10501   -0.66  0.51185    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1133.2  on 5892  degrees of freedom
+## Residual deviance: 1037.8  on 5881  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 1062
+## 
+## Number of Fisher Scoring iterations: 8
+</code></pre>
+
+<p><code> r Using Sambanis alternative coding of civil war
+</code>
+model &lt;&ndash; glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p><code>
+</code></p>
+
+<pre><code>## Call:
+## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
+##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.532  -0.217  -0.165  -0.102   3.499  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.73245    0.52338   -7.13  9.9e-13 ***
+## gdpl1       -0.08649    0.02469   -3.50  0.00046 ***
+## grol1       -0.09783    0.48861   -0.20  0.84131    
+## inst3l1      0.23635    0.10911    2.17  0.03030 *  
+## anoc2l1      0.28191    0.09773    2.88  0.00392 ** 
+## oil2l1       0.16875    0.14066    1.20  0.23027    
+## ef1          0.65104    0.77115    0.84  0.39853    
+## ef1sq       -0.38362    0.77341   -0.50  0.61989    
+## lpopnsl1     0.08969    0.03039    2.95  0.00316 ** 
+## mtnl1        0.00209    0.00205    1.02  0.30854    
+## muslim       0.00118    0.00124    0.95  0.34246    
+## warnsl1     -0.21649    0.31589   -0.69  0.49313    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 915.34  on 5161  degrees of freedom
+## Residual deviance: 842.13  on 5150  degrees of freedom
+##   (4298 observations deleted due to missingness)
+## AIC: 866.1
+## 
+## Number of Fisher Scoring iterations: 8
+</code></pre>
+
+<h2>Using Fearon and Laitin 2003 coding of civil war</h2>
+
+<p><code> r Using Fearon and Laitin 2003 coding of civil war
+</code>
+model &lt;&ndash; glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p><code>
+</code></p>
+
+<pre><code>## Call:
+## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
+##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.501  -0.200  -0.145  -0.086   3.590  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -4.28989    0.54194   -7.92  2.5e-15 ***
+## gdpl1       -0.08807    0.02665   -3.30  0.00095 ***
+## grol1       -0.27141    0.52732   -0.51  0.60677    
+## inst3l1      0.19536    0.10692    1.83  0.06768 .  
+## anoc2l1      0.25845    0.09748    2.65  0.00802 ** 
+## oil2l1       0.13327    0.14174    0.94  0.34707    
+## ef1          0.44027    0.80427    0.55  0.58409    
+## ef1sq       -0.22642    0.79784   -0.28  0.77657    
+## lpopnsl1     0.11930    0.03065    3.89  9.9e-05 ***
+## mtnl1        0.00255    0.00204    1.25  0.21124    
+## muslim       0.00155    0.00122    1.26  0.20659    
+## warnsl1      0.01688    0.11169    0.15  0.87987    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 897.81  on 5892  degrees of freedom
+## Residual deviance: 822.48  on 5881  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 846.5
+## 
+## Number of Fisher Scoring iterations: 9
+</code></pre>
+
+<h2>Only ethnic fractionalization</h2>
+
+<p><code> r Only ethnic fractionalization
+</code>
+model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
+summary(model)</p>
+
+<p><code>
+</code>   ## Call:</p>
+
+<pre><code>## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.303  -0.227  -0.196  -0.161   2.990  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -2.302      0.131  -17.63   &lt;2e-16 ***
+## ef1            0.323      0.589    0.55     0.58    
+## ef1sq          0.283      0.580    0.49     0.63    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1249.6  on 6268  degrees of freedom
+## Residual deviance: 1230.5  on 6266  degrees of freedom
+##   (3191 observations deleted due to missingness)
+## AIC: 1237
+## 
+## Number of Fisher Scoring iterations: 7
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Analysis of #GazaUnderAttack Tweets]]></title>
@@ -46,17 +297,17 @@
 
 <p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
 
-<p>``` r</p>
-
-<p>x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
+<p><code> r
+</code>
+x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
 x$username&lt;-x$V2
 x$text&lt;-x$V5</p>
 
-<h6>#</h6>
+<h6>##################################\</h6>
 
 <h4>Nice Time-Series Plot</h4>
 
-<h6>#</h6>
+<h6>##################################\</h6>
 
 <p>library(ggplot2)
 x$date &lt;&ndash; strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
@@ -65,14 +316,14 @@ timeseries&lt;-ggplot(data=x, aes(x=date)) + geom_bar(aes(fill=..count..), binwi
 timeseries
 ggsave(file=&ldquo;timeseries.png&rdquo;)</p>
 
-<h6>#</h6>
+<h6>##################################\</h6>
 
 <h4>Nice Plot of Frequent Tweeters</h4>
 
-<h6>#</h6>
+<h6>##################################\</h6>
 
 <p>library(ggplot2)
-x$username[x$username==&ldquo;&rdquo;]&lt;-NA
+x$username<a href="">x$username==&ldquo;&rdquo;</a>&lt;-NA
 length(unique(x$username)) # see how many unique tweeter accounts in the sample
 counts=table(x$username)
 counts.sort&lt;-sort(counts)
@@ -82,16 +333,16 @@ counts.sort.subset.df&lt;-data.frame(people=as.factor(counts.sort.subset.df$peop
 ggplot(counts.sort.subset.df, aes(reorder(people,counts),counts)) + xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages&rdquo;)+ geom_bar() + coord_flip() + theme_bw() + opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) + opts(axis.title.y=theme_text(size = 14, angle=90)) # plot nicely ordered counts of tweets by person for people > 5 tggsave(file = &ldquo;tweet_counts.pdf&rdquo;) # export the plot to a PDF file
 ggsave(file = &ldquo;tweet_counts.png&rdquo;)</p>
 
-<h6>#</h6>
+<h6>####################################\</h6>
 
 <h4>Nice Plot of Frequent Re-Tweeters</h4>
 
-<h6>#</h6>
+<h6>####################################\</h6>
 
 <p>library(stringr)
 x$text=sapply(x$text,function(row) iconv(row,to=&lsquo;UTF-8&rsquo;)) #remove odd characters
 trim &lt;&ndash; function (x) sub(&lsquo;@&rsquo;,&lsquo;&rsquo;,x) # remove @ symbol from user names
-x$rt=sapply(x$text,function(tweet) trim(str_match(tweet,&ldquo;^RT (@[[:alnum:]_]*)&rdquo;)[2])) #extract who has been RT’d
+x$rt=sapply(x$text,function(tweet) trim(str_match(tweet,&ldquo;^RT (@[[:alnum:]_]()*)&rdquo;)<a href="">2</a>)) #extract who has been RT’d
 sum(!is.na(x$rt)) # see how many tweets are retweets
 sum(!is.na(x$rt))/length(x$rt) # the ratio of retweets to tweets
 countRT&lt;-table(x$rt)
@@ -102,21 +353,23 @@ ggplot(countRT.subset.df, aes(reorder(people,RT_count),RT_count)) +
  xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages retweeted by others&rdquo;) +
  geom_bar() + coord_flip() + theme_bw() +
  opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))
- # plot nicely ordered counts of tweets by person for people > 1000 retweets
-ggsave(file = &ldquo;retweet_counts.png&rdquo;)</p>
+ opts(axis.title.y=theme_text(size = 14, angle=90))</p>
 
-<h6>#</h6>
+<h1>plot nicely ordered counts of tweets by person for people > 1000 retweets</h1>
+
+<p>ggsave(file = &ldquo;retweet_counts.png&rdquo;)</p>
+
+<h6>####################################\</h6>
 
 <h4>Nice Plot of RT-Tweet Ratios</h4>
 
-<h6>#</h6>
+<h6>####################################\</h6>
 
 <p>t&lt;-as.data.frame(table(x$username)) # make table with counts of tweets per person
 rt&lt;-as.data.frame(table(x$rt)) # make table with counts of retweets per person
 t.rt&lt;-merge(t,rt,by=&ldquo;Var1&rdquo;) # combine tweet count and retweet count per person
-t.rt[&ldquo;ratio&rdquo;]&lt;-t.rt$Freq.y / t.rt$Freq.x # creates new col and adds ratio tweet/retweet
-sort.t.rt&lt;-t.rt[order(t.rt$ratio),] # sort it to put names in order by ratio
+t.rt<a href="">&ldquo;ratio&rdquo;</a>&lt;-t.rt$Freq.y / t.rt$Freq.x # creates new col and adds ratio tweet/retweet
+sort.t.rt&lt;-t.rt<a href="">order(t.rt$ratio),</a> # sort it to put names in order by ratio
 sort.t.rt.subset&lt;-subset(sort.t.rt,sort.t.rt$Freq.y>1000) # exclude those with 1000 tweets or less
 sort.t.rt.subset.drop&lt;-droplevels(sort.t.rt.subset) # drop unused levels that got in there somehow&hellip; note that this is already a data frame
 ggplot(sort.t.rt.subset, aes(reorder(Var1,ratio),ratio)) +
@@ -126,14 +379,14 @@ ggplot(sort.t.rt.subset, aes(reorder(Var1,ratio),ratio)) +
  opts(axis.title.y=theme_text(size = 14, angle=90))
 ggsave(file = &ldquo;retweet_ratios.png&rdquo;)</p>
 
-<h6>#</h6>
+<h6>####################################\</h6>
 
 <h4>Nice Plot of Most Popular Links</h4>
 
-<h6>#</h6>
+<h6>####################################\</h6>
 
-<p>x$link=sapply(x$text,function(tweet) str_extract(tweet,(&ldquo;http[[:print:]]+&rdquo;))) # creates new field and extracts the links contained in the tweet
-x$link=sapply(x$text,function(tweet) str_extract(tweet,&ldquo;http[[:print:]]{16}&rdquo;)) # limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
+<p>x$link=sapply(x$text,function(tweet) str_extract(tweet,(&ldquo;http[[:print:]]()+&rdquo;))) # creates new field and extracts the links contained in the tweet
+x$link=sapply(x$text,function(tweet) str_extract(tweet,&ldquo;http[[:print:]](){16}&rdquo;)) # limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
 countlink&lt;-table(x$link) # get frequencies of each link
 countlink&lt;-sort(countlink) # sort them
 barplot(countlink) # plot freqs</p>
@@ -149,7 +402,7 @@ ggplot(countlink, aes(reorder(Var1, Freq), Freq)) +
  opts(axis.title.y=theme_text(size = 14, angle=90))
 ggsave(file = &ldquo;links.png&rdquo;)</p>
 
-<p>```</p>
+<p>``</p>
 ]]></content>
   </entry>
   
@@ -158,7 +411,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
     <link href="http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data/"/>
     <updated>2012-10-27T17:58:43-04:00</updated>
     <id>http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data</id>
-    <content type="html"><![CDATA[<p>Political scientists <a href="http://themonkeycage.org/blog/2012/10/25/will-2012-be-a-low-turnout-election-some-evidence-from-google-search-activity/#comments">Jesse Richman</a> and <a href="http://themonkeycage.org/blog/2012/10/25/google-searches-and-turnout-a-cautionary-tale/">Erik Voeten</a> wonder if Google Search data can help us predict turnout in next month&rsquo;s Presidential election. To summarize, Richman finds that searches for &ldquo;vote&rdquo; in the past two elections predict voter turnout, and that low search volume for &ldquo;vote&rdquo; this year suggests a low turnout election. In response, Voeten shows that controlling for who has come online since 2004 and 2008 explains much of why search volume for &ldquo;vote&rdquo; appears small this year. There are lots of reasons search data is pretty tricky for making good inferences, but that shouldn&rsquo;t keep us from trying!</p>
+    <content type="html"><![CDATA[<p>Political scientists <a href="http://themonkeycage.org/blog/2012/10/25/will-2012-be-a-low-turnout-election-some-evidence-from-google-search-activity/%23comments">Jesse Richman</a> and <a href="http://themonkeycage.org/blog/2012/10/25/google-searches-and-turnout-a-cautionary-tale/">Erik Voeten</a> wonder if Google Search data can help us predict turnout in next month&rsquo;s Presidential election. To summarize, Richman finds that searches for &ldquo;vote&rdquo; in the past two elections predict voter turnout, and that low search volume for &ldquo;vote&rdquo; this year suggests a low turnout election. In response, Voeten shows that controlling for who has come online since 2004 and 2008 explains much of why search volume for &ldquo;vote&rdquo; appears small this year. There are lots of reasons search data is pretty tricky for making good inferences, but that shouldn&rsquo;t keep us from trying!</p>
 
 <p>My thinking is that we can look at the <em>composition</em> of &ldquo;vote&rdquo; searches across elections to see whether this year&rsquo;s vote searches are indicative of greater voter turnout or greater voter demobilization/skepticism.</p>
 
@@ -200,7 +453,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
 <p><strong>                                       Estimate    Std. Error    t value    Pr(>|t|)</strong>
 (Intercept)                    0.313765      0.164460         1.908      0.0593
 D.inflex                         -0.986283   2.377463         -0.415      0.6791
-obama$Time[-105]     -0.005026   0.002742        -1.833      0.0698</p>
+obama$Time<a href="">-105</a>     -0.005026   0.002742        -1.833      0.0698</p>
 
 <p><a href="http://justinmurphy.files.wordpress.com/2012/09/diffinflationresiduals1.png"><img src="http://justinmurphy.files.wordpress.com/2012/09/diffinflationresiduals1.png" alt="" /></a>And I basically find the same thing for the other models&mdash;residuals show violation of OLS assumptions; models using first differences are statistically insignificant but the residuals look pretty clean. I even tried lags on the independent variables, thinking maybe changes in inflation expectations might just take a day to show up in Obama&rsquo;s Intrade chances&mdash;but no, nothing. A scatterplot using levels and then a scatterplot using first differences sums this up.</p>
 
@@ -210,7 +463,7 @@ obama$Time[-105]     -0.005026   0.002742        -1.833      0.0698</p
 
 <p>In summary, I don&rsquo;t think this data offers evidence that monetary expansion would help Obama&rsquo;s chances of re-election. All of my R code follows, email me or Redonkulous if you want the data file.</p>
 
-<p>[sourcecode language=&ldquo;r&rdquo;]</p>
+<p><a href="">sourcecode language=&ldquo;r&rdquo;</a></p>
 
 <p>obama&lt;-read.table(&ldquo;obamasp.csv&rdquo;, sep=&ldquo;,&rdquo;, header=TRUE)
 obama$inflex&lt;-ts(obama$inflex)
@@ -227,38 +480,38 @@ D.inflex&lt;-diff(obama$inflex, differences=1)</p>
 
 <p>library(car)</p>
 
-<p>sp&lt;-lm(obama$Obamaclose ~ obama$SPAdjClose + obama$Time)
+<p>sp&lt;-lm(obama$Obamaclose  obama$SPAdjClose + obama$Time)
 summary(sp)
 residualPlots(sp)</p>
 
-<p>D.sp&lt;-lm(D.Obamaclose ~ lag(D.SPAdjClose) + obama$Time[-105])
+<p>D.sp&lt;-lm(D.Obamaclose  lag(D.SPAdjClose) + obama$Time-105)
 summary(D.sp)
 residualPlots(D.sp)</p>
 
-<p>spLDV&lt;-lm(obama$Obamaclose ~ obama$SPAdjClose + obama$Time + lag(obama$Obamaclose))
+<p>spLDV&lt;-lm(obama$Obamaclose  obama$SPAdjClose + obama$Time + lag(obama$Obamaclose))
 summary(spLDV)
 residualPlots(spLDV)</p>
 
-<p>inf&lt;-lm(obama$Obamaclose ~ obama$inflex + obama$Time)
+<p>inf&lt;-lm(obama$Obamaclose  obama$inflex + obama$Time)
 summary(inf)
 residualPlots(inf)</p>
 
-<p>D.inf&lt;-lm(D.Obamaclose ~ D.inflex + obama$Time[-105])
+<p>D.inf&lt;-lm(D.Obamaclose  D.inflex + obama$Time-105)
 summary(D.inf)
 residualPlots(D.inf)</p>
 
-<p>all&lt;-lm(obama$Obamaclose ~ obama$inflex + obama$SPAdjClose + obama$Time)
+<p>all&lt;-lm(obama$Obamaclose  obama$inflex + obama$SPAdjClose + obama$Time)
 summary(all)
 residualPlots(all)</p>
 
-<p>D.all&lt;-lm(D.Obamaclose ~ D.inflex + D.SPAdjClose + obama$Time[-105])
+<p>D.all&lt;-lm(D.Obamaclose  D.inflex + D.SPAdjClose + obama$Time-105)
 summary(D.all)
 residualPlots(D.all)</p>
 
-<p>scatterplot(obama$Obamaclose ~ obama$inflex)
-scatterplot(D.Obamaclose ~ D.inflex)</p>
+<p>scatterplot(obama$Obamaclose  obama$inflex)
+scatterplot(D.Obamaclose  D.inflex)</p>
 
-<p>[/sourcecode]</p>
+<p><a href="">/sourcecode</a></p>
 ]]></content>
   </entry>
   
@@ -275,7 +528,7 @@ scatterplot(D.Obamaclose ~ D.inflex)</p>
 
 <p><strong>2. A simple model: Is rising inequality &ldquo;pumping&rdquo; resources from education to incarceration?</strong></p>
 
-<p>****The question of whether there is a school-to-prison pipeline begs the question of why there would be a school-to-prison pipeline. Lacking is a specifiable political explanation. One possible explanation is that<em> rising income inequality in the United States encourages policymakers to divert funding from education to incarceration</em>. Why? Classic political economy models of redistribution suggest that as income inequality increases, the median voter increasingly prefers higher taxation and public spending. Because elected policymakers aim to satisfy the pivotal median voter, redistribution should be positively associated with inequality. However, it&rsquo;s also well known that many factors often neutralize or reverse the link between inequality and redistribution. For instance, income inequality can enable the rich to simply capture the government. A combination of these two models can explain how there could be a systematic spending dynamic between education and incarceration. As income inequality increases and the rich gain political power relative to the poor, policymakers have much to gain from the rich, and little to lose from the poor, by cutting taxes and social spending. Although the poor face decreasing political power, we might expect that beyond some threshold, where the poor &ldquo;have nothing to lose but their chains,&rdquo; cuts to essential social services would indeed be severely punished&mdash;by, say, revolutionary upheaval. Therefore, as policymakers cut essential social spending, they should also alter the<em> composition</em> of social spending in a way that also pacifies a rising threat of rebellion.</p>
+<p>****The question of whether there is a school-to-prison pipeline begs the question of why there would be a school-to-prison pipeline. Lacking is a specifiable political explanation. One possible explanation is that<em> rising income inequality in the United States encourages policymakers to divert funding from education to incarceration</em>. Why? Classic political economy models of redistribution suggest that as income inequality increases, the median voter increasingly prefers higher taxation and public spending. Because elected policymakers aim to satisfy the pivotal median voter, redistribution should be positively associated with inequality. However, it&rsquo;s also well known that many factors often neutralize or reverse the link between inequality and redistribution. For instance, income inequality can enable the rich to simply capture the government. A combination of these two models can explain how there could be a systematic spending dynamic between education and incarceration. As income inequality increases and the rich gain political power relative to the poor, policymakers have much to gain from the rich, and little to lose from the poor, by cutting taxes and social spending. Although the poor face decreasing political power, we might expect that beyond some threshold, where the poor &ldquo;have nothing to lose but their chains,&rdquo; cuts to essential social services would indeed be severely punished&mdash;by, say, revolutionary upheaval. Therefore, as policymakers cut essential social spending, they should also alter the<em> composition</em> of social spending in a way that also pacifies a rising threat of rebellion.</p>
 
 <p>In summary, perhaps rising income inequality (government capture by the rich and the political alienation of the poor) leads policymakers to divert spending from redistributive programs (public education) to programs of outright and coercive pacification (incarceration), not only further excluding the poor from political participation (the formal disenfranchisement of felons) but also literally, forcibly containing the threat of rebellion against the political system itself.</p>
 
@@ -285,7 +538,7 @@ scatterplot(D.Obamaclose ~ D.inflex)</p>
 
 <p>The timespan analyzed here implies a much stronger version of the argument than is popularly articulated: evidence that a school-to-prison pipeline has not existed for several decades would not disprove many more limited versions of the argument. However, evidence of the harder-to-prove, stronger claim of a pipeline dynamic that holds across the past half-century would be even stronger support for today&rsquo;s more limited claims.</p>
 
-<p>[caption id=&ldquo;attachment_74&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;600&rdquo;]<a href="http://justinmurphy.wordpress.com/2012/05/26/67/school_prison_inequality-5/"><img src="http://justinmurphy.files.wordpress.com/2012/05/school_prison_inequality2.jpg" alt="" /></a> The first graph illustrates the puzzle of increasing incarceration and decreasing crime. The second graph shows that inequality appears to track incarceration.[/caption]</p>
+<p><a href="">caption id=&ldquo;attachment_74&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;600&rdquo;</a><a href=""><img src="http://justinmurphy.files.wordpress.com/2012/05/school_prison_inequality2.jpg" alt="" /></a>(<a href="http://justinmurphy.wordpress.com/2012/05/26/67/school_prison_inequality-5/">http://justinmurphy.wordpress.com/2012/05/26/67/school_prison_inequality-5/</a>) The first graph illustrates the puzzle of increasing incarceration and decreasing crime. The second graph shows that inequality appears to track incarceration.<a href="">/caption</a></p>
 
 <ol>
 <li><strong>Evidence</strong></li>
@@ -299,7 +552,7 @@ scatterplot(D.Obamaclose ~ D.inflex)</p>
 </ol>
 
 
-<p>2. <strong>Year-to year increases in inequality are also correlated with year-to-year decreases in education spending per capita, a</strong><strong>lthough it is not clear if inequality itself correlates with decreases in education spending beyond its correlation with the incarceration rate. </strong>This is because when both inequality and incarceration rates are included in the same model (not displayed), Inequality drops out of statistical significance and Incarceration_Rate remains significant. It&rsquo;s possible that both have independent and separate negative effects on education spending but a full model can&rsquo;t sort out independent effects from two explanatory variables that are themselves highly correlated (high collinearity). Nonetheless, changes in the incarceration rate seem directly correlated with decreases in education spending. Inequality may or may not</p>
+<p>2. <strong>Year-to year increases in inequality are also correlated with year-to-year decreases in education spending per capita, a</strong><strong>lthough it is not clear if inequality itself correlates with decreases in education spending beyond its correlation with the incarceration rate. </strong>This is because when both inequality and incarceration rates are included in the same model (not displayed), Inequality drops out of statistical significance and Incarceration_Rate remains significant. It&rsquo;s possible that both have independent and separate negative effects on education spending but a full model can&rsquo;t sort out independent effects from two explanatory variables that are themselves highly correlated (high collinearity). Nonetheless, changes in the incarceration rate seem directly correlated with decreases in education spending. Inequality may or may not</p>
 
 <p><img src="http://justinmurphy.files.wordpress.com/2012/05/screen-shot-2012-06-01-at-2-56-29-pm.png" alt="" /></p>
 
@@ -324,21 +577,6 @@ scatterplot(D.Obamaclose ~ D.inflex)</p>
 <p>The second graph shows that an exogenous shock to inequality has a far larger effect on the incarceration rate than an exogenous shock to the crime rate.</p>
 
 <p><img src="http://justinmurphy.files.wordpress.com/2012/05/irf_inequality_crime_prison.png" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Comparing the Twitter Verbosity of @BarackObama and @MittRomney]]></title>
-    <link href="http://jmrphy.github.io/blog/2012/05/22/comparing-the-twitter-verbosity-of-barackobama-and-mittromney-16/"/>
-    <updated>2012-05-22T05:45:18-04:00</updated>
-    <id>http://jmrphy.github.io/blog/2012/05/22/comparing-the-twitter-verbosity-of-barackobama-and-mittromney-16</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve decided to start learning how to scrape/analyze data from the Twitter API. Starting with pretty simple stuff, I used the TwitteR package in R to scrape almost all of the tweets by both U.S.presidential nominees. It&rsquo;s only possible to download 3200 tweets at a time, but this accounts for most of Obama&rsquo;s tweets (4,016 at the time of writing this) and all of Romney&rsquo;s (953).</p>
-
-<p>One question we can ask is whether either nominee tweets lengthier tweets than the other. We know that G.W. Bush cultivated a populist sort of anti-intellectual style of speaking, we think of McCain&rsquo;s &ldquo;Straight Talk Express&rdquo; bus tour, and of course Obama is often characterized as an academic elite.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/05/rplot3.jpg"><img src="http://justinmurphy.files.wordpress.com/2012/05/rplot3.jpg?w=470" alt="Image" /></a></p>
-
-<p>Interestingly, although the modal length of tweets for both candidates is around the maximum of 140, @MittRomney spikes a little bit around 50 characters. It&rsquo;s impossible to say from this little graphic whether this difference reveals something systematic, but maybe the spike of roughly 50-character tweets from @MittRomney reflects a more &ldquo;straight talking&rdquo; tweeter than @BarackObama?</p>
 ]]></content>
   </entry>
   
