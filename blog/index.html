@@ -7,7 +7,7 @@
 	<meta name="author" content="Justin Murphy">
 
 	
-	<meta name="description" content="Jun 26th, 2013 theory Resentment and Vegetarianism People only eat meat because their repressed rage makes them bloodthirsty. All forms of &hellip;">
+	<meta name="description" content="Jun 26th, 2013 theory Resentment and Vegetarianism This is a test. People only eat meat because their repressed rage makes them bloodthirsty. All &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,7 +116,9 @@
 	</div>
 	<h1 class="title" itemprop="name"><a href="/blog/2013/06/26/resentment-and-eating-animals/" itemprop="url">Resentment and Vegetarianism</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		<p>People only eat meat because their repressed rage makes them bloodthirsty. All forms of bloodthirst are driven by resentment and revenge; this is the only conceivable reason why smart and good-natured people insist on eating meat. Everyone is so oppressed by social institutions but unable to kill any of the <em>humans</em> responsible for those institutions, that the half-hearted laments of unapologetic animal-eaters often reduce to: “I must reserve at least this one right to exercise my insatiable need to <em>take life</em> for  myself.” I think this is why after great ventings of repressed rage, I find it impossible to eat the flesh of an animal. In such instances, one is free of the resentment which drives such a vicious appetite.</p>
+		<p>This is a test.</p>
+
+<p>People only eat meat because their repressed rage makes them bloodthirsty. All forms of bloodthirst are driven by resentment and revenge; this is the only conceivable reason why smart and good-natured people insist on eating meat. Everyone is so oppressed by social institutions but unable to kill any of the <em>humans</em> responsible for those institutions, that the half-hearted laments of unapologetic animal-eaters often reduce to: “I must reserve at least this one right to exercise my insatiable need to <em>take life</em> for  myself.” I think this is why after great ventings of repressed rage, I find it impossible to eat the flesh of an animal. In such instances, one is free of the resentment which drives such a vicious appetite.</p>
 
 		
 		
@@ -242,19 +244,28 @@
   
 
 
-<time datetime="2013-05-22T12:06:22-04:00" data-updated="true" itemprop="datePublished">May 22<span>nd</span>, 2013</time></div>
+<time datetime="2013-05-22T00:00:00-04:00" data-updated="true" itemprop="datePublished">May 22<span>nd</span>, 2013</time></div>
 		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/social-science/'>social science</a>
-
 
 </div>
 		
 	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/" itemprop="url">Civil War and the Square of Ethnic Fractionalization</a></h1>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/" itemprop="url">Civil War and the Square of Ethnic Fractionalization 4</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
+		<hr />
+
+<p>author: justinmurphy
+comments: true
+date: 2013-05-22 16:06:22+00:00
+layout: post
+slug: civil-war-and-the-square-of-ethnic-fractionalization-4
+title: Civil War and the Square of Ethnic Fractionalization
+wordpress_id: 633
+categories:</p>
+
+<h2>&ndash; social science</h2>
+
+<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
 
 <p>Below is a replication of Sambanis 2004 where I simply add the square of ethnic fractionalization. If Steve&rsquo;s conjecture were true, we&rsquo;d expect <em>ef1</em> to be positive, <em>ef1sq</em> to be negative, and both of them to be significant. They are signed as expected but not significant given the controls recommended by Sambanis. I then try alternative codings of civil war and a simple equation with no controls. If Steve&rsquo;s conjecture is true, it&rsquo;s not obvious.</p>
 
@@ -262,25 +273,23 @@
 
 <h2>Data</h2>
 
-<figure class='code'><figcaption><span>Get data and create the squared variable</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>library<span class="p">(</span>foreign<span class="p">)</span>
-</span><span class='line'>sambanis <span class="o">&lt;-</span> read.dta<span class="p">(</span><span class="s">&quot;SambanisJCR2004_replicationdataset.dta&quot;</span><span class="p">)</span>
-</span><span class='line'>sambanis<span class="o">$</span>ef1sq <span class="o">&lt;-</span> sambanis<span class="o">$</span>ef1 <span class="o">*</span> sambanis<span class="o">$</span>ef1
-</span></code></pre></td></tr></table></div></figure>
+<p>&#8220;` r Get data and create the squared variable</p>
 
+<p>library(foreign)
+sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
+sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1</p>
 
+<p>&#8220;`</p>
 
+<p>&#8220;` r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
+model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 +</p>
 
-<figure class='code'><figcaption><span>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb <span class="o">~</span> gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span> lpopnsl1 <span class="o">+</span>
-</span><span class='line'>    mtnl1 <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
-</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code>    mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
 
+<p>summary(model)</p>
+
+<p>&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -318,14 +327,16 @@
 
 <h2>Adding the square of ethnic fractionalization</h2>
 
-<figure class='code'><figcaption><span>Adding the square of ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb <span class="o">~</span> gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span> ef1sq <span class="o">+</span>
-</span><span class='line'>        lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span>             <span class="s">&quot;probit&quot;</span><span class="p">))</span>
-</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>&#8220;` r Adding the square of ethnic fractionalization</p>
 
+<p>model &lt;&ndash; glm(warstnsb \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link =          "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p>&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -363,14 +374,16 @@
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<figure class='code'><figcaption><span>Using Sambanis alternative coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstns <span class="o">~</span> gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span> ef1sq <span class="o">+</span>
-</span><span class='line'>        lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
-</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>&#8220;` r Using Sambanis alternative coding of civil war</p>
 
+<p>model &lt;&ndash; glm(warstns \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p>&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -410,14 +423,16 @@
 
 <h2>Using Fearon and Laitin 2003 coding of civil war</h2>
 
-<figure class='code'><figcaption><span>Using Fearon and Laitin 2003 coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warst7b <span class="o">~</span> gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span> ef1sq <span class="o">+</span>
-</span><span class='line'>        lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
-</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>&#8220;` r Using Fearon and Laitin 2003 coding of civil war</p>
 
+<p>model &lt;&ndash; glm(warst7b \~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +</p>
+
+<pre><code>    lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+</code></pre>
+
+<p>summary(model)</p>
+
+<p>&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -457,12 +472,12 @@
 
 <h2>Only ethnic fractionalization</h2>
 
-<figure class='code'><figcaption><span>Only ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb <span class="o">~</span> ef1 <span class="o">+</span> ef1sq<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
-</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>&#8220;` r Only ethnic fractionalization</p>
 
+<p>model &lt;&ndash; glm(warstnsb \~ ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
+summary(model)</p>
+
+<p>&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
