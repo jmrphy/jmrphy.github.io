@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-08-31T20:11:46-04:00</updated>
+  <updated>2013-08-31T20:44:18-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -14,7 +14,16 @@
 
   
   <entry>
-    <title type="html"><![CDATA[The Hatred of Freedom]]></title>
+    <title type="html"><![CDATA[Ego and revolution]]></title>
+    <link href="http://jmrphy.github.io/blog/2013/08/31/ego-and-revolution/"/>
+    <updated>2013-08-31T20:42:00-04:00</updated>
+    <id>http://jmrphy.github.io/blog/2013/08/31/ego-and-revolution</id>
+    <content type="html"><![CDATA[<p>My ego often wrestles with itself: Obviously I want to avoid arrogance and self absorption and selfishness, but the project of revolution almost presupposes delusions of grandeur and extraordinary self-confidence (if only a confidence in the collectives of which one is a constituent). Capitalist individualism is highly egoistic but ironically it keeps egos small and frail under a herd mentality inclusive of exploitation and alienation. I would much prefer the opposite contradiction of wildly inflated egos demanding and creating revolutionary egalitarianism. Indeed, in such a truly egoistic society such as ours, a powerful and disruptive political project to truly force egalitarian movement might require not the altruistic ethos of shrunken egos but a proliferation of individuals sufficiently egoistic to see themselves as truly and immediately capable of changing the world.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The hatred of freedom]]></title>
     <link href="http://jmrphy.github.io/blog/2013/08/31/the-hatred-of-freedom/"/>
     <updated>2013-08-31T20:07:00-04:00</updated>
     <id>http://jmrphy.github.io/blog/2013/08/31/the-hatred-of-freedom</id>
@@ -693,15 +702,6 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
     <updated>2012-10-13T18:00:23-04:00</updated>
     <id>http://jmrphy.github.io/blog/2012/10/13/the-truth-is-a-troll</id>
     <content type="html"><![CDATA[<p>The truth is a troll.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Untitled Fragment]]></title>
-    <link href="http://jmrphy.github.io/blog/2012/09/27/32424415965/"/>
-    <updated>2012-09-27T19:59:18-04:00</updated>
-    <id>http://jmrphy.github.io/blog/2012/09/27/32424415965</id>
-    <content type="html"><![CDATA[<p>I haven’t had fun in a whole year because I have been a serious man, an ambitious young academic who is serious. I have been putting my ducks in a row. But the ducks are getting ill. I’m getting off the duck bus, fucking idiot I am. Unless they scatter immediately I will kill the ducks unless they kill me. Every bus is a duck bus if you ask me, and you are asking me. I just ate a $3 vegan burger and now I’m at an Afghani place smoking a hookah, reading Agamben, and drawing idiotic diagrams on my iPad. There is a crisis in higher education. I am the crisis. I feel good and nice and quite right about being a crisis.</p>
 ]]></content>
   </entry>
   
