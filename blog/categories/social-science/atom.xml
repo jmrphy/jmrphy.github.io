@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-09-06T22:13:46-04:00</updated>
+  <updated>2013-09-10T02:19:02-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Civil War and the Square of Ethnic Fractionalization]]></title>
+    <title type="html"><![CDATA[Civil war and the square of ethnic fractionalization]]></title>
     <link href="http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/"/>
     <updated>2013-05-22T12:06:22-04:00</updated>
     <id>http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4</id>
@@ -265,7 +265,7 @@ summary(model)</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Analysis of #GazaUnderAttack Tweets]]></title>
+    <title type="html"><![CDATA[Analysis of #GazaUnderAttack tweets]]></title>
     <link href="http://jmrphy.github.io/blog/2012/12/29/analysis-of-gazaunderattack-tweets/"/>
     <updated>2012-12-29T14:12:32-05:00</updated>
     <id>http://jmrphy.github.io/blog/2012/12/29/analysis-of-gazaunderattack-tweets</id>
@@ -407,7 +407,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Predicting Turnout from Google Search Data]]></title>
+    <title type="html"><![CDATA[Predicting turnout from Google search data]]></title>
     <link href="http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data/"/>
     <updated>2012-10-27T17:58:43-04:00</updated>
     <id>http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data</id>
@@ -432,7 +432,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Do Inflation Expectations Have an Effect on Obama's Re-Election Prospects?]]></title>
+    <title type="html"><![CDATA[Do inflation expectations have an effect on Obama's re-election prospects?]]></title>
     <link href="http://jmrphy.github.io/blog/2012/09/15/do-inflation-expectations-have-an-effect-on-obamas-re-election-prospects/"/>
     <updated>2012-09-15T17:30:35-04:00</updated>
     <id>http://jmrphy.github.io/blog/2012/09/15/do-inflation-expectations-have-an-effect-on-obamas-re-election-prospects</id>
@@ -516,7 +516,7 @@ scatterplot(D.Obamaclose  D.inflex)</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Is There Really a School-to-Prison Pipeline?]]></title>
+    <title type="html"><![CDATA[Is there really a school-to-prison pipeline?]]></title>
     <link href="http://jmrphy.github.io/blog/2012/06/09/67/"/>
     <updated>2012-06-09T22:00:24-04:00</updated>
     <id>http://jmrphy.github.io/blog/2012/06/09/67</id>
