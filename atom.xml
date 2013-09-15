@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-09-15T18:00:42-04:00</updated>
+  <updated>2013-09-15T18:02:19-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -195,7 +195,7 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>model \&lt;- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))   
+</pre></td><td class='code'><pre><code class=''><span class='line'>model &lt;- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))   
 </span><span class='line'>summary(model)</span></code></pre></td></tr></table></div></figure>
 
 
@@ -239,7 +239,7 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>model \&lt;- glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))   
+</pre></td><td class='code'><pre><code class=''><span class='line'>model &lt;- glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))   
 </span><span class='line'>summary(model)</span></code></pre></td></tr></table></div></figure>
 
 
@@ -284,7 +284,7 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>model \&lt;- glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
+</pre></td><td class='code'><pre><code class=''><span class='line'>model &lt;- glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
 </span><span class='line'>lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
 </span><span class='line'>summary(model)</span></code></pre></td></tr></table></div></figure>
 
@@ -330,7 +330,7 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>model \&lt;- glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
+</pre></td><td class='code'><pre><code class=''><span class='line'>model &lt;- glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
 </span><span class='line'>
 </span><span class='line'>summary(model)</span></code></pre></td></tr></table></div></figure>
 
