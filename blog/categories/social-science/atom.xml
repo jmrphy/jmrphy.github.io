@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-09-15T17:47:14-04:00</updated>
+  <updated>2013-09-15T17:49:48-04:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -26,7 +26,7 @@
 
 <h2>Data</h2>
 
-<p>``` r Get data and create the squared variable
+<p>``` Get data and create the squared variable
 library(foreign)</p>
 
 <p>sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)</p>
@@ -34,7 +34,7 @@ library(foreign)</p>
 <p>sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1
 ```</p>
 
-<p>``` r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
+<p>``` Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
 model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
 
 <p>summary(model)
@@ -76,7 +76,7 @@ model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1
 
 <h2>Adding the square of ethnic fractionalization</h2>
 
-<p><code> r Adding the square of ethnic fractionalization
+<p><code>Adding the square of ethnic fractionalization
 model \&lt;- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))   
 summary(model)
 </code></p>
@@ -117,7 +117,7 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<p><code> r Using Sambanis alternative coding of civil war
+<p><code>Using Sambanis alternative coding of civil war
 model \&lt;- glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))   
 summary(model)
 </code></p>
@@ -160,7 +160,7 @@ summary(model)
 
 <h2>Using Fearon and Laitin 2003 coding of civil war</h2>
 
-<p><code> r Using Fearon and Laitin 2003 coding of civil war
+<p><code> Using Fearon and Laitin 2003 coding of civil war
 model \&lt;- glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +
 lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
 summary(model)
@@ -204,7 +204,7 @@ summary(model)
 
 <h2>Only ethnic fractionalization</h2>
 
-<p>``` r Only ethnic fractionalization
+<p>``` Only ethnic fractionalization
 model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
 
 <p>summary(model)
