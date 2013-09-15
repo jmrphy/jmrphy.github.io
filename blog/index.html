@@ -365,23 +365,17 @@
 
 <p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
 
-<h2>Data</h2>
-
-<p>Get data and create the squared variable</p>
+<h3>Get data and create the squared variable</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>library(foreign)
-</span><span class='line'>
-</span><span class='line'>sambanis &lt;- read.dta("SambanisJCR2004\_replicationdataset.dta")
-</span><span class='line'>
+</span><span class='line'>sambanis &lt;- read.dta("SambanisJCR2004_replicationdataset.dta")
 </span><span class='line'>sambanis$ef1sq &lt;- sambanis$ef1 * sambanis$ef1</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</p>
+<h3>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -425,9 +419,7 @@
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h2>Adding the square of ethnic fractionalization</h2>
-
-<p>Adding the square of ethnic fractionalization</p>
+<h3>Adding the square of ethnic fractionalization</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -471,7 +463,7 @@
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<p>Using Sambanis alternative coding of civil war</p>
+<h3>Using Sambanis alternative coding of civil war</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -515,9 +507,7 @@
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h2>Using Fearon and Laitin 2003 coding of civil war</h2>
-
-<p>Using Fearon and Laitin 2003 coding of civil war</p>
+<h3>Using Fearon and Laitin 2003 coding of civil war</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -563,9 +553,7 @@
 ## Number of Fisher Scoring iterations: 9
 </code></pre>
 
-<h2>Only ethnic fractionalization</h2>
-
-<p>Only ethnic fractionalization</p>
+<h3>Only ethnic fractionalization</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
