@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-10-12T23:43:46+01:00</updated>
+  <updated>2013-10-12T23:52:13+01:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -408,15 +408,39 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Does Obama really care less than Bush about climate change?]]></title>
-    <link href="http://jmrphy.github.io/blog/2011/01/30/3018373241/"/>
-    <updated>2011-01-30T21:35:00+00:00</updated>
-    <id>http://jmrphy.github.io/blog/2011/01/30/3018373241</id>
-    <content type="html"><![CDATA[<p>Suzanne Goldenberg of the <em>Guardian</em> reports a graph, apparently by <a href="http://www.bris.ac.uk/spais/people/person/148552">Matthew Hope</a> of the University of Bristol, to illustrate the claim that Obama is <a href="http://www.guardian.co.uk/environment/2011/jan/26/climate-change-obama-bush">less interested in climate change than Bush</a>. This comes on the heels of several critics who point out that Obama did not mention climate change once in his past State of the Union address. The graph displays aggregate mentions of &ldquo;climate change,&rdquo; &ldquo;environnment,&rdquo; and &ldquo;global warming.&rdquo;</p>
+    <title type="html"><![CDATA[Comparing the twitter verbosity of @BarackObama and @MittRomney]]></title>
+    <link href="http://jmrphy.github.io/blog/2012/05/22/comparing-the-twitter-verbosity-of-barackobama-and-mittromney-16/"/>
+    <updated>2012-05-22T10:45:18+01:00</updated>
+    <id>http://jmrphy.github.io/blog/2012/05/22/comparing-the-twitter-verbosity-of-barackobama-and-mittromney-16</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve decided to start learning how to scrape/analyze data from the Twitter API. Starting with pretty simple stuff, I used the TwitteR package in R to scrape almost all of the tweets by both U.S.presidential nominees. It&rsquo;s only possible to download 3200 tweets at a time, but this accounts for most of Obama&rsquo;s tweets (4,016 at the time of writing this) and all of Romney&rsquo;s (953).</p>
 
-<p><a href="http://www.guardian.co.uk/environment/2011/jan/26/climate-change-obama-bush"><img src="http://media.tumblr.com/tumblr_lfutfsoliB1qz9517.jpg" alt="" /></a></p>
+<p>One question we can ask is whether either nominee tweets lengthier tweets than the other. We know that G.W. Bush cultivated a populist sort of anti-intellectual style of speaking, we think of McCain&rsquo;s &ldquo;Straight Talk Express&rdquo; bus tour, and of course Obama is often characterized as an academic elite.</p>
 
-<p>However, as Ben Jervey of <em>Good</em> points out, Goldenberg&rsquo;s inference from her analysis <a href="http://www.guardian.co.uk/environment/2011/jan/26/climate-change-obama-bush">is wrong</a>. As Jervey suggests, Obama&rsquo;s lack of interest in &ldquo;climate change&rdquo; is due simply to a shift in rhetorical strategy, as Obama has chosen to frame the problems of climate change as an issue of &ldquo;clean energy.&rdquo; An analysis similar to Goldenberg&rsquo;s provides some compelling evidence for the latter view. Below, I&rsquo;m posting a graph comparable to Goldenberg&rsquo;s but with mentions of &ldquo;energy&rdquo; rather than &ldquo;climate change,&rdquo; &ldquo;environment,&rdquo; and &ldquo;global warming.&rdquo; As graphics should, this largely speaks for itself:<img src="http://media.tumblr.com/tumblr_lfuudeGs1v1qz9517.png" alt="" /></p>
+<p><a href="http://justinmurphy.files.wordpress.com/2012/05/rplot3.jpg"><img src="http://justinmurphy.files.wordpress.com/2012/05/rplot3.jpg?w=470" alt="Image" /></a></p>
+
+<p>Interestingly, although the modal length of tweets for both candidates is around the maximum of 140, @MittRomney spikes a little bit around 50 characters. It&rsquo;s impossible to say from this little graphic whether this difference reveals something systematic, but maybe the spike of roughly 50-character tweets from @MittRomney reflects a more &ldquo;straight talking&rdquo; tweeter than @BarackObama?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[U.S. media and ideological filtering as a global "public good"]]></title>
+    <link href="http://jmrphy.github.io/blog/2011/12/20/14486977984/"/>
+    <updated>2011-12-20T01:56:00+00:00</updated>
+    <id>http://jmrphy.github.io/blog/2011/12/20/14486977984</id>
+    <content type="html"><![CDATA[<p>In the study of international relations, there is a conventional and well-demonstrated theory according to which 1.) global stability is to be understood as a “public good,” and 2.) that due to strategic problems obstructing collective cooperation, often a hegemon is required to effectively subsidize it (Krasner 1976; Kindleberger 1981). Put very simply, in the absence of a hegemon, the global system tends toward conflict in a &ldquo;race to the bottom.&rdquo; Many states with more or less equal power and acting in their own self-interest calculate that, for instance, raising tariffs will help their domestic industries. However, the outcome is that as every other state acts similarly, all countries fare worse than they would have had they not raised tariffs. A global hegemon can prevent this bad equilibrium by effectively enforcing global free trade. More specifically, it is commonly argued that these conditions characterized the global system immediately after World War II, with the United States subsidizing the construction of an “embedded liberalism” (Ruggie 1983) and using “strategic restraint” (Ikenberry 2001) to favor global free trade rather than traditional militaristic domination.</p>
+
+<p>We can develop and further specifiy this line of thought by elaborating how one of the “public goods” subsidized by liberal American hegemony was perhaps the maintenance of a certain ideological hygiene for the postwar capitalist order. One could argue that U.S. culture industry, nurtured by a media market that exemplifies the liberal, commercial model of state-media relations as well as a liberal bourgeois public opinion, has functioned as a sort of protective filter in global media circulation, a vacuum drain that shoots into the dumpster of forgotten history any ugly flotsam that rises up from the placid sea of global capitalist ideology. </p>
+
+<p>This filter for the global desiring machine performs the specific and essential function of making any threat to the system replaced by whatever U.S. media puts in its place. The US media, in this model, is a sort of condom for catching the ejaculant of global capitalism, preventing the excesses of capitalist desire from fertilizing offspring that will ultimately contest the father.</p>
+
+<p>More recently, variation across the covers of Time Magazine’s different regional editions provide stunning evidence for this claim. Below are the various regional editions of Time Magazine for the weeks of October 24th and December 5th of this writing (2011).</p>
+
+<p><img src="http://media.tumblr.com/tumblr_lwhb4v7QFj1qz9517.png" alt="" />
+<img src="http://media.tumblr.com/tumblr_lwhb0p8eU01qz9517.png" alt="" /></p>
+
+<p>Whereas the rest of the world sees a proud Egyptian revolutionary in a gas mask, readers in the United States see a story not just about anxiety, but why it&rsquo;s &ldquo;good for you.&rdquo; These images, only suggestive from a social scientific perspective, provide almost too-provocative evidence of the hypothesis advanced in the last section, that differences in U.S. news reportage perform a certain function of ideological filtering for global flows of desire. </p>
+
+<p> Although we remain for the moment agnostic with respect to the specific characteristics of the U.S. media that lead it to function as global ideological filter, the hypothesis along with the patently conservative biases exemplified in these magazine covers would be consistent with the dyanmic patterns of variation <a href="http://Justin%20Murphyields.tumblr.com/post/14483036324/a-return-of-the-repressed-preliminary-theory-and">uncovered previously using data from Google Books</a>. Material political or economic shocks to the system (radical rebellions such as that of May 1968 in France or the Egyptian uprising this past year) enters into regional or global news but is prevented from causing truly global disruptions of consciousness by a domestic U.S. media quickly replacing it with the sterile human interest stories for which it is famous. Because the U.S. is one of the chief exporters of culture in the world, this sterilization of news consumption for even just the U.S. domestic market represents an <em>energy sink</em> for the whole global system. If revolutionary energy doesn’t get in, it obviously doesn’t get sent back out, and this is especially significant because so much of global culture is set by the American culture industries.</p>
 ]]></content>
   </entry>
   
