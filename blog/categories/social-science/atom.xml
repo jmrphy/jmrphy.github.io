@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-09-15T18:02:19-04:00</updated>
+  <updated>2013-10-12T21:02:25+01:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Civil war and the square of ethnic fractionalization]]></title>
     <link href="http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/"/>
-    <updated>2013-05-22T12:06:22-04:00</updated>
+    <updated>2013-05-22T17:06:22+01:00</updated>
     <id>http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4</id>
     <content type="html"><![CDATA[<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
 
@@ -243,7 +243,7 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
   <entry>
     <title type="html"><![CDATA[Analysis of #GazaUnderAttack tweets]]></title>
     <link href="http://jmrphy.github.io/blog/2012/12/29/analysis-of-gazaunderattack-tweets/"/>
-    <updated>2012-12-29T14:12:32-05:00</updated>
+    <updated>2012-12-29T19:12:32+00:00</updated>
     <id>http://jmrphy.github.io/blog/2012/12/29/analysis-of-gazaunderattack-tweets</id>
     <content type="html"><![CDATA[<p>During the Israeli-Palestinian attacks of last month, I scraped from the Twitter API about 270,000 tweets containing the hashtag #gazaunderattack. Given the unprecedented degree to which this war was fought online, tweets of this sort could and should become really important data for political scientists. I&rsquo;m too busy right now to say very much here, but I want to share some basic descriptive analyses for anyone who might be interested. The dataset can be downloaded <a href="https://dl.dropbox.com/u/20498362/tweets_%23gazaunderattack.csv">here</a> and the R script that produced these analyses is available at the very bottom.</p>
 
@@ -385,7 +385,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
   <entry>
     <title type="html"><![CDATA[Predicting turnout from Google search data]]></title>
     <link href="http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data/"/>
-    <updated>2012-10-27T17:58:43-04:00</updated>
+    <updated>2012-10-27T22:58:43+01:00</updated>
     <id>http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data</id>
     <content type="html"><![CDATA[<p>Political scientists <a href="http://themonkeycage.org/blog/2012/10/25/will-2012-be-a-low-turnout-election-some-evidence-from-google-search-activity/%23comments">Jesse Richman</a> and <a href="http://themonkeycage.org/blog/2012/10/25/google-searches-and-turnout-a-cautionary-tale/">Erik Voeten</a> wonder if Google Search data can help us predict turnout in next month&rsquo;s Presidential election. To summarize, Richman finds that searches for &ldquo;vote&rdquo; in the past two elections predict voter turnout, and that low search volume for &ldquo;vote&rdquo; this year suggests a low turnout election. In response, Voeten shows that controlling for who has come online since 2004 and 2008 explains much of why search volume for &ldquo;vote&rdquo; appears small this year. There are lots of reasons search data is pretty tricky for making good inferences, but that shouldn&rsquo;t keep us from trying!</p>
 
@@ -410,7 +410,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
   <entry>
     <title type="html"><![CDATA[Do inflation expectations have an effect on Obama's re-election prospects?]]></title>
     <link href="http://jmrphy.github.io/blog/2012/09/15/do-inflation-expectations-have-an-effect-on-obamas-re-election-prospects/"/>
-    <updated>2012-09-15T17:30:35-04:00</updated>
+    <updated>2012-09-15T22:30:35+01:00</updated>
     <id>http://jmrphy.github.io/blog/2012/09/15/do-inflation-expectations-have-an-effect-on-obamas-re-election-prospects</id>
     <content type="html"><![CDATA[<p><a href="http://redonkulusblog.blogspot.com/2012/06/could-fed-save-obama.html">Redonkulus Blog thinks so</a> based on some time-series data. But I was skeptical about this conclusions because I have just enough experience with time series to know that these sorts of inferences are really tricky. After checking out the data, I don&rsquo;t think there is a systematic relationship between inflation expectations and Obama&rsquo;s re-election prospects. For an overview of the measures, just visit the link above&hellip; I only want to share some analyses and review what&rsquo;s methodologically at stake here.</p>
 
@@ -493,9 +493,9 @@ scatterplot(D.Obamaclose  D.inflex)</p>
   
   <entry>
     <title type="html"><![CDATA[Is there really a school-to-prison pipeline?]]></title>
-    <link href="http://jmrphy.github.io/blog/2012/06/09/67/"/>
-    <updated>2012-06-09T22:00:24-04:00</updated>
-    <id>http://jmrphy.github.io/blog/2012/06/09/67</id>
+    <link href="http://jmrphy.github.io/blog/2012/06/10/67/"/>
+    <updated>2012-06-10T03:00:24+01:00</updated>
+    <id>http://jmrphy.github.io/blog/2012/06/10/67</id>
     <content type="html"><![CDATA[<p><strong>1. Can we really say there is a school-to-prison pipeline? And if so, what&rsquo;s &ldquo;pumping&rdquo; it?</strong></p>
 
 <p>The notion of a <a href="http://en.wikipedia.org/wiki/School-to-prison_pipeline">school-to-prison pipeline</a> is increasingly popular in the discourse of a wide coalition of U.S. activists fighting mass incarceration and defending public education. The concept is invoked by groups such as the <a href="http://en.wikipedia.org/wiki/American_Civil_Liberties_Union">American Civil Liberties Union</a>, the Justice Policy Center, and the <a href="http://en.wikipedia.org/wiki/New_York_Civil_Liberties_Union">New York Civil Liberties Union</a> (NYCLU). Here in Pennsylvania, <a href="http://decarceratepa.info/">DecarceratePA</a> and friends in Occupy Philly invoke this image especially in protest of Governor Corbett&rsquo;s budget priorities, arguing that state spending favors the prison system at the cost of public education.</p>
