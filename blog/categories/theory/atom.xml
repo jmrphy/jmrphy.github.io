@@ -4,7 +4,11 @@
   <title><![CDATA[Category: theory | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/theory/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
+<<<<<<< HEAD
   <updated>2013-11-03T17:17:22+00:00</updated>
+=======
+  <updated>2013-11-14T20:20:38+00:00</updated>
+>>>>>>> a7f645522a6a78aa423455186d1d4de6d44370ee
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -14,7 +18,11 @@
 
   
   <entry>
+<<<<<<< HEAD
     <title type="html"><![CDATA[A Concept of Political Validity in Quantitative Social Science]]></title>
+=======
+    <title type="html"><![CDATA[A concept of political validity in quantitative social science]]></title>
+>>>>>>> a7f645522a6a78aa423455186d1d4de6d44370ee
     <link href="http://jmrphy.github.io/blog/2013/11/03/a-concept-of-political-validity-in-quantitative-social-science/"/>
     <updated>2013-11-03T17:12:00+00:00</updated>
     <id>http://jmrphy.github.io/blog/2013/11/03/a-concept-of-political-validity-in-quantitative-social-science</id>
@@ -28,6 +36,7 @@
 
 <p>Fortunately, for those of us who take seriously the revolutionary political agenda implied by the necessity of the scientific method, it is not at all the case that we are simply awash with hopelessly and uselessly prejudiced data. Bourgeois data cannot help but accidentally shed light on aspects of the social system it never had any interest in and would have preferred to omit. And it is these aspects to which we must devote our attention if we are to glean from biased data the stories which are most important for correcting the data’s institutional biases. I will call <em>epiphanic data</em> those datasets which emerge from transforming, subsetting, modeling, and otherwise manipulating bourgeois data in order to glean from it radical, anti-institutional insights. It might be objected that if the institutions which sponsor data collection so contaminate data with political bias, then what allows us to think we can glean non-biased conclusions from it? In that voice which positivists use to insinuate that critical theorists are merely conspiracy theorists with paranoiac worldviews: “Why is it not the case that this data is doomed to reproduce the status quo, if the data-collecting instituions are so politically perverse?” There are a few reasons why even the most bourgeois data can be used for anti-bourgeis, epiphanic social science.</p>
 
+<<<<<<< HEAD
 <p>The drive for short-term profit incentivizes institutions and individuals to collect dangerously more data than is ideal for the perpetuation of the status quo, at the risk of revealing contradictions which indict the system as a whole.</p>
 
 <p>Those groups funding data collection in one area are often unaware and, in any event, politically unconcerned with data collected in another area. Of course, they are politically aware of issues such as general conflicts of bureaucratic “turf” but certainly not in the long-term, revolutionary political dimensions under consideration here.</p>
@@ -39,6 +48,11 @@
 <p>At the same time, phenomena such as racism, colonialism and patriarchy have, for a very long time, artifically depressed literacy, education, and civil rights to specific groups, suppressing demand for a really true, popular social science which would dispel the most vicious falsities and generate more legitimate equilibria. So long as the less privileged groups could not effectivley demand true social science, bourgeois institutions felt safe to collect data to their cold heart’s content.</p>
 
 <p>But today, decolonization movements, civil rights movements, feminist movements, various democratic uprisings, and the rise of mass education as well as the internet, have all lead to a huge increase in the aggregate demand for precisely this kind of social science. Witness the rise of the “data visualizer”, that not-quite-data-scientist internet persona who specializes in fashionable data-intensive infographics for mass distribution on the web. Such a persona is merely an inane example of how millions of people around the world would be increasingly amenable to a popular, emancipatory social science.</p>
+=======
+<p>The drive for short-term profit incentivizes institutions and individuals to collect dangerously more data than is ideal for the perpetuation of the status quo, at the risk of revealing contradictions which indict the system as a whole. Those groups funding data collection in one area are often unaware and, in any event, politically unconcerned with data collected in another area. Of course, they are politically aware of issues such as general conflicts of bureaucratic “turf” but certainly not in the long-term, revolutionary political dimensions under consideration here. Bourgeois data collection is complacent also because the division of academic labor is so developed and intensely enforced that status quo institutions don’t really have to worry about anyone discovering relationships <em>across many interdisciplinary datasets</em>, even though such datasets are widely and freely available. Bourgeois institutions have been emboldened by a severe undersupply of revolutionaries in quantitative social science. This has permitted data-collectiong institutions a great deal of complacency on this point. A sudden exogenous increase in radical social scientists could quickly seize on bourgeois data and extract from it extremely damning indictments of the status quo, which from a technical perspective would be almost childishly simple but have never yet been performed because the institutional biases are such that these findings are not rewarded. At the same time, phenomena such as racism, colonialism and patriarchy have, for a very long time, artifically depressed literacy, education, and civil rights to specific groups, suppressing demand for a really true, popular social science which would dispel the most vicious falsities and generate more legitimate equilibria. So long as the less privileged groups could not effectivley demand true social science, bourgeois institutions felt safe to collect data to their cold heart’s content.</p>
+
+<p>But today, decolonization, civil rights movements, feminist movements, various democratic uprisings, and the rise of mass education as well as the internet, have all lead to a huge increase in the aggregate demand for precisely this kind of social science. Witness the rise of the “data visualizer”, that not-quite-data-scientist internet persona who specializes in fashionable data-intensive infographics for mass distribution on the web. Such a persona is merely an inane example of how millions of people around the world would be increasingly amenable to a popular, emancipatory social science.</p>
+>>>>>>> a7f645522a6a78aa423455186d1d4de6d44370ee
 
 <p>In summary, for those who wish to read between the lines of bourgeois data, there always exists epiphanic data in the simple will to read it differently, a parallax data which promises a wide world of revolutionary intellectual exploration. Unfortunately, this world of data is currently available only to those few of us who have been given the unequally distributed privileges required to mine it <em>and</em> a sufficiently youthful spirit to still <em>want to</em>. But a mass defection of radical young social scientists from currently privileged research agendas toward anti-institutional perspectives would open a large range of research which need not be technically sophisticated to quickly produce huge increases in both the overall truth quotient of social science and its overall effectiveness in radical egalitarian political change.</p>
 ]]></content>
