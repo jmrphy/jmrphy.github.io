@@ -1,0 +1,17 @@
+---
+author: Justin Murphy
+comments: false
+date: 2013-02-16 18:10:32+00:00
+layout: post
+slug: the-vertigo-of-social-mobility
+title: The vertigo of social mobility
+wordpress\_id: 400
+categories:
+- theory
+---
+
+Institutions lure you by flattering you, in a world where it is nearly impossible to find recognition outside of them; you begin to see yourself only in institutions that pre-exist you and over which you exercise no influence. If this is perfectly internalized, then you get typical neuroses, mid-life crises, etc. Alternatively, if it's not perfectly internalized, then you get perpetual, mini crises up front; you perpetually realize you're over-worked and over-working on things that are somehow sterilized in advance so as to make sure you cannot exercise freedom over them and you also realize that no matter how hard you work you will not overcome this impotence. The mythology of hard work is, for this reason, indispensable for the status quo; it's one of the only things that keeps people from realizing that they simply can't win, that nobody can win like that.
+
+Furthermore, growing dependent on such an institution for the most essential and elemental psychological needs is a most deadly vulnerability because, when one steps back from the institution for one's own freedom, to the exact degree one is accustomed to the flattery of that institution, one will feel stupid and worthless and suffer all kinds of the most pathetic problems and embarrassments in trying to step back. This is why the businessman in mid-life crisis is one of the most pathetic figures. However, every downturn of self-esteem that comes from such a precarious and self-betraying identification with an institution, tends to produce an upturn in at least one thing: economic consumption. For, the one thing the institutions will give you is money. And they'll give it to you precisely to the degree you're capable of doing something intense outside of an institution; nothing gets a higher price than that and intellectual history is replete with examples. When the life of the mind faulters and there is money in the bank, an almost automatic transference of energy takes place in which the mind fixates on some new thing to buy. Most important in this respect are upper-class goods such as nice clothing and nice housing. "Why am I so stressed and neurotic?" they ask themselves. "It's because I don't have the proper materials for such an important life." 
+
+Because money is the only thing the institutions ultimately offer you, there is an overwhelming tendency to spend it upwards so to speak--so as to alleviate the stresses incurred in earning it. This point is perhaps banal, but the less observed point here is not just the material compensation of purchased pleasures for working stress; it's that the things purchased actually come to convince people of the legitimacy of the social distribution of resources. "I need a nice sunny loft apartment all to myself because I need to focus and that's when I'm most creative, because I am an academic." In fact, the exact opposite is the truth: I need a nice sunny loft apartment precisely because I'm not an academic, so that in trying to be one for money I get so stressed and distracted I can't even do it how most people live, so I have to spend this money on a new apartment, etc. Then, lo and behold, all of the material and psychological vertigo of upward mobility comes along. That vertigo is real, it is the \_real movement\_ as the Marxists like to say, of being distributed.

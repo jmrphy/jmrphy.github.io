@@ -1,0 +1,18 @@
+---
+author: Justin Murphy
+comments: false
+date: 2012-07-30 21:24:21+00:00
+layout: post
+slug: '28360475868'
+title: '#9: Volume, diameter, density, ideology'
+wordpress\_id: 69
+categories:
+- theory
+---
+
+The diagrams of Figures 3 and 4 each capture five things characterized by three sources (input arrows) and three sinks (an original and two tangential splits); one thing with four sources and four sinks; and one thing with two sources and two sinks. Here, \_volume\_ is equal to the \_diameter\_of the thing, and \_density\_ is equal to the number of plugs (sources/sinks). The mass of an ensemble is then equal to its volume multiplied by its density. \_A priori_, there has been no reason for modeling purposes to vary the the theoretical diameter of the particular energetic circles constituting thinghoods because, \_ceteris paribus_, every thing has equal diameter. The volume of things increases only when they enter into ensembles (either material connections or conceptual generalities). Thus, the volume of an ensemble (diagramatically, the sum of all diameters) is equal to the number of things that compose it, and the density of an ensemble is equal to all of the plugs uniting its things. This also implies that any thing whatsoever will have a variable volume and density depending on how the ensembles are distinguished, that is, how they are named. The difficulty is that names, as things, are no less subject to these forces than any other things. This will be the essence of what the Marxist tradition knows as \_ideology\_ or \_false consciousness.\_
+
+
+
+
+Thus, the name-things displayed in Figure 4 were chosen for merely illustrative purposes as a rough approximation of an ideological conception of things that has become almost universal in the history of the West. Humans are conceived as being minor, recently evolved creatures on the periphery of a core ensemble known more or less as nature. The world is a thing that humans made as a concept that encompasses the whole ensemble of known things, but they did not make it any way they pleased. They made it in the only way that was evolutionarily feasible, and the only way that has ever been evolutionarily permitted to word-things, i.e. as having high and even extraordinary volumes (diameter) but very low density.

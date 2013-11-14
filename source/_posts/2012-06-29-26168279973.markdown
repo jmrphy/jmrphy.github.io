@@ -1,0 +1,27 @@
+---
+author: Justin Murphy
+comments: false
+date: 2012-06-29 22:12:00+00:00
+layout: post
+slug: '26168279973'
+title: '#4: Natural selection, random mutation, the material world'
+categories:
+- theory
+---
+
+The logic of _natural selection \_given \_random mutuations_ of ensembles, explains the existence and extinction of ensembles over time. When we conceptualize the circuitry of thinghood according to electrical engineering, we court the error of thinking that energy is something manipulated by the menu of options known to the electrical engineer. Just as Darwin illustrated the theoretical gains to be had by dispensing with God as the designer of everything, we should, for the same reasons, theorize energy as subject to “random mutations.” We will account for the evolution of things by showing that at any point in time, those ensembles that succeed in existing are simply the the random energetic mutations which happen to thrive given the conditions in which they emerge.
+
+
+
+
+Thus, let us consider a simple model of the natural, “material” world. Things are connected to other things in an eco-system of consistencies—a river links to an ocean from which evaporated water links to a sky of clouds from which rain produces the river, and so on—in a more or less stable, circular configuration that perpetuates itself. If the stability of an ensemble is inherently centripetal insofar as it is defined by perpetual orbit around a center of gravity, the notion of random mutation implies a corresponding centrifugal tendency. More rigorously, we should say that existence implies what is known as centripetal force, while change (_metabole_) implies what is known as centrifugal force. Indeed, the Greek term _metabolismos_ means “outthrow.” The world is simply an ensemble of diverse things characterized by a more or less “hard core” of  well-connected and re-enforcing things nonetheless constantly spinning energy “outward” in random mutation. In the diagram below, the right-most thing in the ensemble represents a random mutation.
+
+
+
+
+![][image-1]
+
+
+The fate of the random mutation, whether it will be permitted to exist (persist), is soley a function of whether or not it thrives given that which already exists. The integration of a random mutation into a thing that exists over time is thus sheer subordination of a new part to the whole. If a random mutation does not happen to fulfill the strict conditions of what the currently existing ensemble happens to permit, it simply goes away. It goes extinct. We say natural selection implies the subordination of the new part to the whole because mutual-exclusivity of the conditions for existence between a random mutation and the ensemble from which it emerges seems to never result in the larger ensemble going extinct. In any event, the law of the conservation of energy does not imply a law concerning the conservation of things.
+
+[image-1]:	http://media.tumblr.com/tumblr_m6efp2tlmh1qz9517.png

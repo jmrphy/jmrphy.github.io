@@ -1,0 +1,28 @@
+---
+author: Justin Murphy
+comments: false
+date: 2012-07-07 00:29:01+00:00
+layout: post
+slug: '26663269622'
+title: '#8: Mass, force, acceleration, power'
+wordpress\_id: 76
+categories:
+- theory
+---
+
+If we take at their word those who urge interdisciplinarity, there is no reason to stop before even the venerable theory of gravitation—just another partial angle of aristocratic claptrap on the true theory of things.
+
+
+
+
+Newton’s second law suggests that gravitational force equals the product of a body’s mass and its acceleration (F=ma). This implies that any two bodies are attracted to each other by the same force (the gravitational constant), but that the smaller object will accelerate toward the large object much faster than the larger object, why the apple falls toward the Earth rather than vice-versa.
+
+
+
+
+The vocabularies of “random” mutation and “natural” selection incorrectly suggest an equally cosmic indifference at every stage of an evolutionary process. The indifferent cosmos is constantly generating difference, sometimes to integrate it (and thus be indifferent with respect to it), sometimes to be fundamentally altered by it. In other words, things by nature are constantly transcending themselves in random mutation, but each particular mutation has a relationship to the whole population analogous to what one planet in orbit has to the whole population of bodies in space. Specifically, from within any stage of existence, that which exists, _ceteris paribus_, has a greater _mass_ than new, random mutations.
+
+
+
+
+In Figures 3 and 4, it is easy to see how the present framework can capture relationships of mass, force, and acceleration on the same plane as evolutionary development. The essential point is that in each case it is a matter of relatively weaker things under the pressure of relatively stronger things. Specifically, random mutations of energy are to any stably existing ensemble what an apple is to the Earth, a small thing made to accelerate faster than a larger thing by virtue of a difference in mass. But “small” and “large” are only metaphors, just as “evolutionary fitness” and physical “force” are metaphors. In each case, what is at stake is nothing less than what philosophy and the social sciences will call _power_.

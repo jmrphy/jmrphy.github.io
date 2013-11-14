@@ -1,0 +1,32 @@
+---
+author: Justin Murphy
+comments: false
+date: 2011-01-30 21:35:00+00:00
+layout: post
+slug: '3018373241'
+title: Does Obama really care less than Bush about climate change?
+wordpress\_id: 123
+categories:
+- theory
+- social science
+---
+
+Suzanne Goldenberg of the _Guardian_ reports a graph, apparently by [Matthew Hope][1] of the University of Bristol, to illustrate the claim that Obama is [less interested in climate change than Bush][2]. This comes on the heels of several critics who point out that Obama did not mention climate change once in his past State of the Union address. The graph displays aggregate mentions of "climate change," "environnment," and "global warming."
+
+
+
+
+[![][image-1]][3]
+
+
+
+
+However, as Ben Jervey of _Good_ points out, Goldenberg's inference from her analysis [is wrong][4]. As Jervey suggests, Obama's lack of interest in "climate change" is due simply to a shift in rhetorical strategy, as Obama has chosen to frame the problems of climate change as an issue of "clean energy." An analysis similar to Goldenberg's provides some compelling evidence for the latter view. Below, I'm posting a graph comparable to Goldenberg's but with mentions of "energy" rather than "climate change," "environment," and "global warming." As graphics should, this largely speaks for itself:![][image-2]
+
+[1]:	http://www.bris.ac.uk/spais/people/person/148552
+[2]:	http://www.guardian.co.uk/environment/2011/jan/26/climate-change-obama-bush
+[3]:	http://www.guardian.co.uk/environment/2011/jan/26/climate-change-obama-bush
+[4]:	http://www.guardian.co.uk/environment/2011/jan/26/climate-change-obama-bush
+
+[image-1]:	http://media.tumblr.com/tumblr_lfutfsoliB1qz9517.jpg
+[image-2]:	http://media.tumblr.com/tumblr_lfuudeGs1v1qz9517.png

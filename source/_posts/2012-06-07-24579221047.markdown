@@ -1,0 +1,38 @@
+---
+author: Justin Murphy
+comments: false
+date: 2012-06-07 01:35:00+00:00
+layout: post
+slug: '24579221047'
+title: '#1: Energy, line segment, thing, circuit'
+wordpress\_id: 83
+categories:
+- theory
+---
+
+If we try to work from the most basic and uncontroversial terms, we might call by the name of _energy_ (ἐνέργεια, “activity, operation”**) t**hat universal polymorphous lust that constitutes _things_. The universe is undeniably constituted and constituting, operating, and energy seems to be the best available term that accounts for it as a whole.
+
+
+
+
+The term “energy” is not itself a thing or thing-in-itself (_noumenon_) because, according to classical physics, it is only indirectly observable, it exists only theoretically, abstractly deduced from observation. Because energy is also classically understood as a physical system's capacity to do work on another system, it seems much like the _line segment_ in traditional Euclidean geometry. Like energy, the line is not a thing-in-itself, but a purely theoretical abstraction defined by Euclid as “breathless length.” A line segment is defined as a line bound by two endpoints, just as energy transfering between two systems similarly traverses a sort of breathless length from one point to another.
+
+
+
+
+(Like all thinking that issues from a particular configuration of things rather than the theory of all things, these disciplines of knowledge are only partial angles in partial registers the partiality of which is specifically a function of the unquestioned _things_ that are the condition for their theoretical development. This is to be explained later, but its mention in advance is perhaps necessary to assuage the anxiety of any institutionalized thought which, also a function of things rather than necessary truths, will be inclined to dismiss the present exposition as naïve or childish. Of course, it is both, but for good reasons.)
+
+
+
+
+Energy within a system constitutes a _thing_. If there was no energy in a system, it would be _no-thing_. This is illustrated quite nicely by the philosophers of electricity, who argue that line means _circuit_, or in other words, a closed loop. Thus, we might reasonably define **things** as closed loops of variable energy. Diagrammatically, this implies a line segment that is curved rather than straight, and which loops back into itself.
+
+
+
+
+![][image-1]
+
+
+This definition of the thing presents a concise model of the most basic and distinguishing characteristic of thinghood, that a thing _is_, that it exists, that it sustains a certain circulation of energy in a more or less stable form for whatever period of time.
+
+[image-1]:	http://media.tumblr.com/tumblr_m583wx9ZC51qz9517.png

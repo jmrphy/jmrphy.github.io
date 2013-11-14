@@ -1,0 +1,12 @@
+---
+layout: post
+title: "The cleavage between spatial and non-spatial labor"
+date: 2012-01-11 20:00
+comments: false
+categories:
+- theory
+---
+
+The difference between rich and poor is perhaps not as significant, operationally, as the difference between those whose work is relative to a particular space and those whose work is not relative to a particular space. This distinction is very close to the more popular distinction between material and immaterial labor, but clearly it is not exactly the same. The cleavage between spatial and non-spatial labor emerges in the realization that really it would be quite adequate if everyone could simply "occupy" everything according to the space of their labor. The final hour would consist in a voluntary, collective disavowal and disembodiment of any idea, norm, or habit that mediates the direct material and practical relationship of any individual and the spaces in which they do the labor of their daily lives. 
+
+The polemical, rhetorical distinction between the 99% and the 1% is—as everyone knows—only a loose approximation, but what exactly does it approximate? Perhaps it points toward the distinction between the overwhelming majority of those who *labor in space* and those who do not. The financiers at the New York Stock Exchange could go ahead and "occupy" their workspaces on Wall Street, and we should affirm their right to do so. The difference would be negligible because Wall Street effectively already owns us; whether the workers of Wall Street own the spaces of Wall Street would have little relative effect. But those who have no capital at all would obviously benefit the most by taking the space and material structures that are owned and controlled by others. Billionaires who own several mansions and private planes can keep them, and they can even feel free to “occupy” the boardrooms they already occupy. Let them have little communes for all we care, their orders will fall on deaf ears because we wouldn't have to tolerate anything but cooperation. When everything is occupied, all orders transmitted from one space to another, down the traditional hierarchies, will fall on deaf ears as those at the bottom have enough resources to choose mutual cooperation rather than obedience to orders.

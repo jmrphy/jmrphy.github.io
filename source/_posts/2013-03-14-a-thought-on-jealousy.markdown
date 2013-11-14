@@ -1,0 +1,17 @@
+---
+author: Justin Murphy
+comments: false
+date: 2013-03-14 15:10:04+00:00
+layout: post
+slug: a-thought-on-jealousy
+title: A thought on jealousy
+wordpress\_id: 466
+categories:
+- theory
+---
+
+When one person is jealous of another, that jealousy can be oppressive for the other, of course, but it can also be perversely comforting: Jealousy _is_ flattering. And in the most dangerous cases, rather than balance each other, the oppressiveness and the comfort fuel each other. If the oppression of jealousy is intolerable and even debilitating, the comfort that is supplied by its flattering component can begin to feel all the more needed. This perverse need or desire for the flattering insecurity of the other can lead the coveted person to continue in behaviors that effectively encourage the covetousness under which they are oppressed, rather than simply confront the jealous person and defuse these obviously unhealthy dynamics. In fact, this dynamic is so dangerous because of its final step: this process tends independently to _create_ and _drive_ jealousy because the person who is oppressed but unable to speak about it makes the jealous person fear—this time \_rightfully\_—that the other is hiding something. And, to boot, because there is a flattering component in jealousy, the jealous person is unfortunately and unconsciously encouraged to maintain their jealousy insofar as they observe how the other takes solace in it, however perverse and subtle that solace may be.
+
+By starting this illustration with the jealousy of a jealous person, it might seem that I have set out to describe the perverse effects of jealousy. Although this is true, it is far too easy as it simply flatters our prejudices against a naive conception of the jealous persona, and would merely encourage the scapegoating of individuals for what are inherently social and political problems. The most radical implication of the process I'm describing has not so much to do with the effects of jealous people, but the conditions for the very possibility of jealousy itself. That is, if one person is sufficiently oppressed by even the perception of someone else's insecure covetousness, or if the projection of a jealous other is ever simply a defensive mechanism for pushing one's own fears and insecurities onto an other, then at work here could very well be a very base-level mechanism for the possibility and _production_ of jealousy in the first place.
+
+For what is most interesting about the process discussed above is that, strictly speaking, it does not require the original jealous person to be jealous. The jealous person might not even be jealous or their jealousy could be quite mild and they could be quite willing to change if confronted, but the process could still launch from understandably defensive strategies on the part of the other seeking only to deal with their own essential and perhaps even primordial insecurities. Still, this process would tend to produce real jealousy even if there was none to begin with.
