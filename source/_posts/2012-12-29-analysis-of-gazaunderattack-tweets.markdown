@@ -40,21 +40,21 @@ Most frequently tweeted links.[![links][image-5]][8]
 
 Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.
 
-\` r 
-\`
-x\<-read.csv("tweets\_\#gazaunderattack.csv", header=FALSE, stringsAsFactors=FALSE)
-x$username\<-x$V2
-x$text\<-x$V5
+``` r 
+x<-read.csv("tweets_#gazaunderattack.csv", header=FALSE, stringsAsFactors=FALSE)
+x$username<-x$V2
+x$text<-x$V5
 
-###### \#\################################\#\#
-#### Nice Time-Series Plot
-###### \#\################################\#\#
+#####################################
+#### Nice Time-Series Plot ##########
+#####################################
 library(ggplot2)
-x$date \<- strptime(x$V4, "%a, %d %b %Y %H:%M:%S %z", tz = "EST")
-x$date \<- as.POSIXct(x$date, tz = "EST")
-timeseries\<-ggplot(data=x, aes(x=date)) + geom\_bar(aes(fill=..count..), binwidth=60\*30) + theme\_bw() + ylab("# of Tweets") + xlab("Time")
+x$date<-strptime(x$V4, "%a, %d %b %Y %H:%M:%S %z", tz = "EST")
+x$date<-as.POSIXct(x$date, tz = "EST")
+timeseries<-ggplot(data=x, aes(x=date)) + geom\_bar(aes(fill=..count..), binwidth=60*30) + theme_bw() + ylab("# of Tweets") + xlab("Time")
 timeseries
 ggsave(file="timeseries.png")
+```
 
 ###### \#\################################\#\#
 #### Nice Plot of Frequent Tweeters

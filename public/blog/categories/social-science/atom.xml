@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-11-17T14:40:14+00:00</updated>
+  <updated>2013-11-19T22:09:00+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -296,24 +296,24 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
 
 <p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
 
-<p>` r
-`
+<p>``` r
 x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
 x$username&lt;-x$V2
 x$text&lt;-x$V5</p>
 
-<h6>##################################\</h6>
+<h6>#</h6>
 
 <h4>Nice Time-Series Plot</h4>
 
-<h6>##################################\</h6>
+<h6>#</h6>
 
 <p>library(ggplot2)
-x$date &lt;&ndash; strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
-x$date &lt;&ndash; as.POSIXct(x$date, tz = &ldquo;EST&rdquo;)
+x$date&lt;-strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
+x$date&lt;-as.POSIXct(x$date, tz = &ldquo;EST&rdquo;)
 timeseries&lt;-ggplot(data=x, aes(x=date)) + geom_bar(aes(fill=..count..), binwidth=60*30) + theme_bw() + ylab(&ldquo;# of Tweets&rdquo;) + xlab(&ldquo;Time&rdquo;)
 timeseries
-ggsave(file=&ldquo;timeseries.png&rdquo;)</p>
+ggsave(file=&ldquo;timeseries.png&rdquo;)
+```</p>
 
 <h6>##################################\</h6>
 
