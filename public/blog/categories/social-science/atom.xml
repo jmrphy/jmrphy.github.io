@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-11-19T22:15:32+00:00</updated>
+  <updated>2013-11-19T22:23:17+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -296,114 +296,7 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
 
 <p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
 
-<p>{% codeblock lang:r %}</p>
-
-<p>x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
-x$username&lt;-x$V2
-x$text&lt;-x$V5</p>
-
-<h6>#</h6>
-
-<h4>Nice Time-Series Plot</h4>
-
-<h6>#</h6>
-
-<p>library(ggplot2)
-x$date&lt;-strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
-x$date&lt;-as.POSIXct(x$date, tz = &ldquo;EST&rdquo;)
-timeseries&lt;-ggplot(data=x, aes(x=date)) + geom_bar(aes(fill=..count..), binwidth=60*30) + theme_bw() + ylab(&ldquo;# of Tweets&rdquo;) + xlab(&ldquo;Time&rdquo;)
-timeseries
-ggsave(file=&ldquo;timeseries.png&rdquo;)</p>
-
-<h6>##################################\</h6>
-
-<h4>Nice Plot of Frequent Tweeters</h4>
-
-<h6>##################################\</h6>
-
-<p>library(ggplot2)
-x$username<a href="">x$username==&ldquo;&rdquo;</a>&lt;-NA
-length(unique(x$username)) # see how many unique tweeter accounts in the sample
-counts=table(x$username)
-counts.sort&lt;-sort(counts)
-counts.sort.subset=subset(counts.sort, counts.sort>350) # create a subset of those who tweeted at least 350 times or more
-counts.sort.subset.df&lt;-data.frame(people=unlist(dimnames(counts.sort.subset)),count=unlist(counts.sort.subset)) # makes a funny sort of data frame&hellip;
-counts.sort.subset.df&lt;-data.frame(people=as.factor(counts.sort.subset.df$people),counts=as.numeric(counts.sort.subset.df$count)) # makes a better data frame for ggplot to work with
-ggplot(counts.sort.subset.df, aes(reorder(people,counts),counts)) + xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages&rdquo;)+ geom_bar() + coord_flip() + theme_bw() + opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) + opts(axis.title.y=theme_text(size = 14, angle=90)) # plot nicely ordered counts of tweets by person for people > 5 tggsave(file = &ldquo;tweet_counts.pdf&rdquo;) # export the plot to a PDF file
-ggsave(file = &ldquo;tweet_counts.png&rdquo;)</p>
-
-<h6>####################################\</h6>
-
-<h4>Nice Plot of Frequent Re-Tweeters</h4>
-
-<h6>####################################\</h6>
-
-<p>library(stringr)
-x$text=sapply(x$text,function(row) iconv(row,to=&lsquo;UTF-8&rsquo;)) #remove odd characters
-trim &lt;&ndash; function (x) sub(&lsquo;@&rsquo;,&lsquo;&rsquo;,x) # remove @ symbol from user names
-x$rt=sapply(x$text,function(tweet) trim(str_match(tweet,&ldquo;^RT (@[[:alnum:]_]()*)&rdquo;)<a href="">2</a>)) #extract who has been RT’d
-sum(!is.na(x$rt)) # see how many tweets are retweets
-sum(!is.na(x$rt))/length(x$rt) # the ratio of retweets to tweets
-countRT&lt;-table(x$rt)
-countRT&lt;-sort(countRT)
-countRT.subset=subset(countRT,countRT>1000) # subset those RT’d more than 1000 times
-countRT.subset.df&lt;-data.frame(people=as.factor(unlist(dimnames(countRT.subset))),RT_count=as.numeric(unlist(countRT.subset)))
-ggplot(countRT.subset.df, aes(reorder(people,RT_count),RT_count)) +
- xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages retweeted by others&rdquo;) +
- geom_bar() + coord_flip() + theme_bw() +
- opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))</p>
-
-<h1>plot nicely ordered counts of tweets by person for people > 1000 retweets</h1>
-
-<p>ggsave(file = &ldquo;retweet_counts.png&rdquo;)</p>
-
-<h6>####################################\</h6>
-
-<h4>Nice Plot of RT-Tweet Ratios</h4>
-
-<h6>####################################\</h6>
-
-<p>t&lt;-as.data.frame(table(x$username)) # make table with counts of tweets per person
-rt&lt;-as.data.frame(table(x$rt)) # make table with counts of retweets per person
-t.rt&lt;-merge(t,rt,by=&ldquo;Var1&rdquo;) # combine tweet count and retweet count per person
-t.rt<a href="">&ldquo;ratio&rdquo;</a>&lt;-t.rt$Freq.y / t.rt$Freq.x # creates new col and adds ratio tweet/retweet
-sort.t.rt&lt;-t.rt<a href="">order(t.rt$ratio),</a> # sort it to put names in order by ratio
-sort.t.rt.subset&lt;-subset(sort.t.rt,sort.t.rt$Freq.y>1000) # exclude those with 1000 tweets or less
-sort.t.rt.subset.drop&lt;-droplevels(sort.t.rt.subset) # drop unused levels that got in there somehow&hellip; note that this is already a data frame
-ggplot(sort.t.rt.subset, aes(reorder(Var1,ratio),ratio)) +
- xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Retweets as a ratio of total tweets&rdquo;) +
- geom_bar() + coord_flip() + theme_bw() +
- opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))
-ggsave(file = &ldquo;retweet_ratios.png&rdquo;)</p>
-
-<h6>####################################\</h6>
-
-<h4>Nice Plot of Most Popular Links</h4>
-
-<h6>####################################\</h6>
-
-<p>x$link=sapply(x$text,function(tweet) str_extract(tweet,(&ldquo;http[[:print:]]()+&rdquo;))) # creates new field and extracts the links contained in the tweet
-x$link=sapply(x$text,function(tweet) str_extract(tweet,&ldquo;http[[:print:]](){16}&rdquo;)) # limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
-countlink&lt;-table(x$link) # get frequencies of each link
-countlink&lt;-sort(countlink) # sort them
-barplot(countlink) # plot freqs</p>
-
-<h1>or to use ggplot2, read on&hellip;</h1>
-
-<p>countlink&lt;-data.frame(table(na.omit((x$link))))
-countlink&lt;-subset(countlink,countlink$Freq>300) # exclude those with 300 tweets or less
-ggplot(countlink, aes(reorder(Var1, Freq), Freq)) +
- geom_bar() + coord_flip() + theme_bw() +
- xlab(&ldquo;Link&rdquo;) + ylab(&ldquo;Frequency&rdquo;) +
- opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))
-ggsave(file = &ldquo;links.png&rdquo;)</p>
-
-<p>{% codeblock %}</p>
-
-<p>``</p>
+<p>{% gist 4408882 %}</p>
 ]]></content>
   </entry>
   
