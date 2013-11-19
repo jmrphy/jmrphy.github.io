@@ -41,10 +41,10 @@ Most frequently tweeted links.[![links][image-5]][8]
 Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.
 
 {% codeblock lang:r %}
+
 x<-read.csv("tweets_#gazaunderattack.csv", header=FALSE, stringsAsFactors=FALSE)
 x$username<-x$V2
 x$text<-x$V5
-{% codeblock %}
 
 #####################################
 #### Nice Time-Series Plot ##########
@@ -55,7 +55,7 @@ x$date<-as.POSIXct(x$date, tz = "EST")
 timeseries<-ggplot(data=x, aes(x=date)) + geom\_bar(aes(fill=..count..), binwidth=60*30) + theme_bw() + ylab("# of Tweets") + xlab("Time")
 timeseries
 ggsave(file="timeseries.png")
-```
+
 
 ###### \#\################################\#\#
 #### Nice Plot of Frequent Tweeters
@@ -126,6 +126,8 @@ ggplot(countlink, aes(reorder(Var1, Freq), Freq)) +
  opts(axis.title.x = theme\_text(vjust = -0.5, size = 14)) +
  opts(axis.title.y=theme\_text(size = 14, angle=90))
 ggsave(file = "links.png")
+
+{% codeblock %}
 
 \`\`
 [1]:	https://dl.dropbox.com/u/20498362/tweets_%23gazaunderattack.csv
