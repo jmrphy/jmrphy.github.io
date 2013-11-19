@@ -40,10 +40,11 @@ Most frequently tweeted links.[![links][image-5]][8]
 
 Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.
 
-``` r 
+{% codeblock lang:r %}
 x<-read.csv("tweets_#gazaunderattack.csv", header=FALSE, stringsAsFactors=FALSE)
 x$username<-x$V2
 x$text<-x$V5
+{% codeblock %}
 
 #####################################
 #### Nice Time-Series Plot ##########
