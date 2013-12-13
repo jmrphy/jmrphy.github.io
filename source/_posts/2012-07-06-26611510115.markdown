@@ -5,7 +5,7 @@ date: 2012-07-06 05:08:00+00:00
 layout: post
 slug: '26611510115'
 title: '#6: Maps (ideas as things)'
-wordpress\_id: 78
+wordpress_id: 78
 categories:
 - theory
 ---

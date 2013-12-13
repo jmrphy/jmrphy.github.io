@@ -5,7 +5,7 @@ date: 2012-01-31 18:15:00+00:00
 layout: post
 slug: '16825969225'
 title: Art and bribery
-wordpress\_id: 87
+wordpress_id: 87
 categories:
 - theory
 ---
@@ -40,7 +40,7 @@ A third choice is to go on hunger strike and wait until your either force-fed (y
 
 
 
-The final option is to stand up on one of the tables and suggest that everyone in the restaurant ignore the waiters, ignore the chefs, agree that the restaurant belongs to them, and proceed collectively to do whatever they all wish to do. This last option is the strategy characteristic of what is known as the avant-garde (a useful example for reasons to be elaborated below is the Situationist International and CoBrA, both of which insisted on just going into the kitchen and using what’s there to make new dishes, e.g. \_detournement, \_in order to subvert it according to theoretical, exploratory analyses of how the restaurant functions “normally”).
+The final option is to stand up on one of the tables and suggest that everyone in the restaurant ignore the waiters, ignore the chefs, agree that the restaurant belongs to them, and proceed collectively to do whatever they all wish to do. This last option is the strategy characteristic of what is known as the avant-garde (a useful example for reasons to be elaborated below is the Situationist International and CoBrA, both of which insisted on just going into the kitchen and using what’s there to make new dishes, e.g. _detournement, _in order to subvert it according to theoretical, exploratory analyses of how the restaurant functions “normally”).
 
 
 

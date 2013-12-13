@@ -5,7 +5,7 @@ date: 2013-06-16 18:57:30+00:00
 layout: post
 slug: a-mass-media-theory-of-the-surveillance-state
 title: A mass media theory of the surveillance state
-wordpress\_id: 904
+wordpress_id: 904
 categories:
 - theory
 ---

@@ -5,7 +5,7 @@ date: 2012-07-07 00:29:01+00:00
 layout: post
 slug: '26663269622'
 title: '#8: Mass, force, acceleration, power'
-wordpress\_id: 76
+wordpress_id: 76
 categories:
 - theory
 ---

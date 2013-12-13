@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-11-19T22:49:03+00:00</updated>
+  <updated>2013-12-13T01:45:32+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -47,18 +47,16 @@
 
 <p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
 
-<h3>Get data and create the squared variable</h3>
-
-<p>```
+<p>``` r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
 library(foreign)
-sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
-sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1
-```</p>
+sambanis&lt;-read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
+sambanis$ef1sq&lt;-sambanis$ef1 * sambanis$ef1</p>
 
-<h3>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h3>
+<p>model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 +</p>
 
-<p>```
-model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
+<pre><code>        ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis,
+        family = binomial(link = "probit"))  
+</code></pre>
 
 <p>summary(model)
 ```</p>
@@ -97,11 +95,14 @@ model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Adding the square of ethnic fractionalization</h3>
+<p>``` r Adding the square of ethnic fractionalization
+model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 +</p>
 
-<p>```
-model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))<br/>
-summary(model)
+<pre><code>        ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis,
+        family = binomial(link = "probit"))  
+</code></pre>
+
+<p>summary(model)
 ```</p>
 
 <pre><code>## Call:
@@ -140,11 +141,14 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Using Sambanis alternative coding of civil war</h3>
+<p>``` r Using Sambanis alternative coding of civil war
+model &lt;&ndash; glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 +</p>
 
-<p>```
-model &lt;&ndash; glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))<br/>
-summary(model)
+<pre><code>        ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1,
+        data = sambanis, family = binomial(link = "probit"))  
+</code></pre>
+
+<p>summary(model)
 ```</p>
 
 <pre><code>## Call:
@@ -183,12 +187,14 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Using Fearon and Laitin 2003 coding of civil war</h3>
+<p>``` r Using Fearon and Laitin 2003 coding of civil war
+model &lt;&ndash; glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 +</p>
 
-<p>```
-model &lt;&ndash; glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +
-lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
-summary(model)
+<pre><code>        ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1,
+        data = sambanis, family = binomial(link = "probit"))
+</code></pre>
+
+<p>summary(model)
 ```</p>
 
 <pre><code>## Call:
@@ -227,13 +233,10 @@ summary(model)
 ## Number of Fisher Scoring iterations: 9
 </code></pre>
 
-<h3>Only ethnic fractionalization</h3>
-
-<p>```
-model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
-
-<p>summary(model)
-```</p>
+<p><code>r Only ethnic fractionalization
+model &lt;- glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
+summary(model)
+</code></p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
@@ -276,7 +279,7 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
 
 <p>There are 269,158 tweets. These tweets are authored by 79,923 unique users. Of all the tweets, .62 are retweets.</p>
 
-<p>This first graph plots the frequency of #gazaunderattack tweets in 30-minute intervals between November 17th and November 21st. I _believe__ _this is <em>all</em> of the tweets containing that hashtag within this period. I know the Twitter Search API is subject to weird filters and restrictions, but I believe the technique I used here pages through each and every tweet available within the available time period.</p>
+<p>This first graph plots the frequency of #gazaunderattack tweets in 30-minute intervals between November 17th and November 21st. I <em>believe</em> this is <em>all</em> of the tweets containing that hashtag within this period. I know the Twitter Search API is subject to weird filters and restrictions, but I believe the technique I used here pages through each and every tweet available within the available time period.</p>
 
 <p><a href="http://justinmurphy.files.wordpress.com/2012/12/timeseries.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/timeseries.png" alt="timeseries" /></a></p>
 
@@ -296,7 +299,7 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
 
 <p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
 
-<p>``` r</p>
+<p>``` r Analyze Tweets scraped with Python</p>
 
 <p>x&lt;-read.csv(&ldquo;tweets_#gazaunderattack.csv&rdquo;, header=FALSE, stringsAsFactors=FALSE)
 x$username&lt;-x$V2
@@ -309,8 +312,8 @@ x$text&lt;-x$V5</p>
 <h6>#</h6>
 
 <p>library(ggplot2)
-x$date&lt;-strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
-x$date&lt;-as.POSIXct(x$date, tz = &ldquo;EST&rdquo;)
+x$date &lt;&ndash; strptime(x$V4, &ldquo;%a, %d %b %Y %H:%M:%S %z&rdquo;, tz = &ldquo;EST&rdquo;)
+x$date &lt;&ndash; as.POSIXct(x$date, tz = &ldquo;EST&rdquo;)
 timeseries&lt;-ggplot(data=x, aes(x=date)) + geom_bar(aes(fill=..count..), binwidth=60*30) + theme_bw() + ylab(&ldquo;# of Tweets&rdquo;) + xlab(&ldquo;Time&rdquo;)
 timeseries
 ggsave(file=&ldquo;timeseries.png&rdquo;)</p>
@@ -322,7 +325,7 @@ ggsave(file=&ldquo;timeseries.png&rdquo;)</p>
 <h6>#</h6>
 
 <p>library(ggplot2)
-x$username<a href="">x$username==&ldquo;&rdquo;</a>&lt;-NA
+x$username[x$username==&ldquo;&rdquo;]&lt;-NA
 length(unique(x$username)) # see how many unique tweeter accounts in the sample
 counts=table(x$username)
 counts.sort&lt;-sort(counts)
@@ -332,16 +335,16 @@ counts.sort.subset.df&lt;-data.frame(people=as.factor(counts.sort.subset.df$peop
 ggplot(counts.sort.subset.df, aes(reorder(people,counts),counts)) + xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages&rdquo;)+ geom_bar() + coord_flip() + theme_bw() + opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) + opts(axis.title.y=theme_text(size = 14, angle=90)) # plot nicely ordered counts of tweets by person for people > 5 tggsave(file = &ldquo;tweet_counts.pdf&rdquo;) # export the plot to a PDF file
 ggsave(file = &ldquo;tweet_counts.png&rdquo;)</p>
 
-<h6>####################################\</h6>
+<h6>#</h6>
 
 <h4>Nice Plot of Frequent Re-Tweeters</h4>
 
-<h6>####################################\</h6>
+<h6>#</h6>
 
 <p>library(stringr)
 x$text=sapply(x$text,function(row) iconv(row,to=&lsquo;UTF-8&rsquo;)) #remove odd characters
 trim &lt;&ndash; function (x) sub(&lsquo;@&rsquo;,&lsquo;&rsquo;,x) # remove @ symbol from user names
-x$rt=sapply(x$text,function(tweet) trim(str_match(tweet,&ldquo;^RT (@[[:alnum:]_]()*)&rdquo;)<a href="">2</a>)) #extract who has been RT’d
+x$rt=sapply(x$text,function(tweet) trim(str_match(tweet,&ldquo;^RT (@[[:alnum:]_]*)&rdquo;)<a href="http://bommaritollc.com/2011/02/26/archiving-tweets-with-python/">2</a>)) #extract who has been RT’d
 sum(!is.na(x$rt)) # see how many tweets are retweets
 sum(!is.na(x$rt))/length(x$rt) # the ratio of retweets to tweets
 countRT&lt;-table(x$rt)
@@ -352,23 +355,21 @@ ggplot(countRT.subset.df, aes(reorder(people,RT_count),RT_count)) +
  xlab(&ldquo;Author&rdquo;) + ylab(&ldquo;Number of messages retweeted by others&rdquo;) +
  geom_bar() + coord_flip() + theme_bw() +
  opts(axis.title.x = theme_text(vjust = -0.5, size = 14)) +
- opts(axis.title.y=theme_text(size = 14, angle=90))</p>
+ opts(axis.title.y=theme_text(size = 14, angle=90))
+ # plot nicely ordered counts of tweets by person for people > 1000 retweets
+ggsave(file = &ldquo;retweet_counts.png&rdquo;)</p>
 
-<h1>plot nicely ordered counts of tweets by person for people > 1000 retweets</h1>
-
-<p>ggsave(file = &ldquo;retweet_counts.png&rdquo;)</p>
-
-<h6>####################################\</h6>
+<h6>#</h6>
 
 <h4>Nice Plot of RT-Tweet Ratios</h4>
 
-<h6>####################################\</h6>
+<h6>#</h6>
 
 <p>t&lt;-as.data.frame(table(x$username)) # make table with counts of tweets per person
 rt&lt;-as.data.frame(table(x$rt)) # make table with counts of retweets per person
 t.rt&lt;-merge(t,rt,by=&ldquo;Var1&rdquo;) # combine tweet count and retweet count per person
-t.rt<a href="">&ldquo;ratio&rdquo;</a>&lt;-t.rt$Freq.y / t.rt$Freq.x # creates new col and adds ratio tweet/retweet
-sort.t.rt&lt;-t.rt<a href="">order(t.rt$ratio),</a> # sort it to put names in order by ratio
+t.rt[&ldquo;ratio&rdquo;]&lt;-t.rt$Freq.y / t.rt$Freq.x # creates new col and adds ratio tweet/retweet
+sort.t.rt&lt;-t.rt[order(t.rt$ratio),] # sort it to put names in order by ratio
 sort.t.rt.subset&lt;-subset(sort.t.rt,sort.t.rt$Freq.y>1000) # exclude those with 1000 tweets or less
 sort.t.rt.subset.drop&lt;-droplevels(sort.t.rt.subset) # drop unused levels that got in there somehow&hellip; note that this is already a data frame
 ggplot(sort.t.rt.subset, aes(reorder(Var1,ratio),ratio)) +
@@ -378,14 +379,14 @@ ggplot(sort.t.rt.subset, aes(reorder(Var1,ratio),ratio)) +
  opts(axis.title.y=theme_text(size = 14, angle=90))
 ggsave(file = &ldquo;retweet_ratios.png&rdquo;)</p>
 
-<h6>####################################\</h6>
+<h6>#</h6>
 
 <h4>Nice Plot of Most Popular Links</h4>
 
-<h6>####################################\</h6>
+<h6>#</h6>
 
-<p>x$link=sapply(x$text,function(tweet) str_extract(tweet,(&ldquo;http[[:print:]]()+&rdquo;))) # creates new field and extracts the links contained in the tweet
-x$link=sapply(x$text,function(tweet) str_extract(tweet,&ldquo;http[[:print:]](){16}&rdquo;)) # limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
+<p>x$link=sapply(x$text,function(tweet) str_extract(tweet,(&ldquo;http[[:print:]]+&rdquo;))) # creates new field and extracts the links contained in the tweet
+x$link=sapply(x$text,function(tweet) str_extract(tweet,&ldquo;http[[:print:]]{16}&rdquo;)) # limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
 countlink&lt;-table(x$link) # get frequencies of each link
 countlink&lt;-sort(countlink) # sort them
 barplot(countlink) # plot freqs</p>
@@ -412,7 +413,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
     <id>http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data</id>
     <content type="html"><![CDATA[<p>Political scientists <a href="http://themonkeycage.org/blog/2012/10/25/will-2012-be-a-low-turnout-election-some-evidence-from-google-search-activity/%23comments">Jesse Richman</a> and <a href="http://themonkeycage.org/blog/2012/10/25/google-searches-and-turnout-a-cautionary-tale/">Erik Voeten</a> wonder if Google Search data can help us predict turnout in next month&rsquo;s Presidential election. To summarize, Richman finds that searches for &ldquo;vote&rdquo; in the past two elections predict voter turnout, and that low search volume for &ldquo;vote&rdquo; this year suggests a low turnout election. In response, Voeten shows that controlling for who has come online since 2004 and 2008 explains much of why search volume for &ldquo;vote&rdquo; appears small this year. There are lots of reasons search data is pretty tricky for making good inferences, but that shouldn&rsquo;t keep us from trying!</p>
 
-<p>My thinking is that we can look at the _composition_ of &ldquo;vote&rdquo; searches across elections to see whether this year&rsquo;s vote searches are indicative of greater voter turnout or greater voter demobilization/skepticism.</p>
+<p>My thinking is that we can look at the <em>composition</em> of &ldquo;vote&rdquo; searches across elections to see whether this year&rsquo;s vote searches are indicative of greater voter turnout or greater voter demobilization/skepticism.</p>
 
 <p>For instance, &ldquo;vote&rdquo; searches containing the terms &ldquo;where&rdquo; or &ldquo;when&rdquo; are probably more directly predictive of turning out to vote than the whole set of &ldquo;vote&rdquo; searches&mdash;as they indicate practical planning to turnout. On the other hand, &ldquo;vote&rdquo; searches containing the term &ldquo;why&rdquo; are probably far less predictive of turnout&mdash;and might even predict how many people are thinking &ldquo;why bother?&rdquo; and are considering staying home on election day.</p>
 
@@ -422,7 +423,7 @@ ggsave(file = &ldquo;links.png&rdquo;)</p>
 
 <p><a href="http://justinmurphy.files.wordpress.com/2012/10/whyvotesearches.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/whyvotesearches.png" alt="" /></a>But when we look at voting searches also containing the words &ldquo;where&rdquo; and &ldquo;when&rdquo; (I take the average of vote+where and vote+when as a proportion of the university-science-law index), more people appear to be asking where and when to vote this year than in the past two Presidential elections. The p-value on the difference of means between 2008 and 2012 is .051.</p>
 
-<p><a href="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png" alt="" /></a>Finally, I look at the difference between the why-vote searches and the where/when-vote searches. The gap might be taken as an aggregate measure of how much society is using the web to <em>think about_ the decision to turn out </em>without planning_ to turnout, so that positive values might capture demobilization within vote searches (why bother?) and negative values reflect relatively resolved mobilization. And what we find is that this whole election year shows greater &ldquo;when/where&rdquo; vote searches than &ldquo;why&rdquo; vote searches at the present moment in the timeline but also for the year as a whole. In both of the previous elections there were more &ldquo;thinking&rdquo; searches than &ldquo;planning&rdquo; searches, but this year there have been more planning searches. As in the previous analyses, these are as a proportion of the university-science-law index, and the difference of means for 2008 and 2012 is statistically significant at the 99.9% confidence level.</p>
+<p><a href="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png" alt="" /></a>Finally, I look at the difference between the why-vote searches and the where/when-vote searches. The gap might be taken as an aggregate measure of how much society is using the web to <em>think about</em> the decision to turn out <em>without planning</em> to turnout, so that positive values might capture demobilization within vote searches (why bother?) and negative values reflect relatively resolved mobilization. And what we find is that this whole election year shows greater &ldquo;when/where&rdquo; vote searches than &ldquo;why&rdquo; vote searches at the present moment in the timeline but also for the year as a whole. In both of the previous elections there were more &ldquo;thinking&rdquo; searches than &ldquo;planning&rdquo; searches, but this year there have been more planning searches. As in the previous analyses, these are as a proportion of the university-science-law index, and the difference of means for 2008 and 2012 is statistically significant at the 99.9% confidence level.</p>
 
 <p><a href="http://justinmurphy.files.wordpress.com/2012/10/thinkplangapusl.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/thinkplangapusl.png" alt="" /></a>Arguably, this difference variable perhaps already controls for education or political information because each term reflects a lack of knowledge, so it shouldn&rsquo;t be inflated by less educated/informed people coming online since 2004 and 2008. But the same pattern is evident and statistically significant if we look at this gap as a proportion of all &ldquo;politics&rdquo; search volume or just the raw differences of volume. Obviously, these are back-of-the napkin analyses and these data are plagued by difficulties. But these analyses don&rsquo;t suggest a low-turnout election in 2012. If anything, it looks like the web is registering more vote planning than in previous years.</p>
 

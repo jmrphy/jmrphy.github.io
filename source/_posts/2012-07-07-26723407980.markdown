@@ -5,7 +5,7 @@ date: 2012-07-07 22:46:00+00:00
 layout: post
 slug: '26723407980'
 title: Mark Rothko and the Freedom to Starve (#1)
-wordpress\_id: 75
+wordpress_id: 75
 categories:
 - theory
 ---

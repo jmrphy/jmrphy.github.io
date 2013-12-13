@@ -5,7 +5,7 @@ date: 2011-08-29 06:09:00+00:00
 layout: post
 slug: '9537176228'
 title: About the truth of pop music
-wordpress\_id: 102
+wordpress_id: 102
 categories:
 - theory
 ---
@@ -33,7 +33,7 @@ If Maus is interested in what we might call the _ecstatic_ or _sacred_ truth of 
 
 
 
-\* 
+* 
 
 
 
@@ -56,15 +56,15 @@ Returning home in frenzied inspiration, I awake my computer from its nap and ope
 
 
 
-\_I grabbed some frozen strawberries so I could ice your bruising knees
+_I grabbed some frozen strawberries so I could ice your bruising knees
 But frozen things they all unfreeze and now I taste like….
 All those frozen strawberries I used to chill your bruising knees,
 Hot July ain’t good to me
-I’m pink and black and blue for you.\_ 
+I’m pink and black and blue for you._ 
 
 
 
- \* 
+ * 
 
 
 
@@ -73,7 +73,7 @@ The song is entitled “Bruises.” The song is by a band called Chairlift. Inte
 
 
 
-\* 
+* 
 
 
 
@@ -87,7 +87,7 @@ Today, is the problem for capital not something like the inverse of Genet’s? T
 
 
 
-\* 
+* 
 
 
 
@@ -96,4 +96,4 @@ How does pop music do this and, by way of the heuristic with which the analysis 
 
 
 
-This song is perhaps exceptional, is perhaps the perfect 21st century pop song and thus the ideal song for the iPod Nano commercial, because it does not even allow the listener the traditional object of desire to which pop music traditionally directed our fantasies. Namely, the duo of lovers both seem to love each other and yet they are for completely unknown reasons \_still black and blue . \_The song offers no conflict but nonetheless gets away with the vague impression of lack, a suffering, a completely unknown problem. The only contender in sight is gravity or clumsiness which are perhaps thwarting the poor girl’s handstands. We are forced to affirm either the literality of the handstand problem or else admit that this song is able to create a sense of loss despite the absence of any real problem in the world. Is this not exactly the kind of music that an advertising executive might pray for? Perhaps that is the profane truth of pop music.
+This song is perhaps exceptional, is perhaps the perfect 21st century pop song and thus the ideal song for the iPod Nano commercial, because it does not even allow the listener the traditional object of desire to which pop music traditionally directed our fantasies. Namely, the duo of lovers both seem to love each other and yet they are for completely unknown reasons _still black and blue . _The song offers no conflict but nonetheless gets away with the vague impression of lack, a suffering, a completely unknown problem. The only contender in sight is gravity or clumsiness which are perhaps thwarting the poor girl’s handstands. We are forced to affirm either the literality of the handstand problem or else admit that this song is able to create a sense of loss despite the absence of any real problem in the world. Is this not exactly the kind of music that an advertising executive might pray for? Perhaps that is the profane truth of pop music.

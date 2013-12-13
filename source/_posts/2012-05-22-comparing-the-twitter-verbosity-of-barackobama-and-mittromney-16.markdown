@@ -5,7 +5,7 @@ date: 2012-05-22 09:45:18+00:00
 layout: post
 slug: comparing-the-twitter-verbosity-of-barackobama-and-mittromney-16
 title: Comparing the twitter verbosity of @BarackObama and @MittRomney
-wordpress\_id: 58
+wordpress_id: 58
 categories:
 - social science
 ---

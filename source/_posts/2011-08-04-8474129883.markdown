@@ -5,7 +5,7 @@ date: 2011-08-04 16:17:00+00:00
 layout: post
 slug: '8474129883'
 title: Seven provisional theses on the meaning and future of Mumblecore
-wordpress\_id: 110
+wordpress_id: 110
 categories:
 - theory
 ---

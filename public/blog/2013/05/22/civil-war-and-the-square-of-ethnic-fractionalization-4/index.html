@@ -53,7 +53,7 @@
 
 <section class="aboutme">
   <p>
-    Political scientist at University of Southampton, UK. I'm a generalist and a radical.
+    I'm a political scientist.
   </p>
 </section>
 </nav>
@@ -94,21 +94,24 @@
 
 <p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
 
-<h3>Get data and create the squared variable</h3>
+<figure class='code'><figcaption><span>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>library<span class="p">(</span>foreign<span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">&lt;-</span>read.dta<span class="p">(</span><span class="s">&quot;SambanisJCR2004_replicationdataset.dta&quot;</span><span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">$</span>ef1sq<span class="o">&lt;-</span>sambanis<span class="o">$</span>ef1 <span class="o">*</span> sambanis<span class="o">$</span>ef1
+</span><span class='line'>
+</span><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span>
+</span><span class='line'>          family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-library(foreign)
-sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
-sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1
-&#8220;`</p>
-
-<h3>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h3>
-
-<p>&#8220;`
-model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
-
-<p>summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -144,12 +147,16 @@ model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Adding the square of ethnic fractionalization</h3>
+<figure class='code'><figcaption><span>Adding the square of ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span>
+</span><span class='line'>          ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span>
+</span><span class='line'>          family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))<br/>
-summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -187,12 +194,16 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Using Sambanis alternative coding of civil war</h3>
+<figure class='code'><figcaption><span>Using Sambanis alternative coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstns  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+</span><span class='line'>          data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))<br/>
-summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -230,13 +241,16 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Using Fearon and Laitin 2003 coding of civil war</h3>
+<figure class='code'><figcaption><span>Using Fearon and Laitin 2003 coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warst7b  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+</span><span class='line'>          data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +
-lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
-summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -274,13 +288,12 @@ summary(model)
 ## Number of Fisher Scoring iterations: 9
 </code></pre>
 
-<h3>Only ethnic fractionalization</h3>
+<figure class='code'><figcaption><span>Only ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  ef1 <span class="o">+</span> ef1sq<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
-
-<p>summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 

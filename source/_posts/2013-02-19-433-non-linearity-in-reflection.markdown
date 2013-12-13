@@ -5,7 +5,7 @@ date: 2013-02-19 23:20:32+00:00
 layout: post
 slug: non-linearity-in-reflection
 title: Non-linearity in reflection
-wordpress\_id: 433
+wordpress_id: 433
 categories:
 - theory
 ---

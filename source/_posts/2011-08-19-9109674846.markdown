@@ -5,7 +5,7 @@ date: 2011-08-19 03:56:00+00:00
 layout: post
 slug: '9109674846'
 title: Introductory lecture on aesthetics, religion, and politics
-wordpress\_id: 107
+wordpress_id: 107
 categories:
 - theory
 ---

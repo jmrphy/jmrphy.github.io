@@ -5,7 +5,7 @@ date: 2013-05-22 16:06:22+00:00
 layout: post
 slug: civil-war-and-the-square-of-ethnic-fractionalization-4
 title: Civil war and the square of ethnic fractionalization
-wordpress\_id: 633
+wordpress_id: 633
 categories:
 - social science
 ---
@@ -16,19 +16,17 @@ Below is a replication of Sambanis 2004 where I simply add the square of ethnic 
 
 Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.
 
-### Get data and create the squared variable
-\`\`\`
+``` r Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
 library(foreign)
-sambanis \<- read.dta("SambanisJCR2004\_replicationdataset.dta")
-sambanis$ef1sq \<- sambanis$ef1 \* sambanis$ef1
-\`\`\`
+sambanis<-read.dta("SambanisJCR2004_replicationdataset.dta")
+sambanis$ef1sq<-sambanis$ef1 * sambanis$ef1
 
-### Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)
-\`\`\`
-model \<- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis, family = binomial(link = "probit"))  
-
+model <- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 +
+			ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis,
+			family = binomial(link = "probit"))  
 summary(model)
-\`\`\`
+```
+
 
 	## Call:
 	## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -63,11 +61,15 @@ summary(model)
 	## 
 	## Number of Fisher Scoring iterations: 8
 
-### Adding the square of ethnic fractionalization
-\`\`\`
-model \<- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))  
+
+
+``` r Adding the square of ethnic fractionalization
+model <- glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 +
+			ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis,
+			family = binomial(link = "probit"))  
 summary(model)
-\`\`\`
+```
+
 
 	## Call:
 	## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -104,11 +106,13 @@ summary(model)
 	## 
 	## Number of Fisher Scoring iterations: 8
 
-### Using Sambanis alternative coding of civil war
-\`\`\`
-model \<- glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))  
+
+``` r Using Sambanis alternative coding of civil war
+model <- glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 +
+			ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1,
+			data = sambanis, family = binomial(link = "probit"))  
 summary(model)
-\`\`\`
+```
 
 	## Call:
 	## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -145,12 +149,12 @@ summary(model)
 	## 
 	## Number of Fisher Scoring iterations: 8
 
-### Using Fearon and Laitin 2003 coding of civil war
-\`\`\`
-model \<- glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + 
-lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = "probit"))
+``` r Using Fearon and Laitin 2003 coding of civil war
+model <- glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 +
+			ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1,
+			data = sambanis, family = binomial(link = "probit"))
 summary(model)
-\`\`\`
+```
 
 	## Call:
 	## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -187,12 +191,10 @@ summary(model)
 	## 
 	## Number of Fisher Scoring iterations: 9
 
-### Only ethnic fractionalization
-\`\`\`
-model \<- glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
-
+``` r Only ethnic fractionalization
+model <- glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = "probit"))
 summary(model)
-\`\`\`
+```
 
 	## Call:
 	## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 

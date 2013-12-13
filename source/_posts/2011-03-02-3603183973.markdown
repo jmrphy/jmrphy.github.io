@@ -5,7 +5,7 @@ date: 2011-03-02 18:20:00+00:00
 layout: post
 slug: '3603183973'
 title: Self-immiserative technomadism
-wordpress\_id: 121
+wordpress_id: 121
 categories:
 - theory
 ---

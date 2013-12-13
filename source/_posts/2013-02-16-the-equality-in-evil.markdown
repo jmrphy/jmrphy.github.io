@@ -5,7 +5,7 @@ date: 2013-02-16 18:07:33+00:00
 layout: post
 slug: the-equality-in-evil
 title: The equality in evil
-wordpress\_id: 399
+wordpress_id: 399
 categories:
 - theory
 ---

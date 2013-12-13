@@ -53,7 +53,7 @@
 
 <section class="aboutme">
   <p>
-    Political scientist at University of Southampton, UK. I'm a generalist and a radical.
+    I'm a political scientist.
   </p>
 </section>
 </nav>
@@ -477,21 +477,24 @@
 
 <p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
 
-<h3>Get data and create the squared variable</h3>
+<figure class='code'><figcaption><span>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>library<span class="p">(</span>foreign<span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">&lt;-</span>read.dta<span class="p">(</span><span class="s">&quot;SambanisJCR2004_replicationdataset.dta&quot;</span><span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">$</span>ef1sq<span class="o">&lt;-</span>sambanis<span class="o">$</span>ef1 <span class="o">*</span> sambanis<span class="o">$</span>ef1
+</span><span class='line'>
+</span><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span>
+</span><span class='line'>          family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-library(foreign)
-sambanis &lt;&ndash; read.dta(&ldquo;SambanisJCR2004_replicationdataset.dta&rdquo;)
-sambanis$ef1sq &lt;&ndash; sambanis$ef1 * sambanis$ef1
-&#8220;`</p>
-
-<h3>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</h3>
-
-<p>&#8220;`
-model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
-
-<p>summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -527,12 +530,16 @@ model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Adding the square of ethnic fractionalization</h3>
+<figure class='code'><figcaption><span>Adding the square of ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span>
+</span><span class='line'>          ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span>
+</span><span class='line'>          family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warstnsb  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))<br/>
-summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
@@ -570,12 +577,16 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Using Sambanis alternative coding of civil war</h3>
+<figure class='code'><figcaption><span>Using Sambanis alternative coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstns  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+</span><span class='line'>          data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warstns  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))<br/>
-summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -613,13 +624,16 @@ summary(model)
 ## Number of Fisher Scoring iterations: 8
 </code></pre>
 
-<h3>Using Fearon and Laitin 2003 coding of civil war</h3>
+<figure class='code'><figcaption><span>Using Fearon and Laitin 2003 coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warst7b  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+</span><span class='line'>          data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warst7b  gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + ef1 + ef1sq +
-lpopnsl1 + mtnl1 + muslim + warnsl1, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))
-summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
@@ -657,13 +671,12 @@ summary(model)
 ## Number of Fisher Scoring iterations: 9
 </code></pre>
 
-<h3>Only ethnic fractionalization</h3>
+<figure class='code'><figcaption><span>Only ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  ef1 <span class="o">+</span> ef1sq<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>&#8220;`
-model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(link = &ldquo;probit&rdquo;))</p>
-
-<p>summary(model)
-&#8220;`</p>
 
 <pre><code>## Call:
 ## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
@@ -724,11 +737,11 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
 	</div>
 	<h1 class="title" itemprop="name"><a href="/blog/2013/03/22/what-trust-is-not/" itemprop="url">What trust is not</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		<p>Trust is not the absence of fear or insecurity regarding the possibility of betrayal. The very structure of our society wounds us so badly from the very beginning of our lives that perhaps such fears and insecurities are doomed to persist. Rather, trust is the feeling of peaceful confidence in a particular relationship <em>despite_ whatever fears or insecurities one nonetheless continues to feel. Trust is only meaningful as an _earned relief</em> from fear and insecurity; as such, it not only implies the continued presence of fear and insecurity outside of the trust relation, it even requires a practiced awareness of the default fear and insecurity which has typically persisted as a fact throughout the greater part of the whole, global human network. We find negative evidence of this in the observation that partners in an honest trust relation often become so absorbed in their own mutual security that they lose awareness of the frightful insecurity against which they have built that trust with great labors and against great odds. When this happens, the storehouse of trust quickly begins to deplete. In colloquial terms, we often refer to exactly this process when we object to being &ldquo;taken for granted.&rdquo;</p>
+		<p>Trust is not the absence of fear or insecurity regarding the possibility of betrayal. The very structure of our society wounds us so badly from the very beginning of our lives that perhaps such fears and insecurities are doomed to persist. Rather, trust is the feeling of peaceful confidence in a particular relationship <em>despite</em> whatever fears or insecurities one nonetheless continues to feel. Trust is only meaningful as an <em>earned relief</em> from fear and insecurity; as such, it not only implies the continued presence of fear and insecurity outside of the trust relation, it even requires a practiced awareness of the default fear and insecurity which has typically persisted as a fact throughout the greater part of the whole, global human network. We find negative evidence of this in the observation that partners in an honest trust relation often become so absorbed in their own mutual security that they lose awareness of the frightful insecurity against which they have built that trust with great labors and against great odds. When this happens, the storehouse of trust quickly begins to deplete. In colloquial terms, we often refer to exactly this process when we object to being &ldquo;taken for granted.&rdquo;</p>
 
-<p>Historically, the bourgeois defenses against this tendency are typically strategies of locking-into and locking-up the trust relation as soon as it is sufficiently established: make commitments backed by the wrath of God and the law (marriage); construct a physical space that is at once a fortress against external threats and a prison to contain internal threats of flight (the &ldquo;home&rdquo;); then whither until death in the empty husk of a trust that dies six months after it is locked-in.  Trust in the absence of fear and insecurity is not trust; it is merely a glorified emotional comatose which accomplishes nothing more than self-protection and the _forgetting_ of the real omnipresence of fear and insecurity that persists between nearly everyone else.</p>
+<p>Historically, the bourgeois defenses against this tendency are typically strategies of locking-into and locking-up the trust relation as soon as it is sufficiently established: make commitments backed by the wrath of God and the law (marriage); construct a physical space that is at once a fortress against external threats and a prison to contain internal threats of flight (the &ldquo;home&rdquo;); then whither until death in the empty husk of a trust that dies six months after it is locked-in.  Trust in the absence of fear and insecurity is not trust; it is merely a glorified emotional comatose which accomplishes nothing more than self-protection and the <em>forgetting</em> of the real omnipresence of fear and insecurity that persists between nearly everyone else.</p>
 
-<p>Furthermore, this bourgeois illusion of trust is not simply pathetic, which would at least be harmless. This false trust of the bourgeois family is <em>productive</em> of more human fear and insecurity than existed before it was &ldquo;locked-in.&rdquo; It produces net fear and insecurity because the little and tawdry security gained by the bourgeois couple is more than offset by all the lonely, isolated peers who are objectively less secure after each and every exclusive, excluding, and acquisitive bourgeois coupling. Finally, the bourgeois techniques of politically organizing trust not only tend to destroy the true and emancipating reality of any real trust they seek to hoard, but additionally, by their exclusive and excluding nature they hardly permit any honest understanding (in private or public) about how this political organization of trust ultimately fails everyone. The basic political form of the bourgeois couple necessarily brings with it a strategically dishonest public ideology because its very strategy is simulative and dissimulative: what is most characteristic of the bourgeois organization of trust relations is the creation of a political edifice that props-up merely an idea of trust, using privatized and therefore rarified social resources. The real production of real trust _has nothing to do with it. _In fact, the whole bourgeois organization and conception of trust seems almost expressly designed to excise the necessity and anxiety of having to build trust.</p>
+<p>Furthermore, this bourgeois illusion of trust is not simply pathetic, which would at least be harmless. This false trust of the bourgeois family is <em>productive</em> of more human fear and insecurity than existed before it was &ldquo;locked-in.&rdquo; It produces net fear and insecurity because the little and tawdry security gained by the bourgeois couple is more than offset by all the lonely, isolated peers who are objectively less secure after each and every exclusive, excluding, and acquisitive bourgeois coupling. Finally, the bourgeois techniques of politically organizing trust not only tend to destroy the true and emancipating reality of any real trust they seek to hoard, but additionally, by their exclusive and excluding nature they hardly permit any honest understanding (in private or public) about how this political organization of trust ultimately fails everyone. The basic political form of the bourgeois couple necessarily brings with it a strategically dishonest public ideology because its very strategy is simulative and dissimulative: what is most characteristic of the bourgeois organization of trust relations is the creation of a political edifice that props-up merely an idea of trust, using privatized and therefore rarified social resources. The real production of real trust <em>has nothing to do with it. </em>In fact, the whole bourgeois organization and conception of trust seems almost expressly designed to excise the necessity and anxiety of having to build trust.</p>
 
 <p>In other words, because the bourgeois organization of trust relations is chiefly a system for simulating trust and dissimulating its precariousness, it is especially damning for the overall social trust because it not only fails itself and denies others, it also requires and sustains public allegiance to its honor and continuation at all costs. After all, that is the bourgeois couple&rsquo;s original intention: to sustain a privatized &ldquo;trust&rdquo; at all costs, to hide from the insecurities that have always plagued humans everywhere, to pretend that fear has been abolished, at least until death do it part.  The truth is that people cannot know trust when fear and insecurity have merely been excluded and forgotten. Today, real trust can only be known when real fears and insecurities are so honestly recognized, shared, and accepted as a common problem and common responsibility. When this really truly occurs, the release from bourgeois fakery is so vertiginous and empowering that it cannot be mistaken. It is often named &ldquo;falling in love.&rdquo; Indeed, there is no reason to believe its uncommon and it is almost certainly the once-truly-lived kernel of truth within the dead husk of most bourgeois relationships.</p>
 
@@ -767,11 +780,11 @@ model &lt;&ndash; glm(warstnsb  ef1 + ef1sq, data = sambanis, family = binomial(
 	</div>
 	<h1 class="title" itemprop="name"><a href="/blog/2013/03/19/reactionary-law-and-bourgeois-desire/" itemprop="url">Reactionary law and bourgeois desire</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		<p>An unfortunate tendency of exceptionally repressive laws and draconian sentences is that, in middle-class eyes, they tend to justify themselves: to bourgeois stiffs, it begins to seem as if anyone who would risk such harsh punishments _must be_ so crazy and dangerous that it feels appropriate and reassuring to be protected by such a vicious legal machine. Indeed, the self-justifying effect of a draconian legal system increases as punishments get more severe for less and less significant behaviors. As the punishments become larger and the crimes smaller, even more inclined is the average person to wonder with a mix of fear and envy why anyone would insist on actions that seem to them so trivial given such great costs.</p>
+		<p>An unfortunate tendency of exceptionally repressive laws and draconian sentences is that, in middle-class eyes, they tend to justify themselves: to bourgeois stiffs, it begins to seem as if anyone who would risk such harsh punishments <em>must be</em> so crazy and dangerous that it feels appropriate and reassuring to be protected by such a vicious legal machine. Indeed, the self-justifying effect of a draconian legal system increases as punishments get more severe for less and less significant behaviors. As the punishments become larger and the crimes smaller, even more inclined is the average person to wonder with a mix of fear and envy why anyone would insist on actions that seem to them so trivial given such great costs.</p>
 
-<p>Knowing already that countless people are jailed for years on simple, non-violent drug charges, we begin to read more and more absurd headlines: a black homeless woman is given a 12-year prison sentence for sending her son to a public school with an incorrect home address; even a white man is given a 2-year prison sentence <a href="http://en.wikipedia.org/wiki/Tim_DeChristopher">for outbidding oil companies in a big land auction</a> and another white man is sentenced <a href="http://en.wikipedia.org/wiki/Weev">three years in prison for accessing a publicly available website</a> simply because it wasn&rsquo;t intended for public view. In response to increasingly absurd and vicious applications of the law, the average fish-blooded citizen tends to think only that anyone who still insists on such unorthodox exercises of freedom must _lack all sense of proportion<em>. And this frightens them half to death, for good reason. Of course, in some sense, this view is technically correct (to maintain any integrity in a society such as ours requires a deep refusal of its ratios) but what is critical to grasp is that to the average and spineless citizen, those who display any kind of autonomy inconsistent with the police order _truly</em> appear _that_ dangerous. And perhaps they really are. Not only because such behavior lacks the proportions of everyday middle-class order and therefore _generally_ threatens it; because middle-class comforts and privileges could and would be re-distributed if it were not for a firm legal system, they are_ especially_ threatened when increasingly decent people are punished with increasing absurdity for breaking increasingly stupid laws for engaging in fairly reasonable actions. When there are individuals who insist on doing what they want despite the risk of increasingly insane legal punishment, the average citizen who marginally benefits from this legal system will only prefer more laws, more police, and more prisons.</p>
+<p>Knowing already that countless people are jailed for years on simple, non-violent drug charges, we begin to read more and more absurd headlines: a black homeless woman is given a 12-year prison sentence for sending her son to a public school with an incorrect home address; even a white man is given a 2-year prison sentence <a href="http://en.wikipedia.org/wiki/Tim_DeChristopher">for outbidding oil companies in a big land auction</a> and another white man is sentenced <a href="http://en.wikipedia.org/wiki/Weev">three years in prison for accessing a publicly available website</a> simply because it wasn&rsquo;t intended for public view. In response to increasingly absurd and vicious applications of the law, the average fish-blooded citizen tends to think only that anyone who still insists on such unorthodox exercises of freedom must <em>lack all sense of proportion</em>. And this frightens them half to death, for good reason. Of course, in some sense, this view is technically correct (to maintain any integrity in a society such as ours requires a deep refusal of its ratios) but what is critical to grasp is that to the average and spineless citizen, those who display any kind of autonomy inconsistent with the police order <em>truly</em> appear <em>that</em> dangerous. And perhaps they really are. Not only because such behavior lacks the proportions of everyday middle-class order and therefore <em>generally</em> threatens it; because middle-class comforts and privileges could and would be re-distributed if it were not for a firm legal system, they are<em> especially</em> threatened when increasingly decent people are punished with increasing absurdity for breaking increasingly stupid laws for engaging in fairly reasonable actions. When there are individuals who insist on doing what they want despite the risk of increasingly insane legal punishment, the average citizen who marginally benefits from this legal system will only prefer more laws, more police, and more prisons.</p>
 
-<p>It will never cease to astound us how impoverished the bottom ranks of the relatively privileged groups (in particular, white people, male-gendered people) can become without rebelling. But the present thesis might solve some portion of this classic puzzle. No matter how obvious it is that the contemporary political system has been destroying, and will continue destroying, even these historically privileged groups, they are paralyzed from resisting because they are wholly indebted to precisely this system and its tendencies of exclusion and oppression for whatever material and psychological possessions they still possess. The reason that rebellion is perhaps impossible for such souls, the reason they can see no other option than to double-down on their reactionary wagers, is because every advancement of capitalist exclusion and oppression is simply the advancement of what they once unconsciously but nonetheless gleefully assumed as the core of their beliefs and behaviors. Their refusal to rebel is suicide, but rebellion too would be suicide. Whichever path they choose, may they only choose quickly!_ _ 
+<p>It will never cease to astound us how impoverished the bottom ranks of the relatively privileged groups (in particular, white people, male-gendered people) can become without rebelling. But the present thesis might solve some portion of this classic puzzle. No matter how obvious it is that the contemporary political system has been destroying, and will continue destroying, even these historically privileged groups, they are paralyzed from resisting because they are wholly indebted to precisely this system and its tendencies of exclusion and oppression for whatever material and psychological possessions they still possess. The reason that rebellion is perhaps impossible for such souls, the reason they can see no other option than to double-down on their reactionary wagers, is because every advancement of capitalist exclusion and oppression is simply the advancement of what they once unconsciously but nonetheless gleefully assumed as the core of their beliefs and behaviors. Their refusal to rebel is suicide, but rebellion too would be suicide. Whichever path they choose, may they only choose quickly!<em> </em> 
 Finally, this same thesis which helps us understand absurdly aggressive legal reaction also sheds light on why other types of crime are surprisingly under-punished relative to what we would expect. For example, as the recent and now notorious Steubenville rape case attests, young men who engage in brutal sexual violence against women often receive significantly shorter prison sentences than many non-violent, drug offenders. For the reasons already articulated, it is easy to see why property-related crimes are so grossly over-punished while crimes such as rape are relatively under-punished: crimes even vaguely related to property threaten relatively powerful (but increasingly fearful) groups invested in the status quo, while sexual violence against women—as one of the most basic substructures underwriting our political system built on domination—is the most basic kind of activity that constitutes the power of these relatively privileged but increasingly fearful groups invested in the status quo. From this perspective, it is not at all surprising that the former set of crimes is increasingly punished while the latter is punished less and less.</p>
 
 		

@@ -1,0 +1,5 @@
+<div class="highlight"><pre>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstns  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+			ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+			data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>  
+summary<span class="p">(</span>model<span class="p">)</span>
+</pre></div>

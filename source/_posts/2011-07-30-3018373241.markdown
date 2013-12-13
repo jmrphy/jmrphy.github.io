@@ -5,7 +5,7 @@ date: 2011-08-30 21:15:00+00:00
 layout: post
 slug: 'unsent-letter-to-a-former-friend-a-dj'
 title: Unsent letter to a former friend (a DJ)
-wordpress\_id: 123
+wordpress_id: 123
 categories:
 - life
 ---

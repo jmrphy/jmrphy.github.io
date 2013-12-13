@@ -5,12 +5,12 @@ date: 2012-07-07 23:35:14+00:00
 layout: post
 slug: '26726059365'
 title: Mark Rothko and the Freedom to Starve (#4)
-wordpress\_id: 72
+wordpress_id: 72
 categories:
 - theory
 ---
 
-In the year before he would die by his own hand, Rothko painted a series of acrylics known by art historians as the “Black on Grays.” From my perspective, hitherto the critical reception of this series has been altogether confused. As the \_Catalogue Raisonné \_summarizes:
+In the year before he would die by his own hand, Rothko painted a series of acrylics known by art historians as the “Black on Grays.” From my perspective, hitherto the critical reception of this series has been altogether confused. As the _Catalogue Raisonné _summarizes:
 
 
 > …nearly every visual and thematic strategy that critics have affiliated with these pictures is a trope of disenchantment or distance. They are as follows: they resemble moonscapes, the white margins are an alienating bid derived from taping down the works on paper (by foregrounding this devise the compositions thematize the process of artistic production) or prompted by the borders that Rothko noticed around reproductions of his own work; comparable margins were being used by Malcolm Morley and others at the time so as to ironize the subject of representation; the inchoate brown smears, squiggles and drips in the lower half are a careful affront to the pristine shine of the white acrylic…To conclude: blocked or drastically mediated vision disables intimacy and the very rules for the spectator’s engagement that Rothko himself had set.

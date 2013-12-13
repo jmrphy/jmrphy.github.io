@@ -5,7 +5,7 @@ date: 2012-06-07 01:35:00+00:00
 layout: post
 slug: '24579221047'
 title: '#1: Energy, line segment, thing, circuit'
-wordpress\_id: 83
+wordpress_id: 83
 categories:
 - theory
 ---

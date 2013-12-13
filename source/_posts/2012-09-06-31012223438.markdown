@@ -5,14 +5,14 @@ date: 2012-09-06 20:58:25+00:00
 layout: post
 slug: '31012223438'
 title: Untitled play about maybe getting rid of a bed
-wordpress\_id: 52
+wordpress_id: 52
 categories:
 - collaboration
 ---
 
 With [The Bread From One's Own Mouth][1].
 
-\* 
+* 
 _XX & XY in bed, lying. Both moderately tall, attractive moderately dark-haired people, roughly 22-26 years old. _
 
 _Enter Z, a moderately tall, attractive dark-haired man, roughly 26-years old. He walks to the foot of the bed._
@@ -109,7 +109,7 @@ XX: Also, you know, I feel insecure all of the time. And not in the sense that a
 
 XX: “Get off my bus, you punks.”
 
-XX: \<3
+XX: <3
 
 XX: lol
 

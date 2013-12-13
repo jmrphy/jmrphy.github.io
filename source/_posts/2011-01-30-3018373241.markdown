@@ -5,7 +5,7 @@ date: 2011-01-30 21:35:00+00:00
 layout: post
 slug: '3018373241'
 title: Does Obama really care less than Bush about climate change?
-wordpress\_id: 123
+wordpress_id: 123
 categories:
 - theory
 - social science

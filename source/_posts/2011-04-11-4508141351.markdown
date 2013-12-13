@@ -5,7 +5,7 @@ date: 2011-04-11 03:27:00+00:00
 layout: post
 slug: '4508141351'
 title: Finding modern pictures in the National Gallery
-wordpress\_id: 117
+wordpress_id: 117
 categories:
 - theory
 ---

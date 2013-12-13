@@ -5,7 +5,7 @@ date: 2012-09-12 22:59:34+00:00
 layout: post
 slug: '31425089281'
 title: '#15: The institutionalization of philosophy as the repression of honesty'
-wordpress\_id: 46
+wordpress_id: 46
 categories:
 - theory
 ---

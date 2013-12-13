@@ -5,7 +5,7 @@ date: 2011-11-12 05:00:00+00:00
 layout: post
 slug: '14482563142'
 title: Living and writing of a present insurrection
-wordpress\_id: 96
+wordpress_id: 96
 categories:
 - theory
 ---

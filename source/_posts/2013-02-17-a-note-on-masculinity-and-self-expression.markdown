@@ -5,7 +5,7 @@ date: 2013-02-17 19:25:11+00:00
 layout: post
 slug: a-note-on-masculinity-and-self-expression
 title: A note on masculinity and self-expression
-wordpress\_id: 409
+wordpress_id: 409
 categories:
 - theory
 ---

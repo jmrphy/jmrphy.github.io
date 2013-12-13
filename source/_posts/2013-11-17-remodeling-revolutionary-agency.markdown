@@ -2,7 +2,7 @@
 layout: post
 title: "Remodeling revolutionary agency"
 date: 2013-11-17 14:25
-comments: true
+comments: false
 categories:
 - theory
 ---

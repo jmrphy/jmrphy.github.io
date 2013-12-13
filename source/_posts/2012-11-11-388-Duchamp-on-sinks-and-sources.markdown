@@ -5,7 +5,7 @@ date: 2012-11-11 23:58:17+00:00
 layout: post
 slug: Duchamp-on-sinks-and-sources
 title: Duchamp on sinks and sources
-wordpress\_id: 388
+wordpress_id: 388
 categories:
 - theory
 ---
