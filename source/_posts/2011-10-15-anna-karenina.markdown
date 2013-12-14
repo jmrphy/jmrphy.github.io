@@ -57,28 +57,21 @@ do that, although if he did
 I would secretly be happy.   
 
 I thought for a second that   
-I might try to “express my   
-Feelings” to you in this poem,   
+I might try to “express my feelings”   
+To you in this poem,   
 But then it occurred to me that   
-I could just keep “beating   
-Around the bush” and write   
-Hundreds of poems   
-Just kind of   
-“getting to the point”   
-and just never quite   
-“get to the point,”   
-and that this would   
-probably make greater   
-works of art   
-than somehow just   
-“getting to the point,”   
-which I can’t really do   
-outside of poetry so   
-why would I be able   
-to do it inside of poetry   
-inside of your art studio,   
-which has low lighting,   
-by the way?   
+I could just keep “beating around the bush”   
+And write hundreds of poems   
+Just kind of “getting to the point”   
+And just never quite “get to the point,”   
+And that this would probably   
+Make greater works of art   
+Than somehow just “getting to the point,”   
+Which I can’t really do outside of poetry so   
+Why would I be able to do it inside of poetry   
+Inside of your art studio,   
+Which has low lighting,   
+By the way?   
 
 The low lighting, by the way,   
 Is not a metaphor,   
