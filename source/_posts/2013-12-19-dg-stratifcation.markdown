@@ -11,8 +11,9 @@ categories:
 
 [ ![][image-1] ][1]
 
-\<iframe src="http://wl.figshare.com/articles/881284/embed?show_title=1" width="568" height="380" frameborder="0"\>\</iframe\>
+<iframe src="http://wl.figshare.com/articles/881284/embed?showtitle=1" width="568" height="380" frameborder="0"></iframe>
 
 [1]:	http://figshare.com/articles/Diagram_of_Stratification/881284
 
 [image-1]:	http://files.figshare.com/1321342/Deleuze_Guattari_Diagram_Stratification.jpeg
+
