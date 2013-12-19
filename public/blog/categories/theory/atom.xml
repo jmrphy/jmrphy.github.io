@@ -4,7 +4,7 @@
   <title><![CDATA[Category: theory | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/theory/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-12-14T18:56:11+00:00</updated>
+  <updated>2013-12-19T06:55:35+01:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -14,9 +14,22 @@
 
   
   <entry>
+    <title type="html"><![CDATA[A diagram of stratification]]></title>
+    <link href="http://jmrphy.github.io/blog/2013/12/19/dg-stratifcation/"/>
+    <updated>2013-12-19T06:53:00+01:00</updated>
+    <id>http://jmrphy.github.io/blog/2013/12/19/dg-stratifcation</id>
+    <content type="html"><![CDATA[<h3>A diagram of stratification</h3>
+
+<p><a href="http://figshare.com/articles/Diagram_of_Stratification/881284"> <img src="http://files.figshare.com/1321342/Deleuze_Guattari_Diagram_Stratification.jpeg" alt="" /> </a></p>
+
+<p>&lt;iframe src=&ldquo;<a href="http://wl.figshare.com/articles/881284/embed?show_title=1">http://wl.figshare.com/articles/881284/embed?show_title=1</a>&rdquo; width=&ldquo;568&rdquo; height=&ldquo;380&rdquo; frameborder=&ldquo;0&rdquo;>&lt;/iframe></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Remodeling revolutionary agency]]></title>
     <link href="http://jmrphy.github.io/blog/2013/11/17/remodeling-revolutionary-agency/"/>
-    <updated>2013-11-17T14:25:00+00:00</updated>
+    <updated>2013-11-17T14:25:00+01:00</updated>
     <id>http://jmrphy.github.io/blog/2013/11/17/remodeling-revolutionary-agency</id>
     <content type="html"><![CDATA[<p>When thinking about revolutionary agency, I move away from the traditional Marxian concept of the “proletariat,” a particular class which is most able to generate revolutionary resistance, in favor of a more general conception of whosever happens to fall through the cracks of capitalist subjectivation.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> I am interested in those whose thoughts, behaviors, and projects, <em>for whatever reason</em>, remain relatively undisciplined by the normalizing and neutralizing tendencies inherent in contemporary society. Is someone’s life very consistent with what the status quo expects of them, or is it very inconsistent. What proportion of someone’s thoughts and behaviors are <em>systematic</em> (predictable) and what proportion are in the statistical error term?</p>
 
@@ -53,7 +66,7 @@
   <entry>
     <title type="html"><![CDATA[A concept of political validity in quantitative social science]]></title>
     <link href="http://jmrphy.github.io/blog/2013/11/03/a-concept-of-political-validity-in-quantitative-social-science/"/>
-    <updated>2013-11-03T17:12:00+00:00</updated>
+    <updated>2013-11-03T17:12:00+01:00</updated>
     <id>http://jmrphy.github.io/blog/2013/11/03/a-concept-of-political-validity-in-quantitative-social-science</id>
     <content type="html"><![CDATA[<p>Let us call <em>bourgeois data</em> any research data the collection of which is funded by groups invested in the status quo. Bourgeois data, which is to say nearly all the quantitative data used by social scientists, suffer from a specific type of bias for which most methodologists show very little concern, despite the extraordinary analytical attention they devote to the question of bias in social-scientific inference more generally. Methodologists are likely unconcerned about the possibility of <em>institutional</em> biases in data collection because they have precisely the same institutional investments as the funders of data collection projects. Methodologists will consider &ldquo;external validity&rdquo; (whether the data reflects what we think it reflects in the world) and &ldquo;internal validity&rdquo; (the logical coherence of inferences), but rarely do they consider what we might call <em>political validity</em>, which we might provisionally define as the scientific legitimacy of the basic worldview, determined by a researcher’s institutional environment, with which scientific inferences are verbally constructed. In other words, we must take seriously the question of whether the institutional environment which sponsors data-collection and research activity more generally is itself non-random and non-trivial. I suspect that for too long this question has been delegated to “critical” theorists in a disingenuous gesture which gives them just enough attention so that positivist social scientists can say their discipline already has people “working on” this issue, but not so much attention that positivists have to make any serious adjustments in how we actually think, write, or speak about the political implications of our research agendas.</p>
 
@@ -76,7 +89,7 @@
   <entry>
     <title type="html"><![CDATA[There are more than enough hours in the day]]></title>
     <link href="http://jmrphy.github.io/blog/2013/09/15/there-are-more-than-enough-hours-in-the-day/"/>
-    <updated>2013-09-15T16:46:00+01:00</updated>
+    <updated>2013-09-15T16:46:00+02:00</updated>
     <id>http://jmrphy.github.io/blog/2013/09/15/there-are-more-than-enough-hours-in-the-day</id>
     <content type="html"><![CDATA[<p>The popular refrain that &ldquo;there aren&rsquo;t enough hours in the day&rdquo; is an interesting departure from the long and storied political and rhetorical battle to <em>objectively</em> decrease the hours of the working day. It is an extraordinary gauge of our political pacification that when so many people have such a hard time meeting a pervasive social and economic expectation, we would sooner <em>ask for an extension</em> of the expectation than its abolition.</p>
 ]]></content>
@@ -85,18 +98,9 @@
   <entry>
     <title type="html"><![CDATA[Ego and revolution]]></title>
     <link href="http://jmrphy.github.io/blog/2013/08/31/ego-and-revolution/"/>
-    <updated>2013-08-31T20:42:00+01:00</updated>
+    <updated>2013-08-31T20:42:00+02:00</updated>
     <id>http://jmrphy.github.io/blog/2013/08/31/ego-and-revolution</id>
     <content type="html"><![CDATA[<p>My ego often wrestles with itself: Obviously I want to avoid arrogance and self absorption and selfishness, but the project of revolution almost presupposes delusions of grandeur and extraordinary self-confidence (if only a confidence in the collectives of which one is a constituent). Capitalist individualism is highly egoistic but ironically it keeps egos small and frail under a herd mentality inclusive of exploitation and alienation. I would much prefer the opposite contradiction of wildly inflated egos demanding and creating revolutionary egalitarianism. Indeed, in such a truly egoistic society such as ours, a powerful and disruptive political project to truly force egalitarian movement might require not the altruistic ethos of shrunken egos but a proliferation of individuals sufficiently egoistic to see themselves as truly and immediately capable of changing the world.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The hatred of freedom]]></title>
-    <link href="http://jmrphy.github.io/blog/2013/08/31/the-hatred-of-freedom/"/>
-    <updated>2013-08-31T20:07:00+01:00</updated>
-    <id>http://jmrphy.github.io/blog/2013/08/31/the-hatred-of-freedom</id>
-    <content type="html"><![CDATA[<p>The truth is that most people do not want other people to flourish. We all support a general idea of everyone being freer but we tend to feel threatened whenever anyone <em>in particular</em> meets with an increase of freedom. Not long after, we begin to hate them for it if we are not welcome or able to enjoy in the proceeds.</p>
 ]]></content>
   </entry>
   

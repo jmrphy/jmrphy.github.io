@@ -7,30 +7,21 @@ categories:
 - life
 ---
 
-For the past two minutes I’ve been   
-Typing with one hand because   
-In the other hand was a bagel,   
-Until I ate it all.   
-I liked the bagel and I like   
-Typing like this and   
-And it all just made   
-Me think I would like   
-To write you a poem in this   
-Fashion because poems let one say   
-Many serious things at once   
-And not be too serious   
-Or many stupid things at once   
-And seem interesting or deep or   
+For the past two minutes I’ve been typing with one hand because   
+In the other hand was a bagel, until I ate it all.   
+I liked the bagel and I like typing like this and   
+And it all just made me think I would like   
+To write you a poem in this fashion because poems let one say   
+Many serious things at once and not be too serious   
+Or many stupid things at once, and seem interesting or deep or   
 Profound or even trenchant.   
 
 The bagel was not a metaphor,   
 Just how this really happened,   
 Although it is also a metaphor,   
-The bagel being you,   
-And the typing being   
+The bagel being you, and the typing being   
 A female minimalist lo-fi electro pop   
-Musician playing a “synth,”   
-A thing that works   
+Musician playing a “synth,” a thing that works   
 I know not how.   
 
 Anyway, the plan for this “piece,”   
