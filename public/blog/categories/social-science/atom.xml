@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-12-19T07:10:01+01:00</updated>
+  <updated>2013-12-19T07:23:27+01:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A diagram of stratification]]></title>
+    <link href="http://jmrphy.github.io/blog/2013/12/19/dg-stratifcation/"/>
+    <updated>2013-12-19T06:53:00+01:00</updated>
+    <id>http://jmrphy.github.io/blog/2013/12/19/dg-stratifcation</id>
+    <content type="html"><![CDATA[<p>Below is a sketch of what Deleuze and Guattari describe as &ldquo;the pincer&rdquo; or &ldquo;double articulation&rdquo; of stratification.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<iframe src="http://wl.figshare.com/articles/881284/embed?show_title=0" width="650" height="424" frameborder="0"></iframe>
+
+
+<p></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Deleuze, Gilles, and Félix Guattari. 1987. A Thousand Plateaus. Minneapolis: University of Minnesota Press. pp. 40-41.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What really changed after the Cold War?]]></title>
@@ -436,31 +458,6 @@ ggplot(countlink, aes(reorder(Var1, Freq), Freq)) +
 ggsave(file = &ldquo;links.png&rdquo;)</p>
 
 <p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Predicting turnout from Google search data]]></title>
-    <link href="http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data/"/>
-    <updated>2012-10-27T23:58:43+02:00</updated>
-    <id>http://jmrphy.github.io/blog/2012/10/27/predicting-turnout-from-google-search-data</id>
-    <content type="html"><![CDATA[<p>Political scientists <a href="http://themonkeycage.org/blog/2012/10/25/will-2012-be-a-low-turnout-election-some-evidence-from-google-search-activity/%23comments">Jesse Richman</a> and <a href="http://themonkeycage.org/blog/2012/10/25/google-searches-and-turnout-a-cautionary-tale/">Erik Voeten</a> wonder if Google Search data can help us predict turnout in next month&rsquo;s Presidential election. To summarize, Richman finds that searches for &ldquo;vote&rdquo; in the past two elections predict voter turnout, and that low search volume for &ldquo;vote&rdquo; this year suggests a low turnout election. In response, Voeten shows that controlling for who has come online since 2004 and 2008 explains much of why search volume for &ldquo;vote&rdquo; appears small this year. There are lots of reasons search data is pretty tricky for making good inferences, but that shouldn&rsquo;t keep us from trying!</p>
-
-<p>My thinking is that we can look at the <em>composition</em> of &ldquo;vote&rdquo; searches across elections to see whether this year&rsquo;s vote searches are indicative of greater voter turnout or greater voter demobilization/skepticism.</p>
-
-<p>For instance, &ldquo;vote&rdquo; searches containing the terms &ldquo;where&rdquo; or &ldquo;when&rdquo; are probably more directly predictive of turning out to vote than the whole set of &ldquo;vote&rdquo; searches&mdash;as they indicate practical planning to turnout. On the other hand, &ldquo;vote&rdquo; searches containing the term &ldquo;why&rdquo; are probably far less predictive of turnout&mdash;and might even predict how many people are thinking &ldquo;why bother?&rdquo; and are considering staying home on election day.</p>
-
-<p>So I went back to the data with this in mind. As baseline and as Voeten shows, if we consider voting searches (&ldquo;vote&rdquo; and &ldquo;voting&rdquo; together) as a proportion of searches for &ldquo;university&rdquo;, &ldquo;science&rdquo;, and &ldquo;law&rdquo;, this election hardly looks very different. So that&rsquo;s just (vote+voting) / ((university+science+law) / 3). As explained in the posts linked above, search volume data is scaled from 0 to 100 where 100 is the peak of that search term in the given time period, relative to all other search activity.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/10/votingsearches2.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/votingsearches2.png" alt="" /></a>And when we look at voting searches also containing the word &ldquo;why&rdquo; (as a proportion of the university-science-law index), again we find almost no difference.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/10/whyvotesearches.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/whyvotesearches.png" alt="" /></a>But when we look at voting searches also containing the words &ldquo;where&rdquo; and &ldquo;when&rdquo; (I take the average of vote+where and vote+when as a proportion of the university-science-law index), more people appear to be asking where and when to vote this year than in the past two Presidential elections. The p-value on the difference of means between 2008 and 2012 is .051.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png" alt="" /></a>Finally, I look at the difference between the why-vote searches and the where/when-vote searches. The gap might be taken as an aggregate measure of how much society is using the web to <em>think about</em> the decision to turn out <em>without planning</em> to turnout, so that positive values might capture demobilization within vote searches (why bother?) and negative values reflect relatively resolved mobilization. And what we find is that this whole election year shows greater &ldquo;when/where&rdquo; vote searches than &ldquo;why&rdquo; vote searches at the present moment in the timeline but also for the year as a whole. In both of the previous elections there were more &ldquo;thinking&rdquo; searches than &ldquo;planning&rdquo; searches, but this year there have been more planning searches. As in the previous analyses, these are as a proportion of the university-science-law index, and the difference of means for 2008 and 2012 is statistically significant at the 99.9% confidence level.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/10/thinkplangapusl.png"><img src="http://justinmurphy.files.wordpress.com/2012/10/thinkplangapusl.png" alt="" /></a>Arguably, this difference variable perhaps already controls for education or political information because each term reflects a lack of knowledge, so it shouldn&rsquo;t be inflated by less educated/informed people coming online since 2004 and 2008. But the same pattern is evident and statistically significant if we look at this gap as a proportion of all &ldquo;politics&rdquo; search volume or just the raw differences of volume. Obviously, these are back-of-the napkin analyses and these data are plagued by difficulties. But these analyses don&rsquo;t suggest a low-turnout election in 2012. If anything, it looks like the web is registering more vote planning than in previous years.</p>
-
-<p><a href="https://dl.dropbox.com/u/20498362/GoogleTrendsVoting.csv">Here is the data in .csv form</a>. Here is the <a href="https://dl.dropbox.com/u/20498362/GoogleTrendsTurnout.R">R script</a> to reproduce the analyses found here.</p>
 ]]></content>
   </entry>
   
