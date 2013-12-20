@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "streetcar"
+title: "In a streetcar in New Orleans"
 date: 2009-07-18 18:22
 comments: true
 categories: 
 - life
 ---
-
-## In a streetcar in New Orleans
 
 1   
 
