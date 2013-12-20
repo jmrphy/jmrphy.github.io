@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "family on facebook"
+title: "Open letter to family members on Facebook"
 date: 2011-09-03 19:43
 comments: true
-categories: 
+categories:
+- note
 ---
-
-## On Open Letter to Family Members on Facebook
 
 Dear Family Members on Facebook,[^1]
 
