@@ -7,7 +7,7 @@
 	<meta name="author" content="Justin Murphy">
 
 	
-	<meta name="description" content="Mar 22nd, 2013 theory What trust is not Trust is not the absence of fear or insecurity regarding the possibility of betrayal. The very structure of &hellip;">
+	<meta name="description" content="May 22nd, 2013 social science Civil war and the square of ethnic fractionalization Steve Saideman wonders if the relationship between ethnic &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,272 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-22T18:06:22+02:00" data-updated="true" itemprop="datePublished">May 22<span>nd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/social-science/'>social science</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/" itemprop="url">Civil war and the square of ethnic fractionalization</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
+
+<p>Below is a replication of Sambanis 2004 where I simply add the square of ethnic fractionalization. If Steve&rsquo;s conjecture were true, we&rsquo;d expect <em>ef1</em> to be positive, <em>ef1sq</em> to be negative, and both of them to be significant. They are signed as expected but not significant given the controls recommended by Sambanis. I then try alternative codings of civil war and a simple equation with no controls. If Steve&rsquo;s conjecture is true, it&rsquo;s not obvious.</p>
+
+<p>Everything below is reproducible in R-just download the replication data, easy to find with a quick search, and set your working directory to where the data is.</p>
+
+<figure class='code'><figcaption><span>Replicate Sambanis 2004 (Table 6 in paper, column 8, pp.845)</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>library<span class="p">(</span>foreign<span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">&lt;-</span>read.dta<span class="p">(</span><span class="s">&quot;SambanisJCR2004_replicationdataset.dta&quot;</span><span class="p">)</span>
+</span><span class='line'>sambanis<span class="o">$</span>ef1sq<span class="o">&lt;-</span>sambanis<span class="o">$</span>ef1 <span class="o">*</span> sambanis<span class="o">$</span>ef1
+</span><span class='line'>
+</span><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span>
+</span><span class='line'>          family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>## Call:
+## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
+##     oil2l1 + ef1 + lpopnsl1 + mtnl1 + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.604  -0.231  -0.173  -0.106   3.560  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.90226    0.46234   -8.44  &lt; 2e-16 ***
+## gdpl1       -0.09271    0.02295   -4.04  5.3e-05 ***
+## grol1       -0.51380    0.49750   -1.03  0.30172    
+## inst3l1      0.23713    0.09634    2.46  0.01384 *  
+## anoc2l1      0.23792    0.08807    2.70  0.00690 ** 
+## oil2l1       0.29680    0.11541    2.57  0.01012 *  
+## ef1          0.35605    0.16455    2.16  0.03049 *  
+## lpopnsl1     0.10503    0.02743    3.83  0.00013 ***
+## mtnl1        0.00199    0.00182    1.09  0.27466    
+## warnsl1     -0.06609    0.10492   -0.63  0.52873    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1133.2  on 5892  degrees of freedom
+## Residual deviance: 1038.8  on 5883  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 1059
+## 
+## Number of Fisher Scoring iterations: 8
+</code></pre>
+
+<figure class='code'><figcaption><span>Adding the square of ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span> ef1 <span class="o">+</span>
+</span><span class='line'>          ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span>
+</span><span class='line'>          family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>## Call:
+## glm(formula = warstnsb ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + 
+##     oil2l1 + ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, 
+##     family = binomial(link = "probit"), data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.595  -0.230  -0.172  -0.103   3.547  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.94606    0.48647   -8.11    5e-16 ***
+## gdpl1       -0.09092    0.02370   -3.84  0.00012 ***
+## grol1       -0.50874    0.49343   -1.03  0.30253    
+## inst3l1      0.23723    0.09641    2.46  0.01386 *  
+## anoc2l1      0.24253    0.08838    2.74  0.00607 ** 
+## oil2l1       0.26000    0.12119    2.15  0.03192 *  
+## ef1          0.51893    0.72622    0.71  0.47488    
+## ef1sq       -0.17995    0.71442   -0.25  0.80113    
+## lpopnsl1     0.10452    0.02775    3.77  0.00017 ***
+## mtnl1        0.00184    0.00188    0.98  0.32529    
+## muslim       0.00104    0.00111    0.93  0.35169    
+## warnsl1     -0.06888    0.10501   -0.66  0.51185    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1133.2  on 5892  degrees of freedom
+## Residual deviance: 1037.8  on 5881  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 1062
+## 
+## Number of Fisher Scoring iterations: 8
+</code></pre>
+
+<figure class='code'><figcaption><span>Using Sambanis alternative coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstns  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+</span><span class='line'>          data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>## Call:
+## glm(formula = warstns ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
+##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.532  -0.217  -0.165  -0.102   3.499  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.73245    0.52338   -7.13  9.9e-13 ***
+## gdpl1       -0.08649    0.02469   -3.50  0.00046 ***
+## grol1       -0.09783    0.48861   -0.20  0.84131    
+## inst3l1      0.23635    0.10911    2.17  0.03030 *  
+## anoc2l1      0.28191    0.09773    2.88  0.00392 ** 
+## oil2l1       0.16875    0.14066    1.20  0.23027    
+## ef1          0.65104    0.77115    0.84  0.39853    
+## ef1sq       -0.38362    0.77341   -0.50  0.61989    
+## lpopnsl1     0.08969    0.03039    2.95  0.00316 ** 
+## mtnl1        0.00209    0.00205    1.02  0.30854    
+## muslim       0.00118    0.00124    0.95  0.34246    
+## warnsl1     -0.21649    0.31589   -0.69  0.49313    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 915.34  on 5161  degrees of freedom
+## Residual deviance: 842.13  on 5150  degrees of freedom
+##   (4298 observations deleted due to missingness)
+## AIC: 866.1
+## 
+## Number of Fisher Scoring iterations: 8
+</code></pre>
+
+<figure class='code'><figcaption><span>Using Fearon and Laitin 2003 coding of civil war</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warst7b  gdpl1 <span class="o">+</span> grol1 <span class="o">+</span> inst3l1 <span class="o">+</span> anoc2l1 <span class="o">+</span> oil2l1 <span class="o">+</span>
+</span><span class='line'>          ef1 <span class="o">+</span> ef1sq <span class="o">+</span> lpopnsl1 <span class="o">+</span> mtnl1 <span class="o">+</span> muslim <span class="o">+</span> warnsl1<span class="p">,</span>
+</span><span class='line'>          data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>## Call:
+## glm(formula = warst7b ~ gdpl1 + grol1 + inst3l1 + anoc2l1 + oil2l1 + 
+##     ef1 + ef1sq + lpopnsl1 + mtnl1 + muslim + warnsl1, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.501  -0.200  -0.145  -0.086   3.590  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -4.28989    0.54194   -7.92  2.5e-15 ***
+## gdpl1       -0.08807    0.02665   -3.30  0.00095 ***
+## grol1       -0.27141    0.52732   -0.51  0.60677    
+## inst3l1      0.19536    0.10692    1.83  0.06768 .  
+## anoc2l1      0.25845    0.09748    2.65  0.00802 ** 
+## oil2l1       0.13327    0.14174    0.94  0.34707    
+## ef1          0.44027    0.80427    0.55  0.58409    
+## ef1sq       -0.22642    0.79784   -0.28  0.77657    
+## lpopnsl1     0.11930    0.03065    3.89  9.9e-05 ***
+## mtnl1        0.00255    0.00204    1.25  0.21124    
+## muslim       0.00155    0.00122    1.26  0.20659    
+## warnsl1      0.01688    0.11169    0.15  0.87987    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 897.81  on 5892  degrees of freedom
+## Residual deviance: 822.48  on 5881  degrees of freedom
+##   (3567 observations deleted due to missingness)
+## AIC: 846.5
+## 
+## Number of Fisher Scoring iterations: 9
+</code></pre>
+
+<figure class='code'><figcaption><span>Only ethnic fractionalization</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'>model <span class="o">&lt;-</span> glm<span class="p">(</span>warstnsb  ef1 <span class="o">+</span> ef1sq<span class="p">,</span> data <span class="o">=</span> sambanis<span class="p">,</span> family <span class="o">=</span> binomial<span class="p">(</span>link <span class="o">=</span> <span class="s">&quot;probit&quot;</span><span class="p">))</span>
+</span><span class='line'>summary<span class="p">(</span>model<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>## Call:
+## glm(formula = warstnsb ~ ef1 + ef1sq, family = binomial(link = "probit"), 
+##     data = sambanis)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -0.303  -0.227  -0.196  -0.161   2.990  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -2.302      0.131  -17.63   &lt;2e-16 ***
+## ef1            0.323      0.589    0.55     0.58    
+## ef1sq          0.283      0.580    0.49     0.63    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1249.6  on 6268  degrees of freedom
+## Residual deviance: 1230.5  on 6266  degrees of freedom
+##   (3191 observations deleted due to missingness)
+## AIC: 1237
+## 
+## Number of Fisher Scoring iterations: 7
+</code></pre>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -442,238 +708,6 @@ Finally, this same thesis which helps us understand absurdly aggressive legal re
 		<p>We fetishize words in such a way that when someone says something, we are prone to find them outrageously evil should they choose certain words. But the reality is that the actual quality of human drives probably differs much less across history and space than we wish to believe. This sense is inflated by the significance we attach to particular words, and distorted in severe biases in the social distribution of verbal facility. This is evidenced by the fact that the average, &ldquo;well-bred&rdquo;, sensitive, educated person, almost certainly plays very often, in their head, with certain extremely uncouth and perhaps even wildly offensive ideas and phrasings before instantly knowing or realizing, precisely on account of their well bred discrimination, that such words would likely incur severe social punishment within their peer group. Those who are decent and polite are usually only well educated, which means they&rsquo;re merely better trained in the repression and verbal dissimulation of evil compared to the uneducated who are far more likely to spew all kinds of bigotry in public.</p>
 
 <p>This all suggests a really interesting convergence of the two opposite meanings of the word &ldquo;discrimination&rdquo;: namely that the dominant classes who benefit from social institutions of racial, gender, and class discrimination in the political sense, are precisely those who have the most trained sense of &ldquo;discrimination&rdquo; in the valorized sense of nuance. The same base human drives that more or less unite us all, and the same overarching social institutions organize all of our habits and tendencies, even if they distribute us differentially. The ability to &ldquo;discriminate&rdquo; in the good sense, is itself a privilege of discrimination in the bad sense. We must try to understand better that occupying a position in that discriminate classes in no way makes us better or less evil than people who are simply less adept at hiding their tracks. Ours is simply a different kind of evil, an evil that we have stuffed under layers and layers of torturously complicated rationales, but which is most manifest at the material level of that which we actually enjoy at the cost of the suffering of so many others. There is, then, a certain overall equality of evil in a society such as ours where that evil is so thoroughly mediated and distributed by institutions, such that for some it is transparent and unadorned much to the criticism of the public mind, while for others it is simply buried, dissimulated, and finally rewarded.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-29T20:12:32+01:00" data-updated="true" itemprop="datePublished">Dec 29<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/social-science/'>social science</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/12/29/analysis-of-gazaunderattack-tweets/" itemprop="url">Analysis of #GazaUnderAttack tweets</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>During the Israeli-Palestinian attacks of last month, I scraped from the Twitter API about 270,000 tweets containing the hashtag #gazaunderattack. Given the unprecedented degree to which this war was fought online, tweets of this sort could and should become really important data for political scientists. I&rsquo;m too busy right now to say very much here, but I want to share some basic descriptive analyses for anyone who might be interested. The dataset can be downloaded <a href="https://dl.dropbox.com/u/20498362/tweets_%23gazaunderattack.csv">here</a> and the R script that produced these analyses is available at the very bottom.</p>
-
-<p>Almost everything in this post I learned how to do directly and solely from the amazingly smart, open and generous #Rstats community. The scraping and time-series plot follow a script by <a href="http://bommaritollc.com/2011/02/26/archiving-tweets-with-python/">Michael Bommarito</a>, and the rest follows scripts by <a href="https://github.com/benmarwick/AAA2011-Tweets/blob/master/AAA2011.R">Ben Marwick</a>.</p>
-
-<h2>Analysis</h2>
-
-<p>There are 269,158 tweets. These tweets are authored by 79,923 unique users. Of all the tweets, .62 are retweets.</p>
-
-<p>This first graph plots the frequency of #gazaunderattack tweets in 30-minute intervals between November 17th and November 21st. I <em>believe</em> this is <em>all</em> of the tweets containing that hashtag within this period. I know the Twitter Search API is subject to weird filters and restrictions, but I believe the technique I used here pages through each and every tweet available within the available time period.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/12/timeseries.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/timeseries.png" alt="timeseries" /></a></p>
-
-<p>Most frequent #gazaunderattack tweeters.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/12/tweet_counts.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/tweet_counts.png" alt="tweet_counts" /></a></p>
-
-<p>The most retweeted tweeters. Interestingly, Anonymous seems to have had more reach, at least during this period, than the twitter account of Hamas (@AlqassamBrigade).</p>
-
-<p><em><a href="http://justinmurphy.files.wordpress.com/2012/12/retweet_counts.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/retweet_counts.png" alt="retweet_counts" /></a></em>The most retweeted tweeters as a ratio of total quantity of tweets sent.   Anonymous still seems to have had the most reach on the #gazaunderattack hashtag.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/12/retweet_ratios.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/retweet_ratios.png" alt="retweet_ratios" /></a></p>
-
-<p>Most frequently tweeted links.<a href="http://justinmurphy.files.wordpress.com/2012/12/links.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/links.png" alt="links" /></a></p>
-
-<p><a href="http://d3j5vwomefv46c.cloudfront.net/photos/large/688740234.jpg?key=964633&amp;Expires=1356766099&amp;Key-Pair-Id=APKAIYVGSUJFNRFZBBTA&amp;Signature=05VhXXvHpkOc2wqjLXrGMgNasVet~TM9zp9UELk3vd0aCJcGb6uJI4Uv4FEk5LNEQQSGWrUrV9mNKpp5STIrUEwFufBGCwcboTeLJfg55DA75JoXHkMdmedD5P6M2~EOYUbtqSOBFGY7VQgzfN-~UhU6lLSwV3grA4~ZrZDTIlI_">This is the image</a> in the most popular link, capturing an explosion from an Israeli airstrike in Gaza.</p>
-
-<p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
-
-<figure class='code'><figcaption><span>Analyze Tweets scraped with Python</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>x<span class="o">&lt;-</span>read.csv<span class="p">(</span><span class="s">&quot;tweets_#gazaunderattack.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
-</span><span class='line'>x<span class="o">$</span>username<span class="o">&lt;-</span>x<span class="o">$</span>V2
-</span><span class='line'>x<span class="o">$</span>text<span class="o">&lt;-</span>x<span class="o">$</span>V5
-</span><span class='line'>
-</span><span class='line'><span class="c1">#########################################</span>
-</span><span class='line'><span class="c1">#### Nice Time-Series Plot ####</span>
-</span><span class='line'><span class="c1">#########################################</span>
-</span><span class='line'>library<span class="p">(</span>ggplot2<span class="p">)</span>
-</span><span class='line'>x<span class="o">$</span>date <span class="o">&lt;-</span> strptime<span class="p">(</span>x<span class="o">$</span>V4<span class="p">,</span> <span class="s">&quot;%a, %d %b %Y %H:%M:%S %z&quot;</span><span class="p">,</span> tz <span class="o">=</span> <span class="s">&quot;EST&quot;</span><span class="p">)</span>
-</span><span class='line'>x<span class="o">$</span>date <span class="o">&lt;-</span> as.POSIXct<span class="p">(</span>x<span class="o">$</span>date<span class="p">,</span> tz <span class="o">=</span> <span class="s">&quot;EST&quot;</span><span class="p">)</span>
-</span><span class='line'>timeseries<span class="o">&lt;-</span>ggplot<span class="p">(</span>data<span class="o">=</span>x<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>date<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>aes<span class="p">(</span>fill<span class="o">=</span>..count..<span class="p">),</span> binwidth<span class="o">=</span><span class="m">60</span><span class="o">*</span><span class="m">30</span><span class="p">)</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;# of Tweets&quot;</span><span class="p">)</span> <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Time&quot;</span><span class="p">)</span>
-</span><span class='line'>timeseries
-</span><span class='line'>ggsave<span class="p">(</span>file<span class="o">=</span><span class="s">&quot;timeseries.png&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#########################################</span>
-</span><span class='line'><span class="c1">#### Nice Plot of Frequent Tweeters ####</span>
-</span><span class='line'><span class="c1">#########################################</span>
-</span><span class='line'>library<span class="p">(</span>ggplot2<span class="p">)</span>
-</span><span class='line'>x<span class="o">$</span>username<span class="p">[</span>x<span class="o">$</span>username<span class="o">==</span><span class="s">&quot;&quot;</span><span class="p">]</span><span class="o">&lt;-</span><span class="kc">NA</span>
-</span><span class='line'>length<span class="p">(</span>unique<span class="p">(</span>x<span class="o">$</span>username<span class="p">))</span> <span class="c1"># see how many unique tweeter accounts in the sample</span>
-</span><span class='line'>counts<span class="o">=</span>table<span class="p">(</span>x<span class="o">$</span>username<span class="p">)</span>
-</span><span class='line'>counts.sort<span class="o">&lt;-</span>sort<span class="p">(</span>counts<span class="p">)</span>
-</span><span class='line'>counts.sort.subset<span class="o">=</span>subset<span class="p">(</span>counts.sort<span class="p">,</span> counts.sort<span class="o">&gt;</span><span class="m">350</span><span class="p">)</span> <span class="c1"># create a subset of those who tweeted at least 350 times or more</span>
-</span><span class='line'>counts.sort.subset.df<span class="o">&lt;-</span>data.frame<span class="p">(</span>people<span class="o">=</span>unlist<span class="p">(</span>dimnames<span class="p">(</span>counts.sort.subset<span class="p">)),</span>count<span class="o">=</span>unlist<span class="p">(</span>counts.sort.subset<span class="p">))</span> <span class="c1"># makes a funny sort of data frame...</span>
-</span><span class='line'>counts.sort.subset.df<span class="o">&lt;-</span>data.frame<span class="p">(</span>people<span class="o">=</span>as.factor<span class="p">(</span>counts.sort.subset.df<span class="o">$</span>people<span class="p">),</span>counts<span class="o">=</span>as.numeric<span class="p">(</span>counts.sort.subset.df<span class="o">$</span>count<span class="p">))</span> <span class="c1"># makes a better data frame for ggplot to work with</span>
-</span><span class='line'>ggplot<span class="p">(</span>counts.sort.subset.df<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>people<span class="p">,</span>counts<span class="p">),</span>counts<span class="p">))</span> <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Number of messages&quot;</span><span class="p">)</span><span class="o">+</span> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span> <span class="c1"># plot nicely ordered counts of tweets by person for people &gt; 5 tggsave(file = &quot;tweet_counts.pdf&quot;) # export the plot to a PDF file</span>
-</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;tweet_counts.png&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">###########################################</span>
-</span><span class='line'><span class="c1">#### Nice Plot of Frequent Re-Tweeters ####</span>
-</span><span class='line'><span class="c1">###########################################</span>
-</span><span class='line'>library<span class="p">(</span>stringr<span class="p">)</span>
-</span><span class='line'>x<span class="o">$</span>text<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>row<span class="p">)</span> iconv<span class="p">(</span>row<span class="p">,</span>to<span class="o">=</span><span class="s">&#39;UTF-8&#39;</span><span class="p">))</span> <span class="c1">#remove odd characters</span>
-</span><span class='line'>trim <span class="o">&lt;-</span> <span class="kr">function</span> <span class="p">(</span>x<span class="p">)</span> sub<span class="p">(</span><span class="s">&#39;@&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">,</span>x<span class="p">)</span> <span class="c1"># remove @ symbol from user names</span>
-</span><span class='line'>x<span class="o">$</span>rt<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>tweet<span class="p">)</span> trim<span class="p">(</span>str_match<span class="p">(</span>tweet<span class="p">,</span><span class="s">&quot;^RT (@[[:alnum:]_]*)&quot;</span><span class="p">)[</span><span class="m">2</span><span class="p">]))</span> <span class="c1">#extract who has been RT’d</span>
-</span><span class='line'>sum<span class="p">(</span><span class="o">!</span>is.na<span class="p">(</span>x<span class="o">$</span>rt<span class="p">))</span> <span class="c1"># see how many tweets are retweets</span>
-</span><span class='line'>sum<span class="p">(</span><span class="o">!</span>is.na<span class="p">(</span>x<span class="o">$</span>rt<span class="p">))</span><span class="o">/</span>length<span class="p">(</span>x<span class="o">$</span>rt<span class="p">)</span> <span class="c1"># the ratio of retweets to tweets</span>
-</span><span class='line'>countRT<span class="o">&lt;-</span>table<span class="p">(</span>x<span class="o">$</span>rt<span class="p">)</span>
-</span><span class='line'>countRT<span class="o">&lt;-</span>sort<span class="p">(</span>countRT<span class="p">)</span>
-</span><span class='line'>countRT.subset<span class="o">=</span>subset<span class="p">(</span>countRT<span class="p">,</span>countRT<span class="o">&gt;</span><span class="m">1000</span><span class="p">)</span> <span class="c1"># subset those RT’d more than 1000 times</span>
-</span><span class='line'>countRT.subset.df<span class="o">&lt;-</span>data.frame<span class="p">(</span>people<span class="o">=</span>as.factor<span class="p">(</span>unlist<span class="p">(</span>dimnames<span class="p">(</span>countRT.subset<span class="p">))),</span>RT_count<span class="o">=</span>as.numeric<span class="p">(</span>unlist<span class="p">(</span>countRT.subset<span class="p">)))</span>
-</span><span class='line'>ggplot<span class="p">(</span>countRT.subset.df<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>people<span class="p">,</span>RT_count<span class="p">),</span>RT_count<span class="p">))</span> <span class="o">+</span>
-</span><span class='line'> xlab<span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Number of messages retweeted by others&quot;</span><span class="p">)</span> <span class="o">+</span>
-</span><span class='line'> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span>
-</span><span class='line'> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
-</span><span class='line'> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span>
-</span><span class='line'> <span class="c1"># plot nicely ordered counts of tweets by person for people &gt; 1000 retweets</span>
-</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;retweet_counts.png&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">###########################################</span>
-</span><span class='line'><span class="c1">#### Nice Plot of RT-Tweet Ratios #########</span>
-</span><span class='line'><span class="c1">###########################################</span>
-</span><span class='line'>t<span class="o">&lt;-</span>as.data.frame<span class="p">(</span>table<span class="p">(</span>x<span class="o">$</span>username<span class="p">))</span> <span class="c1"># make table with counts of tweets per person</span>
-</span><span class='line'>rt<span class="o">&lt;-</span>as.data.frame<span class="p">(</span>table<span class="p">(</span>x<span class="o">$</span>rt<span class="p">))</span> <span class="c1"># make table with counts of retweets per person</span>
-</span><span class='line'>t.rt<span class="o">&lt;-</span>merge<span class="p">(</span>t<span class="p">,</span>rt<span class="p">,</span>by<span class="o">=</span><span class="s">&quot;Var1&quot;</span><span class="p">)</span> <span class="c1"># combine tweet count and retweet count per person</span>
-</span><span class='line'>t.rt<span class="p">[</span><span class="s">&quot;ratio&quot;</span><span class="p">]</span><span class="o">&lt;-</span>t.rt<span class="o">$</span>Freq.y <span class="o">/</span> t.rt<span class="o">$</span>Freq.x <span class="c1"># creates new col and adds ratio tweet/retweet</span>
-</span><span class='line'>sort.t.rt<span class="o">&lt;-</span>t.rt<span class="p">[</span>order<span class="p">(</span>t.rt<span class="o">$</span>ratio<span class="p">),]</span> <span class="c1"># sort it to put names in order by ratio</span>
-</span><span class='line'>sort.t.rt.subset<span class="o">&lt;-</span>subset<span class="p">(</span>sort.t.rt<span class="p">,</span>sort.t.rt<span class="o">$</span>Freq.y<span class="o">&gt;</span><span class="m">1000</span><span class="p">)</span> <span class="c1"># exclude those with 1000 tweets or less</span>
-</span><span class='line'>sort.t.rt.subset.drop<span class="o">&lt;-</span>droplevels<span class="p">(</span>sort.t.rt.subset<span class="p">)</span> <span class="c1"># drop unused levels that got in there somehow... note that this is already a data frame</span>
-</span><span class='line'>ggplot<span class="p">(</span>sort.t.rt.subset<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>Var1<span class="p">,</span>ratio<span class="p">),</span>ratio<span class="p">))</span> <span class="o">+</span>
-</span><span class='line'> xlab<span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Retweets as a ratio of total tweets&quot;</span><span class="p">)</span> <span class="o">+</span>
-</span><span class='line'> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span>
-</span><span class='line'> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
-</span><span class='line'> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span>
-</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;retweet_ratios.png&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">###########################################</span>
-</span><span class='line'><span class="c1">#### Nice Plot of Most Popular Links ######</span>
-</span><span class='line'><span class="c1">###########################################</span>
-</span><span class='line'>x<span class="o">$</span>link<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>tweet<span class="p">)</span> str_extract<span class="p">(</span>tweet<span class="p">,(</span><span class="s">&quot;http[[:print:]]+&quot;</span><span class="p">)))</span> <span class="c1"># creates new field and extracts the links contained in the tweet</span>
-</span><span class='line'>x<span class="o">$</span>link<span class="o">=</span>sapply<span class="p">(</span>x<span class="o">$</span>text<span class="p">,</span><span class="kr">function</span><span class="p">(</span>tweet<span class="p">)</span> str_extract<span class="p">(</span>tweet<span class="p">,</span><span class="s">&quot;http[[:print:]]{16}&quot;</span><span class="p">))</span> <span class="c1"># limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.</span>
-</span><span class='line'>countlink<span class="o">&lt;-</span>table<span class="p">(</span>x<span class="o">$</span>link<span class="p">)</span> <span class="c1"># get frequencies of each link</span>
-</span><span class='line'>countlink<span class="o">&lt;-</span>sort<span class="p">(</span>countlink<span class="p">)</span> <span class="c1"># sort them</span>
-</span><span class='line'>barplot<span class="p">(</span>countlink<span class="p">)</span> <span class="c1"># plot freqs</span>
-</span><span class='line'><span class="c1"># or to use ggplot2, read on...</span>
-</span><span class='line'>countlink<span class="o">&lt;-</span>data.frame<span class="p">(</span>table<span class="p">(</span>na.omit<span class="p">((</span>x<span class="o">$</span>link<span class="p">))))</span>
-</span><span class='line'>countlink<span class="o">&lt;-</span>subset<span class="p">(</span>countlink<span class="p">,</span>countlink<span class="o">$</span>Freq<span class="o">&gt;</span><span class="m">300</span><span class="p">)</span> <span class="c1"># exclude those with 300 tweets or less</span>
-</span><span class='line'>ggplot<span class="p">(</span>countlink<span class="p">,</span> aes<span class="p">(</span>reorder<span class="p">(</span>Var1<span class="p">,</span> Freq<span class="p">),</span> Freq<span class="p">))</span> <span class="o">+</span>
-</span><span class='line'> geom_bar<span class="p">()</span> <span class="o">+</span> coord_flip<span class="p">()</span> <span class="o">+</span> theme_bw<span class="p">()</span> <span class="o">+</span>
-</span><span class='line'> xlab<span class="p">(</span><span class="s">&quot;Link&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span> <span class="o">+</span>
-</span><span class='line'> opts<span class="p">(</span>axis.title.x <span class="o">=</span> theme_text<span class="p">(</span>vjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> size <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
-</span><span class='line'> opts<span class="p">(</span>axis.title.y<span class="o">=</span>theme_text<span class="p">(</span>size <span class="o">=</span> <span class="m">14</span><span class="p">,</span> angle<span class="o">=</span><span class="m">90</span><span class="p">))</span>
-</span><span class='line'>ggsave<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;links.png&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 
 		
 		
