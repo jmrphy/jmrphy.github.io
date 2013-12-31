@@ -4,7 +4,7 @@
   <title><![CDATA[Category: social science | Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/blog/categories/social-science/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-12-21T21:03:17+01:00</updated>
+  <updated>2013-12-31T19:03:33+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A diagram of stratification]]></title>
     <link href="http://jmrphy.github.io/blog/2013/12/19/dg-stratifcation/"/>
-    <updated>2013-12-19T06:53:00+01:00</updated>
+    <updated>2013-12-19T06:53:00+00:00</updated>
     <id>http://jmrphy.github.io/blog/2013/12/19/dg-stratifcation</id>
     <content type="html"><![CDATA[<p>Below is a sketch of what Deleuze and Guattari describe as &ldquo;the pincer&rdquo; or &ldquo;double articulation&rdquo; of stratification.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
@@ -38,7 +38,7 @@
   <entry>
     <title type="html"><![CDATA[What really changed after the Cold War?]]></title>
     <link href="http://jmrphy.github.io/blog/2013/12/13/what-really-changed-after-the-cold-war/"/>
-    <updated>2013-12-13T17:36:00+01:00</updated>
+    <updated>2013-12-13T17:36:00+00:00</updated>
     <id>http://jmrphy.github.io/blog/2013/12/13/what-really-changed-after-the-cold-war</id>
     <content type="html"><![CDATA[<p>The traditional textbook story about the end of the Cold War and its effect on the international system completely misses the most important and extraordinary changes taking place at that time. The debate between realists and neoliberal institutionalists is a red herring. The most important transformation wrought by the collapse of the Soviet Union has nothing to do with the power of states vs. the power of international institutions. This debate in international relations theory completely distracts from what are very clearly the most world-historical changes taking place at that time, changes which actually have huge relevance to the lives of students and the global masses more generally.</p>
 
@@ -71,7 +71,7 @@
   <entry>
     <title type="html"><![CDATA[A concept of political validity in quantitative social science]]></title>
     <link href="http://jmrphy.github.io/blog/2013/11/03/a-concept-of-political-validity-in-quantitative-social-science/"/>
-    <updated>2013-11-03T17:12:00+01:00</updated>
+    <updated>2013-11-03T17:12:00+00:00</updated>
     <id>http://jmrphy.github.io/blog/2013/11/03/a-concept-of-political-validity-in-quantitative-social-science</id>
     <content type="html"><![CDATA[<p>Let us call <em>bourgeois data</em> any research data the collection of which is funded by groups invested in the status quo. Bourgeois data, which is to say nearly all the quantitative data used by social scientists, suffer from a specific type of bias for which most methodologists show very little concern, despite the extraordinary analytical attention they devote to the question of bias in social-scientific inference more generally. Methodologists are likely unconcerned about the possibility of <em>institutional</em> biases in data collection because they have precisely the same institutional investments as the funders of data collection projects. Methodologists will consider &ldquo;external validity&rdquo; (whether the data reflects what we think it reflects in the world) and &ldquo;internal validity&rdquo; (the logical coherence of inferences), but rarely do they consider what we might call <em>political validity</em>, which we might provisionally define as the scientific legitimacy of the basic worldview, determined by a researcher’s institutional environment, with which scientific inferences are verbally constructed. In other words, we must take seriously the question of whether the institutional environment which sponsors data-collection and research activity more generally is itself non-random and non-trivial. I suspect that for too long this question has been delegated to “critical” theorists in a disingenuous gesture which gives them just enough attention so that positivist social scientists can say their discipline already has people “working on” this issue, but not so much attention that positivists have to make any serious adjustments in how we actually think, write, or speak about the political implications of our research agendas.</p>
 
@@ -94,7 +94,7 @@
   <entry>
     <title type="html"><![CDATA[Civil war and the square of ethnic fractionalization]]></title>
     <link href="http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4/"/>
-    <updated>2013-05-22T18:06:22+02:00</updated>
+    <updated>2013-05-22T17:06:22+01:00</updated>
     <id>http://jmrphy.github.io/blog/2013/05/22/civil-war-and-the-square-of-ethnic-fractionalization-4</id>
     <content type="html"><![CDATA[<p>Steve Saideman wonders if the relationship between ethnic fractionalization and civil war is curvilinear, where increasing fractionalization increases the probability of civil war up to a certain point but then increasing fractionalization decreases the probability of civil war. Since I have my nose in this data right now, I&rsquo;ve given this conjecture a quick probe. I find no evidence <em>prima facie</em>.</p>
 
@@ -324,7 +324,7 @@ summary(model)
   <entry>
     <title type="html"><![CDATA[Analysis of #GazaUnderAttack tweets]]></title>
     <link href="http://jmrphy.github.io/blog/2012/12/29/analysis-of-gazaunderattack-tweets/"/>
-    <updated>2012-12-29T20:12:32+01:00</updated>
+    <updated>2012-12-29T19:12:32+00:00</updated>
     <id>http://jmrphy.github.io/blog/2012/12/29/analysis-of-gazaunderattack-tweets</id>
     <content type="html"><![CDATA[<p>During the Israeli-Palestinian attacks of last month, I scraped from the Twitter API about 270,000 tweets containing the hashtag #gazaunderattack. Given the unprecedented degree to which this war was fought online, tweets of this sort could and should become really important data for political scientists. I&rsquo;m too busy right now to say very much here, but I want to share some basic descriptive analyses for anyone who might be interested. The dataset can be downloaded <a href="https://dl.dropbox.com/u/20498362/tweets_%23gazaunderattack.csv">here</a> and the R script that produced these analyses is available at the very bottom.</p>
 
