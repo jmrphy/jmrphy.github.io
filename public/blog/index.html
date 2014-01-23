@@ -7,7 +7,7 @@
 	<meta name="author" content="Justin Murphy">
 
 	
-	<meta name="description" content="Dec 31st, 2013 note Daily schedule for weekdays (the only legitimate drill-sergeant is autonomous self-discipline) Below is the daily schedule I &hellip;">
+	<meta name="description" content="Jan 23rd, 2014 System for managing student course submissions using free web services (proof of concept) In order to bypass the criminally &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,78 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-23T21:26:00+00:00" data-updated="true" itemprop="datePublished">Jan 23<span>rd</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/01/23/a-system-for-managing-student-course-submissions-using-free-web-services/" itemprop="url">System for managing student course submissions using free web services (proof of concept)</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>In order to bypass the criminally profligate corporate education contractors who charge universities extortionate prices for almost useless products such as Blackboard and Turnitin, I&rsquo;ve devised a system for managing student course submissions and record keeping throughout the semester, using all free web services. Not as if these free web services live on moral high-ground, but at least they let us dodge these stationary bandits charging rents at the revolving door between universities and the corporate sector.</p>
+
+<p>With this system, students can blog publicly as much as they&rsquo;d like, all of their work is collected and organized automatically, and the instructor can grade submissions quickly, easily, <em>and</em> anonymously, all in one place (in the cloud). Here&rsquo;s how it works.</p>
+
+<p><img src="http://grab.by/tN22" alt="" /></p>
+
+<p>All students have a personal blog using one of the major blogging platforms. The RSS feed associated with each blog is channeled into one master RSS feed using Feed.Informer.com. This master feed is then run through IFTTT to distribute every student blog post into two different formats in my private Google Drive. First, every single student blog post is logged into a Google Spreadsheet capturing everything about the post (the content, the url, the student&rsquo;s name, and the time of the post). This is the master spreadsheet. But the critical course submissions are also distributed into individual text files which do <em>not</em> include the student&rsquo;s name. This is achieved by simply having students tag their critical submissions with some specific tag, and telling IFTTT to create the anonymized text file only for posts with that tag.</p>
+
+<p><strong>Proof of concept.</strong> To show that this works, scales reasonably, and is consistent with anonymous grading, I set up a pilot &ldquo;course&rdquo; using about 15 popular political blogs as my &ldquo;student&rdquo; blogs. Then I let the system run for about 6 days. Below, I demonstrate how I set it up and how this system can reliably deliver more than 2,000 blog posts from various blogs for quick, easy, and secure grading.</p>
+
+<ol>
+<li>Use Feed.Informer.com to turn all of your students&#8217; blogs into one master RSS feed. This is basically just merging all of the blogs into one data stream.</li>
+</ol>
+
+
+<p><img src="http://grab.by/tMEG" alt="" /></p>
+
+<p>You give it many RSS feeds, and then it gives you one RSS feed merging them all.</p>
+
+<p><img src="http://grab.by/tMF4" alt="" /></p>
+
+<ol>
+<li>Use IFTTT to make two &ldquo;recipes.&rdquo; The first one sends every new entry on a specified RSS feed (you give it your master feed) to a new row in some specified spreadsheet in your Google Drive. Then a second recipe sends <em>only</em> items in the RSS master feed matching some specified tag into their own anonymous Google docs in your Google Drive. You can put them in their own folder to keep things tidy. In this example, only blog posts tagged &ldquo;politics&rdquo; are filed into their own anonymous docs. In practice, you would just tell students to tag their critical assignments (mid-term or final-term essays, for instance) with any specified tag of your choosing, and enter that into IFTTT instead of &ldquo;politics.&rdquo;</li>
+</ol>
+
+
+<p><img src="http://grab.by/tMHA" alt="" /></p>
+
+<ol>
+<li>After six days, I have more than 2,000 student blog posts. And a few hundred &ldquo;mid-term essays&rdquo; ready for anonymous grading. After reading the anonymous documents, you can just find the associated title in the spreadsheet and enter a grade. Or just visit the anonymous link from the text document, to see who wrote it and then enter your grades wherever else you might be keeping them. Regardless, the entire written output of your entire class is all collected in one place.</li>
+</ol>
+
+
+<p><img src="http://grab.by/tMG0" alt="" /></p>
+
+<p>Here&rsquo;s a spreadsheet. It will automatically make an additional spreadsheet after any spreadsheet reaches 2000 rows.</p>
+
+<p><img src="http://grab.by/tMIG" alt="" /></p>
+
+<p>Example of an anonymous Google doc.</p>
+
+<p><img src="http://grab.by/tMGk" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -515,109 +587,6 @@
 
 </article>
 
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-16T19:57:30+01:00" data-updated="true" itemprop="datePublished">Jun 16<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/theory/'>theory</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/06/16/a-mass-media-theory-of-the-surveillance-state/" itemprop="url">A mass media theory of the surveillance state</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p><a href="https://twitter.com/sarahljaffe/status/344555375170842624">Sarah Jaffe</a> asks for a political economy of the surveillance state. I felt especially behooved to send her something not just because I&rsquo;m a young academic roughly in political economy but also because, as one of thousands of young adults in the U.S. who were radicalized in through Occupy Wall Street—I strongly identify with independent intellectuals like Sarah and the class war of which she writes. I believe, contrary to many activists and radicals, that the tools of academic political economy can be extremely powerful in the struggle for truth and justice in the social war. So I really wanted to give Sarah a good link and say, &ldquo;Here you go, sure it&rsquo;s bourgeois but look this really can help us understand what&rsquo;s going on&hellip;&rdquo;</p>
-
-<p>Surveying the political economy blogosphere, however, I&rsquo;m hard pressed to find anything worth sending her. Tyler Cowen <a href="http://marginalrevolution.com/marginalrevolution/2013/06/a-simple-public-choice-theory-of-universal-surveillance.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%253A+marginalrevolution%252Ffeed+%2528Marginal+Revolution%2529&amp;utm_content=Google+Reader">takes a stab</a>, which Kindred Winecoff <a href="http://ipeatunc.blogspot.com/2013/06/tree-dont-care-what-little-bird-sings.html">finds unconvincing</a>. Winecoff, though, is admittedly unable to do much better, offering only a smattering of thoughts and links. A little discussion on <a href="http://crookedtimber.org/2013/06/13/insubordination-and-the-surveillance-state/">Crooked Timber</a>, a very interesting and link-rich <a href="http://www.cnas.org/blogs/abumuqawama/2013/06/through-murky-prism.html">story from Adam Elkus</a>, but no especially compelling model.</p>
-
-<p><strong>I&rsquo;d like to offer a model of the US surveillance state as a natural outgrowth of any militarized democracy with a corporate mass media. </strong>I&rsquo;ll summarize the argument succinctly up front, and develop an informal model below.</p>
-
-<p><strong>Abstract:</strong></p>
-
-<p>Basically, in an ideally functioning democracy, anti-colonial terrorism is an effective check on colonial tendencies of democratic states. In an ideally functioning democracy with a healthy communication/information environment, 9-11 would have elicited a massive domestic uproar against the US militarism which incited 9-11, that militarism abroad would have been withdrawn, and terrorism would have stopped.</p>
-
-<p>When a capitalist democracy is overrun with rampant inequality and the media are captured by wealthy elites, terrorism does not produce a check against colonialism because the wealthy have incentives to stifle the message attached to anti-colonial terrorism. This leads to a bad equilibrium of colonial terror abroad and retaliatory terror at home. At the same time, wealthy elites who already have a monopoly on information production also already have economies of scale in information monitoring and surveillance. Because the system is increasingly suboptimal for everyone but the wealthy of the colonial regime, and because it is increasingly leveraged on distorted information, it is therefore increasingly <em>vulnerable</em> to the very nature of information <em>anywhere</em>.</p>
-
-<p>The communication/information of domestic citizens becomes as threatening to the elite as terrorism from abroad, because the increasingly suboptimal system was built on a fundamentally manipulative basis of a corporate-captured media culture. Thus, once the system crosses some threshold of suboptimality, a surveillance state is rapidly and easily turned on populations at home and abroad—the bureacratic and technological resources easily spillover and an already pacified population even happily accepts it.</p>
-
-<h2>1. A Baseline Model of Colonialism and Anti-Colonial Terrorism with Democratic Communication</h2>
-
-<p>Consider an ideally functioning liberal democracy. There is a market economy with winners and losers but robust democratic institutions empower the people to tax and regulate business as they please. Assume only two things about this democracy:</p>
-
-<ul>
-<li><p>As per standard models of taxation/redistribution in democracies, taxation and redistribution increase as inequality increases (Meltzer and Richards 1981).<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p></li>
-<li><p>Assume that there are strong policies which prevent the concentration of commercial media and actively promote a diversity of grassroots, community-driven media agendas. In other words, assume the intution most of us have when we imagine what media would look like in an ideal democracy, i.e. non-massified, diversified media which questions and criticizes everything from multiple angles. This assumption elides many questions (but that&rsquo;s the privilege of blog posts, right?)</p></li>
-</ul>
-
-
-<p>Now, militaries of democracies are driven by what Yagil Levy calls <a href="http://cmp.sagepub.com/content/27/4/386.abstract">a force/casualty tradeoff:</a> Voters punish politicians when soldiers on the home team die, but since voters don&rsquo;t punish politicians for killing foreign civilians, democratic pressure actually encourages militaries to use excessive lethal force overseas (killing civilians) in order to prevent their own soldiers from dying. Assume this is true of our hypothetical liberal democracy.</p>
-
-<p>In response foreigners attack civilians in the liberal democracy precisely in order to raise the costs of the democracy&rsquo;s violence abroad beyond what is politically sustainable in the democracy. There&rsquo;s an excellent book by <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;cad=rja&amp;ved=0CF0QFjAJ&amp;url=http%253A%252F%252Fbooks.google.com%252Fbooks%252Fabout%252FWinning_hearts_and_minds.html%253Fid%253DzvMLAQAAMAAJ&amp;ei=I1u7UZeEH-Lo0gGWl4HADg&amp;usg=AFQjCNE_2mo-CgGxjJ_pQerUwM3BhafstQ&amp;sig2=jI0zNa2fZ6sr8wcF-R7HBw&amp;bvm=bv.47883778,d.dmQ">Susan Carruthers (1995)</a> which provides ample evidence that, from Mau Mau to Malaysia to Cyprus, anti-colonial terrorism against the British colonial government was based on the wager that British citizens would be so horrified that they would pressure their government to withdraw. Interestingly, Carruthers traces how this strategy largely worked, as British media reports of anti-colonial terrorism turned British citizens sour towards colonialism.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> Most important for the moment, however, is the acknowledgement that this logic of political terrorism requires that citizens in the liberal democracy truly learn about the reality of the protesting terrorists. The British media in the 1950s and 1960s roughly meets the assumption laid out above&mdash;definitely some concentration and cronyism but still lots of freewheeling muckraking and radical leftist newspapers with politically significant audiences.</p>
-
-<p>So, in a functioning democracy with relative equality and a relatively healthy media environment, terrorism in protest of a democracy&rsquo;s violence abroad makes citizens in the democracy update their estimation of their military&rsquo;s violence abroad and support declines for the military&rsquo;s violence.<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> The military is forced to withdraw from its violent adventures, terrorism stops, and there is neither the need nor the political possibility of a surveillance state.</p>
-
-<h2>2. Colonialism and Anti-Colonial Terrorism with Corporate Mass Media</h2>
-
-<p>Now, let&rsquo;s imagine a rise in inequality without a corresponding rise in taxation/redistribution. I don&rsquo;t think I need to post a graph—we all know indeed that since the 1950s most of the US income gains have gone to the rich, and along the way we&rsquo;ve ended up with only neoliberal cutbacks to redistributive spending. In other words, assume that the Meltzer and Richards expectations no longer hold.</p>
-
-<p>Runaway inequality would have two really important implications for understanding where the surveillance state has come from and how it was possible:</p>
-
-<ul>
-<li><p>If inequality rises and democratic redistribution does not occur to level the political playing field, here&rsquo;s a nice political economy model showing with evidence why and how <a href="https://0ec87679-a-62cb3a1a-s-sites.googlegroups.com/site/mariapetrovaphd/inequality%2520media.pdf?attachauth=ANoY7coFxOvpnB1LkvoeH4s47vGIT7Q8baK6IVmtXBnjoUVXUQ97HyVYtGsXxDc3fBhYT4Ve5bTn8Tm-Nar1ekON48VEgQec6qqChEAILiqgcJSHSXoUtOOrWfUmlwSm2nwChy74n1-2apdOtcyZfHyyRlwWYaM3XKe-sc42RXnAMYQ2vXvHPgkLpp4L5CkLODy1AQlKNa0Wax0HcunE64rJqKArAjCZ8nQpckC1RZOQcKw6MyhMYG4%253D&amp;attredirects=0">the media will be captured by the rich</a> (Petrova 2008).<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></p></li>
-<li><p>Media captured by the rich is far less likely to report the ways in which the US military is to blame for terrorism, and far more likely to <a href="http://en.wikipedia.org/wiki/Rally_'round_the_flag_effect">rally-around-the-flag</a>. First, we know very well that the media tend to index their reporting to what the government says <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1460-2466.2006.00296.x/abstract?deniedAccessCustomisedMessage=&amp;userIsAuthenticated=false">(one especially apropos example of this finding is Bennett, Lawrence, and Livingston 2006)</a>. If this is a tendency of media in general, it should be more true of media captured by the rich because for obvious reasons the economic interests of elite media actors would have a greater status-quo bias (they would be highly averse to anything that could engender significant mass-public re-evaluations of the status quo). There is ample evidence for this claim in the observation that an outlet such as FOX news, most closely aligned with the wealthiest patrons such as the Koch Brothers, will rally-around-the-flag and defend the military more rabidly than any of the other outlets.</p></li>
-</ul>
-
-
-<p>The resulting expectation at this point in our model is that once runaway inequality leads to media capture (i.e. corporate mass media), the <strong>message</strong> of retaliatory political terrorism hardly gets through as elite media rally-around-the-flag. Terrorists <a href="http://www.nbcnews.com/id/4686034/ns/world_news-hunt_for_al_qaida/t/timeline-al-qaida-statements/">repeatedly and explicity</a> <a href="http://www.nydailynews.com/news/crime/boston-bomb-suspect-left-confession-boat-report-article-1.1345642">explain and justify</a> their attacks on US citizens as the only option available to them in discouraging the continued murder of their people by the US military. The problem is that now there is no sufficiently powerful media company with any incentives to really highlight the US government&rsquo;s share of the blame and to editorialize in that direction as vociferously as Great Britain&rsquo;s <em>Daily Worker</em> in the 1950s.<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup></p>
-
-<p>Of course rallying-around-the-flag has always occurred in the media, but in non-captured, democratic media the knee-jerk patriotism is only one voice among many. After runaway inequality, it&rsquo;s basically the only voice in the media, which is what we have in the U.S. today. Because the actual message terrorists attach to their terrorism does not get through, it no longer exerts the &ldquo;error-correction&rdquo; effects it exerted in our baseline model; it no longer alters the subjective cost-benefit analysis of the mass democratic public, and therefore there is no negative feedback, no countervailing electoral pressure against the collateral murder of foreign civilians. The democratic citizens unwittingly incentivize the goverment to recklessly kill foreign civilians and then, when they are attacked by suicide bombers in response, the elite media deprives them of the most important point and leads them to demand more war.</p>
-
-<h2>3. The Surveillance State is a Spillover of Corporate Mass Media</h2>
-
-<p>I would argue that the surveillance state is simply a technological and bureaucratic <a href="http://www.jstor.org/discover/10.2307/2705338?uid=3739864&amp;uid=2&amp;uid=4&amp;uid=3739256&amp;sid=21102408438227">spillover</a> of a militarized democracy with a corporate mass media system. Once a state arrives in the bad equilibrium described above—where &ldquo;democratic&rdquo; electoral pressures and a perverse media environment create an infinite loop of militarized terrorism abroad and retaliatory terrorism at home—the stability of the system is highly <em>vulernable</em> to information precisely because it&rsquo;s built on distortion of the truth. Because this system is increasingly suboptimal for most people in the country and outside of it, true information is increasingly threatening to the status quo.</p>
-
-<p>At the same time this system is highly leveraged on the distortion of information, advantages in the production/dissemination of information also give media elites extraordinary advantage in the surveillance and reconnaisance of information. If you need to be convinced of the complementarity between producing and monitoring information, recall that a significant portion of CIA activities, especially earlier in its history, are also organized around <a href="http://en.wikipedia.org/wiki/Morale_Operations_Branch">producing</a> information and <a href="http://en.wikipedia.org/wiki/CIA_influence_on_public_opinion">influencing public opinion</a> as much as collecting and monitoring it. The government contractor Booz Allen Hamilton, (former) home of the most recent NSA whistleblower Edward Snowden, <a href="http://en.wikipedia.org/wiki/Booz_Allen_Hamilton%23Notable_members_and_alumni">has ties</a> to British Telecommunications PLC, VH1 and CMT television networks, more than one connection to MTV Networks, publisher McGraw-Hill, and individuals who came directly from the information-production side of the CIA. For instance, Booz Allen Hamilton was once the private-sector home of Miles Copeland, a figure who was instrumental in the sabotage of Mossadegh in Iran, an operation which involved elaborate propaganda campaigns, <a href="http://en.wikipedia.org/wiki/1953_Iranian_coup_d'%25C3%25A9tat%23Role_of_BBC.27s_Persian_service">manipulation</a> of the Persian media, and some <a href="http://select.nytimes.com/gst/abstract.html?res=F10F15F73F5C177B93C4A91783D85F408585F9">ideological assistance</a> at home. One cannot run a world-class surveillance operation without some experience in controlling the flow of public information in general, and one cannot get away with it unless one has already produced a pacifying public culture for some time.</p>
-
-<p>Thus, lo and behold, at exactly the same time as true information is increasingly threatening to the system, the elites who have produced the distortions of that system will, and must, easily and naturally turn their resources towards monitoring as many people as possible. The capture and development of corporate mass media produces the informational distortions which engender a cycle of terror abroad and at home. Because this is an inherently suboptimal system which citizens would overthrow if they understood it, it suddenly requires a surveillance system to monitor the possibility of any threats whatsoever domestic or abroad. Then once the actual construction of a surveillance state is triggered, it is only possible on the back of an already developed and elite-controlled mass media—because of the bureaucratic and technological spillovers but also from the already pacified population it has produced.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>Richard, Scott F, and Allan H Meltzer. 1981. “A Rational Theory of the Size of Government.” Journal of Political Economy (May 26): 1–15. As the mean income outpaces the income of the median voter, we should find taxation/redistribution increasing because that median voter will prefer governments who tax the rich and redistribute their money. In turn, an ideally functioning representative democracy almost by definition means that the only politician who can win an election is the politician who satisfies the median voter. Thus, in a democracy, as inequality increases, we should find governments taxing and redistributing.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>Note also that suicide bombings are more likely against liberal democracies.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>Note that it makes no difference whether the democratic citizens drop their support of the military because they empathetically learn about the suffering which drives the protesting terrorists, or out of self-interest (the military&rsquo;s adventure abroad isn&rsquo;t worth the risk of being bombed in the subway).<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>Petrova looks in particular at media freedom, i.e. censorship and formal repression, but her model is also equally suggestive of the expectation that rising inequality would allow the rich to unduly influence what the media do and do not say without necessarily buying its formal repression. The difficulty is that there&rsquo;s good data on good old fashioned repression, not so many datasets on informal influence by the rich.<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-<li id="fn:5">
-<p>It is well known that bin Laden launched concerted public messaging campaigns urging the US to leave the Middle East or else there would be attacks against US civilians. I&rsquo;m not aware of research on this in particular, but I think we can be pretty sure these public declarations were not well covered by US media outlets. Needless to say, in the aftermath of 9-11, the knee-jerk patriotism and [rally-around-the-flag][13] effects in the media not only crowded-out but positively punished the empathetic/self-critical line. Remember when Ward Churchill was [absolutely destroyed by the mainstream media][14] for suggesting that 9-11 was like &ldquo;chickens coming home to roost&rdquo;? Agree or disagree with Churchill, the point here is that when there are only a few disproportionately powerful media outlets—and for probably a few other more nuanced reasons—the rally-around-the-flag tendencies are amplified and choke off the very possibility of citizens critically evaluating and updating their assessments of their military&rsquo;s actions abroad.<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-
-		
-		
-	</div>
-
-</article>
-
 </div>
 <nav id="pagenavi">
     
@@ -628,7 +597,7 @@
 </nav></div>
 			</div>
 			<footer id="footer" class="inner"><p>
-  Copyright &copy; 2013 - Justin Murphy -
+  Copyright &copy; 2014 - Justin Murphy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

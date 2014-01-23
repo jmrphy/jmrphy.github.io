@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2013-12-31T19:58:39+00:00</updated>
+  <updated>2014-01-23T22:30:32+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[System for managing student course submissions using free web services (proof of concept)]]></title>
+    <link href="http://jmrphy.github.io/blog/2014/01/23/a-system-for-managing-student-course-submissions-using-free-web-services/"/>
+    <updated>2014-01-23T21:26:00+00:00</updated>
+    <id>http://jmrphy.github.io/blog/2014/01/23/a-system-for-managing-student-course-submissions-using-free-web-services</id>
+    <content type="html"><![CDATA[<p>In order to bypass the criminally profligate corporate education contractors who charge universities extortionate prices for almost useless products such as Blackboard and Turnitin, I&rsquo;ve devised a system for managing student course submissions and record keeping throughout the semester, using all free web services. Not as if these free web services live on moral high-ground, but at least they let us dodge these stationary bandits charging rents at the revolving door between universities and the corporate sector.</p>
+
+<p>With this system, students can blog publicly as much as they&rsquo;d like, all of their work is collected and organized automatically, and the instructor can grade submissions quickly, easily, <em>and</em> anonymously, all in one place (in the cloud). Here&rsquo;s how it works.</p>
+
+<p><img src="http://grab.by/tN22" alt="" /></p>
+
+<p>All students have a personal blog using one of the major blogging platforms. The RSS feed associated with each blog is channeled into one master RSS feed using Feed.Informer.com. This master feed is then run through IFTTT to distribute every student blog post into two different formats in my private Google Drive. First, every single student blog post is logged into a Google Spreadsheet capturing everything about the post (the content, the url, the student&rsquo;s name, and the time of the post). This is the master spreadsheet. But the critical course submissions are also distributed into individual text files which do <em>not</em> include the student&rsquo;s name. This is achieved by simply having students tag their critical submissions with some specific tag, and telling IFTTT to create the anonymized text file only for posts with that tag.</p>
+
+<p><strong>Proof of concept.</strong> To show that this works, scales reasonably, and is consistent with anonymous grading, I set up a pilot &ldquo;course&rdquo; using about 15 popular political blogs as my &ldquo;student&rdquo; blogs. Then I let the system run for about 6 days. Below, I demonstrate how I set it up and how this system can reliably deliver more than 2,000 blog posts from various blogs for quick, easy, and secure grading.</p>
+
+<ol>
+<li>Use Feed.Informer.com to turn all of your students&#8217; blogs into one master RSS feed. This is basically just merging all of the blogs into one data stream.</li>
+</ol>
+
+
+<p><img src="http://grab.by/tMEG" alt="" /></p>
+
+<p>You give it many RSS feeds, and then it gives you one RSS feed merging them all.</p>
+
+<p><img src="http://grab.by/tMF4" alt="" /></p>
+
+<ol>
+<li>Use IFTTT to make two &ldquo;recipes.&rdquo; The first one sends every new entry on a specified RSS feed (you give it your master feed) to a new row in some specified spreadsheet in your Google Drive. Then a second recipe sends <em>only</em> items in the RSS master feed matching some specified tag into their own anonymous Google docs in your Google Drive. You can put them in their own folder to keep things tidy. In this example, only blog posts tagged &ldquo;politics&rdquo; are filed into their own anonymous docs. In practice, you would just tell students to tag their critical assignments (mid-term or final-term essays, for instance) with any specified tag of your choosing, and enter that into IFTTT instead of &ldquo;politics.&rdquo;</li>
+</ol>
+
+
+<p><img src="http://grab.by/tMHA" alt="" /></p>
+
+<ol>
+<li>After six days, I have more than 2,000 student blog posts. And a few hundred &ldquo;mid-term essays&rdquo; ready for anonymous grading. After reading the anonymous documents, you can just find the associated title in the spreadsheet and enter a grade. Or just visit the anonymous link from the text document, to see who wrote it and then enter your grades wherever else you might be keeping them. Regardless, the entire written output of your entire class is all collected in one place.</li>
+</ol>
+
+
+<p><img src="http://grab.by/tMG0" alt="" /></p>
+
+<p>Here&rsquo;s a spreadsheet. It will automatically make an additional spreadsheet after any spreadsheet reaches 2000 rows.</p>
+
+<p><img src="http://grab.by/tMIG" alt="" /></p>
+
+<p>Example of an anonymous Google doc.</p>
+
+<p><img src="http://grab.by/tMGk" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Daily schedule for weekdays (the only legitimate drill-sergeant is autonomous self-discipline)]]></title>
@@ -634,17 +684,6 @@ Finally, this same thesis which helps us understand absurdly aggressive legal re
 <p>Furthermore, growing dependent on such an institution for the most essential and elemental psychological needs is a most deadly vulnerability because, when one steps back from the institution for one&rsquo;s own freedom, to the exact degree one is accustomed to the flattery of that institution, one will feel stupid and worthless and suffer all kinds of the most pathetic problems and embarrassments in trying to step back. This is why the businessman in mid-life crisis is one of the most pathetic figures. However, every downturn of self-esteem that comes from such a precarious and self-betraying identification with an institution, tends to produce an upturn in at least one thing: economic consumption. For, the one thing the institutions will give you is money. And they&rsquo;ll give it to you precisely to the degree you&rsquo;re capable of doing something intense outside of an institution; nothing gets a higher price than that and intellectual history is replete with examples. When the life of the mind faulters and there is money in the bank, an almost automatic transference of energy takes place in which the mind fixates on some new thing to buy. Most important in this respect are upper-class goods such as nice clothing and nice housing. &ldquo;Why am I so stressed and neurotic?&rdquo; they ask themselves. &ldquo;It&rsquo;s because I don&rsquo;t have the proper materials for such an important life.&rdquo;</p>
 
 <p>Because money is the only thing the institutions ultimately offer you, there is an overwhelming tendency to spend it upwards so to speak&mdash;so as to alleviate the stresses incurred in earning it. This point is perhaps banal, but the less observed point here is not just the material compensation of purchased pleasures for working stress; it&rsquo;s that the things purchased actually come to convince people of the legitimacy of the social distribution of resources. &ldquo;I need a nice sunny loft apartment all to myself because I need to focus and that&rsquo;s when I&rsquo;m most creative, because I am an academic.&rdquo; In fact, the exact opposite is the truth: I need a nice sunny loft apartment precisely because I&rsquo;m not an academic, so that in trying to be one for money I get so stressed and distracted I can&rsquo;t even do it how most people live, so I have to spend this money on a new apartment, etc. Then, lo and behold, all of the material and psychological vertigo of upward mobility comes along. That vertigo is real, it is the <em>real movement</em> as the Marxists like to say, of being distributed.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The equality in evil]]></title>
-    <link href="http://jmrphy.github.io/blog/2013/02/16/the-equality-in-evil/"/>
-    <updated>2013-02-16T18:07:33+00:00</updated>
-    <id>http://jmrphy.github.io/blog/2013/02/16/the-equality-in-evil</id>
-    <content type="html"><![CDATA[<p>We fetishize words in such a way that when someone says something, we are prone to find them outrageously evil should they choose certain words. But the reality is that the actual quality of human drives probably differs much less across history and space than we wish to believe. This sense is inflated by the significance we attach to particular words, and distorted in severe biases in the social distribution of verbal facility. This is evidenced by the fact that the average, &ldquo;well-bred&rdquo;, sensitive, educated person, almost certainly plays very often, in their head, with certain extremely uncouth and perhaps even wildly offensive ideas and phrasings before instantly knowing or realizing, precisely on account of their well bred discrimination, that such words would likely incur severe social punishment within their peer group. Those who are decent and polite are usually only well educated, which means they&rsquo;re merely better trained in the repression and verbal dissimulation of evil compared to the uneducated who are far more likely to spew all kinds of bigotry in public.</p>
-
-<p>This all suggests a really interesting convergence of the two opposite meanings of the word &ldquo;discrimination&rdquo;: namely that the dominant classes who benefit from social institutions of racial, gender, and class discrimination in the political sense, are precisely those who have the most trained sense of &ldquo;discrimination&rdquo; in the valorized sense of nuance. The same base human drives that more or less unite us all, and the same overarching social institutions organize all of our habits and tendencies, even if they distribute us differentially. The ability to &ldquo;discriminate&rdquo; in the good sense, is itself a privilege of discrimination in the bad sense. We must try to understand better that occupying a position in that discriminate classes in no way makes us better or less evil than people who are simply less adept at hiding their tracks. Ours is simply a different kind of evil, an evil that we have stuffed under layers and layers of torturously complicated rationales, but which is most manifest at the material level of that which we actually enjoy at the cost of the suffering of so many others. There is, then, a certain overall equality of evil in a society such as ours where that evil is so thoroughly mediated and distributed by institutions, such that for some it is transparent and unadorned much to the criticism of the public mind, while for others it is simply buried, dissimulated, and finally rewarded.</p>
 ]]></content>
   </entry>
   
