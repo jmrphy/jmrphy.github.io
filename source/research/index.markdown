@@ -7,7 +7,8 @@ footer: true
 ---
 
 ### Mass Media and the Domestic Politics of Globalization
-- [Download working paper](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2320218)
+- [Download working paper](https://github.com/jmrphy/globalization_mass_media/blob/master/article/globalization_mass_media.pdf?raw=true)
+- [Cite on SSRN](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2320218)
 - [Source materials on Github](https://github.com/jmrphy/media_and_domestic_politics_of_globalization)
 
 ### Why are the Most Trade-Open Countries More Likely to Repress the Media?
