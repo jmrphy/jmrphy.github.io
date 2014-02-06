@@ -7,8 +7,6 @@ categories:
 - theory
 ---
 
-### The question of revolution is unavoidable
-
 If I insist on the revolutionary position, it is not to insist on the dichotomy between revolution and reform. Most of us today will agree with Gorz that there exists a class of *revolutionary reforms*, at which point the relevant distinction becomes the distinction between revolutionary reforms and reformist reforms. Today, Nancy Fraser suggests the critical distinction is between "system-conforming" changes and "system-transforming" changes, but it seems to me that the long-standing theoretical and practical difficulty remains the same: which types of projects (individual or collective) *effectively* oppose capitalism and push society toward justice, and which types of projects (whether through mystification, co-optation, or defeat) merely improve capitalism for some at the price of renouncing the system-level opposition which would be the maximally true, coherent, and just position.
 
 To my mind, this is the essence of the revolutionary position: To believe that the organisation of the world's institutions are unjust, to see empirically that a key feature of these institutions is precisely that they offer particular groups small gains in return for their renunciation of system-level opposition, to therefore locate *this precise mechanism* as the essential and perhaps only mechanism which is able to maintain such massive worldwide system-level injustice, and finally to assume the theoretical and practical position *to never renounce system-level opposition in exchange for any particular gain less than the absolute system-level transformations which are required for justice*, no matter how *relatively* transformative such gains might be.[^1]
