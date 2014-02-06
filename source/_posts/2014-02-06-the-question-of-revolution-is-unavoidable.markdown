@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The question of revolution is unavoidable"
+title: "The question of revolution is not romantic, it is unavoidable"
 date: 2014-02-06 16:12
 comments: true
 categories: 
