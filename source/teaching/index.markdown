@@ -8,7 +8,8 @@ footer: true
 
 ### Politics of the Media (Undergraduate)
 - [Syllabus](http://jmrphy.net/course_media_politics)
-- [Lecture notes](http://jmrphy.net/blog/categories/politics-of-the-media/)   
+- [Lecture notes](http://jmrphy.net/blog/categories/politics-of-the-media/) 
+- [Lecture 1](https://dl.dropboxusercontent.com/u/20498362/%23pomus%20lectures/lecture1.pdf)  
 
 ### Research Methods in Politics and IR (Undergraduate)
 - [Syllabus](http://dropbox.com/link)
