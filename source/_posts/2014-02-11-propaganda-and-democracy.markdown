@@ -144,7 +144,7 @@ hr {
 </head>
 
 <body>
-<h4>Propaganda and the ideology of democracy</h4>
+
 
 <p>The notion of &ldquo;democracy&rdquo; as an internationally recognized and supposedly desirable feature of national political systems is relatively new. It is only around the time of World War I that &ldquo;democracy&rdquo; makes its debut as a recognizable ideology of national governments. More specifically, it was ony a relatively small group of Allied elites who launched this term into mass political consciousness in order to create public support for war against Germany.</p>
 
