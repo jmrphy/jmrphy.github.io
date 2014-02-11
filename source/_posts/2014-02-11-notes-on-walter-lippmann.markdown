@@ -1,19 +1,15 @@
 ---
 layout: post
-title: "Notes on walter lippmann"
+title: "Notes on Walter Lippmann"
 date: 2014-02-11 11:46
 comments: true
 categories: 
 - politics of the media
 ---
 
-<!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-<title>Thoughts on Walter Lippmann</title>
 
 <style type="text/css">
 body, td {
