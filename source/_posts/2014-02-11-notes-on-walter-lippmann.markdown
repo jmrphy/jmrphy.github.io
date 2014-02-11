@@ -146,7 +146,6 @@ hr {
 </head>
 
 <body>
-<h5>Thoughts on Walter Lippmann</h5>
 
 <p>Lippmann writes as if the antagonism determined by national geo-politics is more real than the lived relations of human beings. He thinks in all honesty that they were mistaken to have been acting as friends! (Public Opinion, 6).</p>
 
