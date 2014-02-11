@@ -7,7 +7,7 @@
 	<meta name="author" content="Justin Murphy">
 
 	
-	<meta name="description" content="Sep 28th, 2012 life Untitled fragment I haven’t had fun in a whole year because I have been a serious man, an ambitious young academic who is &hellip;">
+	<meta name="description" content="Oct 13th, 2012 note Untitled “Cupcakes taste like violence.” &ndash; Ahuviya Harel, at the Ox Sep 28th, 2012 life Untitled fragment I haven’t had &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,41 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-13T22:15:18+01:00" data-updated="true" itemprop="datePublished">Oct 13<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/note/'>note</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/10/13/cupcakes-taste-like-violence/" itemprop="url">Untitled</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>“Cupcakes taste like violence.” &ndash; Ahuviya Harel, at the Ox</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -393,116 +428,6 @@
 	<h1 class="title" itemprop="name"><a href="/blog/2012/09/16/31656480216/" itemprop="url">#17: A call to friends</a></h1>
 	<div class="entry-content" itemprop="articleBody">
 		<p>To take these introductory comments seriously is to unlock a whole new orientation for scientific research never before accessed by serious institutionalized scientific disciplines, especially the currently prevailing sciences of society. This present work is in no sense “interdisciplinary.” Rather, it is militantly anti-disciplinary, anti-<em>discipline </em>for that matter, and by scientific necessity. Moreover, what is at stake in this pursuit is a practical project of reconstituting that chain of speech, truth, and being—a chain of which Socrates is perhaps only the purest representative—which is the key to the history and fall of critical thought. Consequently, this work cannot be anything other than a gift in the strict sense, an expenditure without reserve, in friendship with the friendless, and an opening salvo against all the intellectual moneychangers, against all false friends everywhere. As such, it is also a call to philosophic and scientific arms, directed first and foremost to my peers, the young and privileged and educated, we who still have a choice between producing false truths to earn petty comforts in a thoroughly false society, or defecting in favor of a radically emancipated honesty absolutely opposed to every currently existing institution. Needless to say, the latter course won’t pay because it is strictly priceless or, what is the same, <em>worthless</em>. The only personal rewards we can expect are the clarity and dignity of poverty, and if we make it, an actual intellectual community. It’s happened once or twice before. But it is only by betraying the betrayers that we might one day soon meet on such a plane of new beginnings, the plane of honest philosophy and honest science.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-15T22:30:35+01:00" data-updated="true" itemprop="datePublished">Sep 15<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/social-science/'>social science</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/09/15/do-inflation-expectations-have-an-effect-on-obamas-re-election-prospects/" itemprop="url">Do inflation expectations have an effect on Obama&#8217;s re-election prospects?</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p><a href="http://redonkulusblog.blogspot.com/2012/06/could-fed-save-obama.html">Redonkulus Blog thinks so</a> based on some time-series data. But I was skeptical about this conclusions because I have just enough experience with time series to know that these sorts of inferences are really tricky. After checking out the data, I don&rsquo;t think there is a systematic relationship between inflation expectations and Obama&rsquo;s re-election prospects. For an overview of the measures, just visit the link above&hellip; I only want to share some analyses and review what&rsquo;s methodologically at stake here.</p>
-
-<p>In short, the problem with time-series data is that it&rsquo;s often autocorrelated&mdash;for instance, an observation at time T-1 has a very strong effect on that variable at time T. When regressing a time series on another time series, it&rsquo;s easy to identify statistically significant relationships where no such thing exists if one variable is driving itself while another variable is just going along for the ride over time.</p>
-
-<p>In regression analysis, the easiest way to check against spurious relationships is to analyze the residuals of the model. In particular, a plot of the model residuals against fitted values should be random with no identifiable pattern&mdash;if there are identifiable patterns than the model probably violated assumptions and is no good.</p>
-
-<p>All of the Redonkulus regressions show residuals that suggest problematic models. I&rsquo;ll focus only on the inflation expectations model because that&rsquo;s what piqued some twitter interest heh.</p>
-
-<p>Here are graphs of the model relating inflation expectations to Obama&rsquo;s Intrade scores. We see a pretty systematic pattern in the residuals by fitted values plot, suggesting violations of the OLS assumptions.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/09/inflationresiduals.png"><img src="http://justinmurphy.files.wordpress.com/2012/09/inflationresiduals.png" alt="" /></a>One simple way to deal with this is to transform the time series in a way that filters out the autoregression. One way to do that is to use first differences instead of simple levels. Intuitively, this is perhaps more attractive, anyway: If we think X causes Y, then really we should think that a change in X will be associated with a change in Y&mdash;not just that when one is high the other is high.</p>
-
-<p>Differencing and then re-running the model gives pretty clean, white-noise-ish residuals. But the relationship is not statistically significant.</p>
-
-<p><strong>                                       Estimate    Std. Error    t value    Pr(>|t|)</strong>
-(Intercept)                    0.313765      0.164460         1.908      0.0593
-D.inflex                         -0.986283   2.377463         -0.415      0.6791
-obama$Time<a href="">-105</a>     -0.005026   0.002742        -1.833      0.0698</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/09/diffinflationresiduals1.png"><img src="http://justinmurphy.files.wordpress.com/2012/09/diffinflationresiduals1.png" alt="" /></a>And I basically find the same thing for the other models&mdash;residuals show violation of OLS assumptions; models using first differences are statistically insignificant but the residuals look pretty clean. I even tried lags on the independent variables, thinking maybe changes in inflation expectations might just take a day to show up in Obama&rsquo;s Intrade chances&mdash;but no, nothing. A scatterplot using levels and then a scatterplot using first differences sums this up.</p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/09/inflscatter.png"><img src="http://justinmurphy.files.wordpress.com/2012/09/inflscatter.png" alt="" /></a></p>
-
-<p><a href="http://justinmurphy.files.wordpress.com/2012/09/infldiffscatter.png"><img src="http://justinmurphy.files.wordpress.com/2012/09/infldiffscatter.png" alt="" /></a></p>
-
-<p>In summary, I don&rsquo;t think this data offers evidence that monetary expansion would help Obama&rsquo;s chances of re-election. All of my R code follows, email me or Redonkulous if you want the data file.</p>
-
-<p><a href="">sourcecode language=&ldquo;r&rdquo;</a></p>
-
-<p>obama&lt;-read.table(&ldquo;obamasp.csv&rdquo;, sep=&ldquo;,&rdquo;, header=TRUE)
-obama$inflex&lt;-ts(obama$inflex)
-obama$Obamaclose&lt;-ts(obama$Obamaclose)
-obama$Date&lt;-ts(obama$Date)
-obama$SPAdjClose&lt;-ts(obama$SPAdjClose)
-obama$Time&lt;-ts(obama$Time)
-obama$Obamaclose
-plot.ts(obama$Obamaclose)</p>
-
-<p>D.Obamaclose&lt;-diff(obama$Obamaclose, differences=1)
-D.SPAdjClose&lt;-diff(obama$SPAdjClose, differences=1)
-D.inflex&lt;-diff(obama$inflex, differences=1)</p>
-
-<p>library(car)</p>
-
-<p>sp&lt;-lm(obama$Obamaclose  obama$SPAdjClose + obama$Time)
-summary(sp)
-residualPlots(sp)</p>
-
-<p>D.sp&lt;-lm(D.Obamaclose  lag(D.SPAdjClose) + obama$Time-105)
-summary(D.sp)
-residualPlots(D.sp)</p>
-
-<p>spLDV&lt;-lm(obama$Obamaclose  obama$SPAdjClose + obama$Time + lag(obama$Obamaclose))
-summary(spLDV)
-residualPlots(spLDV)</p>
-
-<p>inf&lt;-lm(obama$Obamaclose  obama$inflex + obama$Time)
-summary(inf)
-residualPlots(inf)</p>
-
-<p>D.inf&lt;-lm(D.Obamaclose  D.inflex + obama$Time-105)
-summary(D.inf)
-residualPlots(D.inf)</p>
-
-<p>all&lt;-lm(obama$Obamaclose  obama$inflex + obama$SPAdjClose + obama$Time)
-summary(all)
-residualPlots(all)</p>
-
-<p>D.all&lt;-lm(D.Obamaclose  D.inflex + D.SPAdjClose + obama$Time-105)
-summary(D.all)
-residualPlots(D.all)</p>
-
-<p>scatterplot(obama$Obamaclose  obama$inflex)
-scatterplot(D.Obamaclose  D.inflex)</p>
-
-<p><a href="">/sourcecode</a></p>
 
 		
 		
