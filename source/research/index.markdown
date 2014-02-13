@@ -12,12 +12,12 @@ footer: true
 - [Source materials on Github](https://github.com/jmrphy/media_and_domestic_politics_of_globalization)
 
 ### Why are the Most Trade-Open Countries More Likely to Repress the Media?
-- [Download working paper](http://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1264946)
+- [Download working paper](https://github.com/jmrphy/trade_media_freedom/blob/master/trade_media_freedom.pdf?raw=true)
 - [Source materials on Github](https://github.com/jmrphy/trade_media_freedom)
 
 ### Media Ownership and the Social Construction of Globalization
-- [Download working paper](http://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1264946)
-- [Source materials on Github](https://github.com/jmrphy/trade_media_freedom)
+- [Download working paper](https://github.com/jmrphy/social_construction_of_globalization/blob/master/social_construction_of_globalization.pdf?raw=true)
+- [Source materials on Github](https://github.com/jmrphy/social_construction_of_globalization)
 
 ### What Does it Mean to Make-Up the Mind?
 - [Download working paper](https://github.com/jmrphy/plato_lacan/blob/master/plato_lacan.pdf?raw=true)
