@@ -5,6 +5,7 @@ date: 2014-02-18 18:56
 comments: true
 categories: 
 - politics of the media
+- social science
 ---
 
 From the 1920s until the end of World War II, the conventional wisdom was that the role of mass
@@ -79,25 +80,15 @@ most popular intellectual inheritors of the media-as-propaganda tradition today 
 dominant mainstream social science.[^exceptions]
 
 
-[^mildmanners]: The Columbia group around Lazarsfeld, from the beginning, was     really only
-interested in what was already a highly narrow and     market-oriented type of behavioral variation.
-Bartels notes how they     only turned to electoral behavior when they could not find grant
-money to study consumer behavior (Rossi 1959, 15-16, as cited in     Bartels 2008). The point for
-our purposes is that these pioneering     studies which would become baselines for the modern study
-of     political behavior rose to prominence with a view of the media that     already abstracted
-away from the more “sinister” media effects     predicted by the group discussed above. Thus, by the 1954 *Voting: A     Study of Opinion Formation in a Presidential Campaign, *the Columbia     group
-finds little evidence for the role of parties and media in     presidential campaigns. The later
-Michigan group, whose election     studies would become an increasingly institutionalized backbone
-of     American political science research, also had a view of the media     which is puzzlingly
-inane and conservative read alongside work of     roughly the same period by someone such as Karl
-Deutsch. Of course,     I do not here take issue with the validity of these early findings     as
-far as they go; my point is only to flag that these foundational     studies in American political
-science adopted an approach which     generated strikingly inane findings on the political effects
-of     media, especially when read alongside those who were grappling with     the more general
-historical functions of media as institutions of     social control.
+[^mildmanners]: The Columbia group around Lazarsfeld, from the beginning, was really only interested in what was already a highly narrow and market-oriented type of behavioral variation. Bartels notes how they only turned to electoral behavior when they could not find grantvmoney to study consumer behavior (Rossi 1959, 15-16, as cited in     Bartels 2008). The point for our purposes is that these pioneering studies which would become baselines for the modern study of political behavior rose to prominence with a view of the media that already abstracted
+away from the more “sinister” media effects predicted by the group discussed above. Thus, by the 1954 *Voting: A     Study of Opinion Formation in a Presidential Campaign, *the Columbia group finds little evidence for the role of parties and media in presidential campaigns. The later Michigan group, whose election studies would become an increasingly institutionalized backbone of American political science research, also had a view of the media which is puzzlingly inane and conservative read alongside work of roughly the same period by someone such as Karl
+Deutsch. Of course, I do not here take issue with the validity of these early findings as
+far as they go; my point is only to flag that these foundational studies in American political
+science adopted an approach which  generated strikingly inane findings on the political effects
+of media, especially when read alongside those who were grappling with the more general
+historical functions of media as institutions of social control.
 
-[^exceptions]: For instance, see @Herman:1988ta     [@mcchesney2000rich; @luhmann2000reality]
-
+[^exceptions]: For instance, see @Herman:1988ta [@mcchesney2000rich; @luhmann2000reality]
 
 [^radicals]: To say nothing of concurrent and parallel movements in radical, continental theory. See
 @Horkheimer:2009te, @adorno2001culture, and @Debord:1967vn.
