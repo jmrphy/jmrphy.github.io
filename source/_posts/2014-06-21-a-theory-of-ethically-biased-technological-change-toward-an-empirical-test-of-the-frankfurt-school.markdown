@@ -5,6 +5,7 @@ date: 2014-06-21 14:58
 comments: false
 categories: 
 - theory
+- social science
 ---
 ##### The Puzzle
 There is a widespread consensus in the economics literature that the rise of information technology over the past several decades has been a “skill-biased technological change.” A skill-biased technological change increases the productivity of skilled workers more than it improves the productivity of unskilled workers, therefore increasing the demand for skilled workers relative to unskilled workers. This increased demand for skilled workers, ceteris paribus, [increases their income relative to unskilled workers](http://www.dictionaryofeconomics.com/article?id=pde2008_S000493). It is widely agreed that this is a key explanation for at least some of the rapid increase in income inequality since the 1980s.[^1] One key observation consistent with this theory is that it is only after the appearance of micro-computers that income inequality begins to rise in the early 1980s.[^2] A second key observation is that more educated workers are more likely to use a computer on the job[^3].
