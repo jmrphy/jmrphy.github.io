@@ -5,15 +5,19 @@ comments: false
 sharing: false
 footer: true
 ---
+### Working Papers
 
-### Mass Media and the Domestic Politics of Globalization
-- [Download working paper](https://github.com/jmrphy/globalization_mass_media/blob/master/article/globalization_mass_media.pdf?raw=true)
-- [Cite on SSRN](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2320218)
-- [Source materials on Github](https://github.com/jmrphy/media_and_domestic_politics_of_globalization)
+<table>
+	<tr>
+		<td width="50%">
+			Mass Media and the Domestic Politics of Globalization [PDF](https://github.com/jmrphy/globalization_mass_media/blob/master/article/globalization_mass_media.pdf?raw=true) | [SSRN](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2320218) | [Github](https://github.com/jmrphy/media_and_domestic_politics_of_globalization)
+		</td>
+		<td width="50%">
+			Why are the Most Trade-Open Countries More Likely to Repress the Media? [PDF](https://github.com/jmrphy/globalization_media_freedom/blob/master/trade_media_freedom.pdf?raw=true)[Github](https://github.com/jmrphy/globalization_media_freedom)
+		</td>
+	</tr>
+</table>
 
-### Why are the Most Trade-Open Countries More Likely to Repress the Media?
-- [Download working paper](https://github.com/jmrphy/globalization_media_freedom/blob/master/trade_media_freedom.pdf?raw=true)
-- [Source materials on Github](https://github.com/jmrphy/globalization_media_freedom)
 
 ### Media Ownership and the Social Construction of Globalization
 - [Download working paper](https://github.com/jmrphy/social_construction_of_globalization/blob/master/social_construction_of_globalization.pdf?raw=true)
