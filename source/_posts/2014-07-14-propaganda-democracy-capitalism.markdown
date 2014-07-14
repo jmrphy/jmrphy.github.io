@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Some slides on "Democracy" as propaganda for capitalism"
+title: "Some slides on 'Democracy' as propaganda for capitalism"
 date: 2014-07-12 15:30
 comments: true
 categories:
