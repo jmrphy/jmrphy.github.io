@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dynamic map of journalist murderings, 1992-2014"
+title: "Dynamic map of journalist killings, 1992-2014"
 date: 2014-08-01 18:24
 comments: true
 categories:
