@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2014-08-01T18:47:35+01:00</updated>
+  <updated>2014-08-02T12:28:56+01:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -14,12 +14,14 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Dynamic map of journalist killings, 1992-2014]]></title>
+    <title type="html"><![CDATA[Dynamic map of journalist murderings, 1992-2014]]></title>
     <link href="http://jmrphy.github.io/blog/2014/08/01/dynamic-map-of-journalist-killings/"/>
     <updated>2014-08-01T18:24:00+01:00</updated>
     <id>http://jmrphy.github.io/blog/2014/08/01/dynamic-map-of-journalist-killings</id>
-    <content type="html"><![CDATA[<iframe width='100%' height='700' frameborder='0' src='http://jmrphy.github.io//jmrphy.cartodb.com/viz/e4660890-199a-11e4-9d63-0e10bcd91c2b/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=SELECT%20*%20FROM%20cleaned_data_table%20WHERE%20type_of_death%20IN%20(%27Murder%27)%20AND%20type_of_death%20IS%20NOT%20NULL&zoom=2&center_lat=37.85750715625203&center_lon=18.28125' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <content type="html"><![CDATA[<iframe width='100%' height='700' frameborder='0' src='http://jmrphy.github.io//jmrphy.cartodb.com/viz/324a04fe-1a35-11e4-8f79-0e73339ffa50/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=SELECT%20*%20FROM%20cleaned_data_table%20WHERE%20type_of_death%20IN%20(%27Murder%27)%20AND%20type_of_death%20IS%20NOT%20NULL&zoom=2&center_lat=37.85750715625203&center_lon=18.28125' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
+
+<p>The original raw data can be <a href="http://www.cpj.org/killed/cpj-database.xls">downloaded here</a> from the Comittee to Protect Journalists and the lightly cleaned data used in this map can be found <a href="https://jmrphy.cartodb.com/tables/cpj_data/public/table">here</a>.</p>
 ]]></content>
   </entry>
   
