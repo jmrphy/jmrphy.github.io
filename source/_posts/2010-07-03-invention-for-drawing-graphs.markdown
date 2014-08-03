@@ -8,4 +8,4 @@ categories:
 - notebook
 ---
 
-![Thin, overlapping, plexiglass panels on rails. Scanned sketch.](https://farm6.staticflickr.com/5574/14818479364_84bb4a7e46_c.jpg)
+![Thin, overlapping, plexiglass panels on rails. Scanned sketch.](https://farm3.staticflickr.com/2897/14634299579_9f3b16398b_c.jpg)
