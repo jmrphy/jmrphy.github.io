@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Justin Murphy]]></title>
+  <link href="http://jmrphy.github.io/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://jmrphy.github.io/"/>
+  <updated>2014-08-03T01:22:42+01:00</updated>
+  <id>http://jmrphy.github.io/</id>
+  <author>
+    <name><![CDATA[Justin Murphy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Book holder for a utility belt]]></title>
+    <link href="http://jmrphy.github.io/blog/2009/06/03/utility-belt-book-holder/"/>
+    <updated>2009-06-03T01:17:00+01:00</updated>
+    <id>http://jmrphy.github.io/blog/2009/06/03/utility-belt-book-holder</id>
+    <content type="html"><![CDATA[<p><img src="https://farm6.staticflickr.com/5552/14626819588_3efa5efbca_c.jpg" alt="Scanned notebook sketch" /></p>
+]]></content>
+  </entry>
+  
+</feed>
