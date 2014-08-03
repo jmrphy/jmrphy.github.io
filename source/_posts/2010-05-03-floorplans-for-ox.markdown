@@ -10,4 +10,4 @@ categories:
 
 ![Floorplan for a show-space with balcony of multiple small bedrooms, scanned sketch 1](https://farm6.staticflickr.com/5595/14797950236_c8f09c8a18_c.jpg)
 
-![Floorplan for a show-space with balcony of multiple small bedrooms, scanned sketch 2](https://farm6.staticflickr.com/5574/14818479364_84bb4a7e46_c.jpg)
+![Floorplan for a show-space with balcony of multiple small bedrooms, scanned sketch 2](https://farm4.staticflickr.com/3894/14634284689_4ab2ca14df_c.jpg)
