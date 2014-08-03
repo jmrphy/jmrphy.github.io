@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: design | Justin Murphy]]></title>
-  <link href="http://jmrphy.github.io/blog/categories/design/atom.xml" rel="self"/>
+  <title><![CDATA[Category: notebook | Justin Murphy]]></title>
+  <link href="http://jmrphy.github.io/blog/categories/notebook/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
   <updated>2014-08-03T21:52:55+01:00</updated>
   <id>http://jmrphy.github.io/</id>
