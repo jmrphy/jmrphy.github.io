@@ -14,7 +14,7 @@ Simplybook_ContactWidget.scheduleTitle = "but please just click here and schedul
 Simplybook_ContactWidget.timeline = "flexible";
 Simplybook_ContactWidget.offset = "25%";
 Simplybook_ContactWidget.position = "top";
-Simplybook_ContactWidget.color = "#004E72";
+Simplybook_ContactWidget.color = "#003E5B";
 Simplybook_ContactWidget.mobileRedirect = true;
 Simplybook_ContactWidget.addButton();
 </script>
@@ -32,6 +32,8 @@ Introduction to Quantitative Methods for the Social Sciences (Undergraduate)
 
 Public Policy and Democracy (MSc)
 - [Syllabus](http://dropbox.com/link)
+
+<script type="text/javascript" src="http://jmrphy.simplybook.me/iframe/pm_loader.php?width=960&url=http://jmrphy.simplybook.me&theme=&layout=modern_widget&timeline=flexible_week&mobile_redirect=true"></script>
 
 
 
