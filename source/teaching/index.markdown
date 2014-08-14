@@ -9,10 +9,10 @@ footer: true
 <script type="text/javascript">
 Simplybook_ContactWidget.domain = "jmrphy.simplybook.me";
 Simplybook_ContactWidget.title = "Schedule time to meet with me!";
-Simplybook_ContactWidget.contactTitle = "If you'd like to meet,";
-Simplybook_ContactWidget.scheduleTitle = "click here and say when!";
+Simplybook_ContactWidget.contactTitle = "You can always email me but if you'd like to meet";
+Simplybook_ContactWidget.scheduleTitle = "just click here and schedule some time with me!";
 Simplybook_ContactWidget.timeline = "flexible";
-Simplybook_ContactWidget.offset = "";
+Simplybook_ContactWidget.offset = "75%";
 Simplybook_ContactWidget.position = "top";
 Simplybook_ContactWidget.color = "#035287";
 Simplybook_ContactWidget.mobileRedirect = true;
