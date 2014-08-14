@@ -33,7 +33,7 @@ Introduction to Quantitative Methods for the Social Sciences (Undergraduate)
 Public Policy and Democracy (MSc)
 - [Syllabus](http://dropbox.com/link)
 
-<script type="text/javascript" src="http://jmrphy.simplybook.me/iframe/pm_loader.php?width=960&url=http://jmrphy.simplybook.me&theme=&layout=modern_widget&timeline=flexible_week&mobile_redirect=true"></script>
+<script type="text/javascript" src="http://jmrphy.simplybook.me/iframe/pm_loader.php?width=800&url=http://jmrphy.simplybook.me&theme=&layout=modern_widget&timeline=modern_week&mobile_redirect=true"></script>
 
 
 
