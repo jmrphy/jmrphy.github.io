@@ -5,7 +5,7 @@ comments: false
 sharing: false
 footer: true
 ---
-### Working Papers (top of the pile)
+### Working Papers
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
@@ -41,8 +41,6 @@ footer: true
 		</td>
 	</tr>
 </table>
-
-### Working Papers (bottom of the pile)
 
 *What Does it Mean to Make-Up the Mind?* [[Github](https://github.com/jmrphy/plato_lacan) | [PDF](https://github.com/jmrphy/plato_lacan/blob/master/plato_lacan.pdf?raw=true)]
 
