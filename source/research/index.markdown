@@ -7,10 +7,10 @@ footer: true
 ---
 ### Working Papers
 
-<table background=#FFFFF width="100%">
+<table bgcolor="#FFFFF" width="100%">
 	<tr>
-		<td><img src="https://farm4.staticflickr.com/3915/14917713997_c5e5540952_s.jpg" width="75" height="75" border="1" bordercolor=#000000></td>
-		<td>Title <br> Description lksjlfjdf lsajdfljksdf lsjdfljsd <br> Links <br> </td>
+		<td><img src="https://farm4.staticflickr.com/3915/14917713997_c5e5540952_s.jpg" width="125" height="125" border="1" bordercolor="#000000"></td>
+		<td align="left">Title <br> Description lksjlfjdf lsajdfljksdf lsjdfljsd <br> Links <br> </td>
 	</tr>
 </table>
 
