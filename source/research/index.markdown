@@ -7,10 +7,15 @@ footer: true
 ---
 ### Working Papers
 
-<table style="background-color:white; border:0px" width="400" height="75">
+<table style="background-color:white; border:0px" width="500" height="75">
 	<tr>
-		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3871/15081495816_0c114c2e92_s.jpg" width="75" height="75" border="1" bordercolor="black"></td>
-		<td><b>Title</b> <br>Description lksjlfjdf lsajdfljksdf lsjdfljsd <br> Links <br> </td>
+		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3871/15081495816_0c114c2e92_s.jpg" width="60" height="60" border="1" bordercolor="black"></td>
+		<td valign="top">
+		<b>Mass Media and the Domestic Politics of Globalization</b><br>
+		- <a href="https://github.com/jmrphy/globalization_mass_media/blob/master/article/globalization_mass_media.pdf?raw=true">PDF</a><br>
+		- <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2320218">SSRN</a><br>
+		- <a href="https://github.com/jmrphy/media_and_domestic_politics_of_globalization">Source materials</a><br>
+		</td>
 	</tr>
 </table>
 
