@@ -7,9 +7,9 @@ footer: true
 ---
 ### Working Papers
 
-<table>
+<table background=#FFFFF width="100%">
 	<tr>
-		<td><img src="https://farm4.staticflickr.com/3915/14917713997_c5e5540952_s.jpg"></td>
+		<td><img src="https://farm4.staticflickr.com/3915/14917713997_c5e5540952_s.jpg" width="75" height="75" border="1" bordercolor=#000000></td>
 		<td>Title <br> Description lksjlfjdf lsajdfljksdf lsjdfljsd <br> Links <br> </td>
 	</tr>
 </table>
