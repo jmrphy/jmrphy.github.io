@@ -4,6 +4,7 @@ date: 2013-08-10 23:23
 comments: false
 sharing: false
 footer: true
+fancybox: false
 ---
 ### Other Projects
 
