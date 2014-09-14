@@ -9,7 +9,7 @@ footer: true
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
-		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3924/15048202349_91226b6d8d_s.jpg" width="65" height="65" border="1" bordercolor="black"></td>
+		<td><a href="http://jmrphy.net/poli_sci_searcher/"><img style="border:1px solid black" src="https://farm4.staticflickr.com/3924/15048202349_91226b6d8d_s.jpg" width="65" height="65" border="1" bordercolor="black"></a></td>
 		<td align="left" valign="top" width="600">
 		<b>Political Science Article Searcher</b><br>
 		Conduct a basic literature review across dozens of scholarly Political Science journals in one click and three new browser tabs.
@@ -19,7 +19,7 @@ footer: true
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
-		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3888/15048389008_d0278b6fa7_s.jpg" width="65" height="65" border="1" bordercolor="black"></td>
+		<td><a href="http://jmrphy.net/jailbreak_the_mass_media/"><img style="border:1px solid black" src="https://farm4.staticflickr.com/3888/15048389008_d0278b6fa7_s.jpg" width="65" height="65" border="1" bordercolor="black"></a></td>
 		<td align="left" valign="top" width="600">
 		<b>Jailbreak the Mass Media</b><br>
 		Google Chrome extension.
