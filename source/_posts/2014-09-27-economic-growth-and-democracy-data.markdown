@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Economic Growth and Democracy Data"
+title: "Economic growth and democracy"
 date: 2014-09-27 17:21
 comments: true
 sharing: false
@@ -8,8 +8,6 @@ categories:
 - social science
 - data
 - graphs
-- economic growth
-- democracy
 ---
 
 <iframe src="http://wl.figshare.com/articles/1185317/embed?show_title=0" width="800" height="695" frameborder="0"></iframe>
