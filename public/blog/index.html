@@ -7,7 +7,7 @@
 	<meta name="author" content="Justin Murphy">
 
 	
-	<meta name="description" content="Aug 1st, 2014 social science Dynamic map of murdered journalists, 1992-2014 The original raw data can be downloaded here from the Comittee to &hellip;">
+	<meta name="description" content="Sep 27th, 2014 social science Economic Growth and Democracy Data Aug 1st, 2014 social science Dynamic map of murdered journalists, 1992-2014 The &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,42 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T17:21:00+01:00" data-updated="true" itemprop="datePublished">Sep 27<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/social-science/'>social science</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/09/27/economic-growth-and-democracy-data/" itemprop="url">Economic Growth and Democracy Data</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<iframe src="http://wl.figshare.com/articles/1185317/embed?show_title=1" width="568" height="530" frameborder="0"></iframe>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -691,69 +727,6 @@ rises throughout this period. I hypothesize that &#8220;media&#8221; perhaps rep
 </ol>
 </div>
 
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-23T21:26:00+00:00" data-updated="true" itemprop="datePublished">Jan 23<span>rd</span>, 2014</time></div>
-		<div class="tags">
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2014/01/23/a-system-for-managing-student-course-submissions-using-free-web-services/" itemprop="url">System for managing student course submissions using free web services (proof of concept)</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>In order to bypass the criminally profligate corporate education contractors who charge universities extortionate prices for almost useless products such as Blackboard and Turnitin, I&rsquo;ve devised a system for managing student course submissions and record keeping throughout the semester, using all free web services. Not as if these free web services live on moral high-ground, but at least they let us dodge these stationary bandits charging rents at the revolving door between universities and the corporate sector.</p>
-
-<p>With this system, students can blog publicly as much as they&rsquo;d like, all of their work is collected and organized automatically, and the instructor can grade submissions quickly, easily, <em>and</em> anonymously, all in one place (in the cloud). Here&rsquo;s how it works.</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c71468d4f7b8927bd141baeacf08bc2dde1.png" alt="" /></p>
-
-<p>All students have a personal blog using one of the major blogging platforms. The RSS feed associated with each blog is channeled into one master RSS feed using Feed.Informer.com. This master feed is then run through IFTTT to distribute every student blog post into two different formats in my private Google Drive. First, every single student blog post is logged into a Google Spreadsheet capturing everything about the post (the content, the url, the student&rsquo;s name, and the time of the post). This is the master spreadsheet. But the critical course submissions are also distributed into individual text files which do <em>not</em> include the student&rsquo;s name. This is achieved by simply having students tag their critical submissions with some specific tag, and telling IFTTT to create the anonymized text file only for posts with that tag.</p>
-
-<p><strong>Proof of concept.</strong> To show that this works, scales reasonably, and is consistent with anonymous grading, I set up a pilot &ldquo;course&rdquo; using about 15 popular political blogs as my &ldquo;student&rdquo; blogs. Then I let the system run for about 6 days. Below, I demonstrate how I set it up and how this system can reliably deliver more than 2,000 blog posts from various blogs for quick, easy, and secure grading.</p>
-
-<p>First, use Feed.Informer.com to turn all of your students&#8217; blogs into one master RSS feed. This is basically just merging all of the blogs into one data stream.</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c7194daed018d11923956d4e50188172fe1.png" alt="" /></p>
-
-<p>You give it many RSS feeds, and then it gives you one RSS feed merging them all.</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c71a70226a46f3f3b081f724dd3b619d319.png" alt="" /></p>
-
-<p>Next, use IFTTT to make two &ldquo;recipes.&rdquo; The first one sends every new entry on a specified RSS feed (you give it your master feed) to a new row in some specified spreadsheet in your Google Drive. Then a second recipe sends <em>only</em> items in the RSS master feed matching some specified tag into their own anonymous Google docs in your Google Drive. You can put them in their own folder to keep things tidy. In this example, only blog posts tagged &ldquo;politics&rdquo; are filed into their own anonymous docs. In practice, you would just tell students to tag their critical assignments (mid-term or final-term essays, for instance) with any specified tag of your choosing, and enter that into IFTTT instead of &ldquo;politics.&rdquo;</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c71ea24157ead5402a2ef83fffaa7b38c28.png" alt="" /></p>
-
-<p>Then, after six days, I have more than 2,000 student blog posts. And a few hundred &ldquo;mid-term essays&rdquo; ready for anonymous grading. After reading the anonymous documents, you can just find the associated title in the spreadsheet and enter a grade. Or just visit the anonymous link from the text document, to see who wrote it and then enter your grades wherever else you might be keeping them. Regardless, the entire written output of your entire class is all collected in one place.</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c716062ab1087ff050c05017876eee8502c.png" alt="" /></p>
-
-<p>Here&rsquo;s a spreadsheet. It will automatically make an additional spreadsheet after any spreadsheet reaches 2000 rows.</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c716bc8d95d8e915f87cc70c05380b3d070.png" alt="" /></p>
-
-<p>Example of an anonymous Google doc.</p>
-
-<p><img src="http://tardis1.tinygrab.com/grabs/3db0911c713d93fd329f14cdd9ebdf136012686b47.png" alt="" /></p>
 
 		
 		
