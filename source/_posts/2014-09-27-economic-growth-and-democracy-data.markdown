@@ -10,4 +10,4 @@ categories:
 - graphs
 ---
 
-<iframe src="http://wl.figshare.com/articles/1185317/embed?show_title=0" width="800" height="695" frameborder="0"></iframe>
+<iframe src="http://wl.figshare.com/articles/1185317/embed?show_title=0" width="568" height="509" frameborder="0"></iframe>
