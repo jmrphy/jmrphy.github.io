@@ -12,7 +12,7 @@ footer: true
 		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3871/15081495816_0c114c2e92_s.jpg" width="65" height="65" border="1" bordercolor="black"></td>
 		<td align="left" valign="top" width="600">
 		<b>Mass Media and the Domestic Politics of Globalization</b><br>
-		- <a href="https://github.com/jmrphy/globalization_mass_media/blob/master/article/globalization_mass_media.pdf?raw=true">PDF</a><br>
+		<i class="fa fa-file-pdf-o"></i> <a href="https://github.com/jmrphy/globalization_mass_media/blob/master/article/globalization_mass_media.pdf?raw=true">PDF</a><br>
 		- <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2320218">SSRN</a><br>
 		- <a href="https://github.com/jmrphy/media_and_domestic_politics_of_globalization">Source materials</a><br>
 		</td>
