@@ -31,6 +31,6 @@ Introduction to Quantitative Methods for the Social Sciences (Undergraduate)
 - [Syllabus](https://www.dropbox.com/s/enwj4f2bggewhn7/Murphy_Syllabus_Sec12.pdf)
 
 Public Policy and Democracy (MSc)
-- [Syllabus](http://dropbox.com/link)
+- [Syllabus](http://jmrphy.net/course_public_policy)
 
 
