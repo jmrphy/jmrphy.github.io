@@ -32,7 +32,7 @@ footer: true
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
-		<td><img style="border:1px solid black" src="https://farm3.staticflickr.com/2947/15205242398_3259f03cbb_o.png" width="65" height="65" border="1" bordercolor="black"></td>
+		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3848/15368961726_eaaa4aaf19_o.png" width="65" height="65" border="1" bordercolor="black"></td>
 		<td align="left" valign="top" width="600">
 		<b>Mass Media and Civil War Onset</b><br>
 		- <a href="http://figshare.com/articles/Mass_Media_and_Civil_War_Onset/1181828">PDF</a><br>
