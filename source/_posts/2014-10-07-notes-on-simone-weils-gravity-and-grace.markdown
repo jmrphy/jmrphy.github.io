@@ -5,6 +5,8 @@ date: 2014-10-07 11:48
 comments: false
 sharing: false
 categories: 
+- theory
+- images
 ---
 <!-- <table cellpadding="0px" cellspacing="0px">
 	<tr>
