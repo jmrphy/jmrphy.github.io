@@ -6,150 +6,11 @@ comments: true
 categories: 
 - politics of the media
 ---
-<!-- saved from url=(0014)about:internet -->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<style type="text/css">
-body, td {
-   font-family: sans-serif;
-   background-color: white;
-   font-size: 12px;
-   margin: 8px;
-}
-
-tt, code, pre {
-   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
-}
-
-h1 { 
-   font-size:2.2em; 
-}
-
-h2 { 
-   font-size:1.8em; 
-}
-
-h3 { 
-   font-size:1.4em; 
-}
-
-h4 { 
-   font-size:1.0em; 
-}
-
-h5 { 
-   font-size:0.9em; 
-}
-
-h6 { 
-   font-size:0.8em; 
-}
-
-a:visited {
-   color: rgb(50%, 0%, 50%);
-}
-
-pre { 
-   margin-top: 0;
-   max-width: 95%;
-   border: 1px solid #ccc;
-   white-space: pre-wrap;
-}
-
-pre code {
-   display: block; padding: 0.5em;
-}
-
-code.r, code.cpp {
-   background-color: #F8F8F8;
-}
-
-table, td, th {
-  border: none;
-}
-
-blockquote {
-   color:#666666;
-   margin:0;
-   padding-left: 1em;
-   border-left: 0.5em #EEE solid;
-}
-
-hr {
-   height: 0px;
-   border-bottom: none;
-   border-top-width: thin;
-   border-top-style: dotted;
-   border-top-color: #999999;
-}
-
-@media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
-   }
-
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
-   }
-
-   hr { 
-      visibility: hidden;
-      page-break-before: always;
-   }
-
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
-   }
-
-   tr, img { 
-      page-break-inside: avoid; 
-   }
-
-   img { 
-      max-width: 100% !important; 
-   }
-
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
-   }
-
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
-   }
-
-   h2, h3 { 
-      page-break-after: avoid; 
-   }
-}
-
-</style>
-
-
-
-
-
-</head>
-
-<body>
 
 <p>Lippmann writes as if the antagonism determined by national geo-politics is more real than the lived relations of human beings. He thinks in all honesty that they were mistaken to have been acting as friends! (Public Opinion, 6).</p>
 
-<p>But isn&#39;t it far more reasonable to say that indeed they were friends, despite the war, because they knew nothing of any reasons to oppose one another? And that it was only the media, which acted as a sort of informational tentacle of the state, which informed them that they should be opposed to one another? The news delivery functioned as a sort of order, and here Lippman testifies to this insofar as he literally attributes the messages of national war propaganda more reality than lived relations.</p>
+<p>But isn't it far more reasonable to say that indeed they were friends, despite the war, because they knew nothing of any reasons to oppose one another? And that it was only the media, which acted as a sort of informational tentacle of the state, which informed them that they should be opposed to one another? The news delivery functioned as a sort of order, and here Lippman testifies to this insofar as he literally attributes the messages of national war propaganda more reality than lived relations.</p>
 
 <p>This is really quite extraordinary! He suggests that there is a real world outside and merely a picture in our heads, but it strikes me as far more reasonable to say that the world we live in with the people around us is the &ldquo;world outside&rdquo;&ldquo; and that newspaper reports of conflicts between nation-states often <em>literally</em> only exist as pictures? It is an extremely curious question what permits him such confidence to suggest the opposite, despite the seemingly obvious play in the words here.</p>
 
@@ -159,9 +20,6 @@ hr {
 
 <p>What is interesting about Lippman is that he has the honesty to reject the optimism that a &ldquo;free press&rdquo; could somehow be a guarantor of society&#39;s larger interests. He says quite frankly that the press cannot be expected to supply the truth about the world, because they are too much determined by precisely the political forces which distort our image of the world (Public Opinion, 26).</p>
 
-</body>
-
-</html>
 
 
 
