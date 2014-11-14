@@ -54,7 +54,7 @@ footer: true
 
 <br>
 
-### Longer Manuscripts in Progress
+### Notebooks
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
@@ -67,6 +67,8 @@ footer: true
 		</td>
 	</tr>
 </table>
+
+<br><br><br><br><br><br>
 
 <!-- <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
@@ -84,3 +86,5 @@ footer: true
 
 *Sartre, Bourdieu, and Ethics as a *Realpolitik* of History* [[Github](https://github.com/jmrphy/sartre_bourdieu) | [PDF](https://github.com/jmrphy/sartre_bourdieu/blob/master/sartre_bourdieu.pdf?raw=true)]
  -->
+
+
