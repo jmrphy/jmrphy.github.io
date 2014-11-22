@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: data | Justin Murphy]]></title>
-  <link href="http://jmrphy.github.io/blog/categories/data/atom.xml" rel="self"/>
+  <title><![CDATA[Category: R | Justin Murphy]]></title>
+  <link href="http://jmrphy.github.io/blog/categories/r/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
   <updated>2014-11-22T20:24:33+00:00</updated>
   <id>http://jmrphy.github.io/</id>
@@ -12,16 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Economic growth and democracy]]></title>
-    <link href="http://jmrphy.github.io/blog/2014/09/27/economic-growth-and-democracy-data/"/>
-    <updated>2014-09-27T17:21:00+01:00</updated>
-    <id>http://jmrphy.github.io/blog/2014/09/27/economic-growth-and-democracy-data</id>
-    <content type="html"><![CDATA[<iframe src="http://wl.figshare.com/articles/1185317/embed?show_title=0" width="568" height="509" frameborder="0"></iframe>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Intro to R for graduate students]]></title>
