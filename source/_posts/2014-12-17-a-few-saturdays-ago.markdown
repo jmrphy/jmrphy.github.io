@@ -3,6 +3,7 @@ layout: post
 title: "A few Saturdays ago"
 date: 2014-12-17 23:02
 comments: false
+sharing: false
 categories:
 - life
 ---
@@ -24,3 +25,5 @@ Nonetheless unsure exactly why she was being so nice, when she handed me the tic
 Before returning to her party-promoting group about ten feet away, she said to me in a tutorly voice, “Take my number and text me when you get there, and I’ll show you how it works,” as if I had never been to a nightclub ever. Then it dawned on me that she probably just felt bad for me and wanted to help me, this American guy in a minor British city who doesn’t know what kind of music he likes and apparently has nobody to bring along to a nightclub and does not in any part of his self-presentation really appear to be a member of any recognizable milieu but who, now amused and relaxed, says “OK yea, I think I’ll come.”
 
 Walking away, I wondered to myself if I was going to do drugs that night, then I wondered if university lecturers are allowed to do drugs. Then I wondered if I’m even allowed to ask if I’m allowed to do drugs, like if I asked someone higher up in the university if I’m allowed to drugs and the answer was no then I would be judged and punished just as much as if they found me on Instagram snorting a line of coke hashtag #idodrugs. I imagined someone later in the night handing me drugs, and me asking them to confirm they are not a student before I quickly strongly thought “this is not going to work.” But then I thought “Timothy Leary” and that made me calm enough to decide I would play it by ear.
+
+<br><br><br><br><br>
