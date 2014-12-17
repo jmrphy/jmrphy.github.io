@@ -8,7 +8,7 @@ categories:
 - life
 ---
 
-Walking through the city centre yesterday, I made eye contact with a thin young blonde girl wearing a huge camouflage army coat and when I did the vague acknowledgment smile thing she murmured something to me which of course I didn’t really hear. I took out my earphones or earbuds or whatever they’re called now, and asked what she said. She was promoting a party thing at a nightclub and, in a strong northern accent, asked if I liked house music. I said I don’t really know, that I’ve heard it before but I don’t really know if I like it. She asked what kind of music I like. I said I don’t know.
+Walking through the city centre a few Saturdays ago, I made eye contact with a thin young blonde girl wearing a huge camouflage army coat and when I did the vague acknowledgment smile thing she murmured something to me which of course I didn’t really hear. I took out my earphones or earbuds or whatever they’re called now, and asked what she said. She was promoting a party thing at a nightclub and, in a strong northern accent, asked if I liked house music. I said I don’t really know, that I’ve heard it before but I don’t really know if I like it. She asked what kind of music I like. I said I don’t know.
 
 “I used to be hip but I’m not anymore,” I said.
 
