@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2015-02-05T17:32:37+00:00</updated>
+  <updated>2015-02-05T17:39:08+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -20,11 +20,12 @@
     <id>http://jmrphy.github.io/blog/2015/02/05/new-evidence-stand-your-ground</id>
     <content type="html"><![CDATA[<p>Because there are still many people who continue to doubt systematic racial and gender bias in law enforcement, I have been working on some new statistical tests of these claims. Earlier today I released <a href="http://figshare.com/articles/A_Statistical_Analysis_of_Racism_and_Sexism_in_Stand_Your_Ground_Cases_in_Florida_2006_2013/1301532">new statistical evidence of racism and sexism in the enforcement of &ldquo;stand your ground&rdquo; (SYG) laws</a>, using a sample of cases from Florida in the period from 2006 to 2013. A detailed explanation of the data, methods, and findings (including fully reproducible data and code) can be found in the full working paper linked above.</p>
 
+<p>Below, I summarize:</p>
+
 <ul>
-<li><a href="#the-two-key-findings">The two key findings</a></li>
-<li><a href="#what-these-models-teach-us-about-recent-cases">What if Trayvon Martin had been white? What if Marissa Alexander had been male?</a></li>
-<li><a href="#what-is-new-about-these-findings-and-why-they-matter">What is new about these findings and why they matter
-</a></li>
+<li>The two key findings</li>
+<li>What if Trayvon Martin had been white? What if Marissa Alexander had been male?</li>
+<li>What is new about these findings and why they matter</li>
 </ul>
 
 

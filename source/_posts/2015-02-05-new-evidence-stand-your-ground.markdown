@@ -10,11 +10,11 @@ categories:
 ---
 Because there are still many people who continue to doubt systematic racial and gender bias in law enforcement, I have been working on some new statistical tests of these claims. Earlier today I released [new statistical evidence of racism and sexism in the enforcement of "stand your ground" (SYG) laws](http://figshare.com/articles/A_Statistical_Analysis_of_Racism_and_Sexism_in_Stand_Your_Ground_Cases_in_Florida_2006_2013/1301532), using a sample of cases from Florida in the period from 2006 to 2013. A detailed explanation of the data, methods, and findings (including fully reproducible data and code) can be found in the full working paper linked above.
 
-- [The two key findings](#the-two-key-findings)
-- [What if Trayvon Martin had been white? What if Marissa Alexander had been male?](#what-these-models-teach-us-about-recent-cases)
-- [What is new about these findings and why they matter
-](#what-is-new-about-these-findings-and-why-they-matter
-)
+Below, I summarize:
+
+- The two key findings
+- What if Trayvon Martin had been white? What if Marissa Alexander had been male?
+- What is new about these findings and why they matter
 
 ---------------------
 
