@@ -4,7 +4,7 @@
   <title><![CDATA[Justin Murphy]]></title>
   <link href="http://jmrphy.github.io/atom.xml" rel="self"/>
   <link href="http://jmrphy.github.io/"/>
-  <updated>2014-12-17T23:13:25+00:00</updated>
+  <updated>2015-02-05T17:16:44+00:00</updated>
   <id>http://jmrphy.github.io/</id>
   <author>
     <name><![CDATA[Justin Murphy]]></name>
@@ -14,10 +14,54 @@
 
   
   <entry>
-    <title type="html"><![CDATA[A few Saturdays ago]]></title>
-    <link href="http://jmrphy.github.io/blog/2014/12/17/a-few-saturdays-ago/"/>
+    <title type="html"><![CDATA['Stand your ground' laws reinforce white supremacy in the streets and patriarchy in the home]]></title>
+    <link href="http://jmrphy.github.io/blog/2015/02/05/new-evidence-stand-your-ground/"/>
+    <updated>2015-02-05T09:02:00+00:00</updated>
+    <id>http://jmrphy.github.io/blog/2015/02/05/new-evidence-stand-your-ground</id>
+    <content type="html"><![CDATA[<p>Because there are still many people who continue to doubt systematic racial and gender bias in law enforcement, I have been working on some new statistical tests of these claims. Earlier today I released <a href="http://figshare.com/articles/A_Statistical_Analysis_of_Racism_and_Sexism_in_Stand_Your_Ground_Cases_in_Florida_2006_2013/1301532">new statistical evidence of racism and sexism in the enforcement of &ldquo;stand your ground&rdquo; (SYG) laws</a>, using a sample of cases from Florida in the period from 2006 to 2013. A detailed explanation of the data, methods, and findings (including fully reproducible data and code) can be found in the full working paper linked above.</p>
+
+<ul>
+<li><a href="#the-two-key-findings">The two key findings</a></li>
+<li><a href="#what-these-models-teach-us-about-recent-cases">What if Trayvon Martin had been white? What if Marissa Alexander had been male?</a></li>
+<li><a href="#what-is-new-about-these-findings-and-why-they-matter">What is new about these findings and why they matter
+</a></li>
+</ul>
+
+
+<hr />
+
+<h3>The two key findings</h3>
+
+<p>1) The probability of conviction for a white defendant against a white victim in a typical case is fairly high at around 90% but with a large margin of error, whereas <strong>the probability of conviction for a black defendant against a white victim approaches 100%, even after controlling for more than 10 different objective factors related to the circumstances of the incident.</strong></p>
+
+<p><a href="http://figshare.com/articles/Expected_Probability_of_Conviction_by_Race_of_Victim_and_Defendant_in_Stand_Your_Ground_Cases_Florida_2006_2013_/1301534"><img src="http://previews.figshare.com/1880691/860/p_01.png" height="400" width="500" alt="Expected Probability of Conviction by Race of Victim and Defendant in &quot;Stand Your Ground&quot; Cases (Florida, 2006-2013)" /></a></p>
+
+<p>2) The probability of conviction for a male defendant in a typical domestic case is found to be about 40%, but <strong>for a female defendant in an otherwise objectively equivalent case the probability of conviction increases dramatically to 80%</strong>.</p>
+
+<p><a href="http://figshare.com/articles/Expected_Probability_of_Conviction_by_Gender_of_Defendant_in_Domestic_and_Non_Domestic_Stand_Your_Ground_Cases_in_Florida/1301535"><img src="http://previews.figshare.com/1880692/860/p_01.png" height="400" width="500" alt="Expected Probability of Conviction by Gender of Defendant in Domestic and Non-Domestic &quot;Stand Your Ground&quot; Cases (Florida, 2006-2013)" /></a></p>
+
+<h3>What these models teach us about recent cases</h3>
+
+<p>1) The probability George Zimmerman was going to be found guilty of murdering unarmed black teenager Trayvon Martin in 2012 was marginally greater than 50% but would have been about 98% if Trayvon Martin had been white.</p>
+
+<p>2) Black female Marissa Alexander who fired a physically innocuous warning shot to deter her husband in 2010 faced a probability of conviction marginally greater than 50%, but the probability of conviction for a male defendant in an otherwise objectively equivalent situation would have been around only 12%.</p>
+
+<h3>What is new about these findings and why they matter</h3>
+
+<p>1) The only previous statistical analysis of racial bias in the enforcement of stand your grown laws at the level of individual cases concluded that there has been no racial bias. Conservative gun advocate John Lott analyzed the same data I analyzed and submitted his analysis as testimony to the US Senate Judiciary Committee. As I explain in the paper, his statistical modelswere very superficially reported and deeply flawed. Thus, <strong>my findings overturn the last most influential study which, I believe, incorrectly informed US policymakers.</strong></p>
+
+<p>2) This analysis controls for a very large number of contextual factors which are frequently invoked to dismiss claims of racism and sexism. In other words, if anyone ever says the legal system is not racist or sexist but people of color and/or women are simply more likely to do/be some other thing which rightfully earns them convictions and just happens to be correlated with race or gender, <strong>my study provides evidence of racism and sexism in SYG enforcement even <em>after</em> subtracting out any effect which might come from race or gender correlating with a long list of common conservative excuses</strong>: whether the victim initiates, whether the defendant can retreat, whether the defendant pursues, whether the defendant has a gun, whether the incident takes place on the defendant’s property, whether the victim dies, age of victim and defendant, whether there is physical evidence, whether there is a witness, and whether the victim is committing a crime.</p>
+
+<p><a href="http://figshare.com/articles/A_Statistical_Analysis_of_Racism_and_Sexism_in_Stand_Your_Ground_Cases_in_Florida_2006_2013/1301532"><strong>Murphy, Justin (2015): A Statistical Analysis of Racism and Sexism in &ldquo;Stand Your Ground&rdquo; Cases in Florida, 2006-2013.
+http://dx.doi.org/10.6084/m9.figshare.1301532</strong></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I wondered if I’m allowed to ask if I’m allowed]]></title>
+    <link href="http://jmrphy.github.io/blog/2014/12/17/a-few-saturdays-ago+copy/"/>
     <updated>2014-12-17T23:02:00+00:00</updated>
-    <id>http://jmrphy.github.io/blog/2014/12/17/a-few-saturdays-ago</id>
+    <id>http://jmrphy.github.io/blog/2014/12/17/a-few-saturdays-ago copy</id>
     <content type="html"><![CDATA[<p>Walking through the city centre a few Saturdays ago, I made eye contact with a thin young blonde girl wearing a huge camouflage army coat and when I did the vague acknowledgment smile thing she murmured something to me which of course I didn’t really hear. I took out my earphones or earbuds or whatever they’re called now, and asked what she said. She was promoting a party thing at a nightclub and, in a strong northern accent, asked if I liked house music. I said I don’t really know, that I’ve heard it before but I don’t really know if I like it. She asked what kind of music I like. I said I don’t know.</p>
 
 <p>“I used to be hip but I’m not anymore,” I said.</p>
@@ -34,7 +78,7 @@ Nonetheless unsure exactly why she was being so nice, when she handed me the tic
 
 <p>Before returning to her party-promoting group about ten feet away, she said to me in a tutorly voice, “Take my number and text me when you get there, and I’ll show you how it works,” as if I had never been to a nightclub ever. Then it dawned on me that she probably just felt bad for me and wanted to help me, this American guy in a minor British city who doesn’t know what kind of music he likes and apparently has nobody to bring along to a nightclub and does not in any part of his self-presentation really appear to be a member of any recognizable milieu but who, now amused and relaxed, says “OK yea, I think I’ll come.”</p>
 
-<p>Walking away, I wondered to myself if I was going to do drugs that night, then I wondered if university lecturers are allowed to do drugs. Then I wondered if I’m even allowed to ask if I’m allowed to do drugs, like if I asked someone higher up in the university if I’m allowed to drugs and the answer was no then I would be judged and punished just as much as if they found me on Instagram snorting a line of coke hashtag #idodrugs. I imagined someone later in the night handing me drugs, and me asking them to confirm they are not a student before I quickly strongly thought “this is not going to work.” But then I thought “Timothy Leary” and that made me calm enough to decide I would play it by ear.</p>
+<p>Walking away, I wondered to myself if I was going to do drugs that night, then I wondered if university lecturers are allowed to do drugs. Then I wondered if I’m allowed to ask if I’m allowed to do drugs, like if I asked someone higher up in the university if I’m allowed to drugs and the answer was no then I would be judged and punished just as much as if they found me on Instagram snorting a line of coke hashtag #idodrugs. I imagined someone later in the night handing me drugs, and me asking them to confirm they are not a student before I quickly strongly thought “this is not going to work.” But then I thought “Timothy Leary” and that made me calm enough to decide I would play it by ear.</p>
 
 <br><br><br><br><br>
 
@@ -673,15 +717,6 @@ rises throughout this period. I hypothesize that &#8220;media&#8221; perhaps rep
 <p>But today, decolonization, civil rights movements, feminist movements, various democratic uprisings, and the rise of mass education as well as the internet, have all lead to a huge increase in the aggregate demand for precisely this kind of social science. Witness the rise of the “data visualizer”, that not-quite-data-scientist internet persona who specializes in fashionable data-intensive infographics for mass distribution on the web. Such a persona is merely an inane example of how millions of people around the world would be increasingly amenable to a popular, emancipatory social science.</p>
 
 <p>In summary, for those who wish to read between the lines of bourgeois data, there always exists epiphanic data in the simple will to read it differently, a parallax data which promises a wide world of revolutionary intellectual exploration. Unfortunately, this world of data is currently available only to those few of us who have been given the unequally distributed privileges required to mine it <em>and</em> a sufficiently youthful spirit to still <em>want to</em>. But a mass defection of radical young social scientists from currently privileged research agendas toward anti-institutional perspectives would open a large range of research which need not be technically sophisticated to quickly produce huge increases in both the overall truth quotient of social science and its overall effectiveness in radical egalitarian political change.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[There are more than enough hours in the day]]></title>
-    <link href="http://jmrphy.github.io/blog/2013/09/15/there-are-more-than-enough-hours-in-the-day/"/>
-    <updated>2013-09-15T16:46:00+01:00</updated>
-    <id>http://jmrphy.github.io/blog/2013/09/15/there-are-more-than-enough-hours-in-the-day</id>
-    <content type="html"><![CDATA[<p>The popular refrain that &ldquo;there aren&rsquo;t enough hours in the day&rdquo; is an interesting departure from the long and storied political and rhetorical battle to <em>objectively</em> decrease the hours of the working day. It is an extraordinary gauge of our political pacification that when so many people have such a hard time meeting a pervasive social and economic expectation, we would sooner <em>ask for an extension</em> of the expectation than its abolition.</p>
 ]]></content>
   </entry>
   
