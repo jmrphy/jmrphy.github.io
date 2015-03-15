@@ -98,3 +98,7 @@ google_analytics_tracking_id: UA-42953742-1
 
 # Facebook Like
 facebook_like: true
+
+# Facebook Insights / Open Graph
+facebook_app_id: 212934732101925
+facebook_page: https://www.facebook.com/barclayshields
