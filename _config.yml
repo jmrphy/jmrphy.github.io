@@ -64,7 +64,7 @@ page_asides:
 
 # Github repositories
 github_user: jmrphy
-github_repo_count: 0
+github_repo_count:
 github_show_profile_link: true
 github_skip_forks: true
 
@@ -100,5 +100,5 @@ google_analytics_tracking_id: UA-42953742-1
 facebook_like: true
 
 # Facebook Insights / Open Graph
-facebook_app_id: 212934732101925
+facebook_app_id: 794865410604017
 facebook_page: https://www.facebook.com/barclayshields
