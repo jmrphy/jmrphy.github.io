@@ -8,3 +8,5 @@ categories:
 ---
 
 The popular refrain that "there aren't enough hours in the day" is an interesting departure from the long and storied political and rhetorical battle to *objectively* decrease the hours of the working day. It is an extraordinary gauge of our political pacification that when so many people have such a hard time meeting a pervasive social and economic expectation, we would sooner *ask for an extension* of the expectation than its abolition.
+
+<br><br><br><br><br><br>

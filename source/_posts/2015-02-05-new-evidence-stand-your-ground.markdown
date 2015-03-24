@@ -44,3 +44,5 @@ Below, I summarize:
 
 [**Murphy, Justin (2015): A Statistical Analysis of Racism and Sexism in "Stand Your Ground" Cases in Florida, 2006-2013.
 http://dx.doi.org/10.6084/m9.figshare.1301532**](http://figshare.com/articles/A_Statistical_Analysis_of_Racism_and_Sexism_in_Stand_Your_Ground_Cases_in_Florida_2006_2013/1301532)
+
+<br><br><br><br><br><br>

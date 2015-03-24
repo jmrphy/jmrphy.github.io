@@ -11,3 +11,5 @@ categories:
 ---
 
 Duchamp said that he turned to the ready-made for no other reason than to “discharge” ideas. In other words, successful art objects are _sinks that become sources_. This gives a certain socio-electrical significance to the idea of a "Fountain."
+
+<br><br><br><br><br><br>

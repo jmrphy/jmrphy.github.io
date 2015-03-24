@@ -10,3 +10,5 @@ categories:
 ---
 
 People only eat meat because their repressed rage makes them bloodthirsty. All forms of bloodthirst are driven by resentment and revenge; this is the only conceivable reason why smart and good-natured people insist on eating meat. Everyone is so oppressed by social institutions but unable to kill any of the *humans* responsible for those institutions, that the half-hearted laments of unapologetic animal-eaters often reduce to: “I must reserve at least this one right to exercise my insatiable need to *take life* for  myself.” I think this is why after great ventings of repressed rage, I find it impossible to eat the flesh of an animal. In such instances, one is free of the resentment which drives such a vicious appetite.
+
+<br><br><br><br><br><br>

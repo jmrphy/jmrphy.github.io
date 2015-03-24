@@ -47,15 +47,5 @@ categories:
 
 You can <a href="http://figshare.com/articles/Notes_on_Simone_Weil_s_Gravity_and_Grace/1195887">download, reuse, remix, track any future additions, and/or cite these images here.</a>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br><br><br>
 

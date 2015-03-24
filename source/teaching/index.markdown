@@ -5,20 +5,6 @@ comments: false
 sharing: false
 footer: true
 ---
-<script type="text/javascript" src="//jmrphy.simplybook.me/iframe/contact_widget.js"></script>
-<script type="text/javascript">
-Simplybook_ContactWidget.domain = "jmrphy.simplybook.me";
-Simplybook_ContactWidget.title = "Schedule time to meet with me!";
-Simplybook_ContactWidget.contactTitle = "If you'd like a meeting you COULD email me,";
-Simplybook_ContactWidget.scheduleTitle = "but please just click here and schedule it!";
-Simplybook_ContactWidget.timeline = "flexible";
-Simplybook_ContactWidget.offset = "25%";
-Simplybook_ContactWidget.position = "top";
-Simplybook_ContactWidget.color = "#003E5B";
-Simplybook_ContactWidget.mobileRedirect = true;
-Simplybook_ContactWidget.addButton();
-</script>
-
 ### Courses
 
 Politics of the Media (Undergraduate)
@@ -34,3 +20,4 @@ Public Policy and Democracy (MSc)
 - [Syllabus](http://jmrphy.net/course_public_policy)
 
 
+ <br><br><br><br><br><br>
