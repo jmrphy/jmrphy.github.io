@@ -5,7 +5,17 @@ comments: false
 sharing: false
 footer: true
 ---
-### Other Things
+### Other Projects
+
+<table style="background-color:white; border:0px" width="700" height="65">
+	<tr>
+		<td><img style="border:1px solid black" src="https://farm9.staticflickr.com/8731/16711667627_eb214f1e99_s.jpg" width="75" height="75" border="1" bordercolor="black"></td>
+		<td align="left" valign="top" width="600">
+		<b><a href="http://jmrphy.net/uklip/">UKLIP</a></b><br>
+		UK political party to run in the 2015 general election.
+		</td>
+	</tr>
+</table>
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
