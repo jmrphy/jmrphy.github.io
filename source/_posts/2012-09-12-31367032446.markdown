@@ -8,6 +8,7 @@ title: '#14: Socratic honesty and Platonic betrayal'
 wordpress_id: 47
 categories:
 - theory
+- institutions
 ---
 
 The chief difficulty of logic stems from the ideological nature of language. Dealing only with truth, with internal consistency, logic models the essence of the thing but not its existence. Its existence can only be modeled by the whole map of it, which means not the image of an air-tight circle floating in space, but a map of the whole ensemble within which it is constituted and constituting and including the word-things of its negative space. This is to say that, pretty obviously, logic has the _structure_ of a fiction. Without any sanction from Truth, logic draws maps that are true and thus ideological. If Socrates is special because he testifies to _nothing_ and is thus made to disappear (he is exceedingly massive or evolutionarily unfit relative to the whole ensemble), analytical philosophy is special because its formalism testifies to _everything, _i.e. anything one feels like putting in the place of all those _P_s and _Q_s. This first of all serves as an excellent illustration of the difference between honest, radical philosophy and bourgeois, collaborationist philosophy: the difference between producing things in the service of truth as opposed to producing truth in the service of things.

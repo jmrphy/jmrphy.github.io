@@ -18,6 +18,8 @@ footer: true
 	</tr>
 </table>
 
+<br>
+
 ### Working Papers or Under Review
 
 <table style="background-color:white; border:0px" width="700" height="65">

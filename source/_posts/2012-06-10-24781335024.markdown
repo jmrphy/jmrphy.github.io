@@ -8,6 +8,7 @@ title: '#3: Investment'
 wordpress_id: 81
 categories:
 - theory
+- institutions
 ---
 
 It suffices to point out for this first exposition of the model that reciprocity is an essential requirement of the relations among any and all sub-things which we will understand as composing an ensemble. However, the concept of reciprocity only represents the formal essence of another concept that has become at once a ubiquitious but diversely-employed and contested concept across the human sciences. What is here defined as reciprocity is the essential relationship that modern economics knows as _investment**.**_ If an investor invests in some new enterprise, the lender and borrower do not compose a durable ensemble of things unless the borrower earns enough money to at least pay the lender back. If the borrower doesn’t pay the lender back then there remains only a borrower and an insolvent, disappearing lender. 

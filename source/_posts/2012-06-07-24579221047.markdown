@@ -8,6 +8,7 @@ title: '#1: Energy, line segment, thing, circuit'
 wordpress_id: 83
 categories:
 - theory
+- institutions
 ---
 
 If we try to work from the most basic and uncontroversial terms, we might call by the name of _energy_ (ἐνέργεια, “activity, operation”**) t**hat universal polymorphous lust that constitutes _things_. The universe is undeniably constituted and constituting, operating, and energy seems to be the best available term that accounts for it as a whole.

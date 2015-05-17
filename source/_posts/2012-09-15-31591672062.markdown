@@ -8,6 +8,7 @@ title: '#16: Equilibrium and equality'
 wordpress_id: 45
 categories:
 - theory
+- institutions
 ---
 
 “Whatever needs to be maintained through force is doomed.” – Henry Miller

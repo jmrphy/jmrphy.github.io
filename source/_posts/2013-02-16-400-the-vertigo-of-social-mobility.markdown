@@ -8,6 +8,7 @@ title: The vertigo of social mobility
 wordpress_id: 400
 categories:
 - theory
+- privilege
 ---
 
 Institutions lure you by flattering you, in a world where it is nearly impossible to find recognition outside of them; you begin to see yourself only in institutions that pre-exist you and over which you exercise no influence. If this is perfectly internalized, then you get typical neuroses, mid-life crises, etc. Alternatively, if it's not perfectly internalized, then you get perpetual, mini crises up front; you perpetually realize you're over-worked and over-working on things that are somehow sterilized in advance so as to make sure you cannot exercise freedom over them and you also realize that no matter how hard you work you will not overcome this impotence. The mythology of hard work is, for this reason, indispensable for the status quo; it's one of the only things that keeps people from realizing that they simply can't win, that nobody can win like that.

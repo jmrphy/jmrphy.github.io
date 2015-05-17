@@ -8,6 +8,7 @@ title: '#5: Human, idea, immanence, intensive space, drive'
 wordpress_id: 79
 categories:
 - theory
+- institutions
 ---
 
 “But an animal does not feign feigning.” – Jacques Lacan, Écrits_ 

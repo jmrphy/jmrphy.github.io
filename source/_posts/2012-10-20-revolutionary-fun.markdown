@@ -8,6 +8,7 @@ title: Revolutionary fun
 wordpress_id: 180
 categories:
 - theory
+- insurrection
 ---
 
 Revolutionary fun is the only justified form of fun. Revolutionary fun is the fun had by playing with the power of those who have more power than oneself. Playing with the power of those who have more power than oneself is fun because it is the assertion of will over and against an illegitimate status quo. It is the enjoyment of creating anti-power. It is revolutionary because in its bold idleness it is inexplicable, enchanting, irresistably attractive. The human who can make a toy out of those who have more power is a magical creature to whom others will always wish to draw nearer. Playing with those who have more power is, in other words, an expression of _sheer will, _supported by neither material resources nor short-term instrumental calculations. Really though, it is neither magical nor even exceptional; to exercise the will is simply to be human, and to "poke fun" at the powerful behind closed doors is one of the most natural and common practices in the world. Because power is already levity in the face of suffering, to make light of the powerful is really just a deflation of false cruelty and a return to equilibrium. To actively and provocatively make such a plaything out of the false power of others appears as a magical inversion only because the real exercise of human will has been barred from so many people for so long.

@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Introduction to overthrowing all currently existing institutions"
+date: 2015-04-06 16:35
+comments: false
+sharing: false
+categories: 
+- theory
+- social science
+- institutions
+description: An introduction to the art and science of overthrowing everything.
+keywords: revolution, insurrection, democracy, social science, activism, communism, activism
+facebook: 
+ image: http://40.media.tumblr.com/tumblr_ljefv5XTmF1qz9nt4o1_500.jpg
+twitter_card:
+ type: summary
+ #type: summary_large_image
+ #type: photo
+ #type: gallery
+ #type: summary_large_image
+ image: http://40.media.tumblr.com/tumblr_ljefv5XTmF1qz9nt4o1_500.jpg
+---
+# Preface
+
+It is increasingly clear that the dream of a democratic capitalism was precisely that, a short-lived delusion, a fantasy of the three decades after World War II. Ample evidence, which I will discuss later, indicates that the dance of “liberal democracy” has finished. Unfortunately, activists and academics are notoriously bad at updating their positions in response to changes in the landscape. Because we continue to use language from bygone eras, we who are interested in building a better world rely on mental models of social change which are hopelessly inconsistent with empirical reality.[^1] On the other hand, those academics and mainstream intellectuals who have the most sophisticated and rigorous models of social change tend to be hopelessly invested in the status quo. As a result, certain extraordinary historical changes have flummoxed our ethical *and* practical compasses in ways which we have hardly even begun to understand. This is why neither the political opposition to status quo institutions nor the frontlines of knowledge have ever been less *dangerous*: the game is over, we have been defeated by cheaters, and yet we continue playing by their rules because we have lost so badly that we hardly understand what has happened.
+
+What follows in this volume of writings is an effort to rethink and help reconstitute the nature of protest and activism after the difficult admission that ours truly is an age of *tyranny*, a tyranny which no longer even pretends to negotiate, a tyranny which goes by many names but is as real and formidable and frightening as any of the historical nightmares we’ve always imagined were so far behind us. But don’t worry, there’s no reason to be afraid, for we are already living it and it’s not as if any of the current false optimisms really deliver lasting comfort. On the contrary, it is our refusal to confront the depth of our collective defeatedness which, by blocking sincerity, blocks our path to joy and the collective movement of liberation.
+
+Unfortunately, this time the tyrannical nightmare of history is more confusing than ever, hence its many names. I have no interest in providing a definitive name for this tyranny, for it manifests with different names at different times: capitalism, patriarchy, white supremacy, “corruption,” whatever. As a placeholder, I call our tyranny *the institutions*, for ultimately the problem is not the humans who appear to have too much power; the problem is that a diverse set of institutions have more than ever in the history of the world taken over human being *as such.* As we’ll see, those humans who seem the most powerful are actually the least powerful, they are merely the most well paid.[^2]
+
+If you’re already beginning to wonder what my clever solutions are, I would beg you to pause. As it turns out, some potential solutions will emerge, but I’m not selling you anything, so why would I be expected to have solutions? True solutions to political problems emerge only as by-products of honest truth seeking; wherever a solution is offered as a product it is by definition a false solution which will not show us the way. To offer a solution as a product implies an opaque, instrumental relation to the reader, and this squelches the revolutionary capacity of truth-seeking and communication from the outset. One of my larger arguments will be that an instrumental attitude to political ideas—inherited from market institutions—is one of the most insidiously conservative forces because, by decreasing trust in general, it neutralizes the historically revolutionary connections between communication, truth, risk, and collective action.
+
+I am only trying to do what any writer does, but trying to resist as much as possible those falsehoods with which the institutions tempt me. Falsehoods for the market, primarily. I am writing this on the belief that any truly honest and committed unveiling of possibly misunderstood realities is always itself an act of social war against unjust institutions, not only symbolically but concretely. To put it in a way which will become more clear as we proceed, I have a series of thoughts the actual communication of which I see as directly increasing the only truly liberating and insurrectionary forces which I believe to exist: truth and joy. An essential point that will emerge from my perspective is that it is only the absorption of such energies by status quo institutions that neutralizes their inherently revolutionary consequences before we can even embody them. This volume of writings will try to demonstrate this by argument but also by example, for the joy of my own truth is the only thing all these notes will have in common.
+
+For the question is never, “What is to be done?” Already this would make a crucial and symptomatic mistake: to presume I could possibly know what other people should do, or even if I did know, that it would necessarily be collectively liberating to try and direct them! The odor of moralism in so much radical discourse is already too much to bear, I will not add to it. I want all people to flourish, and since I can’t know others well enough to even guess what their flourishing should look like, I will have nothing to say about “what is to be done” by my readers or anyone else. All forms of writing “what is to be done” require such a dose of megalomania that it typically knocks one off the path of collective liberation before even starting. In most thinking and writing, the only worthwhile question is, “What is truly the case?” Why would “radical” political writing be any different? That so much political writing today is primarily about signaling the moral qualities of the writer, and so little of it even pretends to be concerned with the simple goal of trying to understand things correctly—indeed, that to invoke such a traditional concern as veracity is often criticized as apologism—indicates exactly the publicly looming gap into which I have settled my private thoughts for the past couple of years.
+
+My wager is that the collective struggle for human liberation has gone astray for the same reason anything goes astray: we’ve just gotten lost, in a maze of diffuse institutional temptations, psychological traps, and sociological blind alleys which are par for the course in any pacified society at the end of its history. I think we’ve simply become too good at lying, to ourselves and to each other. My gambit, therefore, is the only gambit of any sincerely revolutionary intellectual, and perhaps of any real writer: to collect and share what I honestly think about the entire distribution of all currently existing institutions in whatever fashion seems to most directly participate in the actual movement of their immediate overthrow.
+
+[^1]:	For instance, it always astounds me how people can speak, with a straight face, about “organizing” a “social movement,” as if any of us are even capable of organizing our own lives, as if the very capacity to trust others has not declined dramatically over the past several decades, as if we were capable of having more than a few truly good relationships if we’re lucky! It is comforting to believe that we are capable of a social movement for liberation, but it simply assumes the existence of precisely those human and interpersonal resources which have depleted fatally during the period of our “liberal” pacification.
+
+[^2]:	Our era, defined by the institutional colonization of human being as such, is all Foucault ever meant by “biopolitics;” it is all the situationists ever meant by “society of the spectacle,” and it is all the conservatives ever meant by “the end of history.”

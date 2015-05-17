@@ -8,6 +8,7 @@ title: '#7: Not methodology but the realization of beginning'
 wordpress_id: 77
 categories:
 - theory
+- institutions
 ---
 
 “It is a tremendous act of violence to begin anything. I am not able to begin. I simply skip what should be the beginning.” – Rainer Maria Rilke

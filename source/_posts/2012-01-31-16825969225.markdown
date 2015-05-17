@@ -8,6 +8,7 @@ title: Art and bribery
 wordpress_id: 87
 categories:
 - theory
+- insurrection
 ---
 
 The history of art is a history of bribery. A young person who for many possible reasons was lucky enough to escape complete and total ideological subjugation in the first few years of life keeps in touch with their sense of desire, a desire for everything, a desire obscurely but undeniably not satisfied by the social organization of the life into which they have been thrown. Thus, they create, they permit themselves the curious project of ascertaining that part of everything to which they are not permitted access. For obvious reasons already elucidated, this ambition is always a fatal threat to the social system, wherever and whenever it appears. But a social system has always already evolved an almost infinite series of offers, one after another, for the individual to exchange the ambition for exiting or revolutionizing the whole system in return for some better individual offering within the system. 

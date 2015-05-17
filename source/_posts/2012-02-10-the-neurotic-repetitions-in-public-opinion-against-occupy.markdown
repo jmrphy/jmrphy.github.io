@@ -7,8 +7,6 @@ categories:
 - theory
 ---
 
-## The neurotic repetitions in public opinion against Occupy
-
 Revolution is the radical demystification of desire beyond demand; conservatism is the mystification of desire by its reduction to demand.
 
 Media spokespeople, critics on the right, and even sympathetic but timid bourgeois progressives everywhere will not cease clamoring, in so many obviously trembling equivalences: “Eventually, you’ll have to, sooner or later, focus, articulate demands, we understand your rage, but eventually, you’ll have to narrow the issues, what exactly do you want?” And so on and so forth. Of course, what is too frightening for most observers and the mainstream media to say aloud if they are even able to comprehend it is a certain realization that is increasingly obvious to many of us on the ground: that everyday more and more of us lose even the idea that we might ever again want something from the political system. Many of us, over the past few months, have simply lost the capacity to be delightfully charmed by the idea of anyone giving us anything.

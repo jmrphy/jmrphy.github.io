@@ -8,6 +8,7 @@ title: A thought on jealousy
 wordpress_id: 466
 categories:
 - theory
+- interpersonal
 ---
 
 When one person is jealous of another, that jealousy can be oppressive for the other, of course, but it can also be perversely comforting: Jealousy _is_ flattering. And in the most dangerous cases, rather than balance each other, the oppressiveness and the comfort fuel each other. If the oppression of jealousy is intolerable and even debilitating, the comfort that is supplied by its flattering component can begin to feel all the more needed. This perverse need or desire for the flattering insecurity of the other can lead the coveted person to continue in behaviors that effectively encourage the covetousness under which they are oppressed, rather than simply confront the jealous person and defuse these obviously unhealthy dynamics. In fact, this dynamic is so dangerous because of its final step: this process tends independently to _create_ and _drive_ jealousy because the person who is oppressed but unable to speak about it makes the jealous person fear—this time _rightfully_—that the other is hiding something. And, to boot, because there is a flattering component in jealousy, the jealous person is unfortunately and unconsciously encouraged to maintain their jealousy insofar as they observe how the other takes solace in it, however perverse and subtle that solace may be.

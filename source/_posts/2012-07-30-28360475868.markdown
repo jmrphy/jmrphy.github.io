@@ -8,6 +8,7 @@ title: '#9: Volume, diameter, density, ideology'
 wordpress_id: 69
 categories:
 - theory
+- institutions
 ---
 
 The diagrams of Figures 3 and 4 each capture five things characterized by three sources (input arrows) and three sinks (an original and two tangential splits); one thing with four sources and four sinks; and one thing with two sources and two sinks. Here, _volume_ is equal to the _diameter_of the thing, and _density_ is equal to the number of plugs (sources/sinks). The mass of an ensemble is then equal to its volume multiplied by its density. _A priori_, there has been no reason for modeling purposes to vary the the theoretical diameter of the particular energetic circles constituting thinghoods because, _ceteris paribus_, every thing has equal diameter. The volume of things increases only when they enter into ensembles (either material connections or conceptual generalities). Thus, the volume of an ensemble (diagramatically, the sum of all diameters) is equal to the number of things that compose it, and the density of an ensemble is equal to all of the plugs uniting its things. This also implies that any thing whatsoever will have a variable volume and density depending on how the ensembles are distinguished, that is, how they are named. The difficulty is that names, as things, are no less subject to these forces than any other things. This will be the essence of what the Marxist tradition knows as _ideology_ or _false consciousness._

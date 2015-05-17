@@ -8,6 +8,7 @@ title: 'Reactionary law and bourgeois desire'
 wordpress_id: 768
 categories:
  - theory
+ - privilege
 ---
 
 

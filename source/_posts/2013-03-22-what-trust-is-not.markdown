@@ -8,6 +8,7 @@ title: What trust is not
 wordpress_id: 781
 categories:
  - theory
+ - interpersonal
 ---
 
 Trust is not the absence of fear or insecurity regarding the possibility of betrayal. The very structure of our society wounds us so badly from the very beginning of our lives that perhaps such fears and insecurities are doomed to persist. Rather, trust is the feeling of peaceful confidence in a particular relationship _despite_ whatever fears or insecurities one nonetheless continues to feel. Trust is only meaningful as an _earned relief_ from fear and insecurity; as such, it not only implies the continued presence of fear and insecurity outside of the trust relation, it even requires a practiced awareness of the default fear and insecurity which has typically persisted as a fact throughout the greater part of the whole, global human network. We find negative evidence of this in the observation that partners in an honest trust relation often become so absorbed in their own mutual security that they lose awareness of the frightful insecurity against which they have built that trust with great labors and against great odds. When this happens, the storehouse of trust quickly begins to deplete. In colloquial terms, we often refer to exactly this process when we object to being "taken for granted."

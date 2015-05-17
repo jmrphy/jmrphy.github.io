@@ -8,6 +8,7 @@ title: A mass media theory of the surveillance state
 wordpress_id: 904
 categories:
 - theory
+- media
 ---
 
 [Sarah Jaffe][1] asks for a political economy of the surveillance state. I felt especially behooved to send her something not just because I'm a young academic roughly in political economy but also because, as one of thousands of young adults in the U.S. who were radicalized in through Occupy Wall Street—I strongly identify with independent intellectuals like Sarah and the class war of which she writes. I believe, contrary to many activists and radicals, that the tools of academic political economy can be extremely powerful in the struggle for truth and justice in the social war. So I really wanted to give Sarah a good link and say, "Here you go, sure it's bourgeois but look this really can help us understand what's going on..."

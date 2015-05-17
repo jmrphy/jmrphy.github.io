@@ -8,6 +8,7 @@ title: '#8: Mass, force, acceleration, power'
 wordpress_id: 76
 categories:
 - theory
+- institutions
 ---
 
 If we take at their word those who urge interdisciplinarity, there is no reason to stop before even the venerable theory of gravitation—just another partial angle of aristocratic claptrap on the true theory of things.

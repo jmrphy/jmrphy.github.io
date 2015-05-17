@@ -8,6 +8,7 @@ title: '#13: Truth'
 wordpress_id: 49
 categories:
 - theory
+- institutions
 ---
 
 By arriving at ideology and false consciousness, we thereby arrive at the question of truth, a question the history of philosophy has quite impressively muddled up with repressed nervous energy, as we will show.

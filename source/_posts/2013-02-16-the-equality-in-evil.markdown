@@ -8,6 +8,7 @@ title: The equality in evil
 wordpress_id: 399
 categories:
 - theory
+- privilege
 ---
 
 We fetishize words in such a way that when someone says something, we are prone to find them outrageously evil should they choose certain words. But the reality is that the actual quality of human drives probably differs much less across history and space than we wish to believe. This sense is inflated by the significance we attach to particular words, and distorted in severe biases in the social distribution of verbal facility. This is evidenced by the fact that the average, "well-bred", sensitive, educated person, almost certainly plays very often, in their head, with certain extremely uncouth and perhaps even wildly offensive ideas and phrasings before instantly knowing or realizing, precisely on account of their well bred discrimination, that such words would likely incur severe social punishment within their peer group. Those who are decent and polite are usually only well educated, which means they're merely better trained in the repression and verbal dissimulation of evil compared to the uneducated who are far more likely to spew all kinds of bigotry in public.
