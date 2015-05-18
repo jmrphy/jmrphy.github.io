@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "To end the government it is necessary to become ungovernable"
+title: "One way to end the government is to become ungovernable"
 date: 2015-05-17 13:15
 comments: false
 sharing: false
