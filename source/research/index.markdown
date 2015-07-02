@@ -24,6 +24,17 @@ footer: true
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
+		<td><img style="border:1px solid black" src="https://c1.staticflickr.com/1/484/18686952114_acb50b99b5_m.jpg" width="65" height="65" border="1" bordercolor="black"></td>
+		<td align="left" valign="top" width="600">
+		A Statistical Analysis of Racism and Sexism in Stand Your Ground Cases in Florida, 2006-2013<br><br>
+		<a href="http://figshare.com/articles/A_Statistical_Analysis_of_Racism_and_Sexism_in_Stand_Your_Ground_Cases_in_Florida_2006_2013/1301532" target="_blank"><i class="fa fa-file-pdf-o fa-lg"></i></a> |
+		<a href="https://github.com/jmrphy/stand_your_ground" target="_blank"><i class="fa fa-flask fa-lg"></i></a>
+		</td>
+	</tr>
+</table>
+
+<table style="background-color:white; border:0px" width="700" height="65">
+	<tr>
 		<td><img style="border:1px solid black" src="https://farm4.staticflickr.com/3871/15081495816_0c114c2e92_s.jpg" width="65" height="65" border="1" bordercolor="black"></td>
 		<td align="left" valign="top" width="600">
 		Mass Media and the Domestic Politics of Globalization<br><br>
