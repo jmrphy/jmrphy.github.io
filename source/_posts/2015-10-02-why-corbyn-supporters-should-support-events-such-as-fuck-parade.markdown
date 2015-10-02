@@ -4,9 +4,15 @@ title: "On Corbynism and Fuck Parades"
 date: 2015-10-02 13:28
 comments: true
 sharing: true
-categories: 
-description: 
-keywords: 
+categories:
+- theory
+- insurrection
+description: "Why Corbyn and events such as the Fuck Parade need each other."
+keywords:
+- Corbyn
+- Corbynism
+- class war
+- Fuck Parade
 facebook: 
  image: http://40.media.tumblr.com/tumblr_ljefv5XTmF1qz9nt4o1_500.jpg
 twitter_card:
