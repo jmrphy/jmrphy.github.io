@@ -9,7 +9,7 @@ footer: true
 
 <table style="background-color:white; border:0px" width="700" height="65">
 	<tr>
-		<td><img style="border:1px solid black" src="http://38.media.tumblr.com/tumblr_lqcagw8Q8w1qkjs4v.gif" width="65" height="100" border="1" bordercolor="black"></td>
+		<td><img style="border:1px solid black" src="http://38.media.tumblr.com/tumblr_lqcagw8Q8w1qkjs4v.gif" width="65" height="65" border="1" bordercolor="black"></td>
 		<td align="left" valign="top" width="600">
 		<a href="http://jmrphy.net/media_politics">Politics of the Media (Undergraduate)</a><br><br>
 		Optional/elective module for second and third year students at the University of Southampton, providing a broad survey of various theoretical and empirical perspectives on political implications of media.
@@ -42,9 +42,6 @@ footer: true
 </table>
 
 <br>
-
-Introduction to Quantitative Methods for the Social Sciences (Undergraduate, Temple University)
-
 
 
  <br><br><br><br><br><br><br><br><br>
