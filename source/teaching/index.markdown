@@ -7,17 +7,41 @@ footer: true
 ---
 ### Courses
 
-Politics of the Media (Undergraduate)
-- [Syllabus](http://jmrphy.net/course_media_politics)
+<table style="background-color:white; border:0px" width="700" height="65">
+	<tr>
+		<td><img style="border:1px solid black" src="http://41.media.tumblr.com/87855cd308825a7e09b624e781fa1888/tumblr_nusfh1x6U91qz9nt4o1_500.jpg" width="65" height="65" border="1" bordercolor="black"></td>
+		<td align="left" valign="top" width="600">
+		<a href="http://jmrphy.net/media_politics">Politics of the Media (Undergraduate)</a><br><br>
+		</td>
+	</tr>
+</table>
 
-Research Methods in Politics and IR (Undergraduate)
-- [Syllabus](http://dropbox.com/link)
+<br>
 
-Introduction to Quantitative Methods for the Social Sciences (Undergraduate)
-- [Syllabus](https://www.dropbox.com/s/enwj4f2bggewhn7/Murphy_Syllabus_Sec12.pdf)
+<table style="background-color:white; border:0px" width="700" height="65">
+	<tr>
+		<td><img style="border:1px solid black" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/GEO_Globe.jpg" width="65" height="65" border="1" bordercolor="black"></td>
+		<td align="left" valign="top" width="600">
+		<a href="http://jmrphy.net/political_inquiry">Introduction to Political Inquiry (Undergraduate)</a><br><br>
+		</td>
+	</tr>
+</table>
 
-Public Policy and Democracy (MSc)
-- [Syllabus](http://jmrphy.net/course_public_policy)
+<br>
+
+<table style="background-color:white; border:0px" width="700" height="65">
+	<tr>
+		<td><img style="border:1px solid black" src="http://alevelpolitics.com/wp-content/uploads/2013/11/houses-of-parliament-at-night.jpg" width="65" height="65" border="1" bordercolor="black"></td>
+		<td align="left" valign="top" width="600">
+		<a href="http://jmrphy.net/course_public_policy">Public Policy and Demcoracy (Graduate)</a><br><br>
+		</td>
+	</tr>
+</table>
+
+<br>
+
+Introduction to Quantitative Methods for the Social Sciences (Undergraduate, Temple University)
+
 
 
  <br><br><br><br><br><br><br><br><br>
