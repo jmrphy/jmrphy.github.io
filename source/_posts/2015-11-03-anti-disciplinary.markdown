@@ -8,7 +8,7 @@ categories:
 - institutions
 - theory
 - social science
-description: "This project is not what is called critical or inter-disciplinary social science; strictly speaking, it should be useless for the contemporary institutions of social science."
+description: "This is not what they call critical or inter-disciplinary social science; strictly speaking, it should be useless for the contemporary institutions of social science."
 keywords: 
 - interdisciplinarity
 - discipline
