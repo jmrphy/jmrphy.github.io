@@ -5,11 +5,15 @@ date: 2015-11-03 10:14
 comments: true
 sharing: true
 categories:
-	- institutions
-	- theory
-	- social science
-description: This project is not what is called critical or inter-disciplinary social science; strictly speaking, it should be useless for the contemporary institutions of social science.
-keywords: interdisciplinarity, discipline, anti-disciplinarity, anti-discipline
+- institutions
+- theory
+- social science
+description: "This project is not what is called critical or inter-disciplinary social science; strictly speaking, it should be useless for the contemporary institutions of social science.""
+keywords: 
+- interdisciplinarity
+- discipline
+- anti-disciplinarity
+- anti-discipline
 facebook: 
  image: http://40.media.tumblr.com/c7ab0676fc07d1e6fdc030b815ba2388/tumblr_nwbcjn6Xp31qz9nt4o1_1280.jpg
 twitter_card:
