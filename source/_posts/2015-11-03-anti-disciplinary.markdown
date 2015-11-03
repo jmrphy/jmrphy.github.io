@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "Not interdisciplinary but anti-disciplinary"
+title: "Not inter-disciplinary but anti-disciplinary"
 date: 2015-11-03 10:14
 comments: true
 sharing: true
-categories: institutions, theory, social science
+categories:
+	- institutions
+	- theory
+	- social science
 description: This project is not what is called critical or inter-disciplinary social science; strictly speaking, it should be useless for the contemporary institutions of social science.
 keywords: interdisciplinarity, discipline, anti-disciplinarity, anti-discipline
 facebook: 
