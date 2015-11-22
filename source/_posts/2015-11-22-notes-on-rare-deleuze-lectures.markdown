@@ -7,7 +7,7 @@ sharing: true
 categories:
 - theory
 - Deleuze
-description: "Deleuze lecturing on micro vs. molar, gangs, borders, Virginia Woolf, and social change"
+description: "Notes I took on rare video of Gilles Deleuze lecturing in 1975-76. On micro vs. molar, gangs, borders, Virginia Woolf, and social change."
 keywords: 
 - Gilles Deleuze
 - Deleuze
@@ -19,14 +19,13 @@ keywords:
 - the border
 - Justin Murphy
 facebook: 
- image: https://farm1.staticflickr.com/672/22843509429_a137302237_m.jpg
+ image: http://sites.williams.edu/cthorne/files/2014/07/Deleuze-Lamennais-4-A.jpg
 twitter_card:
  #type: summary
  type: summary_large_image
  #type: photo
  #type: gallery
- #type: summary_large_image
- image: https://farm1.staticflickr.com/672/22843509429_a137302237_m.jpg
+ image: http://sites.williams.edu/cthorne/files/2014/07/Deleuze-Lamennais-4-A.jpg
 ---
 
 In 1975-76, a student named Marielle Burkhalter recorded video of Gilles Deleuze’s lectures at the University of Paris VIII in Vincennes. Some of the video has been translated and re-presented by a couple of artists named Silvia Maglioni and Graeme Thomson, in an on-going project called *Through the Letterbox.* In [a recent showing at the Whitechapel Gallery](http://www.whitechapelgallery.org/events/a-life-beyond-the-facts-deleuze-now/) in London, I got to watch a set of clips with English subtitles.
