@@ -1,0 +1,604 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P56LRMG');</script>
+<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Predicting turnout from Google search data</title>
+
+	<meta name="description" content="I&#39;m a political scientist." />
+
+    <meta name="author" content="Justin Murphy"/>
+    
+ 	<meta name="keywords" content="academic research,social science,data">
+
+	<link rel="stylesheet" type="text/css" href="https://jmrphy.net/assets/css/styles_feeling_responsive.css" />
+	<script src="https://jmrphy.net/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Volkhov' rel='stylesheet' type='text/css' />
+	</noscript>
+
+  	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ" />
+	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" />
+	<link rel="author" href="https://plus.google.com/u/1/106173867748806895007"/>
+
+	
+
+
+
+	
+	<link rel="icon" sizes="16x16" href="https://jmrphy.net/assets/img/favicon-16x16.png" />
+
+
+
+	
+	<link rel="icon" sizes="32x32" href="https://jmrphy.net/assets/img/favicon-32x32.png" />
+
+
+
+
+	
+	<link rel="icon" sizes="192x192" href="https://jmrphy.net/assets/img/touch-icon-192x192.png" />
+
+
+
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://jmrphy.net/assets/img/apple-touch-icon-180x180-precomposed.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<meta name="msapplication-TileImage" content="https://jmrphy.net/assets/img/msapplication_tileimage.png" />
+
+
+
+
+	
+	<meta name="msapplication-TileColor" content="#176789" />
+
+
+
+<!-- Facebook Optimization -->
+	<meta property="og:locale" content="" />
+
+	<meta property="og:author" content="Justin Murphy" />
+
+	<meta property="og:type" content="website" />
+
+	<meta property="og:title" content="Predicting turnout from Google search data" />
+
+	<meta property="og:description" content="I&#39;m a political scientist." />
+
+	<meta property="og:url" content="https://jmrphy.net/blog/2012/10/27/predicting-turnout-from-google-search-data/" />
+	<meta property="og:site_name" content="Justin Murphy" />
+	
+
+	
+
+	<!-- Search Engine Optimization -->
+	
+
+	<link type="text/plain" rel="author" href="https://jmrphy.net/humans.txt" />
+
+	
+
+	
+
+	<!-- Include Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Meta Data for Google Scholar -->
+	<!-- Copied from MMadsen https://github.com/mmadsen/jekyll-greycite  -->
+
+	<!-- Get date last modified from git log. (Uses current time if file entry not found, e.g. projects/)  -->
+    
+
+
+    <!-- For posts, page.date is the date they are published under, which we use as their 'canonical' dc:date -->
+     
+      
+      
+
+    <!-- Posts declare modified timestamps in the sidebar, so would be redundant to put here. But then 
+         pages don't have a dc:modified... unless we give them their own (modified) sidebar?  
+    -->
+    <!-- Ideally we would want date originally created from the _oldest_ git commit too...-->
+
+<!-- Google Scholar Metadata -->
+	<meta name="resource_type" content="article"/>
+    <meta name="citation_author" content="Justin Murphy"/>
+    <meta name="citation_date" content="2012-10-27T00:00:00+01:00"/>
+    <meta name="citation_publication_date" content="2012-10-27T00:00:00+01:00"/>
+    <meta name="citation_title" content="Predicting turnout from Google search data"/>
+    <meta name="citation_journal_title" content="Justin Murphy"/>
+
+<!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Predicting turnout from Google search data" />
+    <meta property="dc:creator" content="Justin Murphy" />
+    <meta property="dc:date" content="2012-10-27T00:00:00+01:00" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/blog/2012/10/27/predicting-turnout-from-google-search-data/" />
+    <meta property="dc:rights" content="CC BY 4.0" />
+    <meta property="dc:source" content="Justin Murphy" />
+    <meta property="dc:subject" content="Political Science" /> 
+    <meta property="dc:type" content="website" /> 
+
+</head>
+<body id="top-of-page" class="">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P56LRMG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="https://jmrphy.net" class="icon-home"> Justin Murphy</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/research/">Research</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/files/Murphy_vita.pdf">CV</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/teaching/">Teaching</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/blog/">Blog</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="https://jmrphy.net">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+
+
+
+	<span
+	class="Z3988" 
+	title="ctx_ver=Z39.88-2004
+	&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+	&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+	&amp;rft.type=Article
+	&amp;rft.title=Predicting turnout from Google search data
+	&amp;rft.creator=Justin Murphy
+	&amp;rft.aulast=Murphy
+	&amp;rft.aufirst=Justin
+	&amp;rft.date=2012-10-27 00:00:00 +0100
+	&amp;rft.language=EN
+	&amp;rft.rights=CC-BY-4.0
+	&amp;rft_id=https://jmrphy.net/blog/2012/10/27/predicting-turnout-from-google-search-data/">
+</span>
+	
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Predicting turnout from Google search data</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<p>Political scientists [Jesse Richman][1] and [Erik Voeten][2] wonder if Google Search data can help us predict turnout in next month’s Presidential election. To summarize, Richman finds that searches for “vote” in the past two elections predict voter turnout, and that low search volume for “vote” this year suggests a low turnout election. In response, Voeten shows that controlling for who has come online since 2004 and 2008 explains much of why search volume for “vote” appears small this year. There are lots of reasons search data is pretty tricky for making good inferences, but that shouldn’t keep us from trying!</p>
+
+<p>My thinking is that we can look at the <em>composition</em> of “vote” searches across elections to see whether this year’s vote searches are indicative of greater voter turnout or greater voter demobilization/skepticism.</p>
+
+<p>For instance, “vote” searches containing the terms “where” or “when” are probably more directly predictive of turning out to vote than the whole set of “vote” searches–as they indicate practical planning to turnout. On the other hand, “vote” searches containing the term “why” are probably far less predictive of turnout–and might even predict how many people are thinking “why bother?” and are considering staying home on election day.</p>
+
+<p>So I went back to the data with this in mind. As baseline and as Voeten shows, if we consider voting searches (“vote” and “voting” together) as a proportion of searches for “university”, “science”, and “law”, this election hardly looks very different. So that’s just (vote+voting) / ((university+science+law) / 3). As explained in the posts linked above, search volume data is scaled from 0 to 100 where 100 is the peak of that search term in the given time period, relative to all other search activity.</p>
+
+<p>[<img src="http://justinmurphy.files.wordpress.com/2012/10/votingsearches2.png" alt="" />][3]And when we look at voting searches also containing the word “why” (as a proportion of the university-science-law index), again we find almost no difference.</p>
+
+<p>[<img src="http://justinmurphy.files.wordpress.com/2012/10/whyvotesearches.png" alt="" />][4]But when we look at voting searches also containing the words “where” and “when” (I take the average of vote+where and vote+when as a proportion of the university-science-law index), more people appear to be asking where and when to vote this year than in the past two Presidential elections. The p-value on the difference of means between 2008 and 2012 is .051.</p>
+
+<p>[<img src="http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png" alt="" />][5]Finally, I look at the difference between the why-vote searches and the where/when-vote searches. The gap might be taken as an aggregate measure of how much society is using the web to <em>think about</em> the decision to turn out <em>without planning</em> to turnout, so that positive values might capture demobilization within vote searches (why bother?) and negative values reflect relatively resolved mobilization. And what we find is that this whole election year shows greater “when/where” vote searches than “why” vote searches at the present moment in the timeline but also for the year as a whole. In both of the previous elections there were more “thinking” searches than “planning” searches, but this year there have been more planning searches. As in the previous analyses, these are as a proportion of the university-science-law index, and the difference of means for 2008 and 2012 is statistically significant at the 99.9% confidence level.</p>
+
+<p>[<img src="http://justinmurphy.files.wordpress.com/2012/10/thinkplangapusl.png" alt="" />][6]Arguably, this difference variable perhaps already controls for education or political information because each term reflects a lack of knowledge, so it shouldn’t be inflated by less educated/informed people coming online since 2004 and 2008. But the same pattern is evident and statistically significant if we look at this gap as a proportion of all “politics” search volume or just the raw differences of volume. Obviously, these are back-of-the napkin analyses and these data are plagued by difficulties. But these analyses don’t suggest a low-turnout election in 2012. If anything, it looks like the web is registering more vote planning than in previous years.</p>
+
+<p>[Here is the data in .csv form][7]. Here is the [R script][8] to reproduce the analyses found here.
+[1]:	http://themonkeycage.org/blog/2012/10/25/will-2012-be-a-low-turnout-election-some-evidence-from-google-search-activity/%23comments
+[2]:	http://themonkeycage.org/blog/2012/10/25/google-searches-and-turnout-a-cautionary-tale/
+[3]:	http://justinmurphy.files.wordpress.com/2012/10/votingsearches2.png
+[4]:	http://justinmurphy.files.wordpress.com/2012/10/whyvotesearches.png
+[5]:	http://justinmurphy.files.wordpress.com/2012/10/votingplansearches.png
+[6]:	http://justinmurphy.files.wordpress.com/2012/10/thinkplangapusl.png
+[7]:	https://dl.dropbox.com/u/20498362/GoogleTrendsVoting.csv
+[8]:	https://dl.dropbox.com/u/20498362/GoogleTrendsTurnout.R</p>
+
+
+			</div>
+			
+			
+			<p>Share this post:</p>
+					<ul class="share-buttons">
+
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://jmrphy.net/blog/2012/10/27/predicting-turnout-from-google-search-data/" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmrphy.net&text=http%3A%2F%2Fjmrphy.net&via=jmrphy" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&nbsp;via&nbsp;@jmrphy&nbsp;'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+
+  <li><a href="http://www.reddit.com/submit?url=https://jmrphy.net//blog/2012/10/27/predicting-turnout-from-google-search-data/&title=Predicting turnout from Google search data" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Submit to Reddit" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+
+  <li><a href="mailto:?subject=&body=:%20https://jmrphy.net//blog/2012/10/27/predicting-turnout-from-google-search-data/" target="_blank" title="Send email" onclick="window.open('mailto:?subject=&body=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+			
+
+				
+
+				<p>Cite this post: <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/ris/?uri=https://jmrphy.net/blog/2012/10/27/predicting-turnout-from-google-search-data/ target='_blank'>RIS Citation</a>
+ </i> <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/bib/?uri=https://jmrphy.net/blog/2012/10/27/predicting-turnout-from-google-search-data/ target='_blank'>BibTeX Entry</a>
+</i></p>
+				<p class="citation"><!-- Suggested citation code -->
+Murphy, Justin. 2012. "Predicting turnout from Google search data," https://jmrphy.net/blog/2012/10/27/predicting-turnout-from-google-search-data/ (December 14, 2018).
+
+</p>
+
+			
+			
+			<hr/>
+			
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+
+				
+				<time class="icon-calendar pr20" datetime="2012-10-27" itemprop="datePublished"> 2012-10-27</time>
+				
+
+				<span class="icon-archive pr20">  <a href="https://jmrphy.net/blog/category/#theory & empirics"> / THEORY & EMPIRICS</a> </span>
+				<br />
+				<span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#academic research"> academic research </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#social science"> social science </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#data"> data </a> 
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="https://jmrphy.net/blog/2012/10/20/revolutionary-fun/">&laquo; Revolutionary fun</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="https://jmrphy.net/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="https://jmrphy.net/blog/2012/10/29/222/">Untitled fragment &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              I'm a political scientist.
+              <!-- <a href="https://jmrphy.net/info/">Explore some of my work in this area ›</a> -->
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Other info</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href=""  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/privacy"  title="Privacy Policy">Privacy Policy</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">See also</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href=""  title=""></a>
+                </li>
+            
+              
+                <li >
+                  <a href="mailto:jstnmrphy@gmail.com"  title="Email me">Email me</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://tinyletter.com/jmrphy" target="_blank"  title="Subscribe to my newsletter">Newsletter</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com" target="_blank"  title="Tumblr">Tumblr</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com/ask" target="_blank"  title="Ask me anything">Ask me anything</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            <p>
+              This site is powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. It uses the custome theme <a href="http://github.com/jmrphy/jekyll_academic">Jekyll Academic</a>, which was adapted from <a href="http://phlow.github.io/feeling-responsive/">Feeling&nbsp;Responsive</a>. This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. Finally, the content of this website is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </p>
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://twitter.com/jmrphy" target="_blank" class="icon-twitter" title="I'm on twitter as @jmrphy"></a></li>
+            
+              <li><a href="https://www.instagram.com/jstnmrphy/" target="_blank" class="icon-instagram" title="Pictures"></a></li>
+            
+              <li><a href="http://github.com/jmrphy" target="_blank" class="icon-github" title="Code and data"></a></li>
+            
+              <li><a href="http://www.youtube.com/BarclayShields" target="_blank" class="icon-youtube" title="Videos"></a></li>
+            
+              <li><a href="https://www.facebook.com/barclayshields" target="_blank" class="icon-facebook" title=""></a></li>
+            
+              <li><a href="https://soundcloud.com/barclay-shields" target="_blank" class="icon-soundcloud" title="Some audio things"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="https://jmrphy.net/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="//my.hellobar.com/4fa9f552f76ae17579c82c1d40803e06738e0390.js" type="text/javascript" charset="utf-8" async="async"></script>
+
+</body>
+</html>
+

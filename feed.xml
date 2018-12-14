@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://jmrphy.net/assets/xslt/rss.xslt" ?>
+<?xml-stylesheet type="text/css" href="https://jmrphy.net/assets/css/rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Justin Murphy</title>
+		<description>I&#39;m a political scientist.</description>
+		<link>https://jmrphy.net/</link>
+		<atom:link href="https://jmrphy.net/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Inequality and the Pacification of Militant Protest in the United States, 1919-2012</title>
+				<link>https://jmrphy.net/blog/inequality-and-pacification-of-protest</link>
+				<pubDate>Fri, 01 Jun 2018 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/inequality-and-pacification-of-protest</guid>
+			</item>
+		
+			<item>
+				<title>The Alt-Right is not all Right: On the ideology of Kekistan</title>
+				<link>https://jmrphy.net/blog/the-alt-right-is-not-all-right</link>
+				<pubDate>Thu, 10 May 2018 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/the-alt-right-is-not-all-right</guid>
+			</item>
+		
+			<item>
+				<title>Who’s afraid of free speech in the United States?</title>
+				<link>https://jmrphy.net/blog/2018/02/16/who-is-afraid-of-free-speech/</link>
+				<pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2018/02/16/who-is-afraid-of-free-speech/</guid>
+			</item>
+		
+			<item>
+				<title>The moral foundations of social justice warriors</title>
+				<link>https://jmrphy.net/blog/2018/01/15/moral-foundations-of-social-justice-warriors/</link>
+				<pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2018/01/15/moral-foundations-of-social-justice-warriors/</guid>
+			</item>
+		
+			<item>
+				<title>What is the effect of comparing Donald Trump to Hitler?</title>
+				<link>https://jmrphy.net/blog/2017/12/10/what-is-the-effect-of-comparing-donald-trump-to-hitler/</link>
+				<pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2017/12/10/what-is-the-effect-of-comparing-donald-trump-to-hitler/</guid>
+			</item>
+		
+			<item>
+				<title>Milo, motivated reasoning, and the left-wing Fox News</title>
+				<link>https://jmrphy.net/blog/2017/10/16/milo-motivated-reasoning/</link>
+				<pubDate>Mon, 16 Oct 2017 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2017/10/16/milo-motivated-reasoning/</guid>
+			</item>
+		
+			<item>
+				<title>Data appendix on global rioting dynamics</title>
+				<link>https://jmrphy.net/blog/2017/09/12/rioting-decline-data/</link>
+				<pubDate>Tue, 12 Sep 2017 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2017/09/12/rioting-decline-data/</guid>
+			</item>
+		
+			<item>
+				<title>Who are Jordan Peterson’s followers?</title>
+				<link>https://jmrphy.net/blog/2017/09/06/jordan-peterson-followers/</link>
+				<pubDate>Wed, 06 Sep 2017 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2017/09/06/jordan-peterson-followers/</guid>
+			</item>
+		
+			<item>
+				<title>Are Americans becoming more conservative or liberal (right or left)?</title>
+				<link>https://jmrphy.net/blog/2017/09/04/americans-conservative-liberal-left-right/</link>
+				<pubDate>Mon, 04 Sep 2017 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2017/09/04/americans-conservative-liberal-left-right/</guid>
+			</item>
+		
+			<item>
+				<title>Feminism and the problem of supertoxic masculinity</title>
+				<link>https://jmrphy.net/blog/2017/07/13/supertoxic-masculinity/</link>
+				<pubDate>Thu, 13 Jul 2017 00:00:00 +0100</pubDate>
+				<description></description>
+				<guid isPermaLink="true">https://jmrphy.net/blog/2017/07/13/supertoxic-masculinity/</guid>
+			</item>
+		
+	</channel>
+</rss>

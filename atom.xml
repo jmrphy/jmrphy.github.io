@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/assets/xslt/atom.xslt" ?>
+<?xml-stylesheet type="text/css" href="/assets/css/atom.css" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://jmrphy.net/</id>
+	<title>Justin Murphy</title>
+	<updated>2018-12-14T15:14:01+00:00</updated>
+
+	<subtitle>I&#39;m a political scientist.</subtitle>
+
+	
+		
+		<author>
+			
+				<name>Justin Murphy</name>
+			
+			
+			
+		</author>
+	
+
+	<link href="https://jmrphy.net/atom.xml" rel="self" type="application/rss+xml" />
+	<link href="https://jmrphy.net/" rel="alternate" type="text/html" />
+
+	<generator uri="http://jekyllrb.com" version="3.0.0">Jekyll</generator>
+
+	
+		<entry>
+			<id>https://jmrphy.net/blog/inequality-and-pacification-of-protest</id>
+			<title>Inequality and the Pacification of Militant Protest in the United States, 1919-2012</title>
+			<link href="https://jmrphy.net/blog/inequality-and-pacification-of-protest" rel="alternate" type="text/html" title="Inequality and the Pacification of Militant Protest in the United States, 1919-2012" />
+			<updated>2018-06-01T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>Code for reproducing the graph in our 2018 ISQ article on Liberal Pacification.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/inequality-and-pacification-of-protest">To generate the graph below, you need two data files. The first is yearly income decile data from Piketty (2014), which should be named “Inequality_USA.csv.” The second is the Cross-National Time-Series data from Banks and Wilson (2017), which should be called “2017 Edition CNTSDATA.csv.” Finally, the code snippet below should be in a file called “Baron_et_al-ISQ.R” — that will be an R script that compiles the two datasets before producing the figure from our article. To reproduce the Figure, open the R script on your computer, ensure each dataset is in the same directory as the R script, set your R working directory to that directory, and run the script. Please note that while Piketty’s data is freely available and included in our replication archive on the ISQ website, the CNTS data is proprietary and cannoot be made public. Issues or questions about replicating our analysis can be directed to me at j [dot] murphy [at] soton [dot] ac [dot] uk. For legibility, event counts from Banks and Wilson (2017) were transformed into 10-year moving averages. These and the inequality measure from Piketty (2014) were then scaled to ease comparison. Scaling was done by subtracting the mean from each variable...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="academic research" />
+			
+				<category term="data" />
+			
+				<category term="R" />
+			
+				<category term="social science" />
+			
+
+			<published>2018-06-01T00:00:00+01:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/the-alt-right-is-not-all-right</id>
+			<title>The Alt-Right is not all Right: On the ideology of Kekistan</title>
+			<link href="https://jmrphy.net/blog/the-alt-right-is-not-all-right" rel="alternate" type="text/html" title="The Alt-Right is not all Right: On the ideology of Kekistan" />
+			<updated>2018-05-10T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>Kekistan is mostly right-wing, but with a &quot;long tail&quot; of centrists and leftists. The number one issue priority of Kekistanis is free speech, and Kekistani public opinion includes a large number of contradictory interests each belonging to a small number of people. There is some racism in Kekistan, but that&#39;s also in the long-tail, with many other random topics such as cryptocurrency, atheism, anime, Christianity, and AI.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/the-alt-right-is-not-all-right">Table of Contents Introduction Data and Method The Left-Right Distribution of Kekistan: Bayesian Ideal Point Estimation The Issue Priorities of Kekistan Network of Issue/Identity Associations in Kekistan A Closer Look at the Kekistani Left A Closer Look at Kekistani Racism The General Meaninglessness of Kekistani Memefare The Moral Foundations and Policy Positions of Kekistan Conclusion References Introduction Based on what we know about openness and leftism, I’ve now been arguing for more than a year that there is almost certainly a very large number of pro-free-speech leftists in hiding. As one part of this larger argument, I’ve long been curious about Kekistan, a mythical country the defining characteristic of which is that it is supposed to be outside of political correctness. Many leftist activists today assert that it’s a fascist country, but we know very well that the tendency to call others fascist has inflated dramatically in recent years. Many Kekistanis claim that they simply want the freedom to meme and “shitpost.” Much has been written about the notorious Kekistan, but very little systematic research has been conducted on the underlying distribution of beliefs and interests belonging to the Kekistani people. Here I provide what is, I believe, the first...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="social science" />
+			
+				<category term="ideology" />
+			
+				<category term="data" />
+			
+				<category term="visualization" />
+			
+				<category term="radical politics" />
+			
+
+			<published>2018-05-10T00:00:00+01:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2018/02/16/who-is-afraid-of-free-speech/</id>
+			<title>Who’s afraid of free speech in the United States?</title>
+			<link href="https://jmrphy.net/blog/2018/02/16/who-is-afraid-of-free-speech/" rel="alternate" type="text/html" title="Who’s afraid of free speech in the United States?" />
+			<updated>2018-02-16T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>The pushback against political correctness has led to overly hasty generalizations about leftist opposition to free speech. Survey data tell some surprising stories.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2018/02/16/who-is-afraid-of-free-speech/">The topic of free speech is highly salient at the moment, but if you look at the public opinion data, you find some patterns quite incongruous with many of the popular talking points circulating right now. It seems that perhaps in the pushback against political correctness, many have been too quick to make generalizations about how “the far left” and/or “radical liberals” think about free speech. The now popular view that “the left” has turned against free speech is not totally wrong, but it’s complicated. The important wrinkle is that “extreme liberals” and the “far left” have always been, and generally remain, the most supportive of free speech. Curiously, it is the “slightly left” that have in recent years turned against free speech (and only for racists, not for other groups, including military fascists!). For most of its surveys between 1972 and 2016, the General Social Survey asked a U.S. sample to consider the following types of potential public speakers. (They asked about a few others but the following are the ones they asked most consistently.) “…a person who believes that Blacks are genetically inferior.” (Henceforth “racist.”) “Somebody who is against all churches and religion…” (Henceforth “antitheist.”) “…a man who...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="data" />
+			
+				<category term="visualization" />
+			
+				<category term="ideology" />
+			
+				<category term="academic research" />
+			
+
+			<published>2018-02-16T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2018/01/15/moral-foundations-of-social-justice-warriors/</id>
+			<title>The moral foundations of social justice warriors</title>
+			<link href="https://jmrphy.net/blog/2018/01/15/moral-foundations-of-social-justice-warriors/" rel="alternate" type="text/html" title="The moral foundations of social justice warriors" />
+			<updated>2018-01-15T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>Are &#39;Social Justice Warriors&#39; a real ideological faction of the Left, with a unique moral psychology? The first in a multi-part series using &#39;big data&#39; to understand obscure ideological subcultures.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2018/01/15/moral-foundations-of-social-justice-warriors/">What is a social justice warrior? The term SJW, short for social justice warrior, is now a well-known piece of internet slang. It refers to a particular tendency within left-wing political activism today. People often ask me to define “social justice warrior”, or they ask: “Isn’t that just an epithet, like ‘political correctness,’ used by conservatives to dismiss the claims of marginalized people?” Or else it is sometimes suggested that such an ideologically loaded term is beneath a Serious Social Scientist. But I’ve been thinking about these questions a lot, and my sense is that SJW seems to reasonably distinguish a particular dimension of left-wing ideology and behavior from the larger multidimensional umbrella of “the Left.” Whether SJW is a defensible analytical construct is ultimately an empirical question. Is “SJW” a term that conservatives use, without logical constraint, to dismiss any lefty they feel like dismissing? Or does SJW name a particular type of leftist statistically distinguishable from other leftists? Data and Method: Self-identified SJWs on Twitter How might we do this? One approach would be to list clear, observable criteria that we believe define SJWism, and which distinguish it from leftism in general. We could then go find people...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="academic research" />
+			
+				<category term="social science" />
+			
+				<category term="ideology" />
+			
+				<category term="data" />
+			
+				<category term="R" />
+			
+				<category term="visualization" />
+			
+
+			<published>2018-01-15T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2017/12/10/what-is-the-effect-of-comparing-donald-trump-to-hitler/</id>
+			<title>What is the effect of comparing Donald Trump to Hitler?</title>
+			<link href="https://jmrphy.net/blog/2017/12/10/what-is-the-effect-of-comparing-donald-trump-to-hitler/" rel="alternate" type="text/html" title="What is the effect of comparing Donald Trump to Hitler?" />
+			<updated>2017-12-10T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>Critics of U.S. President Donald Trump frequently compare him to Adolf Hitler. Does comparing Trump to Hitler decrease support for his policies? We conducted a survey experiment to investigate the causal effect of a Hitler comparison on support for a Trump policy.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2017/12/10/what-is-the-effect-of-comparing-donald-trump-to-hitler/">Critics of U.S. President Donald Trump frequently [compare him to Adolf Hitler](http://amzn.to/2GJ0rsn). Does comparing Trump to Hitler decrease support for his policies? With the help of my students at the University of Southampton, we conducted a survey experiment to investigate the causal effect of a Hitler comparison on support for one of Trump&#39;s policies. There are several reasons to expect that comparing Donald Trump to Adolf Hitler could decrease support for policies of the Trump administration. First of all, we know that people are very sensitive to how political questions are worded. Simply putting the word “Hitler” into a description of a policy could shift respondents’ attitudes towards the policy in a negative direction, for the simple reason that the former leader of the Third Reich has a ubiquitously negative connotation. Research on priming shows that exposing someone to the word “yellow” will make them more likely to think of a banana than an apple, for instance. Similarly, exposing someone to the word “Hitler”, could prime them to think of evil rather than good. There could also be a framing effect at work. Introducing Hitler to a respondents’ thought process could shift their frame of reference, pushing their estimate of...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="social science" />
+			
+				<category term="race" />
+			
+				<category term="media" />
+			
+				<category term="academic research" />
+			
+
+			<published>2017-12-10T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2017/10/16/milo-motivated-reasoning/</id>
+			<title>Milo, motivated reasoning, and the left-wing Fox News</title>
+			<link href="https://jmrphy.net/blog/2017/10/16/milo-motivated-reasoning/" rel="alternate" type="text/html" title="Milo, motivated reasoning, and the left-wing Fox News" />
+			<updated>2017-10-16T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>How progressive media culture treats Milo is a case study of how the left is approaching the cognitive level of Fox News.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2017/10/16/milo-motivated-reasoning/">It is a well-documented fact of psychology that if we are emotionally drawn to a certain conclusion, our mind tends to trust whatever looks like supporting evidence, and distrust whatever looks like contradictory evidence. A nice rule of thumb is given by the psychologist Thomas Gilovich. If we emotionally like the implication of something, our brain automatically asks “Can I believe it?” But if we don’t, our brain asks, “Must I believe it?”1 The difference might seem slight, but this asymmetry in how we process information leads to profound social confusion when it plays out iteratively over time. If you think you are above such pedestrian irrationality, you probably are not; this process operates through a system that is not conscious—in fact, it happens before conscious thought even begins. For years, lefties have gawked with amazement at the insistent stupidity of right-wing media bubbles, especially that of Fox News. Today, however, not only the “mainstream left” but even supposedly sophisticated left-wing critics appear increasingly comfortable with a level of cognitive functioning once peculiar to channels such as Fox News. The phenomenon of motivated reasoning explains why even smart people on the left appear to be getting dumber, at the same...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="media" />
+			
+				<category term="social science" />
+			
+				<category term="ideology" />
+			
+
+			<published>2017-10-16T00:00:00+01:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2017/09/12/rioting-decline-data/</id>
+			<title>Data appendix on global rioting dynamics</title>
+			<link href="https://jmrphy.net/blog/2017/09/12/rioting-decline-data/" rel="alternate" type="text/html" title="Data appendix on global rioting dynamics" />
+			<updated>2017-09-12T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>Supplementary information for my article on the hidden decline of rioting.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2017/09/12/rioting-decline-data/">This post serves as a short appendix for a forthcoming, online article on the cross-national historical dynamics of rioting. Here is the citation for the dataset. The event data is based on news reports. Banks, Arthur S., and Kenneth A. Wilson. Cross-National Time-Series Data Archive. Jerusalem, Israel: Databanks International, 2017. https://www.cntsdata.com. A common problem with cross-national historical data in political science is that countries enter and exit the international system of states. So global averages could potentially be misleading, especially if newer states are for some reason more or less conducive to rioting. For the main article, I report from the more general and complete sample of countries, but I also checked for this possible problem empirically. It turns out the story does not change substantially, whether you allow or disallow states to exit/enter the sample. The 57 countries in the sample from 1919 to 2016 are: Afghanistan, Albania, Argentina, Australia, Austria, Belgium, Bolivia, Brazil, Bulgaria, Canada, Chile, Colombia, Costa Rica, Cuba, Denmark, Dominican Republic, Ecuador, El Salvador, Estonia, Finland, France, Germany, Greece, Guatemala, Haiti, Honduras, Hungary, Iran, Italy, Japan, Latvia, Liberia, Lithuania, Luxembourg, Mexico, Nepal, Netherlands, New Zealand, Nicaragua, Norway, Panama, Paraguay, Peru, Poland, Portugal, Romania, Saudi Arabia, South...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="academic research" />
+			
+				<category term="data" />
+			
+				<category term="pacification" />
+			
+				<category term="radical politics" />
+			
+
+			<published>2017-09-12T00:00:00+01:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2017/09/06/jordan-peterson-followers/</id>
+			<title>Who are Jordan Peterson’s followers?</title>
+			<link href="https://jmrphy.net/blog/2017/09/06/jordan-peterson-followers/" rel="alternate" type="text/html" title="Who are Jordan Peterson’s followers?" />
+			<updated>2017-09-06T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>An academic psychologist is connecting left-libertarians and Trump supporters.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2017/09/06/jordan-peterson-followers/">I’ve been curious about the new massive camp of Jordan Peterson acolytes. In one of my many prodigal late-night lurking sessions through the depths of Reddit, I noticed they collected some data on themselves. So here we go. If you’ve been following my recent writing, podcasts, and videos, you’ll know I’m especially interested in the relationships between education, political correctness, taboo topics, and ideology. I’ve been hypothesizing that there is a substantial number of culturally conservative (against the cultural leftism of the West) but libertarian (let people do what they want, free speech, etc.) folks, who have been increasingly shut out from mainstream Western political culture for decades now. Not just from the left, but from a mainstream right that bows before cultural leftism (what the right internet lovingly refers to as “cucks”). In many educated circles, support for Donald Trump is seen as somewhere between insane and evil, quite seriously. Yet, about 50% of the Americans who voted did so for him, so we know at least a non-trivial number of educated people voted for him. But who are they? I haven’t really had strong intuitions about this, and my sense is you just don’t really see or hear...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="data" />
+			
+				<category term="visualization" />
+			
+				<category term="ideology" />
+			
+				<category term="social science" />
+			
+
+			<published>2017-09-06T00:00:00+01:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2017/09/04/americans-conservative-liberal-left-right/</id>
+			<title>Are Americans becoming more conservative or liberal (right or left)?</title>
+			<link href="https://jmrphy.net/blog/2017/09/04/americans-conservative-liberal-left-right/" rel="alternate" type="text/html" title="Are Americans becoming more conservative or liberal (right or left)?" />
+			<updated>2017-09-04T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>Conservatism, racism, and white nationalism are not increasing. It&#39;s social liberalism that is taking over.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2017/09/04/americans-conservative-liberal-left-right/">Table of Contents Summary Not much recent change in self-identification Policy Mood, 1952-2016 Macroideology, 1937-2012 Macropartisanship, 1952-2015 Large, long-term increases in social liberalism What about the far-right? Conclusion References Summary There is a lot of confusion about whether we’re seeing significant ideological change in the United States. With Trump and the re-appearance of white nationalism in the public spotlight, many people are wondering if conservative (right-wing) ideology is on the rise. One can find many influential outlets endorsing this notion. CBS, BBC, Vox, and certainly others have all run articles suggesting this. On the other hand, many conservatives believe that “liberal” (left-wing in America) ideology is on the rise. There are good reasons for people to be confused, because the dynamics of ideology in the United States are confusing. To help clear up some of the confusion, I’ve written this guide to some of the basics of what political scientists know about the long-term historical dynamics of ideology in the United States. And how they shed light on what is happening, or not happening, right now. The rest of this post presents the key data and a little bit of my own interpretation, but here is the TLDR: If there...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="academic research" />
+			
+				<category term="social science" />
+			
+				<category term="ideology" />
+			
+				<category term="data" />
+			
+
+			<published>2017-09-04T00:00:00+01:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://jmrphy.net/blog/2017/07/13/supertoxic-masculinity/</id>
+			<title>Feminism and the problem of supertoxic masculinity</title>
+			<link href="https://jmrphy.net/blog/2017/07/13/supertoxic-masculinity/" rel="alternate" type="text/html" title="Feminism and the problem of supertoxic masculinity" />
+			<updated>2017-07-13T00:00:00+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Justin Murphy</name>
+					
+					
+						<email>j.murphy@soton.ac.uk</email>
+					
+					
+						<uri>http://jmrphy.net/</uri>
+					
+				</author>
+			
+			<summary>A serious feminist challenge is what to do with hyper-dominant males who are not domesticated by any amount of moral or legal constraint; in fact, excessive social constraints on average males may help explain why supertoxic masculinity is now a fast-track to the heights of political power.</summary>
+			<content type="html" xml:base="https://jmrphy.net/blog/2017/07/13/supertoxic-masculinity/">I just watched a documentary film about John McAfee, creator of the famous McAfee Antivirus you will remember from every PC in the 1990s. I didn’t know anything about this man before watching this film. I want to make a point that requires me to give you a brief summary of the story, so here is a plot-spoiling recapitulation. Basically, after he gets rich off McAfee Antivirus, McAfee has a couple of failed business ventures before proceeding through a brazenly aggressive, daring, manipulative, controlling, arrogant, violent, and ultimately murderous course of affairs.1 After a few years as a yoga guru preaching peace and wellness from a retreat center he funded, there’s some indication that he becomes disillusioned with his efforts toward egalitarian community (he suggests something to the effect that others were taking advantage of him, but this is not examined deeply). So he buys a house in Belize, hires an idealistic biologist from the US to run an alternative medicine laboratory, recruits the toughest gangsters he can find to build an in-house private security force, donates to local police equipment worth millions of dollars, and effectively purchases several poor, local women as long-term girlfriends. When he had the time...</content>
+
+			
+				<category term="theory &amp; empirics" />
+			
+			
+				<category term="radical politics" />
+			
+				<category term="gender" />
+			
+				<category term="violence" />
+			
+				<category term="activism" />
+			
+
+			<published>2017-07-13T00:00:00+01:00</published>
+		</entry>
+	
+</feed>

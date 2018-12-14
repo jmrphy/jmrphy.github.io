@@ -1,0 +1,678 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P56LRMG');</script>
+<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Generating summary statistics and box/violin plots in R</title>
+
+	<meta name="description" content="Start a basic data analysis with real data in R." />
+
+    <meta name="author" content="Justin Murphy"/>
+    
+ 	<meta name="keywords" content="summary statistics in R,box plots in R,violin plots in R,descriptive inference,r tutorial,r walkthrough">
+
+	<link rel="stylesheet" type="text/css" href="https://jmrphy.net/assets/css/styles_feeling_responsive.css" />
+	<script src="https://jmrphy.net/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Volkhov' rel='stylesheet' type='text/css' />
+	</noscript>
+
+  	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ" />
+	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" />
+	<link rel="author" href="https://plus.google.com/u/1/106173867748806895007"/>
+
+	
+
+
+
+	
+	<link rel="icon" sizes="16x16" href="https://jmrphy.net/assets/img/favicon-16x16.png" />
+
+
+
+	
+	<link rel="icon" sizes="32x32" href="https://jmrphy.net/assets/img/favicon-32x32.png" />
+
+
+
+
+	
+	<link rel="icon" sizes="192x192" href="https://jmrphy.net/assets/img/touch-icon-192x192.png" />
+
+
+
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://jmrphy.net/assets/img/apple-touch-icon-180x180-precomposed.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<meta name="msapplication-TileImage" content="https://jmrphy.net/assets/img/msapplication_tileimage.png" />
+
+
+
+
+	
+	<meta name="msapplication-TileColor" content="#176789" />
+
+
+
+<!-- Facebook Optimization -->
+	<meta property="og:locale" content="" />
+
+	<meta property="og:author" content="Justin Murphy" />
+
+	<meta property="og:type" content="website" />
+
+	<meta property="og:title" content="Generating summary statistics and box/violin plots in R" />
+
+	<meta property="og:description" content="Start a basic data analysis with real data in R."/>
+
+	<meta property="og:url" content="https://jmrphy.net/blog/2012/05/22/generating-summary-statistics-in-r/" />
+	<meta property="og:site_name" content="Justin Murphy" />
+	<meta property="og:image" content="https://i.imgur.com/LCKTRMo.png" />
+
+	
+
+	<!-- Search Engine Optimization -->
+	
+
+	<link type="text/plain" rel="author" href="https://jmrphy.net/humans.txt" />
+
+	
+
+	
+
+	<!-- Include Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Meta Data for Google Scholar -->
+	<!-- Copied from MMadsen https://github.com/mmadsen/jekyll-greycite  -->
+
+	<!-- Get date last modified from git log. (Uses current time if file entry not found, e.g. projects/)  -->
+    
+
+
+    <!-- For posts, page.date is the date they are published under, which we use as their 'canonical' dc:date -->
+     
+      
+      
+
+    <!-- Posts declare modified timestamps in the sidebar, so would be redundant to put here. But then 
+         pages don't have a dc:modified... unless we give them their own (modified) sidebar?  
+    -->
+    <!-- Ideally we would want date originally created from the _oldest_ git commit too...-->
+
+<!-- Google Scholar Metadata -->
+	<meta name="resource_type" content="article"/>
+    <meta name="citation_author" content="Justin Murphy"/>
+    <meta name="citation_date" content="2012-05-22T00:00:00+01:00"/>
+    <meta name="citation_publication_date" content="2012-05-22T00:00:00+01:00"/>
+    <meta name="citation_title" content="Generating summary statistics and box/violin plots in R"/>
+    <meta name="citation_journal_title" content="Justin Murphy"/>
+
+<!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Generating summary statistics and box/violin plots in R" />
+    <meta property="dc:creator" content="Justin Murphy" />
+    <meta property="dc:date" content="2012-05-22T00:00:00+01:00" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/blog/2012/05/22/generating-summary-statistics-in-r/" />
+    <meta property="dc:rights" content="CC BY 4.0" />
+    <meta property="dc:source" content="Justin Murphy" />
+    <meta property="dc:subject" content="Political Science" /> 
+    <meta property="dc:type" content="website" /> 
+
+</head>
+<body id="top-of-page" class="">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P56LRMG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="https://jmrphy.net" class="icon-home"> Justin Murphy</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/research/">Research</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/files/Murphy_vita.pdf">CV</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/teaching/">Teaching</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/blog/">Blog</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="https://jmrphy.net">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+
+
+
+	<span
+	class="Z3988" 
+	title="ctx_ver=Z39.88-2004
+	&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+	&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+	&amp;rft.type=Article
+	&amp;rft.title=Generating summary statistics and box/violin plots in R
+	&amp;rft.creator=Justin Murphy
+	&amp;rft.aulast=Murphy
+	&amp;rft.aufirst=Justin
+	&amp;rft.date=2012-05-22 00:00:00 +0100
+	&amp;rft.language=EN
+	&amp;rft.rights=CC-BY-4.0
+	&amp;rft_id=https://jmrphy.net/blog/2012/05/22/generating-summary-statistics-in-r/">
+</span>
+	
+	
+
+
+<div class="row t30">
+	<div class="medium-12 columns">
+		<article>
+			<header>
+				<p class="subheadline">Student resources</p>
+				<h1>Generating summary statistics and box/violin plots in R</h1>
+			</header>
+
+			
+			<p class="teaser">
+				Start a basic data analysis with real data in R.
+			</p>
+			
+
+			<p>Here is a script (with highly detailed comments) to get you up and running in R, analyzing a real social science dataset. Data come from the 1970-2010 General Social Survey dataset. When you download the original master file from the web, the whole dataset has more than 5,000 variables and more than 55,000 respondents, which is too large for most computers to handle efficiently. So I’ve limited the original file to 613 of some of the most commonly used and generally valuable variables–still large and comprehensive enough to be useful for a wide-range of research interests, but a little more manageable.</p>
+
+<p>All you have to do is <a href="https://www.dropbox.com/s/29s8ivlo0xagpv3/GSS.csv?dl=0">download this dataset, the 1970-2010 General Social Survey.</a> Then in RStudio set the working directory to wherever the GSS.csv file is located on your computer.</p>
+
+<p>You can then work through this script to get started on your own research project.</p>
+
+<p>If you are absolutely new to using R and RStudio, I have also made a corresponding <a href="https://www.youtube.com/watch?v=uwlwNRbaKMI">video walkthrough on Youtube, “Intro to R Studio and Basic Descriptive Statistics.”</a></p>
+
+<p>If you are looking for a text, my favorite book for learning basic statistics in R is <a href="http://amzn.to/2EPIpr7">Andy Field’s <em>Discovering Statistics Using R</em></a>.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1">##################################################
+### Read data from your working directory
+### You need to set that from the file menu.
+##################################################
+</span>
+<span class="c1"># read GSS.csv as a table (with values separated by a comma and with the first row reserved as names).
+</span>
+<span class="n">gss</span><span class="o">&lt;-</span><span class="n">read.table</span><span class="p">(</span><span class="s2">"GSS.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+
+<span class="c1">##################################################
+### summary statistics
+##################################################
+</span>
+<span class="c1"># Install package "pastecs," which has a nice little summary.statistics() function
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"pastecs"</span><span class="p">)</span>           		
+                           
+<span class="c1"># Load it into working memory
+</span><span class="n">library</span><span class="p">(</span><span class="n">pastecs</span><span class="p">)</span> 
+
+<span class="c1"># Generate summary stats for importance attributed to work, relaxation, and politics	
+</span><span class="n">stat.desc</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">impwork</span><span class="p">,</span> <span class="n">basic</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>   		
+<span class="n">stat.desc</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">imprelax</span><span class="p">,</span> <span class="n">basic</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>
+<span class="n">stat.desc</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">imppol</span><span class="p">,</span> <span class="n">basic</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>
+
+<span class="c1">##################################################
+#### Generate some boxplots to compare the distributions
+##################################################
+</span>
+<span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>       <span class="c1"># Set up a graph with 1 row and 3 columns.
+</span>                        <span class="c1"># We do this because we plan to compare
+</span>                        <span class="c1"># 3 distributions.
+</span>                        <span class="c1"># R will just place the next three graphs
+</span>                        <span class="c1"># in these slots.
+</span>
+<span class="n">boxplot</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">impwork</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"magenta"</span><span class="p">)</span>     <span class="c1"># Make boxplot for the variable
+</span>                                        <span class="c1"># "impwork" in the dataframe "gss"
+</span>                                        <span class="c1"># and color it magenta.
+</span>
+<span class="n">boxplot</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">imprelax</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"green"</span><span class="p">)</span>      <span class="c1"># Make boxplot for the variable "imprelax" in the
+</span>                                        <span class="c1"># dataframe "gss" and color it green.
+</span>
+<span class="n">boxplot</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">imppol</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"cyan"</span><span class="p">)</span>         <span class="c1"># Make boxplot for the variable "imppol" in the
+</span>                                        <span class="c1"># dataframe "gss" and make it magenta.
+</span>
+<span class="c1">##################################################
+### Box plots are good but not great. violin plots are similar
+### but better because they represent the distribution directly.
+##################################################
+</span>
+<span class="n">install.packages</span><span class="p">(</span><span class="s2">"wvioplot"</span><span class="p">)</span>             <span class="c1"># install the package called "wvioplot" for making
+</span>                                         <span class="c1"># violin plots
+</span><span class="n">library</span><span class="p">(</span><span class="n">wvioplot</span><span class="p">)</span>                        <span class="c1"># load the library of the package "wvioplot"
+</span>
+<span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>                                        <span class="c1">#  Set up a graph with 1 row and 3
+</span>                                                         <span class="c1">#  columns. We do this because we
+</span>                                                         <span class="c1">#  plan to compare 3 distributions.
+</span>
+<span class="n">wvioplot</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">impwork</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"magenta"</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">"Work"</span><span class="p">)</span>       <span class="c1">#  Make violin plot for the variable
+</span>                                                         <span class="c1">#  "impwork" in the dataframe "gss",
+</span>                                                         <span class="c1">#  color it magenta, label it "Work".
+</span>
+<span class="n">wvioplot</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">imprelax</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"green"</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">"Relaxation"</span><span class="p">)</span>  <span class="c1">#  Make violin plot for the variable
+</span>                                                         <span class="c1"># "imprelax" in the dataframe "gss",
+</span>                                                         <span class="c1"># color it green, label it "Relaxation."
+</span>
+<span class="n">wvioplot</span><span class="p">(</span><span class="n">gss</span><span class="o">$</span><span class="n">imppol</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"cyan"</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">"Politics"</span><span class="p">)</span>       <span class="c1"># Make violin plot for the variable
+</span>                                                         <span class="c1"># imppol in the dataframe gss,
+</span>                                                         <span class="err">#</span> <span class="n">color</span> <span class="n">it</span> <span class="n">cyan</span><span class="p">,</span> <span class="n">label</span> <span class="n">it</span> <span class="n">Politics</span></code></pre></figure>
+
+
+			<hr/>
+
+			
+			<p>Share this post:</p>
+					<ul class="share-buttons">
+
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://jmrphy.net/blog/2012/05/22/generating-summary-statistics-in-r/" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmrphy.net&text=http%3A%2F%2Fjmrphy.net&via=jmrphy" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&nbsp;via&nbsp;@jmrphy&nbsp;'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+
+  <li><a href="http://www.reddit.com/submit?url=https://jmrphy.net//blog/2012/05/22/generating-summary-statistics-in-r/&title=Generating summary statistics and box/violin plots in R" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Submit to Reddit" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+
+  <li><a href="mailto:?subject=&body=:%20https://jmrphy.net//blog/2012/05/22/generating-summary-statistics-in-r/" target="_blank" title="Send email" onclick="window.open('mailto:?subject=&body=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+			
+
+				
+
+				<p>Citation for this post: <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/ris/?uri=https://jmrphy.net/blog/2012/05/22/generating-summary-statistics-in-r/ target='_blank'>RIS Citation</a>
+ </i> <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/bib/?uri=https://jmrphy.net/blog/2012/05/22/generating-summary-statistics-in-r/ target='_blank'>BibTeX Entry</a>
+</i></p>
+				<p class="citation"><!-- Suggested citation code -->
+Murphy, Justin. 2012. "Generating summary statistics and box/violin plots in R," https://jmrphy.net/blog/2012/05/22/generating-summary-statistics-in-r/ (December 14, 2018).
+
+</p>
+
+			
+			
+			
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="http://jmrphy.net/" target="_blank"> Justin Murphy</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2012-05-22" itemprop="datePublished"> 2012-05-22</time>
+				
+
+				<span class="icon-archive pr20">  <a href="https://jmrphy.net/blog/category/#resources"> / RESOURCES</a> </span>
+				<br />
+				<span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#data"> data </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#visualization"> visualization </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#R"> R </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#teaching"> teaching </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#statistics"> statistics </a> 
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="https://jmrphy.net/blog/2012/05/22/comparing-the-twitter-verbosity-of-barackobama-and-mittromney-16/">&laquo; Comparing the twitter verbosity of @BarackObama and @MittRomney</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="https://jmrphy.net/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="https://jmrphy.net/blog/2012/05/27/23883065976/">Hip pouch (red square solidarity edition) &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+						
+				<h3 id="comments" class="t60"></h3>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			        var disqus_shortname = 'jmrphy'; 
+			        var disqus_identifier = '/blog/2012/05/22/generating-summary-statistics-in-r/';
+
+			        /* * * DON'T EDIT BELOW THIS LINE * * */
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+
+
+
+			
+
+		</article>
+	</div><!-- /.medium-12.columns -->
+</div><!-- /.row -->
+
+
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              I'm a political scientist.
+              <!-- <a href="https://jmrphy.net/info/">Explore some of my work in this area ›</a> -->
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Other info</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href=""  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/privacy"  title="Privacy Policy">Privacy Policy</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">See also</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href=""  title=""></a>
+                </li>
+            
+              
+                <li >
+                  <a href="mailto:jstnmrphy@gmail.com"  title="Email me">Email me</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://tinyletter.com/jmrphy" target="_blank"  title="Subscribe to my newsletter">Newsletter</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com" target="_blank"  title="Tumblr">Tumblr</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com/ask" target="_blank"  title="Ask me anything">Ask me anything</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            <p>
+              This site is powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. It uses the custome theme <a href="http://github.com/jmrphy/jekyll_academic">Jekyll Academic</a>, which was adapted from <a href="http://phlow.github.io/feeling-responsive/">Feeling&nbsp;Responsive</a>. This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. Finally, the content of this website is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </p>
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://twitter.com/jmrphy" target="_blank" class="icon-twitter" title="I'm on twitter as @jmrphy"></a></li>
+            
+              <li><a href="https://www.instagram.com/jstnmrphy/" target="_blank" class="icon-instagram" title="Pictures"></a></li>
+            
+              <li><a href="http://github.com/jmrphy" target="_blank" class="icon-github" title="Code and data"></a></li>
+            
+              <li><a href="http://www.youtube.com/BarclayShields" target="_blank" class="icon-youtube" title="Videos"></a></li>
+            
+              <li><a href="https://www.facebook.com/barclayshields" target="_blank" class="icon-facebook" title=""></a></li>
+            
+              <li><a href="https://soundcloud.com/barclay-shields" target="_blank" class="icon-soundcloud" title="Some audio things"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="https://jmrphy.net/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="//my.hellobar.com/4fa9f552f76ae17579c82c1d40803e06738e0390.js" type="text/javascript" charset="utf-8" async="async"></script>
+
+</body>
+</html>
+

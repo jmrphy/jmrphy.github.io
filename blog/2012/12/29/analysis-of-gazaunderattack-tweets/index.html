@@ -1,0 +1,692 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P56LRMG');</script>
+<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Analysis of #GazaUnderAttack tweets</title>
+
+	<meta name="description" content="I&#39;m a political scientist." />
+
+    <meta name="author" content="Justin Murphy"/>
+    
+ 	<meta name="keywords" content="R,data,visualization,media">
+
+	<link rel="stylesheet" type="text/css" href="https://jmrphy.net/assets/css/styles_feeling_responsive.css" />
+	<script src="https://jmrphy.net/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Volkhov' rel='stylesheet' type='text/css' />
+	</noscript>
+
+  	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ" />
+	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" />
+	<link rel="author" href="https://plus.google.com/u/1/106173867748806895007"/>
+
+	
+
+
+
+	
+	<link rel="icon" sizes="16x16" href="https://jmrphy.net/assets/img/favicon-16x16.png" />
+
+
+
+	
+	<link rel="icon" sizes="32x32" href="https://jmrphy.net/assets/img/favicon-32x32.png" />
+
+
+
+
+	
+	<link rel="icon" sizes="192x192" href="https://jmrphy.net/assets/img/touch-icon-192x192.png" />
+
+
+
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://jmrphy.net/assets/img/apple-touch-icon-180x180-precomposed.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<meta name="msapplication-TileImage" content="https://jmrphy.net/assets/img/msapplication_tileimage.png" />
+
+
+
+
+	
+	<meta name="msapplication-TileColor" content="#176789" />
+
+
+
+<!-- Facebook Optimization -->
+	<meta property="og:locale" content="" />
+
+	<meta property="og:author" content="Justin Murphy" />
+
+	<meta property="og:type" content="website" />
+
+	<meta property="og:title" content="Analysis of #GazaUnderAttack tweets" />
+
+	<meta property="og:description" content="I&#39;m a political scientist." />
+
+	<meta property="og:url" content="https://jmrphy.net/blog/2012/12/29/analysis-of-gazaunderattack-tweets/" />
+	<meta property="og:site_name" content="Justin Murphy" />
+	
+
+	
+
+	<!-- Search Engine Optimization -->
+	
+
+	<link type="text/plain" rel="author" href="https://jmrphy.net/humans.txt" />
+
+	
+
+	
+
+	<!-- Include Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Meta Data for Google Scholar -->
+	<!-- Copied from MMadsen https://github.com/mmadsen/jekyll-greycite  -->
+
+	<!-- Get date last modified from git log. (Uses current time if file entry not found, e.g. projects/)  -->
+    
+
+
+    <!-- For posts, page.date is the date they are published under, which we use as their 'canonical' dc:date -->
+     
+      
+      
+
+    <!-- Posts declare modified timestamps in the sidebar, so would be redundant to put here. But then 
+         pages don't have a dc:modified... unless we give them their own (modified) sidebar?  
+    -->
+    <!-- Ideally we would want date originally created from the _oldest_ git commit too...-->
+
+<!-- Google Scholar Metadata -->
+	<meta name="resource_type" content="article"/>
+    <meta name="citation_author" content="Justin Murphy"/>
+    <meta name="citation_date" content="2012-12-29T00:00:00+00:00"/>
+    <meta name="citation_publication_date" content="2012-12-29T00:00:00+00:00"/>
+    <meta name="citation_title" content="Analysis of #GazaUnderAttack tweets"/>
+    <meta name="citation_journal_title" content="Justin Murphy"/>
+
+<!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Analysis of #GazaUnderAttack tweets" />
+    <meta property="dc:creator" content="Justin Murphy" />
+    <meta property="dc:date" content="2012-12-29T00:00:00+00:00" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/blog/2012/12/29/analysis-of-gazaunderattack-tweets/" />
+    <meta property="dc:rights" content="CC BY 4.0" />
+    <meta property="dc:source" content="Justin Murphy" />
+    <meta property="dc:subject" content="Political Science" /> 
+    <meta property="dc:type" content="website" /> 
+
+</head>
+<body id="top-of-page" class="">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P56LRMG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="https://jmrphy.net" class="icon-home"> Justin Murphy</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/research/">Research</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/files/Murphy_vita.pdf">CV</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/teaching/">Teaching</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/blog/">Blog</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="https://jmrphy.net">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+
+
+
+	<span
+	class="Z3988" 
+	title="ctx_ver=Z39.88-2004
+	&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+	&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+	&amp;rft.type=Article
+	&amp;rft.title=Analysis of #GazaUnderAttack tweets
+	&amp;rft.creator=Justin Murphy
+	&amp;rft.aulast=Murphy
+	&amp;rft.aufirst=Justin
+	&amp;rft.date=2012-12-29 00:00:00 +0000
+	&amp;rft.language=EN
+	&amp;rft.rights=CC-BY-4.0
+	&amp;rft_id=https://jmrphy.net/blog/2012/12/29/analysis-of-gazaunderattack-tweets/">
+</span>
+	
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Analysis of #GazaUnderAttack tweets</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<p>During the Israeli-Palestinian attacks of last month, I scraped from the Twitter API about 270,000 tweets containing the hashtag #gazaunderattack. Given the unprecedented degree to which this war was fought online, tweets of this sort could and should become really important data for political scientists. I’m too busy right now to say very much here, but I want to share some basic descriptive analyses for anyone who might be interested. The dataset can be downloaded <a href="https://dl.dropbox.com/u/20498362/tweets_%23gazaunderattack.csv">here</a> and the R script that produced these analyses is available at the very bottom.</p>
+
+<p>Almost everything in this post I learned how to do directly and solely from the amazingly smart, open and generous #Rstats community. The scraping and time-series plot follow a script by <a href="http://bommaritollc.com/2011/02/26/archiving-tweets-with-python/">Michael Bommarito</a>, and the rest follows scripts by <a href="https://github.com/benmarwick/AAA2011-Tweets/blob/master/AAA2011.R">Ben Marwick</a>.</p>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>There are 269,158 tweets. These tweets are authored by 79,923 unique users. Of all the tweets, .62 are retweets.</p>
+
+<p>This first graph plots the frequency of #gazaunderattack tweets in 30-minute intervals between November 17th and November 21st. I <em>believe</em> this is <em>all</em> of the tweets containing that hashtag within this period. I know the Twitter Search API is subject to weird filters and restrictions, but I believe the technique I used here pages through each and every tweet available within the available time period.</p>
+
+<p><a href="http://justinmurphy.files.wordpress.com/2012/12/timeseries.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/timeseries.png" alt="timeseries" /></a></p>
+
+<p>Most frequent #gazaunderattack tweeters.</p>
+
+<p><a href="http://justinmurphy.files.wordpress.com/2012/12/tweet_counts.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/tweet_counts.png" alt="tweet_counts" /></a></p>
+
+<p>The most retweeted tweeters. Interestingly, Anonymous seems to have had more reach, at least during this period, than the twitter account of Hamas (@AlqassamBrigade).</p>
+
+<p>_<a href="http://justinmurphy.files.wordpress.com/2012/12/retweet_counts.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/retweet_counts.png" alt="retweet_counts" /></a>_The most retweeted tweeters as a ratio of total quantity of tweets sent.   Anonymous still seems to have had the most reach on the #gazaunderattack hashtag.</p>
+
+<p><a href="http://justinmurphy.files.wordpress.com/2012/12/retweet_ratios.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/retweet_ratios.png" alt="retweet_ratios" /></a></p>
+
+<p>Most frequently tweeted links.<a href="http://justinmurphy.files.wordpress.com/2012/12/links.png"><img src="http://justinmurphy.files.wordpress.com/2012/12/links.png" alt="links" /></a></p>
+
+<p><a href="http://d3j5vwomefv46c.cloudfront.net/photos/large/688740234.jpg?key=964633&amp;Expires=1356766099&amp;Key-Pair-Id=APKAIYVGSUJFNRFZBBTA&amp;Signature=05VhXXvHpkOc2wqjLXrGMgNasVet~TM9zp9UELk3vd0aCJcGb6uJI4Uv4FEk5LNEQQSGWrUrV9mNKpp5STIrUEwFufBGCwcboTeLJfg55DA75JoXHkMdmedD5P6M2~EOYUbtqSOBFGY7VQgzfN-~UhU6lLSwV3grA4~ZrZDTIlI_">This is the image</a> in the most popular link, capturing an explosion from an Israeli airstrike in Gaza.</p>
+
+<p>Again, the Python code I used to obtain the tweets and the R code I used to analyze them were lifted directly from scripts by the authors linked above.</p>
+
+<h3 id="analyze-tweets-scraped-with-python">Analyze Tweets scraped with Python</h3>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">x</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"tweets_#gazaunderattack.csv"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span> <span class="n">stringsAsFactors</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>
+<span class="n">x</span><span class="o">$</span><span class="n">username</span><span class="o">&lt;-</span><span class="n">x</span><span class="o">$</span><span class="n">V2</span>
+<span class="n">x</span><span class="o">$</span><span class="n">text</span><span class="o">&lt;-</span><span class="n">x</span><span class="o">$</span><span class="n">V5</span>
+ 
+<span class="c1">#########################################
+#### Nice Time-Series Plot ####
+#########################################
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="n">x</span><span class="o">$</span><span class="n">date</span> <span class="o">&lt;-</span> <span class="n">strptime</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">V4</span><span class="p">,</span> <span class="s2">"%a, %d %b %Y %H:%M:%S %z"</span><span class="p">,</span> <span class="n">tz</span> <span class="o">=</span> <span class="s2">"EST"</span><span class="p">)</span>
+<span class="n">x</span><span class="o">$</span><span class="n">date</span> <span class="o">&lt;-</span> <span class="n">as.POSIXct</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">date</span><span class="p">,</span> <span class="n">tz</span> <span class="o">=</span> <span class="s2">"EST"</span><span class="p">)</span>
+<span class="n">timeseries</span><span class="o">&lt;-</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">date</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="err">.</span><span class="n">.count..</span><span class="p">),</span> <span class="n">binwidth</span><span class="o">=</span><span class="m">60</span><span class="o">*</span><span class="m">30</span><span class="p">)</span> <span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">"# of Tweets"</span><span class="p">)</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">"Time"</span><span class="p">)</span>
+<span class="n">timeseries</span>
+<span class="n">ggsave</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"timeseries.png"</span><span class="p">)</span>
+ 
+<span class="c1">#########################################
+#### Nice Plot of Frequent Tweeters ####
+#########################################
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="n">x</span><span class="o">$</span><span class="n">username</span><span class="p">[</span><span class="n">x</span><span class="o">$</span><span class="n">username</span><span class="o">==</span><span class="s2">""</span><span class="p">]</span><span class="o">&lt;-</span><span class="n">NA</span>
+<span class="n">length</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">username</span><span class="p">))</span> <span class="c1"># see how many unique tweeter accounts in the sample
+</span><span class="n">counts</span><span class="o">=</span><span class="n">table</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">username</span><span class="p">)</span>
+<span class="n">counts.sort</span><span class="o">&lt;-</span><span class="n">sort</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">counts.sort.subset</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">counts.sort</span><span class="p">,</span> <span class="n">counts.sort</span><span class="o">&gt;</span><span class="m">350</span><span class="p">)</span> <span class="c1"># create a subset of those who tweeted at least 350 times or more
+</span><span class="n">counts.sort.subset.df</span><span class="o">&lt;-</span><span class="n">data.frame</span><span class="p">(</span><span class="n">people</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">dimnames</span><span class="p">(</span><span class="n">counts.sort.subset</span><span class="p">)),</span><span class="n">count</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">counts.sort.subset</span><span class="p">))</span> <span class="c1"># makes a funny sort of data frame...
+</span><span class="n">counts.sort.subset.df</span><span class="o">&lt;-</span><span class="n">data.frame</span><span class="p">(</span><span class="n">people</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">counts.sort.subset.df</span><span class="o">$</span><span class="n">people</span><span class="p">),</span><span class="n">counts</span><span class="o">=</span><span class="n">as.numeric</span><span class="p">(</span><span class="n">counts.sort.subset.df</span><span class="o">$</span><span class="n">count</span><span class="p">))</span> <span class="c1"># makes a better data frame for ggplot to work with
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">counts.sort.subset.df</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">reorder</span><span class="p">(</span><span class="n">people</span><span class="p">,</span><span class="n">counts</span><span class="p">),</span><span class="n">counts</span><span class="p">))</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">"Author"</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">"Number of messages"</span><span class="p">)</span><span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span> <span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span> <span class="o">+</span> <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.x</span> <span class="o">=</span> <span class="n">theme_text</span><span class="p">(</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span> <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.y</span><span class="o">=</span><span class="n">theme_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">))</span> <span class="c1"># plot nicely ordered counts of tweets by person for people &gt; 5 tggsave(file = "tweet_counts.pdf") # export the plot to a PDF file
+</span><span class="n">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">"tweet_counts.png"</span><span class="p">)</span>
+ 
+<span class="c1">###########################################
+#### Nice Plot of Frequent Re-Tweeters ####
+###########################################
+</span><span class="n">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span>
+<span class="n">x</span><span class="o">$</span><span class="n">text</span><span class="o">=</span><span class="n">sapply</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">text</span><span class="p">,</span><span class="k">function</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="n">iconv</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">to</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">))</span> <span class="c1">#remove odd characters
+</span><span class="n">trim</span> <span class="o">&lt;-</span> <span class="k">function</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">sub</span><span class="p">(</span><span class="s1">'@'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="c1"># remove @ symbol from user names
+</span><span class="n">x</span><span class="o">$</span><span class="n">rt</span><span class="o">=</span><span class="n">sapply</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">text</span><span class="p">,</span><span class="k">function</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span> <span class="n">trim</span><span class="p">(</span><span class="n">str_match</span><span class="p">(</span><span class="n">tweet</span><span class="p">,</span><span class="s2">"^RT (@[[:alnum:]_]*)"</span><span class="p">)[</span><span class="m">2</span><span class="p">]))</span> <span class="c1">#extract who has been RT’d
+</span><span class="n">sum</span><span class="p">(</span><span class="o">!</span><span class="n">is.na</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">rt</span><span class="p">))</span> <span class="c1"># see how many tweets are retweets
+</span><span class="n">sum</span><span class="p">(</span><span class="o">!</span><span class="n">is.na</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">rt</span><span class="p">))</span><span class="o">/</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">rt</span><span class="p">)</span> <span class="c1"># the ratio of retweets to tweets
+</span><span class="n">countRT</span><span class="o">&lt;-</span><span class="n">table</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">rt</span><span class="p">)</span>
+<span class="n">countRT</span><span class="o">&lt;-</span><span class="n">sort</span><span class="p">(</span><span class="n">countRT</span><span class="p">)</span>
+<span class="n">countRT.subset</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">countRT</span><span class="p">,</span><span class="n">countRT</span><span class="o">&gt;</span><span class="m">1000</span><span class="p">)</span> <span class="c1"># subset those RT’d more than 1000 times
+</span><span class="n">countRT.subset.df</span><span class="o">&lt;-</span><span class="n">data.frame</span><span class="p">(</span><span class="n">people</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">unlist</span><span class="p">(</span><span class="n">dimnames</span><span class="p">(</span><span class="n">countRT.subset</span><span class="p">))),</span><span class="n">RT_count</span><span class="o">=</span><span class="n">as.numeric</span><span class="p">(</span><span class="n">unlist</span><span class="p">(</span><span class="n">countRT.subset</span><span class="p">)))</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">countRT.subset.df</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">reorder</span><span class="p">(</span><span class="n">people</span><span class="p">,</span><span class="n">RT_count</span><span class="p">),</span><span class="n">RT_count</span><span class="p">))</span> <span class="o">+</span>
+ <span class="n">xlab</span><span class="p">(</span><span class="s2">"Author"</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">"Number of messages retweeted by others"</span><span class="p">)</span> <span class="o">+</span>
+ <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span> <span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span> <span class="o">+</span>
+ <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.x</span> <span class="o">=</span> <span class="n">theme_text</span><span class="p">(</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
+ <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.y</span><span class="o">=</span><span class="n">theme_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">))</span>
+ <span class="c1"># plot nicely ordered counts of tweets by person for people &gt; 1000 retweets
+</span><span class="n">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">"retweet_counts.png"</span><span class="p">)</span>
+ 
+<span class="c1">###########################################
+#### Nice Plot of RT-Tweet Ratios #########
+###########################################
+</span><span class="n">t</span><span class="o">&lt;-</span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">username</span><span class="p">))</span> <span class="c1"># make table with counts of tweets per person
+</span><span class="n">rt</span><span class="o">&lt;-</span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">rt</span><span class="p">))</span> <span class="c1"># make table with counts of retweets per person
+</span><span class="n">t.rt</span><span class="o">&lt;-</span><span class="n">merge</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">rt</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="s2">"Var1"</span><span class="p">)</span> <span class="c1"># combine tweet count and retweet count per person
+</span><span class="n">t.rt</span><span class="p">[</span><span class="s2">"ratio"</span><span class="p">]</span><span class="o">&lt;-</span><span class="n">t.rt</span><span class="o">$</span><span class="n">Freq.y</span> <span class="o">/</span> <span class="n">t.rt</span><span class="o">$</span><span class="n">Freq.x</span> <span class="c1"># creates new col and adds ratio tweet/retweet
+</span><span class="n">sort.t.rt</span><span class="o">&lt;-</span><span class="n">t.rt</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">t.rt</span><span class="o">$</span><span class="n">ratio</span><span class="p">),]</span> <span class="c1"># sort it to put names in order by ratio
+</span><span class="n">sort.t.rt.subset</span><span class="o">&lt;-</span><span class="n">subset</span><span class="p">(</span><span class="n">sort.t.rt</span><span class="p">,</span><span class="n">sort.t.rt</span><span class="o">$</span><span class="n">Freq.y</span><span class="o">&gt;</span><span class="m">1000</span><span class="p">)</span> <span class="c1"># exclude those with 1000 tweets or less
+</span><span class="n">sort.t.rt.subset.drop</span><span class="o">&lt;-</span><span class="n">droplevels</span><span class="p">(</span><span class="n">sort.t.rt.subset</span><span class="p">)</span> <span class="c1"># drop unused levels that got in there somehow... note that this is already a data frame
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">sort.t.rt.subset</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">reorder</span><span class="p">(</span><span class="n">Var1</span><span class="p">,</span><span class="n">ratio</span><span class="p">),</span><span class="n">ratio</span><span class="p">))</span> <span class="o">+</span>
+ <span class="n">xlab</span><span class="p">(</span><span class="s2">"Author"</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">"Retweets as a ratio of total tweets"</span><span class="p">)</span> <span class="o">+</span>
+ <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span> <span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span> <span class="o">+</span>
+ <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.x</span> <span class="o">=</span> <span class="n">theme_text</span><span class="p">(</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
+ <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.y</span><span class="o">=</span><span class="n">theme_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">))</span>
+<span class="n">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">"retweet_ratios.png"</span><span class="p">)</span>
+ 
+<span class="c1">###########################################
+#### Nice Plot of Most Popular Links ######
+###########################################
+</span><span class="n">x</span><span class="o">$</span><span class="n">link</span><span class="o">=</span><span class="n">sapply</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">text</span><span class="p">,</span><span class="k">function</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span> <span class="n">str_extract</span><span class="p">(</span><span class="n">tweet</span><span class="p">,(</span><span class="s2">"http[[:print:]]+"</span><span class="p">)))</span> <span class="c1"># creates new field and extracts the links contained in the tweet
+</span><span class="n">x</span><span class="o">$</span><span class="n">link</span><span class="o">=</span><span class="n">sapply</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">text</span><span class="p">,</span><span class="k">function</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span> <span class="n">str_extract</span><span class="p">(</span><span class="n">tweet</span><span class="p">,</span><span class="s2">"http[[:print:]]{16}"</span><span class="p">))</span> <span class="c1"># limits to just 16 characters after http so I just get the shortened link. They are all shortened, so this is fine, but there might be a better way using regex.
+</span><span class="n">countlink</span><span class="o">&lt;-</span><span class="n">table</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">link</span><span class="p">)</span> <span class="c1"># get frequencies of each link
+</span><span class="n">countlink</span><span class="o">&lt;-</span><span class="n">sort</span><span class="p">(</span><span class="n">countlink</span><span class="p">)</span> <span class="c1"># sort them
+</span><span class="n">barplot</span><span class="p">(</span><span class="n">countlink</span><span class="p">)</span> <span class="c1"># plot freqs
+# or to use ggplot2, read on...
+</span><span class="n">countlink</span><span class="o">&lt;-</span><span class="n">data.frame</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">na.omit</span><span class="p">((</span><span class="n">x</span><span class="o">$</span><span class="n">link</span><span class="p">))))</span>
+<span class="n">countlink</span><span class="o">&lt;-</span><span class="n">subset</span><span class="p">(</span><span class="n">countlink</span><span class="p">,</span><span class="n">countlink</span><span class="o">$</span><span class="n">Freq</span><span class="o">&gt;</span><span class="m">300</span><span class="p">)</span> <span class="c1"># exclude those with 300 tweets or less
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">countlink</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">reorder</span><span class="p">(</span><span class="n">Var1</span><span class="p">,</span> <span class="n">Freq</span><span class="p">),</span> <span class="n">Freq</span><span class="p">))</span> <span class="o">+</span>
+ <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span> <span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span> <span class="o">+</span>
+ <span class="n">xlab</span><span class="p">(</span><span class="s2">"Link"</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">"Frequency"</span><span class="p">)</span> <span class="o">+</span>
+ <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.x</span> <span class="o">=</span> <span class="n">theme_text</span><span class="p">(</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.5</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">))</span> <span class="o">+</span>
+ <span class="n">opts</span><span class="p">(</span><span class="n">axis.title.y</span><span class="o">=</span><span class="n">theme_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">))</span>
+<span class="n">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s2">"links.png"</span><span class="p">)</span></code></pre></figure>
+
+
+			</div>
+			
+			
+			<p>Share this post:</p>
+					<ul class="share-buttons">
+
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://jmrphy.net/blog/2012/12/29/analysis-of-gazaunderattack-tweets/" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmrphy.net&text=http%3A%2F%2Fjmrphy.net&via=jmrphy" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&nbsp;via&nbsp;@jmrphy&nbsp;'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+
+  <li><a href="http://www.reddit.com/submit?url=https://jmrphy.net//blog/2012/12/29/analysis-of-gazaunderattack-tweets/&title=Analysis of #GazaUnderAttack tweets" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Submit to Reddit" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+
+  <li><a href="mailto:?subject=&body=:%20https://jmrphy.net//blog/2012/12/29/analysis-of-gazaunderattack-tweets/" target="_blank" title="Send email" onclick="window.open('mailto:?subject=&body=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+			
+
+				
+
+				<p>Cite this post: <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/ris/?uri=https://jmrphy.net/blog/2012/12/29/analysis-of-gazaunderattack-tweets/ target='_blank'>RIS Citation</a>
+ </i> <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/bib/?uri=https://jmrphy.net/blog/2012/12/29/analysis-of-gazaunderattack-tweets/ target='_blank'>BibTeX Entry</a>
+</i></p>
+				<p class="citation"><!-- Suggested citation code -->
+Murphy, Justin. 2012. "Analysis of #GazaUnderAttack tweets," https://jmrphy.net/blog/2012/12/29/analysis-of-gazaunderattack-tweets/ (December 14, 2018).
+
+</p>
+
+			
+			
+			<hr/>
+			
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+
+				
+				<time class="icon-calendar pr20" datetime="2012-12-29" itemprop="datePublished"> 2012-12-29</time>
+				
+
+				<span class="icon-archive pr20">  <a href="https://jmrphy.net/blog/category/#theory & empirics"> / THEORY & EMPIRICS</a> </span>
+				<br />
+				<span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#R"> R </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#data"> data </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#visualization"> visualization </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#media"> media </a> 
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="https://jmrphy.net/blog/2012/11/11/388-duchamp-on-sinks-and-sources/">&laquo; Duchamp on sinks and sources</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="https://jmrphy.net/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="https://jmrphy.net/blog/2013/01/05/sensitivity-a-scarce-resource/">Sensitivity is a scarce resource &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              I'm a political scientist.
+              <!-- <a href="https://jmrphy.net/info/">Explore some of my work in this area ›</a> -->
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Other info</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href=""  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/privacy"  title="Privacy Policy">Privacy Policy</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">See also</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href=""  title=""></a>
+                </li>
+            
+              
+                <li >
+                  <a href="mailto:jstnmrphy@gmail.com"  title="Email me">Email me</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://tinyletter.com/jmrphy" target="_blank"  title="Subscribe to my newsletter">Newsletter</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com" target="_blank"  title="Tumblr">Tumblr</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com/ask" target="_blank"  title="Ask me anything">Ask me anything</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            <p>
+              This site is powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. It uses the custome theme <a href="http://github.com/jmrphy/jekyll_academic">Jekyll Academic</a>, which was adapted from <a href="http://phlow.github.io/feeling-responsive/">Feeling&nbsp;Responsive</a>. This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. Finally, the content of this website is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </p>
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://twitter.com/jmrphy" target="_blank" class="icon-twitter" title="I'm on twitter as @jmrphy"></a></li>
+            
+              <li><a href="https://www.instagram.com/jstnmrphy/" target="_blank" class="icon-instagram" title="Pictures"></a></li>
+            
+              <li><a href="http://github.com/jmrphy" target="_blank" class="icon-github" title="Code and data"></a></li>
+            
+              <li><a href="http://www.youtube.com/BarclayShields" target="_blank" class="icon-youtube" title="Videos"></a></li>
+            
+              <li><a href="https://www.facebook.com/barclayshields" target="_blank" class="icon-facebook" title=""></a></li>
+            
+              <li><a href="https://soundcloud.com/barclay-shields" target="_blank" class="icon-soundcloud" title="Some audio things"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="https://jmrphy.net/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="//my.hellobar.com/4fa9f552f76ae17579c82c1d40803e06738e0390.js" type="text/javascript" charset="utf-8" async="async"></script>
+
+</body>
+</html>
+

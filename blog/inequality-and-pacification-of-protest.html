@@ -1,0 +1,680 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P56LRMG');</script>
+<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Inequality and the Pacification of Militant Protest in the United States, 1919-2012</title>
+
+	<meta name="description" content="Code for reproducing the graph in our 2018 ISQ article on Liberal Pacification." />
+
+    <meta name="author" content="Justin Murphy"/>
+    
+ 	<meta name="keywords" content="inequality,protest,contentious politics,international studies quarterly,ISQ,pacification,riots">
+
+	<link rel="stylesheet" type="text/css" href="https://jmrphy.net/assets/css/styles_feeling_responsive.css" />
+	<script src="https://jmrphy.net/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Volkhov' rel='stylesheet' type='text/css' />
+	</noscript>
+
+  	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ" />
+	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" />
+	<link rel="author" href="https://plus.google.com/u/1/106173867748806895007"/>
+
+	
+
+
+
+	
+	<link rel="icon" sizes="16x16" href="https://jmrphy.net/assets/img/favicon-16x16.png" />
+
+
+
+	
+	<link rel="icon" sizes="32x32" href="https://jmrphy.net/assets/img/favicon-32x32.png" />
+
+
+
+
+	
+	<link rel="icon" sizes="192x192" href="https://jmrphy.net/assets/img/touch-icon-192x192.png" />
+
+
+
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://jmrphy.net/assets/img/apple-touch-icon-180x180-precomposed.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<meta name="msapplication-TileImage" content="https://jmrphy.net/assets/img/msapplication_tileimage.png" />
+
+
+
+
+	
+	<meta name="msapplication-TileColor" content="#176789" />
+
+
+
+<!-- Facebook Optimization -->
+	<meta property="og:locale" content="" />
+
+	<meta property="og:author" content="Justin Murphy" />
+
+	<meta property="og:type" content="website" />
+
+	<meta property="og:title" content="Inequality and the Pacification of Militant Protest in the United States, 1919-2012" />
+
+	<meta property="og:description" content="Code for reproducing the graph in our 2018 ISQ article on Liberal Pacification."/>
+
+	<meta property="og:url" content="https://jmrphy.net/blog/inequality-and-pacification-of-protest" />
+	<meta property="og:site_name" content="Justin Murphy" />
+	<meta property="og:image" content="http://i.imgur.com/snK6iNQ.png" />
+
+	
+
+	<!-- Search Engine Optimization -->
+	
+
+	<link type="text/plain" rel="author" href="https://jmrphy.net/humans.txt" />
+
+	
+
+	
+
+	<!-- Include Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Meta Data for Google Scholar -->
+	<!-- Copied from MMadsen https://github.com/mmadsen/jekyll-greycite  -->
+
+	<!-- Get date last modified from git log. (Uses current time if file entry not found, e.g. projects/)  -->
+    
+
+
+    <!-- For posts, page.date is the date they are published under, which we use as their 'canonical' dc:date -->
+     
+      
+      
+
+    <!-- Posts declare modified timestamps in the sidebar, so would be redundant to put here. But then 
+         pages don't have a dc:modified... unless we give them their own (modified) sidebar?  
+    -->
+    <!-- Ideally we would want date originally created from the _oldest_ git commit too...-->
+
+<!-- Google Scholar Metadata -->
+	<meta name="resource_type" content="article"/>
+    <meta name="citation_author" content="Justin Murphy"/>
+    <meta name="citation_date" content="2018-06-01T00:00:00+01:00"/>
+    <meta name="citation_publication_date" content="2018-06-01T00:00:00+01:00"/>
+    <meta name="citation_title" content="Inequality and the Pacification of Militant Protest in the United States, 1919-2012"/>
+    <meta name="citation_journal_title" content="Justin Murphy"/>
+
+<!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Inequality and the Pacification of Militant Protest in the United States, 1919-2012" />
+    <meta property="dc:creator" content="Justin Murphy" />
+    <meta property="dc:date" content="2018-06-01T00:00:00+01:00" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/blog/inequality-and-pacification-of-protest" />
+    <meta property="dc:rights" content="CC BY 4.0" />
+    <meta property="dc:source" content="Justin Murphy" />
+    <meta property="dc:subject" content="Political Science" /> 
+    <meta property="dc:type" content="website" /> 
+
+</head>
+<body id="top-of-page" class="">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P56LRMG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="https://jmrphy.net" class="icon-home"> Justin Murphy</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/research/">Research</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/files/Murphy_vita.pdf">CV</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/teaching/">Teaching</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="https://jmrphy.net/blog/">Blog</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="https://jmrphy.net">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+
+
+
+	<span
+	class="Z3988" 
+	title="ctx_ver=Z39.88-2004
+	&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+	&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+	&amp;rft.type=Article
+	&amp;rft.title=Inequality and the Pacification of Militant Protest in the United States, 1919-2012
+	&amp;rft.creator=Justin Murphy
+	&amp;rft.aulast=Murphy
+	&amp;rft.aufirst=Justin
+	&amp;rft.date=2018-06-01 00:00:00 +0100
+	&amp;rft.language=EN
+	&amp;rft.rights=CC-BY-4.0
+	&amp;rft_id=https://jmrphy.net/blog/inequality-and-pacification-of-protest">
+</span>
+	
+	
+
+
+<div class="row t30">
+	<div class="medium-12 columns">
+		<article>
+			<header>
+				<p class="subheadline">Data and code</p>
+				<h1>Inequality and the Pacification of Militant Protest in the United States, 1919-2012</h1>
+			</header>
+
+			
+			<p class="teaser">
+				Code for reproducing the graph in our 2018 ISQ article on Liberal Pacification.
+			</p>
+			
+
+			<p>To generate the graph below, you need two data files. The first is yearly income decile data from <a href="https://amzn.to/2JhLrGT">Piketty (2014)</a>, which should be named “Inequality_USA.csv.” The second is the Cross-National Time-Series data from <a href="https://www.cntsdata.com/">Banks and Wilson (2017)</a>, which should be called “2017 Edition CNTSDATA.csv.” Finally, the code snippet below should be in a file called “Baron_et_al-ISQ.R” — that will be an R script that compiles the two datasets before producing the figure from our article. To reproduce the Figure, open the R script on your computer, ensure each dataset is in the same directory as the R script, set your R working directory to that directory, and run the script.</p>
+
+<p>Please note that while Piketty’s data is freely available and included in our replication archive on the ISQ website, the CNTS data is proprietary and cannoot be made public.</p>
+
+<p>Issues or questions about replicating our analysis can be directed to me at j [dot] murphy [at] soton [dot] ac [dot] uk.</p>
+
+<p>For legibility, event counts from Banks and Wilson (2017) were transformed into 10-year moving averages. These and the inequality measure from Piketty (2014) were then scaled to ease comparison. Scaling was done by subtracting the mean from each variable and dividing by one standard deviation; the lines reflect standard deviations from historical means (0).</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Check for packages ————————————
+</span><span class="n">x</span><span class="o">&lt;-</span><span class="n">c</span><span class="p">(</span><span class="s2">"Zelig"</span><span class="p">,</span>
+     <span class="s2">"ggplot2"</span><span class="p">,</span>
+     <span class="s2">"reshape2"</span><span class="p">,</span>
+     <span class="s2">"zoo"</span><span class="p">,</span>
+     <span class="s2">"countrycode"</span><span class="p">,</span>
+     <span class="s2">"arm"</span><span class="p">,</span>
+     <span class="s2">"dplyr"</span><span class="p">,</span>
+     <span class="s2">"stringr"</span><span class="p">,</span>
+     <span class="s2">"foreign"</span><span class="p">,</span>
+     <span class="s2">"lubridate"</span><span class="p">)</span>
+
+<span class="c1"># Install any not already installed ——————————
+</span><span class="n">new.p</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="p">[</span><span class="o">!</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">installed.packages</span><span class="p">()[,</span><span class="s2">"Package"</span><span class="p">])]</span>
+<span class="k">if</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">new.p</span><span class="p">))</span> <span class="n">install.packages</span><span class="p">(</span><span class="n">new.p</span><span class="p">)</span>
+
+<span class="c1"># Load packages ——————————————————
+</span><span class="n">lapply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">require</span><span class="p">,</span> <span class="n">character.only</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+<span class="n">rm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">new.p</span><span class="p">)</span>
+
+<span class="c1"># Load data and wrangle dates
+</span><span class="n">ineq</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"inequality_USA.csv"</span><span class="p">)</span>
+<span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="o">&lt;-</span><span class="n">mdy</span><span class="p">(</span><span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="p">)</span>
+<span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="o">&lt;-</span><span class="n">year</span><span class="p">(</span><span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="p">)</span>
+<span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="o">&lt;-</span><span class="n">ifelse</span><span class="p">(</span><span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="o">&gt;=</span><span class="m">2019</span><span class="p">,</span> <span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="m">-100</span><span class="p">,</span> <span class="n">ineq</span><span class="o">$</span><span class="n">year</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"2017_Edition_CNTSDATA.csv"</span><span class="p">)</span>
+<span class="n">df</span><span class="o">$</span><span class="n">country</span><span class="o">&lt;-</span><span class="n">df</span><span class="o">$</span><span class="n">Country</span>
+<span class="n">df</span><span class="o">$</span><span class="n">year</span><span class="o">&lt;-</span><span class="n">as.numeric</span><span class="p">(</span><span class="n">as.character</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">Year</span><span class="p">))</span>
+
+<span class="c1"># Wrangle the CNTS data
+</span><span class="n">df</span><span class="o">$</span><span class="n">Assassinations</span><span class="o">&lt;-</span><span class="n">as.numeric</span><span class="p">(</span><span class="n">as.character</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">Assassinations</span><span class="p">))</span>
+<span class="n">df</span><span class="o">$</span><span class="n">Riots</span><span class="o">&lt;-</span><span class="n">as.numeric</span><span class="p">(</span><span class="n">as.character</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">Riots</span><span class="p">))</span>
+<span class="n">df</span><span class="o">$</span><span class="n">Guerrilla.Warfare</span><span class="o">&lt;-</span><span class="n">as.numeric</span><span class="p">(</span><span class="n">as.character</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">Guerrilla.Warfare</span><span class="p">))</span>
+<span class="n">usriots</span><span class="o">&lt;-</span><span class="n">subset</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">country</span><span class="o">==</span><span class="s2">"United States"</span> <span class="o">&amp;</span> <span class="n">year</span><span class="o">&gt;=</span><span class="m">1919</span> <span class="o">&amp;</span> <span class="n">year</span><span class="o">&lt;=</span><span class="m">2016</span><span class="p">,</span> <span class="n">select</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">"Assassinations"</span><span class="p">,</span> <span class="s2">"Riots"</span><span class="p">,</span> <span class="s2">"Guerrilla.Warfare"</span><span class="p">,</span> <span class="s2">"year"</span><span class="p">))</span>
+
+<span class="c1"># Merge the two datasets
+</span><span class="n">df2</span><span class="o">&lt;-</span><span class="n">merge</span><span class="p">(</span><span class="n">usriots</span><span class="p">,</span> <span class="n">ineq</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">"year"</span><span class="p">),</span> <span class="n">all.x</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># Create rolling averages
+</span><span class="n">df2</span><span class="o">$</span><span class="n">Riots</span><span class="o">&lt;-</span><span class="n">rollmean</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">Riots</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="n">NA</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">$</span><span class="n">Assassinations</span><span class="o">&lt;-</span><span class="n">rollmean</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">Assassinations</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="n">NA</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">$</span><span class="n">Guerrilla.Warfare</span><span class="o">&lt;-</span><span class="n">rollmean</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">Guerrilla.Warfare</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="n">NA</span><span class="p">)</span>
+
+<span class="c1"># Standardize for comparability
+</span><span class="n">df2</span><span class="o">$</span><span class="n">Inequality</span><span class="o">&lt;-</span><span class="n">scale</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">top_decile</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">$</span><span class="n">Riots</span><span class="o">&lt;-</span><span class="n">scale</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">Riots</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">$</span><span class="n">Guerrillas</span><span class="o">&lt;-</span><span class="n">scale</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">Guerrilla.Warfare</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">$</span><span class="n">Assassinations</span><span class="o">&lt;-</span><span class="n">scale</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">Assassinations</span><span class="p">)</span>
+
+<span class="c1"># Reshape for plotting
+</span><span class="n">molt</span><span class="o">&lt;-</span><span class="n">melt</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="n">c</span><span class="p">(</span><span class="s2">"year"</span><span class="p">,</span> <span class="s2">"Inequality"</span><span class="p">,</span> <span class="s2">"Riots"</span><span class="p">,</span> <span class="s2">"Guerrillas"</span><span class="p">,</span> <span class="s2">"Assassinations"</span><span class="p">)],</span> <span class="n">id.vars</span><span class="o">=</span><span class="s2">"year"</span><span class="p">)</span>
+<span class="n">molt</span><span class="o">&lt;-</span><span class="n">filter</span><span class="p">(</span><span class="n">molt</span><span class="p">,</span> <span class="n">year</span><span class="o">&lt;</span><span class="m">2012</span><span class="p">)</span>
+
+<span class="n">ggplot</span><span class="p">(</span><span class="n">molt</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">year</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="n">variable</span><span class="p">,</span> <span class="n">linetype</span><span class="o">=</span><span class="n">variable</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_line</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">.8</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">theme_bw</span><span class="p">(</span><span class="n">base_size</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">ggtitle</span><span class="p">(</span><span class="s2">"Inequality and the Pacification of Militant Contention in the U.S."</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">xlab</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">ylab</span><span class="p">(</span><span class="s2">"Standardized values (z-scores)"</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="n">seq</span><span class="p">(</span><span class="m">1919</span><span class="p">,</span> <span class="m">2011</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="m">5</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="n">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">45</span><span class="p">,</span> <span class="n">hjust</span> <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">theme</span><span class="p">(</span><span class="n">legend.title</span><span class="o">=</span><span class="n">element_blank</span><span class="p">())</span></code></pre></figure>
+
+<p><img src="https://i.imgur.com/OFF5kr8.png" alt="Inequality and protest data" title="Inequality and protest data" /></p>
+
+<h2 id="references">References</h2>
+
+<p>Banks, A.A., Wilson, K.A., 2017. “Cross-National Time-Series Data Archive.” Databanks International, Jerusalem, Israel.</p>
+
+<p>Piketty, T., 2014. “The top decile income share in the United States (including capital gains), 1910-2010,” in <a href="https://amzn.to/2JhLrGT"><em>Capital in the Twenty-First Century.</em></a> Harvard University Press, Cambridge, Massachusetts.</p>
+
+
+
+			<hr/>
+
+			
+			<p>Share this post:</p>
+					<ul class="share-buttons">
+
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://jmrphy.net/blog/inequality-and-pacification-of-protest" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmrphy.net&text=http%3A%2F%2Fjmrphy.net&via=jmrphy" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&nbsp;via&nbsp;@jmrphy&nbsp;'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+
+  <li><a href="http://www.reddit.com/submit?url=https://jmrphy.net//blog/inequality-and-pacification-of-protest&title=Inequality and the Pacification of Militant Protest in the United States, 1919-2012" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Submit to Reddit" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+
+  <li><a href="mailto:?subject=&body=:%20https://jmrphy.net//blog/inequality-and-pacification-of-protest" target="_blank" title="Send email" onclick="window.open('mailto:?subject=&body=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="https://jmrphy.net/images/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+			
+
+				
+
+				<p>Citation for this post: <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/ris/?uri=https://jmrphy.net/blog/inequality-and-pacification-of-protest target='_blank'>RIS Citation</a>
+ </i> <i class="fa fa-download pr10"> <a href=http://greycite.knowledgeblog.org/bib/?uri=https://jmrphy.net/blog/inequality-and-pacification-of-protest target='_blank'>BibTeX Entry</a>
+</i></p>
+				<p class="citation"><!-- Suggested citation code -->
+Murphy, Justin. 2018. "Inequality and the Pacification of Militant Protest in the United States, 1919-2012," https://jmrphy.net/blog/inequality-and-pacification-of-protest (December 14, 2018).
+
+</p>
+
+			
+			
+			
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="http://jmrphy.net/" target="_blank"> Justin Murphy</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2018-06-01" itemprop="datePublished"> 2018-06-01</time>
+				
+
+				<span class="icon-archive pr20">  <a href="https://jmrphy.net/blog/category/#theory & empirics"> / THEORY & EMPIRICS</a> </span>
+				<br />
+				<span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#academic research"> academic research </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#data"> data </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#R"> R </a> <span class="icon-price-tag"></span><a href="https://jmrphy.net/blog/tag/#social science"> social science </a> 
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="https://jmrphy.net/blog/the-alt-right-is-not-all-right">&laquo; The Alt-Right is not all Right: On the ideology of Kekistan</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="https://jmrphy.net/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+						
+				<h3 id="comments" class="t60"></h3>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			        var disqus_shortname = 'jmrphy'; 
+			        var disqus_identifier = '/blog/inequality-and-pacification-of-protest';
+
+			        /* * * DON'T EDIT BELOW THIS LINE * * */
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+
+
+
+			
+
+		</article>
+	</div><!-- /.medium-12.columns -->
+</div><!-- /.row -->
+
+
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              I'm a political scientist.
+              <!-- <a href="https://jmrphy.net/info/">Explore some of my work in this area ›</a> -->
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Other info</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href=""  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="/privacy"  title="Privacy Policy">Privacy Policy</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">See also</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href=""  title=""></a>
+                </li>
+            
+              
+                <li >
+                  <a href="mailto:jstnmrphy@gmail.com"  title="Email me">Email me</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://tinyletter.com/jmrphy" target="_blank"  title="Subscribe to my newsletter">Newsletter</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com" target="_blank"  title="Tumblr">Tumblr</a>
+                </li>
+            
+              
+                <li >
+                  <a href="http://jmrphy.tumblr.com/ask" target="_blank"  title="Ask me anything">Ask me anything</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            <p>
+              This site is powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. It uses the custome theme <a href="http://github.com/jmrphy/jekyll_academic">Jekyll Academic</a>, which was adapted from <a href="http://phlow.github.io/feeling-responsive/">Feeling&nbsp;Responsive</a>. This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. Finally, the content of this website is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </p>
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://twitter.com/jmrphy" target="_blank" class="icon-twitter" title="I'm on twitter as @jmrphy"></a></li>
+            
+              <li><a href="https://www.instagram.com/jstnmrphy/" target="_blank" class="icon-instagram" title="Pictures"></a></li>
+            
+              <li><a href="http://github.com/jmrphy" target="_blank" class="icon-github" title="Code and data"></a></li>
+            
+              <li><a href="http://www.youtube.com/BarclayShields" target="_blank" class="icon-youtube" title="Videos"></a></li>
+            
+              <li><a href="https://www.facebook.com/barclayshields" target="_blank" class="icon-facebook" title=""></a></li>
+            
+              <li><a href="https://soundcloud.com/barclay-shields" target="_blank" class="icon-soundcloud" title="Some audio things"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="https://jmrphy.net/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="//my.hellobar.com/4fa9f552f76ae17579c82c1d40803e06738e0390.js" type="text/javascript" charset="utf-8" async="async"></script>
+
+</body>
+</html>
+
